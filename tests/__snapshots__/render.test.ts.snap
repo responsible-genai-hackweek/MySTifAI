@@ -1,0 +1,211 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`golden sections > jupyterbook #get-involved 1`] = `
+"## Get involved
+
+::::{grid}
+:columns: 1 1 2 2
+
+:::{card} Technical details »
+---
+link: https://mystmd.org/guide/accessibility-and-performance
+---
+
+What {abbr}\`MyST (Markedly Structured Text)\` themes do today, how to audit your own site, and which tools and standards we use.
+:::
+
+:::{card} Track open work »
+---
+link: https://github.com/jupyter-book/myst-theme/labels/a11y
+---
+
+Open accessibility issues are tracked under the \`a11y\` label in \`myst-theme\`.
+:::
+
+:::{card} Report an a11y barrier »
+---
+link: https://github.com/jupyter-book/myst-theme/issues/new?labels=a11y
+---
+
+A clear reproduction is enormously helpful, even if you can’t propose a fix.
+:::
+
+:::{card} Contribute »
+---
+link: /contribute
+---
+
+Accessibility contributions follow the same workflow as any other contribution.
+:::
+::::
+
+[^jb]: **This only covers the \`myst-theme\` in Jupyter Book**
+
+    See the [Jupyter Accessibility Working Group](https://jupyter-accessibility.readthedocs.io) for broader project-wide resources about accessibility."
+`;
+
+exports[`golden sections > mystmd-guide #cool-myst-features 1`] = `
+"## Cool {abbr}\`MyST (Markedly Structured Text)\` Features 🪄
+
+We think {abbr}\`MyST (Markedly Structured Text)\` is really cool, some of the features that we think stand out are highlighted below with links to places in the documentation where you can reproduce them!
+
+---
+
+🪄🐰 **Rabbit-hole links** allow you to get information to your reader as fast as possible, and they can deep-dive all the way to computations, code and interactive figures. You can play with this demo yourself in [Working with MyST Markdown](/quickstart-myst-markdown).
+
+:::{figure} ./videos/links.mp4
+:class: framed
+:::
+
+🪄📊 **Live graphs** can be embedded directly in your documentation or articles with computation backed by Jupyter or JupyterLite – running locally, on Binder, or directly in your browser. Get up and running with Thebe in [In-Page Execution](/in-page-execution)
+
+:::{figure} ./videos/thebe.mp4
+:class: framed
+:::
+
+🪄🪐 **JupyterLab support** for {abbr}\`MyST (Markedly Structured Text)\` comes with inline computations, support for \`ipywidgets\`, matplotlib sparklines, editable task-lists, rich frontmatter, and beautiful typography and other elements like dropdowns, grids and cards. Install [\`jupyterlab-myst\`](/quickstart-jupyter-lab-myst) today!
+
+:::{figure} ./videos/jupyterlab-myst.mp4
+:class: framed
+:::
+
+🪄📜 **Export to {abbr}\`PDF (Portable Document Format)\`** is easy with {abbr}\`MyST (Markedly Structured Text)\`, and we support hundreds of different journals out of the box, see [myst-templates](https://github.com/myst-templates)! You can also export to Microsoft Word or even {abbr}\`JATS (Journal Article Tag Suite)\`, which is used in scientific publishing. See the [Scientific Articles](/quickstart-myst-documents)!
+
+:::{figure} ./images/myst-build.png
+:class: framed
+:::
+
+---"
+`;
+
+exports[`golden sections > mystmd-guide #light-dark-css 1`] = `
+"(light-dark-css)=
+## Provide Light and Dark Mode images
+
+You can use [Tailwind CSS classes](https://tailwindcss.com/docs/dark-mode) to make certain content show up in light vs. dark mode. By default items are shown in light mode, so here is how you can control light vs. dark behavior:
+
+**To only show in dark mode**, attach the {abbr}\`CSS (Cascading Style Sheet)\` class \`hidden dark:block\`. This hides the element by default, and sets its display to \`block\` when the Dark theme is active.
+
+**To only show in light mode**, attach the {abbr}\`CSS (Cascading Style Sheet)\` class \`dark:hidden\`. The element will be hidden when Dark mode is active.
+
+For example, here is how you can make two elements swap visibility during light and dark mode. This is useful if you have two versions of an image that are meant for light and dark modes, but the same approach could be applied to any element you can [attach CSS classes to](#add-css-classes).
+
+
+
+:::{warning} This will only work if you’re using the default themes
+This syntax depends on [Tailwind CSS](https://tailwindcss.com/docs/dark-mode), which comes with the default themes. If you’re using a custom {abbr}\`HTML (Hypertext Markup Language)\` theme, these classes may not work.
+:::"
+`;
+
+exports[`golden sections > mystmd-guide #project-goals 1`] = `
+"## Project Goals
+
+{abbr}\`MyST (Markedly Structured Text)\` is part of the [Project Jupyter](https://jupyter.org/) organization, and is an open-source, community-driven project to improve scientific communication, including integrations into Jupyter Notebooks and computational results.
+
+::::{grid}
+:columns: 1 1 2 3
+
+:::{card}
+---
+link: /citations
+header: '**Built for Science** 👩‍🔬'
+footer: '{abbr}\`MyST (Markedly Structured Text)\` for Science »'
+---
+
+Extend Markdown with equations, cross-references, citations, and export to a preprint or rich, interactive website or book.
+:::
+
+:::{card}
+---
+link: /interactive-notebooks
+header: '**Dynamic Documents** 📈'
+footer: Bring your pages to life »
+---
+
+Make your pages interactive by connecting to custom JupyterHubs, public Binders or even Python running directly in your browser.
+:::
+
+:::{card}
+---
+link: /accessibility-and-performance
+header: '**Fast & Accessible** ⚡️'
+footer: Read about performance »
+---
+
+Publish next-generation articles and books that are beautifully designed, without compromising on accessibility or performance.
+:::
+::::
+
+**Technical Goals**
+
+*   \`mystmd\` is a JavaScript parser and command line tool for working with {abbr}\`MyST (Markedly Structured Text)\` Markdown
+*   Parse {abbr}\`MyST (Markedly Structured Text)\` into a standardized [AST](https://en.wikipedia.org/wiki/Abstract_Syntax_Tree), that follows [the MyST Spec](https://mystmd.org/spec)
+*   Translate and render {abbr}\`MyST (Markedly Structured Text)\` into:
+
+    *   Modern [interactive websites](/quickstart-myst-documents), using React (like this website!)
+    *   {abbr}\`PDF (Portable Document Format)\`s and {math}\`\\LaTeX\` documents, with [specific templates for over 400 journals](/creating-pdf-documents)
+    *   Microsoft Word [export](/creating-word-documents)
+*   Provide functionality for [cross-referencing](/cross-references), [external structured links](/external-references), and [scientific citations](/citations)
+
+**Architecture**
+
+The \`mystmd\` command line tool can be used to parse {abbr}\`MyST (Markedly Structured Text)\` Markdown and Jupyter Notebooks into an {abbr}\`AST (Abstract Syntax Tree)\`. This data can be saved as {abbr}\`JSON (JavaScript Object Notation)\`, or rendered to a website (like this one!) or any number of formats including [PDF & {math}\`\\LaTeX\`](/creating-pdf-documents), [Word](/creating-word-documents), [React](/quickstart-myst-documents), or [JATS](/creating-jats-xml).
+
+\`\`\`{mermaid}
+flowchart LR
+  A[Jupyter Notebook] --> C
+  B[MyST Markdown] --> C
+  C(mystmd) --> D{AST}
+  D <--> E[LaTeX]
+  E --> F[PDF]
+  D --> G[Word]
+  D --> H[React]
+  D --> I[HTML]
+  D <--> J[JATS]
+\`\`\`
+
+:::{important} Using Sphinx or Python?
+:class: dropdown
+
+For integration with **Sphinx**, use the Python implementation for {abbr}\`MyST (Markedly Structured Text)\` or Jupyter Book V1, which can be found at:
+
+*   [MyST Python Parser for Sphinx](https://myst-parser.readthedocs.io/en/latest/)
+*   [Jupyter Book](https://jupyterbook.org/)
+
+Although many tools in the [MyST Ecosystem](https://mystmd.org) follow the same conventions and [specification](https://mystmd.org/spec), the following documentation refers only to the \`mystmd\` {abbr}\`CLI (Command Line Interface)\`.
+:::"
+`;
+
+exports[`golden sections > mystmd-guide #static-images 1`] = `
+"### Static images
+
+Non-interactive images are embedded as PNGs:
+
+\`\`\`
+{"type":"container","kind":"figure","label":"img:mpl","identifier":"img:mpl","children":[{"type":"code","lang":"python","executable":true,"value":"import matplotlib.pyplot as plt\\nfig, ax = plt.subplots()\\nax.scatter(\\"Horsepower\\", \\"Miles_per_Gallon\\",\\n           c=\\"Acceleration\\", data=data.cars())\\n_ = ax.set(xlabel=\\"Horsepower\\", ylabel=\\"Miles per gallon\\",\\n       title=\\"Horsepower and miles per gallon\\")","identifier":"img:mpl-code","visibility":"show","enumerator":"2","html_id":"img-mpl-code","key":"v9eC0YLJCX"},{"type":"caption","children":[{"type":"paragraph","position":{"start":{"line":1,"column":1},"end":{"line":1,"column":1}},"children":[{"type":"captionNumber","kind":"figure","label":"img:mpl","identifier":"img:mpl","html_id":"img-mpl","enumerator":"1","children":[{"type":"text","value":"Figure ","key":"Iiwcyq668Y"},{"type":"text","value":"1","key":"CEDCibAkRx"},{"type":"text","value":":","key":"s3hN6v0hAm"}],"template":"Figure %s:","key":"gstGF4L7vK"},{"type":"text","value":"Horsepower and miles per gallon, from ","position":{"start":{"line":1,"column":1},"end":{"line":1,"column":1}},"key":"zoMNt0wEcL"},{"type":"inlineCode","value":"vega_datasets","position":{"start":{"line":1,"column":1},"end":{"line":1,"column":1}},"key":"dVDl91xX0F"}],"key":"h9BBlKKPWs"}],"key":"ba3X1LRlnn"},{"type":"legend","children":[{"type":"outputs","id":"Cv9qJJFHRoL7JHh5zKeFC","children":[{"type":"output","children":[],"jupyter_data":{"output_type":"display_data","metadata":{},"data":{"text/plain":{"content":"<Figure size 640x480 with 1 Axes>","content_type":"text/plain"},"image/png":{"content_type":"image/png","hash":"4fdccc4cfe43aea99c7ddc6076495b3a","path":"https://cdn.curvenote.com/019fe2a2-9548-72e2-bfb5-deba7d35df4f/public/4fdccc4cfe43aea99c7ddc6076495b3a.png"}}},"identifier":"img:mpl-outputs-0","html_id":"img-mpl-outputs-0","key":"SepGnfvcDm"}],"identifier":"img:mpl-outputs","visibility":"show","html_id":"img-mpl-outputs","key":"ST7pAYAEhy"}],"key":"k7l6XRXD9Z"}],"noSubcontainers":true,"enumerator":"1","html_id":"img-mpl","key":"vIvdQXFwZt"}
+\`\`\`"
+`;
+
+exports[`golden sections > mystmd-guide #style-sheet 1`] = `
+"(style-sheet)=
+## Add a Style Sheet ({abbr}\`CSS (Cascading Style Sheet)\`) to your website
+
+The [default MyST website themes](#default-web-themes) support bundling a custom [style-sheet](https://en.wikipedia.org/wiki/CSS). This can be used to introduce custom {abbr}\`CSS (Cascading Style Sheet)\` styling to your website. To include a custom {abbr}\`CSS (Cascading Style Sheet)\` file as part of your website build, you can define the [**style** (*file*)](#template-site-myst-book-theme-style) option, e.g.
+
+\`\`\`{code-block} yaml
+:emphasize-lines: 3
+:linenos:
+
+site:
+  options:
+    style: ./my-style.css
+\`\`\`
+
+\`\`\`{embed}
+\`\`\`
+
+For example, the style-sheet could contain styling for \`em\` elements nested below a particular \`text-gradient\` class:
+
+\`\`\`{include} public/style.css
+\`\`\`"
+`;
