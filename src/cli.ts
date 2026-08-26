@@ -46,7 +46,7 @@ async function resolveSection(url: string, depth?: number): Promise<Root> {
 program
   .command('get <url>')
   .description(
-    'print the section (or labeled node) a URL#anchor points at, as markdown; the anchor may be any label on the site',
+    'print the section (or labeled node) a URL#anchor points at, as markdown; the anchor may be any label on the site, and omitting it prints the whole page',
   )
   .option('--depth <n>', 'levels of subsections to include', (v: string) => {
     // commander calls the coercion fn as (value, previous) — bare parseInt
@@ -77,11 +77,12 @@ program
   .action(async (site: string, pagePath?: string) => {
     try {
       if (!pagePath) {
-        const { xref } = await findSiteRoot(new URL(site));
+        const { root, xref } = await findSiteRoot(new URL(site));
         // shortcut: URLs only, no titles — myst.xref.json doesn't carry page
         // titles, and fetching every page to get one would hammer sites.
+        // Absolute URLs so output feeds straight into `get`.
         for (const r of xref.references.filter((r: any) => r.kind === 'page')) {
-          console.log(r.url);
+          console.log(root + r.url);
         }
         return;
       }
@@ -90,14 +91,18 @@ program
       // any subpath a site is deployed under (e.g. site.com/guide).
       const p = pagePath.startsWith('/') ? pagePath : '/' + pagePath;
       const { page } = await resolvePage(site.replace(/\/$/, '') + p);
+      let found = 0;
       for (const n of flattenBlocks(page.mdast)) {
         if (n.type === 'heading' && (n.html_id || n.identifier)) {
           // shortcut: crude first-text-value grab instead of a proper text
           // collector; replace if it garbles a real heading (e.g. inline math).
           const text = JSON.stringify(n).match(/"value":"([^"]*)"/)?.[1] ?? '';
           console.log(`${'  '.repeat((n.depth ?? 1) - 1)}${text} #${n.html_id ?? n.identifier}`);
+          found++;
         }
       }
+      // An empty outline looks identical to a failed call otherwise.
+      if (!found) console.error(`no anchored headings on ${p}; try \`get\` for the whole page`);
     } catch (err) {
       fail(err);
     }
@@ -137,8 +142,9 @@ program
         console.error(`no matches for "${query}"`);
         process.exit(1);
       }
+      // Absolute URLs so output feeds straight into `get`.
       for (const h of hits) {
-        console.log(`${h.url}${h.anchor ? '#' + h.anchor : ''}\t${h.snippet}`);
+        console.log(`${root}${h.url}${h.anchor ? '#' + h.anchor : ''}\t${h.snippet}`);
       }
     } catch (err) {
       fail(err);
@@ -150,7 +156,7 @@ program
   .description('list figures | tables | headings | pages from the site index')
   .action(async (kind: string, site: string) => {
     try {
-      const { xref } = await findSiteRoot(new URL(site));
+      const { root, xref } = await findSiteRoot(new URL(site));
       const singular = kind.replace(/s$/, '');
       const rows = xref.references.filter((r: any) => r.kind === singular);
       if (!rows.length) {
@@ -159,9 +165,10 @@ program
       }
       // shortcut: identifier<TAB>url#anchor output, no captions — those would
       // require fetching every page; defer until someone needs them.
+      // Absolute URLs so output feeds straight into `get`.
       for (const r of rows) {
         const anchor = r.html_id ?? r.identifier;
-        console.log(`${r.identifier ?? '(no id)'}\t${r.url}${anchor ? '#' + anchor : ''}`);
+        console.log(`${r.identifier ?? '(no id)'}\t${root}${r.url}${anchor ? '#' + anchor : ''}`);
       }
     } catch (err) {
       fail(err);

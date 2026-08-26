@@ -3,6 +3,11 @@
 myst-docs gives terminals and LLM agents section-level access to any deployed MyST site, without the site changing anything.
 It reads the JSON endpoints every MyST site already publishes, so you can pull out one section as markdown instead of fetching and parsing whole pages.
 
+The goal is progressive disclosure for agents.
+A docs site is already a structured knowledge base, and this tool lets an agent survey it, then read just the sections it needs, keeping context small.
+That matters most for smaller and open-weights models, which can't absorb whole sites.
+And because the site is queried directly, nobody maintains a separate set of agent-facing skill files: the docs stay the single source of truth.
+
 ## Setup
 
 From a checkout of this repo, install the `myst-docs` command once:
@@ -19,6 +24,7 @@ Paste any section link copied from your browser, and get that section back as ma
 myst-docs get 'https://mystmd.org/guide/quickstart#install-the-myst-markdown-cli'
 ```
 
+Leave off the `#anchor` to print the whole page.
 You can also give the site root plus any MyST label, and myst-docs finds it wherever it lives on the site:
 
 ```bash
@@ -69,7 +75,9 @@ This is a hackweek project.
 Still to come:
 
 - An MCP server exposing the same operations
-- Agent skills (a `skills/` folder)
+
+There is a skill teaching LLM agents to use the CLI in [`skills/myst-docs/`](https://github.com/responsible-genai-hackweek/MySTifAI/blob/main/skills/myst-docs/SKILL.md).
+It stays small on purpose: it teaches the commands and points agents at this site to learn the rest with the tool itself.
 
 ## Project notes
 
