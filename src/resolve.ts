@@ -25,14 +25,27 @@ export class PageNotFoundError extends Error {
  */
 export async function findSiteRoot(url: URL): Promise<{ root: string; xref: any }> {
   const segments = url.pathname.split('/').filter(Boolean);
+  // Track whether any probe actually reached the server (got an HTTP
+  // response, even a 404) vs. every probe failing at the connection level
+  // (DNS, refused, etc.) — those are different failures: "not a MyST site"
+  // vs. "network error", and the CLI maps them to different exit codes.
+  let sawHttp = false;
+  let lastErr: unknown;
   for (let i = segments.length; i >= 0; i--) {
     const root = url.origin + (i ? '/' + segments.slice(0, i).join('/') : '');
     try {
       const xref = await fetchJson(`${root}/myst.xref.json`, HOUR_MS);
       if (Array.isArray(xref?.references)) return { root, xref };
-    } catch {} // keep walking up
+    } catch (e) {
+      // Node's fetch signals connection failures as TypeError; anything else
+      // (an HTTP error, or non-JSON like an SPA fallback page) means the
+      // server responded.
+      if (!(e instanceof TypeError)) sawHttp = true;
+      lastErr = e;
+    } // keep walking up
     // shortcut: failed probes aren't cached; revisit if deep paths feel slow.
   }
+  if (!sawHttp && lastErr) throw lastErr;
   throw new NotMystSiteError(
     `no myst.xref.json found at ${url.origin}${url.pathname} or any parent path — this may not be a MyST site`,
   );

@@ -20,8 +20,19 @@ describe('findSiteRoot', () => {
     const { root } = await findSiteRoot(new URL(`${guide.base}/interactive-notebooks`));
     expect(root).toBe(guide.base);
   });
-  it('throws NotMystSiteError when no xref exists', async () => {
-    await expect(findSiteRoot(new URL('http://127.0.0.1:1/nope'))).rejects.toThrow(
+  it('rejects when the host is unreachable', async () => {
+    // Connection-level failure (nothing listening on port 1): every probe
+    // fails before getting an HTTP response, so this is a network error,
+    // not "not a MyST site".
+    await expect(findSiteRoot(new URL('http://127.0.0.1:1/nope'))).rejects.toThrow();
+    await expect(findSiteRoot(new URL('http://127.0.0.1:1/nope'))).rejects.not.toBeInstanceOf(
+      NotMystSiteError,
+    );
+  });
+  it('throws NotMystSiteError when the host responds but has no xref', async () => {
+    // Probes outside /guide get real 404s from the mounted server, so this
+    // is genuinely "not a MyST site", not a network error.
+    await expect(findSiteRoot(new URL(`${mounted.base}/nope`))).rejects.toThrow(
       NotMystSiteError,
     );
   });

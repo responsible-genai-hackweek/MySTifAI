@@ -21,6 +21,7 @@
     "vitest": "^4.1.11"
   },
   "dependencies": {
+    "commander": "^14.0.3",
     "myst-spec-ext": "^1.10.0",
     "myst-to-md": "^1.0.16",
     "unified": "^11.0.5",

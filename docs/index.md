@@ -5,9 +5,47 @@ It reads the same JSON endpoints a MyST site already publishes (`myst.xref.json`
 
 ## What works today
 
-The core library fetches a MyST page's published JSON, cuts out one piece by its anchor, and renders it as markdown.
-A heading anchor gives you that whole section; an anchor on any other labeled thing (a figure, table, or equation) gives you just that item.
-From a checkout of this repo, save this as `example.mts` and run it with `npx tsx example.mts`:
+Run the CLI from a checkout of this repo with `npx tsx src/cli.ts`.
+
+Paste any section link copied from your browser, and get that section back as markdown:
+
+```bash
+npx tsx src/cli.ts get 'https://mystmd.org/guide/quickstart#install-the-myst-markdown-cli'
+```
+
+Or give just the site root plus a MyST label, and it's found anywhere on the site, even on a different page than the one you gave:
+
+```bash
+npx tsx src/cli.ts get 'https://mystmd.org/guide#sunset-figure'
+```
+
+See a site's pages, or a page's headings and their anchors:
+
+```bash
+npx tsx src/cli.ts outline https://mystmd.org/guide
+npx tsx src/cli.ts outline https://mystmd.org/guide /figures
+```
+
+List everything of one kind across a site, e.g. every figure with its identifier and `url#anchor`:
+
+```bash
+npx tsx src/cli.ts list figures https://mystmd.org/guide
+```
+
+Add `--format json` to `get` for the raw mdast instead of markdown.
+`cache` shows how much is cached, `cache clear` empties it.
+
+There is also a survey script that reports on the JSON endpoints a deployed site publishes:
+
+```bash
+npm run recon -- https://mystmd.org/guide
+```
+
+Everything is tested offline against fixtures captured from real MyST sites.
+
+### As a library
+
+The CLI is a thin wrapper over a small library. From a checkout of this repo, save this as `example.mts` and run it with `npx tsx example.mts`:
 
 ```typescript
 import { subsetByAnchor } from './src/mdast.js';
@@ -17,14 +55,6 @@ const page = await (await fetch('https://mystmd.org/guide/quickstart.json')).jso
 const section = subsetByAnchor(page.mdast, 'install-the-myst-markdown-cli');
 console.log(renderMd(section).markdown);
 ```
-
-There is also a survey script that reports on the JSON endpoints a deployed site publishes:
-
-```bash
-npm run recon -- https://mystmd.org/guide
-```
-
-Everything is tested offline against fixtures captured from real MyST sites.
 
 ## Roadmap
 
