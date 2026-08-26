@@ -1,0 +1,29 @@
+{
+  "name": "myst-docs",
+  "version": "0.0.1",
+  "description": "Section-level access to deployed MyST sites for humans and LLMs",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "myst-docs": "./dist/cli.js"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "recon": "tsx scripts/recon.ts",
+    "docs": "cd docs && myst build --html",
+    "docs:live": "cd docs && myst start"
+  },
+  "devDependencies": {
+    "@types/node": "^26.3.0",
+    "mystmd": "^1.10.1",
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.11"
+  },
+  "dependencies": {
+    "myst-spec-ext": "^1.10.0",
+    "myst-to-md": "^1.0.16",
+    "unified": "^11.0.5",
+    "vfile": "^6.0.3"
+  }
+}
