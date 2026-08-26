@@ -6,7 +6,7 @@ import { subsetByAnchor, flattenBlocks, type Root } from './mdast.js';
 import { renderMd } from './render.js';
 import { searchPages } from './search.js';
 
-const program = new Command().name('myst-docs');
+const program = new Command().name('docslice');
 
 // Exit codes per docs/develop.md: 0 ok, 1 no results, 2 not a MyST site, 3 network error.
 function fail(err: unknown): never {

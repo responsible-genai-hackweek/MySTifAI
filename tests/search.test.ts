@@ -12,7 +12,7 @@ afterAll(() => guide.close());
 // Run via tsx so no build step is needed; cache off so tests stay hermetic.
 function cli(...args: string[]) {
   return run('npx', ['tsx', 'src/cli.ts', ...args], {
-    env: { ...process.env, MYST_DOCS_CACHE: 'off' },
+    env: { ...process.env, DOCSLICE_CACHE: 'off' },
   });
 }
 
@@ -105,7 +105,7 @@ describe('searchPages', () => {
   });
 });
 
-describe('myst-docs search', () => {
+describe('docslice search', () => {
   it('prints tab-separated url#anchor and snippet for a matching query', async () => {
     const { stdout } = await cli('search', guide.base, 'altair');
     expect(stdout).toMatch(/\t/);

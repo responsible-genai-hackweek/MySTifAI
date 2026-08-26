@@ -15,20 +15,20 @@ export class HttpError extends Error {
 }
 
 /**
- * Where cached responses live. Reads MYST_DOCS_CACHE_DIR on every call
+ * Where cached responses live. Reads DOCSLICE_CACHE_DIR on every call
  * (rather than once at import time) so tests can point it at a temp
  * directory before calling fetchJson or cacheClear.
  */
 function cacheRoot(): string {
-  return process.env.MYST_DOCS_CACHE_DIR ?? join(homedir(), '.cache', 'myst-docs');
+  return process.env.DOCSLICE_CACHE_DIR ?? join(homedir(), '.cache', 'docslice');
 }
 
 /**
  * Fetch a JSON endpoint, serving from the file cache when younger than ttlMs.
- * Set MYST_DOCS_CACHE=off to bypass the cache entirely (used by tests).
+ * Set DOCSLICE_CACHE=off to bypass the cache entirely (used by tests).
  */
 export async function fetchJson(url: string, ttlMs = DAY_MS): Promise<any> {
-  const off = process.env.MYST_DOCS_CACHE === 'off';
+  const off = process.env.DOCSLICE_CACHE === 'off';
   // shortcut: flat per-URL cache files with mtime-based TTL; no ETag
   // revalidation. Add ETag support if stale-cache complaints ever show up.
   const file = join(
@@ -46,7 +46,7 @@ export async function fetchJson(url: string, ttlMs = DAY_MS): Promise<any> {
       }
     } catch {} // no cache entry, or unreadable/corrupt one: fall through to a fresh fetch
   }
-  const res = await fetch(url, { headers: { 'user-agent': 'myst-docs' } });
+  const res = await fetch(url, { headers: { 'user-agent': 'docslice' } });
   if (!res.ok) throw new HttpError(res.status, url);
   const data = await res.json();
   if (!off) {

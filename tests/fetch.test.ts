@@ -3,8 +3,8 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
 // Point the cache at a fresh temp dir before anything else runs, so
-// cacheClear()'s rmSync never touches the real ~/.cache/myst-docs.
-process.env.MYST_DOCS_CACHE_DIR = mkdtempSync(join(tmpdir(), 'myst-docs-test-'));
+// cacheClear()'s rmSync never touches the real ~/.cache/docslice.
+process.env.DOCSLICE_CACHE_DIR = mkdtempSync(join(tmpdir(), 'docslice-test-'));
 
 import { describe, it, expect, beforeEach, afterAll } from 'vitest';
 import { createServer } from 'node:http';
@@ -29,7 +29,7 @@ describe('fetchJson', () => {
   afterAll(() => new Promise((r) => server.close(() => r(null))));
   beforeEach(() => {
     hits = 0;
-    delete process.env.MYST_DOCS_CACHE;
+    delete process.env.DOCSLICE_CACHE;
     cacheClear();
   });
   it('fetches JSON and caches within the TTL', async () => {
@@ -37,8 +37,8 @@ describe('fetchJson', () => {
     expect(await fetchJson(`${base}/ok.json`)).toEqual({ hello: 'world' });
     expect(hits).toBe(1); // second call served from cache
   });
-  it('bypasses the cache when MYST_DOCS_CACHE=off', async () => {
-    process.env.MYST_DOCS_CACHE = 'off';
+  it('bypasses the cache when DOCSLICE_CACHE=off', async () => {
+    process.env.DOCSLICE_CACHE = 'off';
     await fetchJson(`${base}/ok.json`);
     await fetchJson(`${base}/ok.json`);
     expect(hits).toBe(2);

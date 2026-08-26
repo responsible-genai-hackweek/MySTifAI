@@ -17,7 +17,7 @@ afterAll(() => {
 // Run via tsx so no build step is needed; cache off so tests stay hermetic.
 function cli(...args: string[]) {
   return run('npx', ['tsx', 'src/cli.ts', ...args], {
-    env: { ...process.env, MYST_DOCS_CACHE: 'off' },
+    env: { ...process.env, DOCSLICE_CACHE: 'off' },
   });
 }
 
@@ -25,7 +25,7 @@ function cli(...args: string[]) {
 // CI runner.
 const TIMEOUT = 15_000;
 
-describe('myst-docs get', () => {
+describe('docslice get', () => {
   it('prints a section as markdown', async () => {
     const { stdout } = await cli('get', `${guide.base}/interactive-notebooks#static-images`);
     expect(stdout).toContain('### Static images');
@@ -51,7 +51,7 @@ describe('myst-docs get', () => {
   }, TIMEOUT);
 });
 
-describe('myst-docs outline', () => {
+describe('docslice outline', () => {
   it('lists pages for a site with titles', async () => {
     const { stdout } = await cli('outline', guide.base);
     expect(stdout).toMatch(/\/interactive-notebooks\tGenerate and Display Rich Outputs/);
@@ -62,7 +62,7 @@ describe('myst-docs outline', () => {
   }, TIMEOUT);
 });
 
-describe('myst-docs list', () => {
+describe('docslice list', () => {
   it('lists figures with identifier and url#anchor', async () => {
     const { stdout } = await cli('list', 'figures', guide.base);
     expect(stdout).toMatch(/^img:mpl\t.+#img-mpl/m);

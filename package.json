@@ -1,5 +1,5 @@
 {
-  "name": "myst-docs",
+  "name": "docslice",
   "version": "0.1.0",
   "description": "Section-level access to deployed MyST sites for humans and LLMs",
   "type": "module",
@@ -20,7 +20,7 @@
     "node": ">=18"
   },
   "bin": {
-    "myst-docs": "./dist/cli.js"
+    "docslice": "./dist/cli.js"
   },
   "files": [
     "dist"

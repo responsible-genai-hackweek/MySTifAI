@@ -1,4 +1,4 @@
-process.env.MYST_DOCS_CACHE = 'off';
+process.env.DOCSLICE_CACHE = 'off';
 
 import { describe, it, expect, afterAll } from 'vitest';
 import { resolvePage, findSiteRoot, NotMystSiteError } from '../src/resolve.js';

@@ -1,6 +1,6 @@
 version: 1
 project:
-  title: myst-docs
+  title: docslice
   toc:
     - file: index.md
     - title: Development

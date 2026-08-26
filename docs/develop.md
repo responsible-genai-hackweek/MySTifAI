@@ -1,4 +1,4 @@
-# Developing myst-docs
+# Developing docslice
 
 How to get set up, and the conventions for working on this codebase.
 
@@ -24,7 +24,7 @@ There's no build step here, so this always runs your latest changes:
 npx tsx src/cli.ts get 'https://mystmd.org/guide/quickstart#install-the-myst-markdown-cli'
 ```
 
-Build the installed `myst-docs` command (it runs `dist/`, so it lags behind your edits until you rebuild):
+Build the installed `docslice` command (it runs `dist/`, so it lags behind your edits until you rebuild):
 
 ```bash
 npm run build
