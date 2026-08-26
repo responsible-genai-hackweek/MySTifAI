@@ -38,6 +38,14 @@ List everything of one kind across a site, like every figure:
 myst-docs list figures https://mystmd.org/guide
 ```
 
+Search every page of a site for a phrase:
+
+```bash
+myst-docs search https://mystmd.org/guide "kernelspec"
+```
+
+The first search on a site fetches every page, so it's slower; later searches reuse the cache.
+
 Add `--format json` to `get` for the raw mdast instead of markdown, or `--depth 0` to trim a section down to just its own content, without subsections.
 A `warning:` line on stderr means myst-docs couldn't convert part of the content to markdown; [](./renderer-gaps.md) tracks these cases.
 Fetches are cached for a day under `~/.cache/myst-docs`; `myst-docs cache` shows what's stored, and `myst-docs cache clear` forces fresh fetches.
@@ -60,7 +68,6 @@ console.log(renderMd(section).markdown);
 This is a hackweek project.
 Still to come:
 
-- A `search` command, over `myst.search.json`
 - An MCP server exposing the same operations
 - Agent skills (a `skills/` folder)
 

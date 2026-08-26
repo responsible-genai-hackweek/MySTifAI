@@ -4,6 +4,7 @@ import { fetchJson, cacheStatus, cacheClear } from './fetch.js';
 import { findSiteRoot, resolvePage, NotMystSiteError, PageNotFoundError } from './resolve.js';
 import { subsetByAnchor, flattenBlocks, type Root } from './mdast.js';
 import { renderMd } from './render.js';
+import { searchPages } from './search.js';
 
 const program = new Command().name('myst-docs');
 
@@ -96,6 +97,48 @@ program
           const text = JSON.stringify(n).match(/"value":"([^"]*)"/)?.[1] ?? '';
           console.log(`${'  '.repeat((n.depth ?? 1) - 1)}${text} #${n.html_id ?? n.identifier}`);
         }
+      }
+    } catch (err) {
+      fail(err);
+    }
+  });
+
+// Fetch every page's JSON, a handful at a time so a large site doesn't open
+// dozens of connections at once. A page that fails to fetch (e.g. a stale
+// xref entry) is skipped rather than failing the whole search.
+async function fetchAllPages(root: string, xref: any): Promise<{ url: string; mdast: any }[]> {
+  const records = xref.references.filter((r: any) => r.kind === 'page');
+  const CONCURRENCY = 8;
+  const pages: { url: string; mdast: any }[] = [];
+  for (let i = 0; i < records.length; i += CONCURRENCY) {
+    const batch = records.slice(i, i + CONCURRENCY);
+    const fetched = await Promise.allSettled(
+      batch.map((r: any) => fetchJson(r.data.startsWith('http') ? r.data : root + r.data)),
+    );
+    fetched.forEach((res, j) => {
+      if (res.status === 'fulfilled') pages.push({ url: batch[j].url, mdast: res.value.mdast });
+    });
+  }
+  return pages;
+}
+
+program
+  .command('search <site> <query>')
+  .description('search all pages of a site for a phrase')
+  .action(async (site: string, query: string) => {
+    try {
+      const { root, xref } = await findSiteRoot(new URL(site));
+      const pages = await fetchAllPages(root, xref);
+      if (!pages.length && xref.references.some((r: any) => r.kind === 'page')) {
+        console.error('warning: no pages could be fetched');
+      }
+      const hits = searchPages(pages, query);
+      if (!hits.length) {
+        console.error(`no matches for "${query}"`);
+        process.exit(1);
+      }
+      for (const h of hits) {
+        console.log(`${h.url}${h.anchor ? '#' + h.anchor : ''}\t${h.snippet}`);
       }
     } catch (err) {
       fail(err);

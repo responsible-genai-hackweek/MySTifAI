@@ -10,3 +10,5 @@ See [](./recon-notes.md) for full detail behind each one.
 - `next.jupyterbook.org` was unreachable (connection timeout) during Phase 0 recon; `https://jupyterbook.org` was surveyed instead as the second required site.
 - The bare `mystmd.org` domain (no subpath) 404s on `myst.xref.json`: each documentation section (`/guide`, `/spec`, `/jtex`) is its own independent MyST site deployment.
 - `scripts/recon.ts` has been retired now that the CLI can inspect sites directly.
+- `myst.search.json` is deliberately unused by `search`: it only exists on static-export hosting, and deriving records from page JSONs gives identical behavior on every site.
+- `search` and `get` define sections differently on purpose: `search` treats every anchored heading as a flat boundary, while `get` follows heading depth so a section includes its subsections. A search hit points at the nearest anchor, and `get` on that anchor retrieves it with its subtree.
