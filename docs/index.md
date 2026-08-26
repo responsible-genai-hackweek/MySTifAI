@@ -32,14 +32,10 @@ List everything of one kind across a site, e.g. every figure with its identifier
 npx tsx src/cli.ts list figures https://mystmd.org/guide
 ```
 
-Add `--format json` to `get` for the raw mdast instead of markdown.
-`cache` shows how much is cached, `cache clear` empties it.
-
-There is also a survey script that reports on the JSON endpoints a deployed site publishes:
-
-```bash
-npm run recon -- https://mystmd.org/guide
-```
+Add `--format json` to `get` for the raw mdast instead of markdown, or `--depth 0` to trim a section down to just its own content, without subsections.
+A `warning:` line on stderr means part of the content couldn't be converted to markdown; [](./renderer-gaps.md) tracks these cases.
+Everything fetched is cached for a day under `~/.cache/myst-docs`, so repeat queries are fast.
+`cache` shows how much is stored, and `cache clear` empties it to force fresh fetches.
 
 Everything is tested offline against fixtures captured from real MyST sites.
 
@@ -61,9 +57,9 @@ console.log(renderMd(section).markdown);
 This is a hackweek project.
 Still to come:
 
-- CLI commands (`outline`, `get`, `search`, `list`) wrapping the library
+- A `search` command, over `myst.search.json`
 - An MCP server exposing the same operations
-- Agent skills (a `skills/` folder), once the CLI exists
+- Agent skills (a `skills/` folder)
 
 ## Project notes
 

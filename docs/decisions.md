@@ -9,3 +9,4 @@ See [](./recon-notes.md) for full detail behind each one.
 - `myst.search.json` records are Algolia DocSearch-style (`hierarchy`, `type`, `url`, `position`, and `content` on content-type rows), richer than the bare page/heading pointer shape assumed in the design spec.
 - `next.jupyterbook.org` was unreachable (connection timeout) during Phase 0 recon; `https://jupyterbook.org` was surveyed instead as the second required site.
 - The bare `mystmd.org` domain (no subpath) 404s on `myst.xref.json`: each documentation section (`/guide`, `/spec`, `/jtex`) is its own independent MyST site deployment.
+- `scripts/recon.ts` has been retired now that the CLI can inspect sites directly.

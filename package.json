@@ -9,7 +9,6 @@
   },
   "scripts": {
     "test": "vitest run",
-    "recon": "tsx scripts/recon.ts",
     "docs": "cd docs && myst build --html",
     "docs:live": "cd docs && myst start"
   },

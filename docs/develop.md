@@ -18,11 +18,12 @@ Treat derivation as a fallback only.
 
 **Route all network fetches through `src/fetch.ts`.**
 One caching layer means one place to reason about retries, caching, and offline tests.
-No bare `fetch()` elsewhere (`scripts/recon.ts` predates this rule and is the one exception).
+No bare `fetch()` elsewhere.
 
 **Tests run offline, against `tests/fixtures/`.**
 `npm test` must pass with no network access.
 This keeps CI fast and deterministic, and keeps the fixtures themselves as a record of what real sites actually return.
+Refresh fixtures by curling a site's `myst.xref.json` and page `data` URLs into `tests/fixtures/<site>/`, named `myst.xref.json` and `page<url-with-slashes-as-dots>.json`.
 
 **stdout is the payload, stderr is diagnostics.**
 So the CLI composes cleanly in a pipeline. Exit codes:
@@ -45,6 +46,5 @@ This keeps gaps visible and fixable upstream instead of silently diverging.
 
 - Tests: `npm test`
 - Typecheck: `npx tsc --noEmit`
-- Recon (survey a live MyST site): `npm run recon -- <site-url>`
 - Docs, built once: `bun run docs` (or `npm run docs`)
 - Docs, live-reloading: `bun run docs:live` (or `npm run docs:live`)
