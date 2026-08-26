@@ -1,0 +1,5 @@
+version: 1
+project:
+  title: myst-docs
+site:
+  template: book-theme

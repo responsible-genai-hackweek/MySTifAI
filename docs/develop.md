@@ -1,0 +1,50 @@
+# Developing myst-docs
+
+Conventions for working on this codebase, and the why behind each one.
+
+## Design conventions
+
+**Consume published JSON, never reparse markdown source.**
+A deployed MyST site already serves parsed AST (page `.json`, `myst.xref.json`, `myst.search.json`).
+Reparsing markdown would duplicate work the site has already done, and risks drifting from what it actually rendered.
+
+**Prefer reusing mystmd/myst-theme packages over reimplementing.**
+`myst-to-md`, `@myst-theme/search`, `@myst-theme/search-minisearch`, and `myst-spec-ext` types cover most of what this project needs.
+Local checkouts for API reference: `~/github/jupyter/book/mystmd` and `~/github/jupyter/book/myst-theme`.
+
+**Resolve page-JSON URLs via the `data` field in `myst.xref.json`.**
+Deriving a URL from the page path (slashes to dots) looks right most of the time, but breaks for folder-index pages; see the derivation-rule section in [](./recon-notes.md).
+Treat derivation as a fallback only.
+
+**Route all network fetches through `src/fetch.ts`.**
+One caching layer means one place to reason about retries, caching, and offline tests.
+No bare `fetch()` elsewhere (`scripts/recon.ts` predates this rule and is the one exception).
+
+**Tests run offline, against `tests/fixtures/`.**
+`npm test` must pass with no network access.
+This keeps CI fast and deterministic, and keeps the fixtures themselves as a record of what real sites actually return.
+
+**stdout is the payload, stderr is diagnostics.**
+So the CLI composes cleanly in a pipeline. Exit codes:
+
+| Code | Meaning |
+| --- | --- |
+| 0 | ok |
+| 1 | no results |
+| 2 | not a MyST site |
+| 3 | network error |
+
+**Markdown out by default; `--format json` is the escape hatch.**
+Markdown is what both terminals and LLMs read most naturally; JSON stays available for callers that need structure.
+
+**Renderer gaps get documented, not patched inline.**
+When `myst-to-md` can't handle a node shape, add it to [](./renderer-gaps.md) with a graceful fallback rather than patching `myst-to-md` behavior locally.
+This keeps gaps visible and fixable upstream instead of silently diverging.
+
+## Running things
+
+- Tests: `npm test`
+- Typecheck: `npx tsc --noEmit`
+- Recon (survey a live MyST site): `npm run recon -- <site-url>`
+- Docs, built once: `bun run docs` (or `npm run docs`)
+- Docs, live-reloading: `bun run docs:live` (or `npm run docs:live`)
