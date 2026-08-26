@@ -1,6 +1,41 @@
 # Developing myst-docs
 
-Conventions for working on this codebase, and the why behind each one.
+How to get set up, and the conventions for working on this codebase.
+
+## Running things
+
+First-time setup, from a checkout:
+
+```bash
+npm install
+```
+
+Run the tests and the typecheck:
+
+```bash
+npm test
+npx tsc --noEmit
+```
+
+Try the CLI straight from your working tree.
+There's no build step here, so this always runs your latest changes:
+
+```bash
+npx tsx src/cli.ts get 'https://mystmd.org/guide/quickstart#install-the-myst-markdown-cli'
+```
+
+Build the installed `myst-docs` command (it runs `dist/`, so it lags behind your edits until you rebuild):
+
+```bash
+npm run build
+```
+
+Work on the docs site:
+
+```bash
+npm run docs:live   # live-reloading preview
+npm run docs        # one-shot build
+```
 
 ## Design conventions
 
@@ -41,10 +76,3 @@ Markdown is what both terminals and LLMs read most naturally; JSON stays availab
 **Renderer gaps get documented, not patched inline.**
 When `myst-to-md` can't handle a node shape, add it to [](./renderer-gaps.md) with a graceful fallback rather than patching `myst-to-md` behavior locally.
 This keeps gaps visible and fixable upstream instead of silently diverging.
-
-## Running things
-
-- Tests: `npm test`
-- Typecheck: `npx tsc --noEmit`
-- Docs, built once: `bun run docs` (or `npm run docs`)
-- Docs, live-reloading: `bun run docs:live` (or `npm run docs:live`)

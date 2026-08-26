@@ -1,43 +1,46 @@
 # myst-docs
 
 myst-docs gives terminals and LLM agents section-level access to any deployed MyST site, without the site changing anything.
-It reads the same JSON endpoints a MyST site already publishes (`myst.xref.json`, per-page `.json`, `myst.search.json`) and lets you go from a site's outline, to a search over it, to the exact section you need, as markdown, rather than fetching and parsing whole pages.
+It reads the JSON endpoints every MyST site already publishes, so you can pull out one section as markdown instead of fetching and parsing whole pages.
 
-## What works today
+## Setup
 
-Run the CLI from a checkout of this repo with `npx tsx src/cli.ts`.
+From a checkout of this repo, install the `myst-docs` command once:
+
+```bash
+npm install && npm run build && npm link
+```
+
+## Using it
 
 Paste any section link copied from your browser, and get that section back as markdown:
 
 ```bash
-npx tsx src/cli.ts get 'https://mystmd.org/guide/quickstart#install-the-myst-markdown-cli'
+myst-docs get 'https://mystmd.org/guide/quickstart#install-the-myst-markdown-cli'
 ```
 
-Or give just the site root plus a MyST label, and it's found anywhere on the site, even on a different page than the one you gave:
+You can also give the site root plus any MyST label, and myst-docs finds it wherever it lives on the site:
 
 ```bash
-npx tsx src/cli.ts get 'https://mystmd.org/guide#sunset-figure'
+myst-docs get 'https://mystmd.org/guide#sunset-figure'
 ```
 
-See a site's pages, or a page's headings and their anchors:
+See a site's pages, or one page's headings and their anchors:
 
 ```bash
-npx tsx src/cli.ts outline https://mystmd.org/guide
-npx tsx src/cli.ts outline https://mystmd.org/guide /figures
+myst-docs outline https://mystmd.org/guide
+myst-docs outline https://mystmd.org/guide /figures
 ```
 
-List everything of one kind across a site, e.g. every figure with its identifier and `url#anchor`:
+List everything of one kind across a site, like every figure:
 
 ```bash
-npx tsx src/cli.ts list figures https://mystmd.org/guide
+myst-docs list figures https://mystmd.org/guide
 ```
 
 Add `--format json` to `get` for the raw mdast instead of markdown, or `--depth 0` to trim a section down to just its own content, without subsections.
-A `warning:` line on stderr means part of the content couldn't be converted to markdown; [](./renderer-gaps.md) tracks these cases.
-Everything fetched is cached for a day under `~/.cache/myst-docs`, so repeat queries are fast.
-`cache` shows how much is stored, and `cache clear` empties it to force fresh fetches.
-
-Everything is tested offline against fixtures captured from real MyST sites.
+A `warning:` line on stderr means myst-docs couldn't convert part of the content to markdown; [](./renderer-gaps.md) tracks these cases.
+Fetches are cached for a day under `~/.cache/myst-docs`; `myst-docs cache` shows what's stored, and `myst-docs cache clear` forces fresh fetches.
 
 ### As a library
 

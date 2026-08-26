@@ -7,7 +7,12 @@
   "bin": {
     "myst-docs": "./dist/cli.js"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepublishOnly": "npm run build",
     "test": "vitest run",
     "docs": "cd docs && myst build --html",
     "docs:live": "cd docs && myst start"

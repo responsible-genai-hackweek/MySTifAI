@@ -1,13 +1,14 @@
 # myst-docs
 
 Section-level access to any deployed MyST site, for terminals and LLM agents.
-Point it at a site URL and get back the exact section you need, as markdown, using the JSON endpoints every MyST site already publishes.
+Point it at a page URL and it prints just that section, as markdown.
+It works from the JSON endpoints every MyST site already publishes, so sites don't need to change anything.
 
 ```bash
-npx tsx src/cli.ts get 'https://mystmd.org/guide/quickstart#install-the-myst-markdown-cli'
+myst-docs get 'https://mystmd.org/guide/quickstart#install-the-myst-markdown-cli'
 ```
 
 This is a hackweek project.
-The documentation lives in [`docs/`](docs/index.md) and is itself a MyST site: run `bun run docs:live` (or `npm run docs:live`) to browse it locally.
+Setup and usage are in [`docs/`](docs/index.md), which is itself a MyST site: browse it locally with `npm run docs:live`.
 
 Contributor conventions and commands are in [`docs/develop.md`](docs/develop.md).
