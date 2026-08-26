@@ -8,7 +8,7 @@ process.env.DOCSLICE_CACHE_DIR = mkdtempSync(join(tmpdir(), 'docslice-test-'));
 
 import { describe, it, expect, beforeEach, afterAll } from 'vitest';
 import { createServer } from 'node:http';
-import { fetchJson, cacheClear, HttpError } from '../src/fetch.js';
+import { fetchJson, cacheClear, HttpError, NetworkError } from '../src/fetch.js';
 
 let hits = 0;
 const server = createServer((req, res) => {
@@ -51,5 +51,10 @@ describe('fetchJson', () => {
   it('throws HttpError with the status on non-2xx', async () => {
     await expect(fetchJson(`${base}/missing.json`)).rejects.toThrow(HttpError);
     await expect(fetchJson(`${base}/missing.json`)).rejects.toMatchObject({ status: 404 });
+  });
+  it('throws NetworkError when the connection fails', async () => {
+    // Nothing listens on port 1; callers rely on this class (not the
+    // runtime's TypeError) to tell network failures from HTTP errors.
+    await expect(fetchJson('http://127.0.0.1:1/x.json')).rejects.toBeInstanceOf(NetworkError);
   });
 });

@@ -9,8 +9,15 @@
  * strict types would force casts at every use. Revisit if we ever need
  * spec-typed traversal.
  */
-type Node = { type: string; depth?: number; identifier?: string; html_id?: string; children?: Node[] };
+type Node = { type: string; depth?: number; identifier?: string; html_id?: string; value?: string; children?: Node[] };
 export type Root = { type: 'root'; children: Node[] };
+
+export class AnchorNotFoundError extends Error {
+  constructor(anchor: string) {
+    super(`anchor not found: #${anchor}`);
+    this.name = 'AnchorNotFoundError';
+  }
+}
 
 /**
  * Unwrap one level of `block` nodes so headings become top-level siblings.
@@ -20,6 +27,17 @@ export type Root = { type: 'root'; children: Node[] };
  */
 export function flattenBlocks(root: Root): Node[] {
   return root.children.flatMap((c) => (c.type === 'block' && c.children ? c.children : [c]));
+}
+
+/** All text values under a node, depth-first, whitespace-collapsed. */
+export function textOf(node: Node): string {
+  const acc: string[] = [];
+  const collect = (n: Node) => {
+    if (typeof n.value === 'string') acc.push(n.value);
+    for (const c of n.children ?? []) collect(c);
+  };
+  collect(node);
+  return acc.join(' ').replace(/\s+/g, ' ').trim();
 }
 
 function matches(n: Node, anchor: string): boolean {
@@ -61,7 +79,7 @@ export function subsetByAnchor(root: Root, anchor?: string, opts: { depth?: numb
     // equation, ...) to just that node.
     const node = findByAnchor({ type: 'root', children: nodes }, anchor);
     if (node) return { type: 'root', children: [node] };
-    throw new Error(`anchor not found: #${anchor}`);
+    throw new AnchorNotFoundError(anchor);
   }
   const level = nodes[start].depth ?? 1;
   let end = nodes.length;

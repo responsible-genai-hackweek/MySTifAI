@@ -1,46 +1,20 @@
 #!/usr/bin/env node
 import { Command } from 'commander';
-import { fetchJson, cacheStatus, cacheClear } from './fetch.js';
-import { findSiteRoot, resolvePage, NotMystSiteError, PageNotFoundError } from './resolve.js';
-import { subsetByAnchor, flattenBlocks, type Root } from './mdast.js';
+import { cacheStatus, cacheClear } from './fetch.js';
+import { openSite, NotMystSiteError, PageNotFoundError } from './site.js';
+import { AnchorNotFoundError } from './mdast.js';
 import { renderMd } from './render.js';
-import { searchPages } from './search.js';
+import { getSection, outlineSite, outlinePage, searchSite } from './commands.js';
 
 const program = new Command().name('docslice');
 
 // Exit codes per docs/develop.md: 0 ok, 1 no results, 2 not a MyST site, 3 network error.
 function fail(err: unknown): never {
-  const msg = err instanceof Error ? err.message : String(err);
-  console.error(msg);
+  console.error(err instanceof Error ? err.message : String(err));
   if (err instanceof NotMystSiteError) process.exit(2);
-  if (err instanceof PageNotFoundError) process.exit(1);
-  if (/anchor not found/.test(msg)) process.exit(1);
-  // everything else (HttpError, fetch TypeError, bugs): 3
+  if (err instanceof PageNotFoundError || err instanceof AnchorNotFoundError) process.exit(1);
+  // everything else (HttpError, NetworkError, bugs): 3
   process.exit(3);
-}
-
-/**
- * Resolve a URL's anchor to a subtree, falling back to a site-wide label
- * lookup when the anchor isn't on the pasted page itself. MyST labels are
- * site-global — myst.xref.json maps identifier -> page — so `get
- * <site-root>#<label>` should work like MyST's own xref resolution, not
- * just anchors that happen to live on the given page.
- */
-async function resolveSection(url: string, depth?: number): Promise<Root> {
-  const { root, xref, page, anchor } = await resolvePage(url);
-  try {
-    return subsetByAnchor(page.mdast, anchor, { depth });
-  } catch (err) {
-    if (!anchor || !/anchor not found/.test((err as Error).message)) throw err;
-    const rec = xref.references.find((r: any) => r.identifier === anchor || r.html_id === anchor);
-    if (!rec) throw err; // no site-wide match either: rethrow the original error
-    const otherPage = await fetchJson(rec.data.startsWith('http') ? rec.data : root + rec.data);
-    try {
-      return subsetByAnchor(otherPage.mdast, anchor, { depth });
-    } catch {
-      throw err; // that page doesn't have it either: rethrow the original error
-    }
-  }
 }
 
 program
@@ -58,7 +32,7 @@ program
   .option('--format <fmt>', 'md | json', 'md')
   .action(async (url: string, opts: { depth?: number; format: string }) => {
     try {
-      const subtree = await resolveSection(url, opts.depth);
+      const subtree = await getSection(url, opts.depth);
       if (opts.format === 'json') {
         console.log(JSON.stringify(subtree, null, 1));
       } else {
@@ -74,83 +48,28 @@ program
 program
   .command('outline <site> [page]')
   .description("list a site's pages, or a page's headings with anchors")
-  .action(async (site: string, pagePath?: string) => {
+  .action(async (site: string, pageRef?: string) => {
     try {
-      if (!pagePath) {
-        const { root, xref } = await findSiteRoot(new URL(site));
-        const pages = await fetchAllPages(root, xref);
-        const titles = new Map(pages.map((p) => [p.url, p.title]));
-        // Absolute URLs so output feeds straight into `get`. Pages that
-        // failed to fetch (e.g. a stale xref entry) still get a line, just
-        // with an empty title, rather than being silently dropped.
-        for (const r of xref.references.filter((r: any) => r.kind === 'page')) {
-          console.log(`${root + r.url}\t${titles.get(r.url) ?? ''}`);
-        }
+      if (!pageRef) {
+        for (const row of await outlineSite(site)) console.log(`${row.url}\t${row.title}`);
         return;
       }
-      // Plain concatenation, not `new URL(pagePath, site)`: pagePath is an
-      // absolute path (from myst.xref.json), and URL resolution would drop
-      // any subpath a site is deployed under (e.g. site.com/guide).
-      // A full URL as the page argument also works (agents paste those).
-      const p = pagePath.startsWith('/') ? pagePath : '/' + pagePath;
-      const target = /^https?:\/\//.test(pagePath) ? pagePath : site.replace(/\/$/, '') + p;
-      const { page } = await resolvePage(target);
-      let found = 0;
-      for (const n of flattenBlocks(page.mdast)) {
-        if (n.type === 'heading' && (n.html_id || n.identifier)) {
-          // shortcut: crude first-text-value grab instead of a proper text
-          // collector; replace if it garbles a real heading (e.g. inline math).
-          const text = JSON.stringify(n).match(/"value":"([^"]*)"/)?.[1] ?? '';
-          console.log(`${'  '.repeat((n.depth ?? 1) - 1)}${text} #${n.html_id ?? n.identifier}`);
-          found++;
-        }
-      }
+      const headings = await outlinePage(site, pageRef);
+      for (const h of headings) console.log(`${'  '.repeat(h.depth - 1)}${h.text} #${h.anchor}`);
       // An empty outline looks identical to a failed call otherwise.
-      if (!found) console.error(`no anchored headings on ${p}; try \`get\` for the whole page`);
+      if (!headings.length) console.error(`no anchored headings on ${pageRef}; try \`get\` for the whole page`);
     } catch (err) {
       fail(err);
     }
   });
-
-// Fetch every page's JSON, a handful at a time so a large site doesn't open
-// dozens of connections at once. A page that fails to fetch (e.g. a stale
-// xref entry) is skipped rather than failing the whole search.
-async function fetchAllPages(
-  root: string,
-  xref: any,
-): Promise<{ url: string; mdast: any; title: string }[]> {
-  const records = xref.references.filter((r: any) => r.kind === 'page');
-  const CONCURRENCY = 8;
-  const pages: { url: string; mdast: any; title: string }[] = [];
-  for (let i = 0; i < records.length; i += CONCURRENCY) {
-    const batch = records.slice(i, i + CONCURRENCY);
-    const fetched = await Promise.allSettled(
-      batch.map((r: any) => fetchJson(r.data.startsWith('http') ? r.data : root + r.data)),
-    );
-    fetched.forEach((res, j) => {
-      if (res.status === 'fulfilled') {
-        pages.push({
-          url: batch[j].url,
-          mdast: res.value.mdast,
-          title: res.value.frontmatter?.title ?? '',
-        });
-      }
-    });
-  }
-  return pages;
-}
 
 program
   .command('search <site> <query>')
   .description('search all pages of a site for a phrase')
   .action(async (site: string, query: string) => {
     try {
-      const { root, xref } = await findSiteRoot(new URL(site));
-      const pages = await fetchAllPages(root, xref);
-      if (!pages.length && xref.references.some((r: any) => r.kind === 'page')) {
-        console.error('warning: no pages could be fetched');
-      }
-      const hits = await searchPages(pages, query);
+      const { hits, fetchedNone } = await searchSite(site, query);
+      if (fetchedNone) console.error('warning: no pages could be fetched');
       if (!hits.length) {
         console.error(`no matches for "${query}"`);
         process.exit(1);
@@ -159,10 +78,7 @@ program
       if (hits.length > SHOWN) {
         console.error(`showing ${SHOWN} of ${hits.length} matches; refine the query to narrow`);
       }
-      // Absolute URLs so output feeds straight into `get`.
-      for (const h of hits.slice(0, SHOWN)) {
-        console.log(`${root}${h.url}${h.anchor ? '#' + h.anchor : ''}\t${h.snippet}`);
-      }
+      for (const h of hits.slice(0, SHOWN)) console.log(`${h.url}\t${h.snippet}`);
     } catch (err) {
       fail(err);
     }
@@ -171,22 +87,17 @@ program
 program
   .command('list <kind> <site>')
   .description('list figures | tables | headings | pages from the site index')
-  .action(async (kind: string, site: string) => {
+  .action(async (kind: string, siteUrl: string) => {
     try {
-      const { root, xref } = await findSiteRoot(new URL(site));
-      const singular = kind.replace(/s$/, '');
-      const rows = xref.references.filter((r: any) => r.kind === singular);
+      const site = await openSite(siteUrl);
+      // shortcut: identifier<TAB>url#anchor output, no captions — those would
+      // require fetching every page; defer until someone needs them.
+      const rows = site.labels(kind.replace(/s$/, ''));
       if (!rows.length) {
         console.error(`no ${kind} in site index`);
         process.exit(1);
       }
-      // shortcut: identifier<TAB>url#anchor output, no captions — those would
-      // require fetching every page; defer until someone needs them.
-      // Absolute URLs so output feeds straight into `get`.
-      for (const r of rows) {
-        const anchor = r.html_id ?? r.identifier;
-        console.log(`${r.identifier ?? '(no id)'}\t${root}${r.url}${anchor ? '#' + anchor : ''}`);
-      }
+      for (const r of rows) console.log(`${r.identifier ?? '(no id)'}\t${r.url}`);
     } catch (err) {
       fail(err);
     }

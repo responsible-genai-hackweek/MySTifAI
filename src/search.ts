@@ -3,7 +3,7 @@
  * stack so CLI results match what the site's search UI would show.
  */
 
-import { flattenBlocks } from './mdast.js';
+import { flattenBlocks, textOf } from './mdast.js';
 import type { SearchRecord, RankedSearchResult, HeadingLevel } from '@myst-theme/search';
 import { SEARCH_ATTRIBUTES_ORDERED, rankResults } from '@myst-theme/search';
 import { createSearch } from '@myst-theme/search-minisearch';
@@ -40,19 +40,8 @@ function stripStopwords(query: string): string {
   return kept.length ? kept.join(' ') : query; // an all-stopword query searches unchanged
 }
 
-function collectText(node: any, acc: string[]): void {
-  if (typeof node.value === 'string') acc.push(node.value);
-  for (const c of node.children ?? []) collectText(c, acc);
-}
-
 function collapse(s: string): string {
   return s.replace(/\s+/g, ' ').trim();
-}
-
-function textOf(node: any): string {
-  const acc: string[] = [];
-  collectText(node, acc);
-  return collapse(acc.join(' '));
 }
 
 function headingLevel(depth: number | undefined): HeadingLevel {
@@ -70,13 +59,14 @@ function headingLevel(depth: number | undefined): HeadingLevel {
  * heading is the page's own section. Each section yields a heading record
  * (matched via `hierarchy`) and a content record (matched via `content`).
  *
- * A page's mdast carries no frontmatter title, so `hierarchy.lvl1` falls
- * back to the page's first heading, or its url if it has none.
+ * `hierarchy.lvl1` is the page's frontmatter title when the caller has one
+ * (a page's mdast doesn't carry it), falling back to the page's first
+ * heading, or its url if it has neither.
  */
-function buildRecords(url: string, mdast: any): SearchRecord[] {
+function buildRecords(url: string, mdast: any, title?: string): SearchRecord[] {
   const nodes = flattenBlocks(mdast);
   const firstHeading = nodes.find((n: any) => n.type === 'heading');
-  const pageTitle = (firstHeading && textOf(firstHeading)) || url;
+  const pageTitle = title || (firstHeading && textOf(firstHeading)) || url;
 
   // path[d - 1] holds the current ancestor heading text at depth d.
   const path: (string | undefined)[] = [pageTitle, undefined, undefined, undefined, undefined, undefined];
@@ -107,7 +97,7 @@ function buildRecords(url: string, mdast: any): SearchRecord[] {
     }
     // shortcut: an anchor-less heading doesn't start a section, but its text
     // still counts as content of whichever section it falls in.
-    collectText(n, acc);
+    acc.push(textOf(n));
   }
   flush();
   return records;
@@ -147,10 +137,10 @@ function snippetAround(text: string, terms: string[]): string {
  * above body content, exact/positional matches rank above fuzzy ones.
  */
 export async function searchPages(
-  pages: { url: string; mdast: any }[],
+  pages: { url: string; title?: string; mdast: any }[],
   query: string,
 ): Promise<{ url: string; anchor?: string; snippet: string }[]> {
-  const records = pages.flatMap((p) => buildRecords(p.url, p.mdast));
+  const records = pages.flatMap((p) => buildRecords(p.url, p.mdast, p.title));
   const search = createSearch(records, SEARCH_OPTIONS);
   const results = await search(stripStopwords(query));
   if (!results) return [];
