@@ -26,7 +26,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      # The docs execute their CLI examples at build time; that needs the
+      # Jupyter bash kernel and a docslice command on PATH.
+      - run: |
+          pip install jupyter-server bash_kernel
+          python -m bash_kernel.install
       - run: npm ci
+      - run: npm run build && npm install -g .
       - run: npm run docs
       - uses: actions/upload-pages-artifact@v3
         with:

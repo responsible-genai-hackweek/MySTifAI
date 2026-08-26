@@ -1,3 +1,9 @@
+---
+kernelspec:
+  name: bash
+  display_name: Bash
+---
+
 # docslice
 
 docslice gives terminals and LLM agents section-level access to any deployed MyST site, without the site changing anything.
@@ -23,33 +29,36 @@ Working from a checkout of this repo instead is covered in [](./develop.md).
 
 Paste any section link copied from your browser, and get that section back as markdown:
 
-```bash
+```{code-cell} bash
 docslice get 'https://mystmd.org/guide/quickstart#install-the-myst-markdown-cli'
 ```
 
 Leave off the `#anchor` to print the whole page.
 You can also give the site root plus any MyST label, and docslice finds it wherever it lives on the site:
 
-```bash
+```{code-cell} bash
 docslice get 'https://mystmd.org/guide#sunset-figure'
 ```
 
 See a site's pages, or one page's headings and their anchors:
 
-```bash
-docslice outline https://mystmd.org/guide
+```{code-cell} bash
+docslice outline https://mystmd.org/guide | head
+```
+
+```{code-cell} bash
 docslice outline https://mystmd.org/guide /figures
 ```
 
 List everything of one kind across a site, like every figure:
 
-```bash
-docslice list figures https://mystmd.org/guide
+```{code-cell} bash
+docslice list figures https://mystmd.org/guide | head
 ```
 
 Search every page of a site for a phrase:
 
-```bash
+```{code-cell} bash
 docslice search https://mystmd.org/guide "kernelspec"
 ```
 

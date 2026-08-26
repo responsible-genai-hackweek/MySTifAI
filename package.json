@@ -33,8 +33,8 @@
     "build": "tsc -p tsconfig.build.json",
     "prepublishOnly": "npm run build",
     "test": "vitest run",
-    "docs": "cd docs && myst build --html",
-    "docs:live": "cd docs && myst start"
+    "docs": "cd docs && myst build --html --execute",
+    "docs:live": "cd docs && myst start --execute"
   },
   "devDependencies": {
     "@types/node": "^26.3.0",

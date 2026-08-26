@@ -37,6 +37,14 @@ npm run docs:live   # live-reloading preview
 npm run docs        # one-shot build
 ```
 
+The docs run their CLI examples at build time (the `--execute` flag), which needs the Jupyter bash kernel and a `docslice` command on your PATH:
+
+```bash
+pip install jupyter-server bash_kernel
+python -m bash_kernel.install
+npm install -g .
+```
+
 ## Design conventions
 
 **Consume published JSON, never reparse markdown source.**
