@@ -8,6 +8,10 @@
     "type": "git",
     "url": "git+https://github.com/responsible-genai-hackweek/MySTifAI.git"
   },
+  "homepage": "https://responsible-genai-hackweek.github.io/MySTifAI/",
+  "bugs": {
+    "url": "https://github.com/responsible-genai-hackweek/MySTifAI/issues"
+  },
   "keywords": [
     "myst",
     "jupyter-book",

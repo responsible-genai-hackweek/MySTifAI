@@ -60,6 +60,10 @@ describe('docslice outline', () => {
     const { stdout } = await cli('outline', guide.base, '/interactive-notebooks');
     expect(stdout).toContain('#static-images');
   }, TIMEOUT);
+  it('accepts a full URL as the page argument', async () => {
+    const { stdout } = await cli('outline', guide.base, `${guide.base}/interactive-notebooks`);
+    expect(stdout).toContain('#static-images');
+  }, TIMEOUT);
 });
 
 describe('docslice list', () => {

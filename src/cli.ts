@@ -91,8 +91,10 @@ program
       // Plain concatenation, not `new URL(pagePath, site)`: pagePath is an
       // absolute path (from myst.xref.json), and URL resolution would drop
       // any subpath a site is deployed under (e.g. site.com/guide).
+      // A full URL as the page argument also works (agents paste those).
       const p = pagePath.startsWith('/') ? pagePath : '/' + pagePath;
-      const { page } = await resolvePage(site.replace(/\/$/, '') + p);
+      const target = /^https?:\/\//.test(pagePath) ? pagePath : site.replace(/\/$/, '') + p;
+      const { page } = await resolvePage(target);
       let found = 0;
       for (const n of flattenBlocks(page.mdast)) {
         if (n.type === 'heading' && (n.html_id || n.identifier)) {

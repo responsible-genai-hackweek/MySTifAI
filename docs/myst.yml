@@ -3,6 +3,7 @@ project:
   title: docslice
   toc:
     - file: index.md
+    - file: evaluation.md
     - title: Development
       children:
         - file: develop.md

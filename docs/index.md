@@ -10,7 +10,7 @@ And because the site is queried directly, nobody maintains a separate set of age
 
 ## Setup
 
-Install the `docslice` command from npm:
+Install the `docslice` command from [npm](https://www.npmjs.com/package/docslice):
 
 ```bash
 npm install -g docslice
