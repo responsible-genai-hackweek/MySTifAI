@@ -1,5 +1,13 @@
 version: 1
 project:
   title: myst-docs
+  toc:
+    - file: index.md
+    - title: Development
+      children:
+        - file: develop.md
+        - file: decisions.md
+        - file: recon-notes.md
+        - file: renderer-gaps.md
 site:
   template: book-theme

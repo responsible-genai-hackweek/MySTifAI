@@ -10,11 +10,14 @@ And because the site is queried directly, nobody maintains a separate set of age
 
 ## Setup
 
-From a checkout of this repo, install the `myst-docs` command once:
+Install the `myst-docs` command from npm:
 
 ```bash
-npm install && npm run build && npm link
+npm install -g myst-docs
 ```
+
+Or run it without installing, as `npx myst-docs <command>`.
+Working from a checkout of this repo instead is covered in [](./develop.md).
 
 ## Using it
 
@@ -79,12 +82,7 @@ Still to come:
 There is a skill teaching LLM agents to use the CLI in [`skills/myst-docs/`](https://github.com/responsible-genai-hackweek/MySTifAI/blob/main/skills/myst-docs/SKILL.md).
 It stays small on purpose: it teaches the commands and points agents at this site to learn the rest with the tool itself.
 
-## Project notes
+## Contributing
 
-The pages below record what we learned while building: recon findings, design decisions, and known renderer gaps.
-
-- [](./recon-notes.md)
-- [](./decisions.md)
-- [](./renderer-gaps.md)
-
-See [](./develop.md) for contributor conventions.
+[](./develop.md) has setup and the conventions for working on the code.
+The other pages under Development record the why behind them: design decisions, the survey of real MyST sites, and known renderer gaps.

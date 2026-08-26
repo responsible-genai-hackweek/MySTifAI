@@ -9,7 +9,7 @@ description: Read any deployed MyST documentation site from the command line, on
 Use it for progressive disclosure: survey a site cheaply, then read only the sections you actually need, already converted to markdown.
 Never fetch and parse whole pages of a MyST site when this tool is available.
 
-If `myst-docs` isn't on your PATH, run it from a checkout of this repo as `npx tsx src/cli.ts`.
+If `myst-docs` isn't on your PATH, run it as `npx myst-docs`, or from a checkout of this repo as `npx tsx src/cli.ts`.
 
 ## The loop
 

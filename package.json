@@ -1,9 +1,24 @@
 {
   "name": "myst-docs",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Section-level access to deployed MyST sites for humans and LLMs",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/responsible-genai-hackweek/MySTifAI.git"
+  },
+  "keywords": [
+    "myst",
+    "jupyter-book",
+    "documentation",
+    "cli",
+    "llm",
+    "agents"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
   "bin": {
     "myst-docs": "./dist/cli.js"
   },

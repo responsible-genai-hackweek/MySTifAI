@@ -6,6 +6,7 @@ It works from the JSON endpoints every MyST site already publishes, so sites don
 The aim is progressive disclosure for LLM agents: survey a docs site, then read it one section at a time, instead of stuffing whole pages into context.
 
 ```bash
+npm install -g myst-docs
 myst-docs get 'https://mystmd.org/guide/quickstart#install-the-myst-markdown-cli'
 ```
 
