@@ -1,0 +1,1062 @@
+{
+ "version": 3,
+ "kind": "Article",
+ "sha256": "ae13195aa9d0826d38fce6e76ac5a9e93a10dc3af8daf145d76cfdf35e01164e",
+ "slug": "accessibility",
+ "location": "/accessibility.md",
+ "dependencies": [],
+ "frontmatter": {
+  "title": "Accessibility",
+  "description": "Jupyter Book's accessibility commitment, what you get out of the box, and where to go for details.",
+  "github": "https://github.com/jupyter-book/jupyterbook.org",
+  "abbreviations": {
+   "MyST": "Markedly Structured Text",
+   "CLI": "Command-Line Interface",
+   "TOC": "Table of Contents"
+  },
+  "source_url": "https://github.com/jupyter-book/jupyterbook.org/blob/main/docs/accessibility.md",
+  "edit_url": "https://github.com/jupyter-book/jupyterbook.org/edit/main/docs/accessibility.md",
+  "exports": [
+   {
+    "format": "md",
+    "filename": "accessibility.md",
+    "url": "/build/accessibility-6596785857619cc78a2b4954f79b1ebc.md"
+   }
+  ]
+ },
+ "mdast": {
+  "type": "root",
+  "children": [
+   {
+    "type": "block",
+    "children": [
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 6,
+        "column": 1
+       },
+       "end": {
+        "line": 8,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "Jupyter Book is a distribution of the ",
+        "position": {
+         "start": {
+          "line": 6,
+          "column": 1
+         },
+         "end": {
+          "line": 6,
+          "column": 1
+         }
+        },
+        "key": "N0qRZMbJOi"
+       },
+       {
+        "type": "link",
+        "url": "https://mystmd.org/guide/",
+        "position": {
+         "start": {
+          "line": 6,
+          "column": 1
+         },
+         "end": {
+          "line": 6,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "MyST Document Engine",
+          "position": {
+           "start": {
+            "line": 6,
+            "column": 1
+           },
+           "end": {
+            "line": 6,
+            "column": 1
+           }
+          },
+          "key": "ibDU6ySdiU"
+         }
+        ],
+        "urlSource": "xref:guide",
+        "dataUrl": "https://mystmd.org/guide/index.json",
+        "internal": false,
+        "protocol": "xref:myst",
+        "key": "DQX8iUbgu9"
+       },
+       {
+        "type": "text",
+        "value": ", and uses the ",
+        "position": {
+         "start": {
+          "line": 6,
+          "column": 1
+         },
+         "end": {
+          "line": 6,
+          "column": 1
+         }
+        },
+        "key": "cvspYxZ3F0"
+       },
+       {
+        "type": "link",
+        "url": "https://mystmd.org/guide/website-templates",
+        "position": {
+         "start": {
+          "line": 6,
+          "column": 1
+         },
+         "end": {
+          "line": 6,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "MyST Book Theme",
+          "position": {
+           "start": {
+            "line": 6,
+            "column": 1
+           },
+           "end": {
+            "line": 6,
+            "column": 1
+           }
+          },
+          "key": "x6DhpNACS7"
+         }
+        ],
+        "urlSource": "xref:guide/website-templates",
+        "dataUrl": "https://mystmd.org/guide/website-templates.json",
+        "internal": false,
+        "protocol": "xref:myst",
+        "key": "PlBCvmb3HZ"
+       },
+       {
+        "type": "text",
+        "value": " for web exports.\nThese come with a number of accessibility features out of the box.\nSee the ",
+        "position": {
+         "start": {
+          "line": 6,
+          "column": 1
+         },
+         "end": {
+          "line": 6,
+          "column": 1
+         }
+        },
+        "key": "xxjbLqnkkT"
+       },
+       {
+        "type": "link",
+        "url": "https://mystmd.org/guide/accessibility-and-performance",
+        "position": {
+         "start": {
+          "line": 6,
+          "column": 1
+         },
+         "end": {
+          "line": 6,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "accessibility documentation in the MyST guide",
+          "position": {
+           "start": {
+            "line": 6,
+            "column": 1
+           },
+           "end": {
+            "line": 6,
+            "column": 1
+           }
+          },
+          "key": "kJETSGUkRZ"
+         }
+        ],
+        "urlSource": "xref:guide/accessibility-and-performance",
+        "dataUrl": "https://mystmd.org/guide/accessibility-and-performance.json",
+        "internal": false,
+        "protocol": "xref:myst",
+        "key": "YaybIb0dgj"
+       },
+       {
+        "type": "text",
+        "value": ".",
+        "position": {
+         "start": {
+          "line": 6,
+          "column": 1
+         },
+         "end": {
+          "line": 6,
+          "column": 1
+         }
+        },
+        "key": "NbO4fFBNb5"
+       },
+       {
+        "type": "footnoteReference",
+        "identifier": "jb",
+        "label": "jb",
+        "position": {
+         "start": {
+          "line": 6,
+          "column": 1
+         },
+         "end": {
+          "line": 6,
+          "column": 1
+         }
+        },
+        "enumerator": "1",
+        "key": "iMkb3iQzq9"
+       }
+      ],
+      "key": "NtTTTtftOH"
+     },
+     {
+      "type": "heading",
+      "depth": 2,
+      "position": {
+       "start": {
+        "line": 14,
+        "column": 1
+       },
+       "end": {
+        "line": 14,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "Our goals",
+        "position": {
+         "start": {
+          "line": 14,
+          "column": 1
+         },
+         "end": {
+          "line": 14,
+          "column": 1
+         }
+        },
+        "key": "nQA3K4c5IQ"
+       }
+      ],
+      "identifier": "our-goals",
+      "label": "Our goals",
+      "html_id": "our-goals",
+      "implicit": true,
+      "key": "QyFcOfY3CE"
+     },
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 16,
+        "column": 1
+       },
+       "end": {
+        "line": 17,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "Jupyter Book aims to produce websites that meet ",
+        "position": {
+         "start": {
+          "line": 16,
+          "column": 1
+         },
+         "end": {
+          "line": 16,
+          "column": 1
+         }
+        },
+        "key": "P500ZeNMky"
+       },
+       {
+        "type": "link",
+        "url": "https://www.w3.org/TR/WCAG21/",
+        "position": {
+         "start": {
+          "line": 16,
+          "column": 1
+         },
+         "end": {
+          "line": 16,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "WCAG 2.1 AA",
+          "position": {
+           "start": {
+            "line": 16,
+            "column": 1
+           },
+           "end": {
+            "line": 16,
+            "column": 1
+           }
+          },
+          "key": "BEBeF6MZnk"
+         }
+        ],
+        "urlSource": "https://www.w3.org/TR/WCAG21/",
+        "key": "zdCdzuekHc"
+       },
+       {
+        "type": "text",
+        "value": ".\nAccessibility bugs are treated like any other bug, and accessibility contributions follow the ",
+        "position": {
+         "start": {
+          "line": 16,
+          "column": 1
+         },
+         "end": {
+          "line": 16,
+          "column": 1
+         }
+        },
+        "key": "dv3jtUJWgm"
+       },
+       {
+        "type": "link",
+        "url": "/contribute",
+        "position": {
+         "start": {
+          "line": 16,
+          "column": 1
+         },
+         "end": {
+          "line": 16,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "normal contribution process",
+          "position": {
+           "start": {
+            "line": 16,
+            "column": 1
+           },
+           "end": {
+            "line": 16,
+            "column": 1
+           }
+          },
+          "key": "wMPO4fZIzO"
+         }
+        ],
+        "urlSource": "./contribute/index.md",
+        "dataUrl": "/contribute.index.json",
+        "internal": true,
+        "protocol": "file",
+        "key": "zZ7Wz6jmq9"
+       },
+       {
+        "type": "text",
+        "value": ".",
+        "position": {
+         "start": {
+          "line": 16,
+          "column": 1
+         },
+         "end": {
+          "line": 16,
+          "column": 1
+         }
+        },
+        "key": "O552iCqzWG"
+       }
+      ],
+      "key": "Mg4tL8rSPX"
+     },
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 19,
+        "column": 1
+       },
+       "end": {
+        "line": 19,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "If you find a barrier on a site built with Jupyter Book, please ",
+        "position": {
+         "start": {
+          "line": 19,
+          "column": 1
+         },
+         "end": {
+          "line": 19,
+          "column": 1
+         }
+        },
+        "key": "Vb2GxBafoo"
+       },
+       {
+        "type": "link",
+        "url": "https://github.com/jupyter-book/myst-theme/issues/new",
+        "position": {
+         "start": {
+          "line": 19,
+          "column": 1
+         },
+         "end": {
+          "line": 19,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "open an issue in ",
+          "position": {
+           "start": {
+            "line": 19,
+            "column": 1
+           },
+           "end": {
+            "line": 19,
+            "column": 1
+           }
+          },
+          "key": "Vgf3oCrUGf"
+         },
+         {
+          "type": "inlineCode",
+          "value": "myst-theme",
+          "position": {
+           "start": {
+            "line": 19,
+            "column": 1
+           },
+           "end": {
+            "line": 19,
+            "column": 1
+           }
+          },
+          "key": "aGz1sISKbK"
+         }
+        ],
+        "urlSource": "https://github.com/jupyter-book/myst-theme/issues/new",
+        "error": true,
+        "key": "YZ5788JEnw"
+       },
+       {
+        "type": "text",
+        "value": ".",
+        "position": {
+         "start": {
+          "line": 19,
+          "column": 1
+         },
+         "end": {
+          "line": 19,
+          "column": 1
+         }
+        },
+        "key": "R08ysn30AZ"
+       }
+      ],
+      "key": "VpCJCl6Iu5"
+     },
+     {
+      "type": "heading",
+      "depth": 2,
+      "position": {
+       "start": {
+        "line": 21,
+        "column": 1
+       },
+       "end": {
+        "line": 21,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "Get involved",
+        "position": {
+         "start": {
+          "line": 21,
+          "column": 1
+         },
+         "end": {
+          "line": 21,
+          "column": 1
+         }
+        },
+        "key": "IINnrygN0o"
+       }
+      ],
+      "identifier": "get-involved",
+      "label": "Get involved",
+      "html_id": "get-involved",
+      "implicit": true,
+      "key": "JKvxCwAYOl"
+     },
+     {
+      "type": "grid",
+      "columns": [
+       1,
+       1,
+       2,
+       2
+      ],
+      "children": [
+       {
+        "type": "card",
+        "url": "https://mystmd.org/guide/accessibility-and-performance",
+        "children": [
+         {
+          "type": "cardTitle",
+          "children": [
+           {
+            "type": "text",
+            "value": "Technical details »",
+            "position": {
+             "start": {
+              "line": 25,
+              "column": 1
+             },
+             "end": {
+              "line": 25,
+              "column": 1
+             }
+            },
+            "key": "vIfotkiVaN"
+           }
+          ],
+          "key": "L5qLKiEaz8"
+         },
+         {
+          "type": "paragraph",
+          "position": {
+           "start": {
+            "line": 28,
+            "column": 1
+           },
+           "end": {
+            "line": 28,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "What ",
+            "key": "Hnjs4gs4nX"
+           },
+           {
+            "type": "abbreviation",
+            "title": "Markedly Structured Text",
+            "children": [
+             {
+              "type": "text",
+              "value": "MyST",
+              "key": "rfUv1kcmTC"
+             }
+            ],
+            "key": "m7BVWofYl8"
+           },
+           {
+            "type": "text",
+            "value": " themes do today, how to audit your own site, and which tools and standards we use.",
+            "key": "Q4Qn2Husjc"
+           }
+          ],
+          "key": "oj1q2vt13f"
+         }
+        ],
+        "urlSource": "xref:guide/accessibility-and-performance",
+        "dataUrl": "https://mystmd.org/guide/accessibility-and-performance.json",
+        "internal": false,
+        "protocol": "xref:myst",
+        "key": "l6YuCaSAhV"
+       },
+       {
+        "type": "card",
+        "url": "https://github.com/jupyter-book/myst-theme/labels/a11y",
+        "children": [
+         {
+          "type": "cardTitle",
+          "children": [
+           {
+            "type": "text",
+            "value": "Track open work »",
+            "position": {
+             "start": {
+              "line": 31,
+              "column": 1
+             },
+             "end": {
+              "line": 31,
+              "column": 1
+             }
+            },
+            "key": "KwN4K3UiBz"
+           }
+          ],
+          "key": "Ht04VeEE9d"
+         },
+         {
+          "type": "paragraph",
+          "position": {
+           "start": {
+            "line": 34,
+            "column": 1
+           },
+           "end": {
+            "line": 34,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "Open accessibility issues are tracked under the ",
+            "position": {
+             "start": {
+              "line": 34,
+              "column": 1
+             },
+             "end": {
+              "line": 34,
+              "column": 1
+             }
+            },
+            "key": "NVn18jvfuA"
+           },
+           {
+            "type": "inlineCode",
+            "value": "a11y",
+            "position": {
+             "start": {
+              "line": 34,
+              "column": 1
+             },
+             "end": {
+              "line": 34,
+              "column": 1
+             }
+            },
+            "key": "iieVBEIoJt"
+           },
+           {
+            "type": "text",
+            "value": " label in ",
+            "position": {
+             "start": {
+              "line": 34,
+              "column": 1
+             },
+             "end": {
+              "line": 34,
+              "column": 1
+             }
+            },
+            "key": "ybQv8lvTJT"
+           },
+           {
+            "type": "inlineCode",
+            "value": "myst-theme",
+            "position": {
+             "start": {
+              "line": 34,
+              "column": 1
+             },
+             "end": {
+              "line": 34,
+              "column": 1
+             }
+            },
+            "key": "auVFIINYAz"
+           },
+           {
+            "type": "text",
+            "value": ".",
+            "position": {
+             "start": {
+              "line": 34,
+              "column": 1
+             },
+             "end": {
+              "line": 34,
+              "column": 1
+             }
+            },
+            "key": "Q7Z6THgMoU"
+           }
+          ],
+          "key": "GruFYvVRHy"
+         }
+        ],
+        "urlSource": "https://github.com/jupyter-book/myst-theme/labels/a11y",
+        "error": true,
+        "key": "Z1NkdHyJH0"
+       },
+       {
+        "type": "card",
+        "url": "https://github.com/jupyter-book/myst-theme/issues/new?labels=a11y",
+        "children": [
+         {
+          "type": "cardTitle",
+          "children": [
+           {
+            "type": "text",
+            "value": "Report an a11y barrier »",
+            "position": {
+             "start": {
+              "line": 37,
+              "column": 1
+             },
+             "end": {
+              "line": 37,
+              "column": 1
+             }
+            },
+            "key": "LbLhJVx4UB"
+           }
+          ],
+          "key": "RRi4CiWp2W"
+         },
+         {
+          "type": "paragraph",
+          "position": {
+           "start": {
+            "line": 40,
+            "column": 1
+           },
+           "end": {
+            "line": 40,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "A clear reproduction is enormously helpful, even if you can’t propose a fix.",
+            "position": {
+             "start": {
+              "line": 40,
+              "column": 1
+             },
+             "end": {
+              "line": 40,
+              "column": 1
+             }
+            },
+            "key": "ugeevEu2xJ"
+           }
+          ],
+          "key": "F2xTdeQflW"
+         }
+        ],
+        "urlSource": "https://github.com/jupyter-book/myst-theme/issues/new?labels=a11y",
+        "error": true,
+        "key": "vpw1bXM5jT"
+       },
+       {
+        "type": "card",
+        "url": "/contribute",
+        "children": [
+         {
+          "type": "cardTitle",
+          "children": [
+           {
+            "type": "text",
+            "value": "Contribute »",
+            "position": {
+             "start": {
+              "line": 43,
+              "column": 1
+             },
+             "end": {
+              "line": 43,
+              "column": 1
+             }
+            },
+            "key": "HQAjkV3ugF"
+           }
+          ],
+          "key": "WfiU4OTHnx"
+         },
+         {
+          "type": "paragraph",
+          "position": {
+           "start": {
+            "line": 46,
+            "column": 1
+           },
+           "end": {
+            "line": 46,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "Accessibility contributions follow the same workflow as any other contribution.",
+            "position": {
+             "start": {
+              "line": 46,
+              "column": 1
+             },
+             "end": {
+              "line": 46,
+              "column": 1
+             }
+            },
+            "key": "NII5iErEco"
+           }
+          ],
+          "key": "yYyEI1QIoy"
+         }
+        ],
+        "urlSource": "./contribute/index.md",
+        "dataUrl": "/contribute.index.json",
+        "internal": true,
+        "protocol": "file",
+        "key": "l5EUIfgtiE"
+       }
+      ],
+      "key": "GeG36l6UJm"
+     },
+     {
+      "type": "footnoteDefinition",
+      "identifier": "jb",
+      "label": "jb",
+      "position": {
+       "start": {
+        "line": 46,
+        "column": 1
+       },
+       "end": {
+        "line": 46,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "paragraph",
+        "position": {
+         "start": {
+          "line": 10,
+          "column": 1
+         },
+         "end": {
+          "line": 10,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "strong",
+          "position": {
+           "start": {
+            "line": 10,
+            "column": 1
+           },
+           "end": {
+            "line": 10,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "This only covers the ",
+            "position": {
+             "start": {
+              "line": 10,
+              "column": 1
+             },
+             "end": {
+              "line": 10,
+              "column": 1
+             }
+            },
+            "key": "wXFBs4DwsR"
+           },
+           {
+            "type": "inlineCode",
+            "value": "myst-theme",
+            "position": {
+             "start": {
+              "line": 10,
+              "column": 1
+             },
+             "end": {
+              "line": 10,
+              "column": 1
+             }
+            },
+            "key": "CijmktcPAn"
+           },
+           {
+            "type": "text",
+            "value": " in Jupyter Book",
+            "position": {
+             "start": {
+              "line": 10,
+              "column": 1
+             },
+             "end": {
+              "line": 10,
+              "column": 1
+             }
+            },
+            "key": "P9pJJO65S1"
+           }
+          ],
+          "key": "dddtdIWZlN"
+         }
+        ],
+        "key": "IOR7KegvMY"
+       },
+       {
+        "type": "paragraph",
+        "position": {
+         "start": {
+          "line": 12,
+          "column": 1
+         },
+         "end": {
+          "line": 12,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "See the ",
+          "position": {
+           "start": {
+            "line": 12,
+            "column": 1
+           },
+           "end": {
+            "line": 12,
+            "column": 1
+           }
+          },
+          "key": "MiF2GPDjm8"
+         },
+         {
+          "type": "link",
+          "url": "https://jupyter-accessibility.readthedocs.io",
+          "position": {
+           "start": {
+            "line": 12,
+            "column": 1
+           },
+           "end": {
+            "line": 12,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "Jupyter Accessibility Working Group",
+            "position": {
+             "start": {
+              "line": 12,
+              "column": 1
+             },
+             "end": {
+              "line": 12,
+              "column": 1
+             }
+            },
+            "key": "dMHwBHDY10"
+           }
+          ],
+          "urlSource": "https://jupyter-accessibility.readthedocs.io",
+          "key": "EMm3EoVpDB"
+         },
+         {
+          "type": "text",
+          "value": " for broader project-wide resources about accessibility.",
+          "position": {
+           "start": {
+            "line": 12,
+            "column": 1
+           },
+           "end": {
+            "line": 12,
+            "column": 1
+           }
+          },
+          "key": "H2LFM1BKSe"
+         }
+        ],
+        "key": "fZsCpZvdh4"
+       }
+      ],
+      "enumerator": "1",
+      "key": "opiYizGStH"
+     }
+    ],
+    "key": "rvJr6dDlci"
+   }
+  ],
+  "key": "CZxTWBsKwh"
+ },
+ "references": {
+  "cite": {
+   "order": [],
+   "data": {}
+  }
+ },
+ "footer": {
+  "navigation": {
+   "prev": {
+    "title": "Roadmap and priorities",
+    "short_title": "❗ Development priorities",
+    "url": "/roadmap",
+    "group": "Community Guide"
+   },
+   "next": {
+    "title": "Contributing to Jupyter Book",
+    "short_title": "📝 Contributing guide",
+    "url": "/contribute",
+    "group": "Community Guide"
+   }
+  }
+ },
+ "domain": "http://localhost:3000"
+}

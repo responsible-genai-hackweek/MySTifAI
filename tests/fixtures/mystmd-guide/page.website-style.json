@@ -1,0 +1,2386 @@
+{
+ "version": 3,
+ "kind": "Article",
+ "sha256": "4fa46c6326ac7fc4d7ac8d71a9456513750b801c192a380279799f12b1b8fe25",
+ "slug": "website-style",
+ "location": "/website-style.md",
+ "dependencies": [
+  {
+   "url": "/website-templates",
+   "label": "page-site-options-note",
+   "kind": "Article",
+   "slug": "website-templates",
+   "location": "/website-templates.md",
+   "title": "Website Themes & Templates"
+  }
+ ],
+ "frontmatter": {
+  "title": "Styles and CSS Classes",
+  "description": "How to customize the look and feel of your website with CSS.",
+  "license": {
+   "content": {
+    "id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "name": "Creative Commons Attribution 4.0 International",
+    "free": true,
+    "CC": true
+   },
+   "code": {
+    "id": "MIT",
+    "url": "https://opensource.org/licenses/MIT",
+    "name": "MIT License",
+    "free": true,
+    "osi": true
+   }
+  },
+  "github": "https://github.com/jupyter-book/mystmd",
+  "subject": "MyST Markdown",
+  "abbreviations": {
+   "AMS": "American Mathematical Society",
+   "API": "Application Programming Interface",
+   "AST": "Abstract Syntax Tree",
+   "CLI": "Command Line Interface",
+   "CRediT": "Contributor Roles Taxonomy",
+   "CSS": "Cascading Style Sheet",
+   "CSV": "comma-separated values",
+   "DOI": "Digital Object Identifier",
+   "ESM": "ECMAScript Modules",
+   "GPU": "Graphics Processing Unit",
+   "HTML": "Hypertext Markup Language",
+   "ID": "Identifier",
+   "ISNI": "International Standard Name Identifier",
+   "JATS": "Journal Article Tag Suite",
+   "JSON": "JavaScript Object Notation",
+   "LTS": "Long Term Support",
+   "MyST": "Markedly Structured Text",
+   "NISO": "National Information Standards Organization",
+   "OA": "Open Access",
+   "PDF": "Portable Document Format",
+   "PID": "Persistent Identifier",
+   "POSIX": "Portable Operating System Interface",
+   "REES": "Reproducible Execution Environment Specification",
+   "ROR": "Research Organization Registry",
+   "RRID": "Research Resource Identifier",
+   "RST": "reStructuredText",
+   "SPDX": "Software Package Data Exchange",
+   "TLA": "Three Letter Acronym",
+   "TOC": "table of contents",
+   "TPU": "Tensor Processing Unit",
+   "URL": "Uniform Resource Locator",
+   "VoR": "Version of Record",
+   "WASM": "WebAssembly",
+   "YAML": "Yet Another Markup Language",
+   "XML": "Extensible Markup Language"
+  },
+  "numbering": {
+   "title": {
+    "offset": 1
+   }
+  },
+  "source_url": "https://github.com/jupyter-book/mystmd/blob/main/docs/website-style.md",
+  "edit_url": "https://github.com/jupyter-book/mystmd/edit/main/docs/website-style.md",
+  "exports": [
+   {
+    "format": "md",
+    "filename": "website-style.md",
+    "url": "https://cdn.curvenote.com/019fe2a2-9548-72e2-bfb5-deba7d35df4f/public/website-style-5518c3674aa94542d973f53d3148e27b.md"
+   }
+  ]
+ },
+ "mdast": {
+  "type": "root",
+  "children": [
+   {
+    "type": "block",
+    "children": [
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 6,
+        "column": 1
+       },
+       "end": {
+        "line": 7,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "abbreviation",
+        "title": "Markedly Structured Text",
+        "children": [
+         {
+          "type": "text",
+          "value": "MyST",
+          "key": "WPtQh6lnw7"
+         }
+        ],
+        "key": "nVfWlj39t2"
+       },
+       {
+        "type": "text",
+        "value": " has basic support for styling your content with ",
+        "key": "fZK7q56Pnj"
+       },
+       {
+        "type": "abbreviation",
+        "title": "Cascading Style Sheet",
+        "children": [
+         {
+          "type": "text",
+          "value": "CSS",
+          "key": "HuLoK2RdBU"
+         }
+        ],
+        "key": "rplhGkDRML"
+       },
+       {
+        "type": "text",
+        "value": ".\nThis page describes some common ways to do so.",
+        "key": "rLUDzqry2I"
+       }
+      ],
+      "key": "qjR8g6AHJQ"
+     },
+     {
+      "type": "admonition",
+      "kind": "caution",
+      "children": [
+       {
+        "type": "admonitionTitle",
+        "children": [
+         {
+          "type": "text",
+          "value": "This is still a work in progress",
+          "position": {
+           "start": {
+            "line": 9,
+            "column": 1
+           },
+           "end": {
+            "line": 9,
+            "column": 1
+           }
+          },
+          "key": "QTdbt6j5iJ"
+         }
+        ],
+        "key": "ABgMFFZXOS"
+       },
+       {
+        "type": "paragraph",
+        "position": {
+         "start": {
+          "line": 10,
+          "column": 1
+         },
+         "end": {
+          "line": 11,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "We’re still building out custom ",
+          "key": "VtXIaHXATi"
+         },
+         {
+          "type": "abbreviation",
+          "title": "Cascading Style Sheet",
+          "children": [
+           {
+            "type": "text",
+            "value": "CSS",
+            "key": "meTzs7RpWl"
+           }
+          ],
+          "key": "cWf0n9mvWd"
+         },
+         {
+          "type": "text",
+          "value": " functionality with the ",
+          "key": "jiZK7uBCNH"
+         },
+         {
+          "type": "abbreviation",
+          "title": "Markedly Structured Text",
+          "children": [
+           {
+            "type": "text",
+            "value": "MyST",
+            "key": "wK79ttMwKP"
+           }
+          ],
+          "key": "henP2KNNO0"
+         },
+         {
+          "type": "text",
+          "value": " engine.\nFollow and comment on the issues linked below to help us improve it!",
+          "key": "raiF68maF9"
+         }
+        ],
+        "key": "jmZ4Oz83rA"
+       }
+      ],
+      "key": "rNxMJgRdnD"
+     },
+     {
+      "type": "heading",
+      "depth": 2,
+      "position": {
+       "start": {
+        "line": 15,
+        "column": 1
+       },
+       "end": {
+        "line": 15,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "Add a Style Sheet (",
+        "key": "qaVZlxef6c"
+       },
+       {
+        "type": "abbreviation",
+        "title": "Cascading Style Sheet",
+        "children": [
+         {
+          "type": "text",
+          "value": "CSS",
+          "key": "uHg4J2c5kE"
+         }
+        ],
+        "key": "ylG13ita9e"
+       },
+       {
+        "type": "text",
+        "value": ") to your website",
+        "key": "ZETeY0aGAZ"
+       }
+      ],
+      "label": "style-sheet",
+      "identifier": "style-sheet",
+      "html_id": "style-sheet",
+      "key": "fBa57tLgX4"
+     },
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 17,
+        "column": 1
+       },
+       "end": {
+        "line": 17,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "The ",
+        "position": {
+         "start": {
+          "line": 17,
+          "column": 1
+         },
+         "end": {
+          "line": 17,
+          "column": 1
+         }
+        },
+        "key": "TTaacwyERd"
+       },
+       {
+        "type": "crossReference",
+        "position": {
+         "start": {
+          "line": 17,
+          "column": 1
+         },
+         "end": {
+          "line": 17,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "default MyST website themes",
+          "position": {
+           "start": {
+            "line": 17,
+            "column": 1
+           },
+           "end": {
+            "line": 17,
+            "column": 1
+           }
+          },
+          "key": "NIkrLNWGcM"
+         }
+        ],
+        "identifier": "default-web-themes",
+        "label": "default-web-themes",
+        "kind": "heading",
+        "template": "{name}",
+        "resolved": true,
+        "html_id": "default-web-themes",
+        "remote": true,
+        "url": "/website-templates",
+        "dataUrl": "/website-templates.json",
+        "key": "GbQ9CjQe4d"
+       },
+       {
+        "type": "text",
+        "value": " support bundling a custom ",
+        "position": {
+         "start": {
+          "line": 17,
+          "column": 1
+         },
+         "end": {
+          "line": 17,
+          "column": 1
+         }
+        },
+        "key": "Jc8r9ezlAo"
+       },
+       {
+        "type": "link",
+        "url": "https://en.wikipedia.org/wiki/CSS",
+        "position": {
+         "start": {
+          "line": 17,
+          "column": 1
+         },
+         "end": {
+          "line": 17,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "style-sheet",
+          "position": {
+           "start": {
+            "line": 17,
+            "column": 1
+           },
+           "end": {
+            "line": 17,
+            "column": 1
+           }
+          },
+          "key": "xWFDw0cNHm"
+         }
+        ],
+        "urlSource": "https://en.wikipedia.org/wiki/CSS",
+        "data": {
+         "page": "CSS",
+         "wiki": "https://en.wikipedia.org/",
+         "lang": "en"
+        },
+        "internal": false,
+        "protocol": "wiki",
+        "key": "LJuk1sU7us"
+       },
+       {
+        "type": "text",
+        "value": ". This can be used to introduce custom ",
+        "key": "Q79BCKVlux"
+       },
+       {
+        "type": "abbreviation",
+        "title": "Cascading Style Sheet",
+        "children": [
+         {
+          "type": "text",
+          "value": "CSS",
+          "key": "ciAyUmVFVE"
+         }
+        ],
+        "key": "xnwTnBkT2S"
+       },
+       {
+        "type": "text",
+        "value": " styling to your website. To include a custom ",
+        "key": "FOKR6weTA7"
+       },
+       {
+        "type": "abbreviation",
+        "title": "Cascading Style Sheet",
+        "children": [
+         {
+          "type": "text",
+          "value": "CSS",
+          "key": "jTOXiOwFH8"
+         }
+        ],
+        "key": "kRMn4CCvWk"
+       },
+       {
+        "type": "text",
+        "value": " file as part of your website build, you can define the ",
+        "key": "nhH3PFZXEJ"
+       },
+       {
+        "type": "crossReference",
+        "identifier": "template-site-myst-book-theme-style",
+        "label": "template-site-myst-book-theme-style",
+        "kind": "definitionTerm",
+        "position": {
+         "start": {
+          "line": 17,
+          "column": 277
+         },
+         "end": {
+          "line": 17,
+          "column": 313
+         }
+        },
+        "children": [
+         {
+          "type": "strong",
+          "children": [
+           {
+            "type": "text",
+            "value": "style",
+            "key": "KdyJAZhXIl"
+           }
+          ],
+          "key": "REPYAmVuoM"
+         },
+         {
+          "type": "text",
+          "value": " (",
+          "key": "vZfmE0LXnG"
+         },
+         {
+          "type": "emphasis",
+          "children": [
+           {
+            "type": "text",
+            "value": "file",
+            "key": "iYVuYyLNHK"
+           }
+          ],
+          "key": "A78K5DIEIT"
+         },
+         {
+          "type": "text",
+          "value": ")",
+          "key": "voUFJb17RU"
+         }
+        ],
+        "template": "{name}",
+        "resolved": true,
+        "html_id": "template-site-myst-book-theme-style",
+        "remote": true,
+        "url": "/website-templates",
+        "dataUrl": "/website-templates.json",
+        "key": "Pat24JQ9nL"
+       },
+       {
+        "type": "text",
+        "value": " option, e.g.",
+        "position": {
+         "start": {
+          "line": 17,
+          "column": 1
+         },
+         "end": {
+          "line": 17,
+          "column": 1
+         }
+        },
+        "key": "tD1qZnF5iS"
+       }
+      ],
+      "key": "bYMOaWie9v"
+     },
+     {
+      "type": "code",
+      "lang": "yaml",
+      "emphasizeLines": [
+       3
+      ],
+      "showLineNumbers": true,
+      "filename": "myst.yml",
+      "value": "site:\n  options:\n    style: ./my-style.css",
+      "key": "Ac4mvq1Op1"
+     },
+     {
+      "type": "embed",
+      "position": {
+       "start": {
+        "line": 28,
+        "column": 1
+       },
+       "end": {
+        "line": 28,
+        "column": 1
+       }
+      },
+      "source": {
+       "url": "/website-templates",
+       "label": "page-site-options-note",
+       "kind": "Article",
+       "slug": "website-templates",
+       "location": "/website-templates.md",
+       "title": "Website Themes & Templates"
+      },
+      "remove-input": true,
+      "children": [
+       {
+        "type": "paragraph",
+        "position": {
+         "start": {
+          "line": 128,
+          "column": 1
+         },
+         "end": {
+          "line": 128,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "When setting an option from a page, omit the ",
+          "position": {
+           "start": {
+            "line": 128,
+            "column": 1
+           },
+           "end": {
+            "line": 128,
+            "column": 1
+           }
+          },
+          "key": "aEgoy6FCUf"
+         },
+         {
+          "type": "inlineCode",
+          "value": "options:",
+          "position": {
+           "start": {
+            "line": 128,
+            "column": 1
+           },
+           "end": {
+            "line": 128,
+            "column": 1
+           }
+          },
+          "key": "D7X0PTbmv5"
+         },
+         {
+          "type": "text",
+          "value": " key - put it directly under ",
+          "position": {
+           "start": {
+            "line": 128,
+            "column": 1
+           },
+           "end": {
+            "line": 128,
+            "column": 1
+           }
+          },
+          "key": "Re6hJuEFBR"
+         },
+         {
+          "type": "inlineCode",
+          "value": "site:",
+          "position": {
+           "start": {
+            "line": 128,
+            "column": 1
+           },
+           "end": {
+            "line": 128,
+            "column": 1
+           }
+          },
+          "key": "C9MBKqOx1B"
+         },
+         {
+          "type": "text",
+          "value": ", not ",
+          "position": {
+           "start": {
+            "line": 128,
+            "column": 1
+           },
+           "end": {
+            "line": 128,
+            "column": 1
+           }
+          },
+          "key": "Ehf5Pokd9B"
+         },
+         {
+          "type": "inlineCode",
+          "value": "site.options:",
+          "position": {
+           "start": {
+            "line": 128,
+            "column": 1
+           },
+           "end": {
+            "line": 128,
+            "column": 1
+           }
+          },
+          "key": "C7AOwXZWI3"
+         },
+         {
+          "type": "text",
+          "value": ". See ",
+          "position": {
+           "start": {
+            "line": 128,
+            "column": 1
+           },
+           "end": {
+            "line": 128,
+            "column": 1
+           }
+          },
+          "key": "o3LerVBP42"
+         },
+         {
+          "type": "crossReference",
+          "position": {
+           "start": {
+            "line": 128,
+            "column": 1
+           },
+           "end": {
+            "line": 128,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "Page Options",
+            "position": {
+             "start": {
+              "line": 123,
+              "column": 1
+             },
+             "end": {
+              "line": 123,
+              "column": 1
+             }
+            },
+            "key": "dfjl5MwAHb"
+           }
+          ],
+          "identifier": "site-options-page",
+          "label": "site-options-page",
+          "kind": "heading",
+          "template": "{name}",
+          "resolved": true,
+          "html_id": "site-options-page",
+          "url": "/website-templates",
+          "dataUrl": "/website-templates.json",
+          "remote": true,
+          "key": "e2Z4rvKocc"
+         },
+         {
+          "type": "text",
+          "value": ".",
+          "position": {
+           "start": {
+            "line": 128,
+            "column": 1
+           },
+           "end": {
+            "line": 128,
+            "column": 1
+           }
+          },
+          "key": "czUPSCJ36R"
+         }
+        ],
+        "key": "Toklv8mPVm"
+       }
+      ],
+      "key": "b7qUDSVEIw"
+     },
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 30,
+        "column": 1
+       },
+       "end": {
+        "line": 30,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "For example, the style-sheet could contain styling for ",
+        "position": {
+         "start": {
+          "line": 30,
+          "column": 1
+         },
+         "end": {
+          "line": 30,
+          "column": 1
+         }
+        },
+        "key": "Tld1fiLNty"
+       },
+       {
+        "type": "inlineCode",
+        "value": "em",
+        "position": {
+         "start": {
+          "line": 30,
+          "column": 1
+         },
+         "end": {
+          "line": 30,
+          "column": 1
+         }
+        },
+        "key": "LS7JkEyzeG"
+       },
+       {
+        "type": "text",
+        "value": " elements nested below a particular ",
+        "position": {
+         "start": {
+          "line": 30,
+          "column": 1
+         },
+         "end": {
+          "line": 30,
+          "column": 1
+         }
+        },
+        "key": "jAbKvM7iwl"
+       },
+       {
+        "type": "inlineCode",
+        "value": "text-gradient",
+        "position": {
+         "start": {
+          "line": 30,
+          "column": 1
+         },
+         "end": {
+          "line": 30,
+          "column": 1
+         }
+        },
+        "key": "doWGvo0MJk"
+       },
+       {
+        "type": "text",
+        "value": " class:",
+        "position": {
+         "start": {
+          "line": 30,
+          "column": 1
+         },
+         "end": {
+          "line": 30,
+          "column": 1
+         }
+        },
+        "key": "kBP8yeajSi"
+       }
+      ],
+      "key": "xvtPk0VTqx"
+     },
+     {
+      "type": "include",
+      "file": "public/style.css",
+      "literal": true,
+      "children": [
+       {
+        "type": "code",
+        "value": ".text-gradient em {\n  background: -webkit-linear-gradient(#eee, #333);\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n}\n",
+        "lang": "css",
+        "filename": "style.css",
+        "key": "E0HTiq6j0W"
+       }
+      ],
+      "key": "RgbZKVEuMj"
+     },
+     {
+      "type": "heading",
+      "depth": 2,
+      "position": {
+       "start": {
+        "line": 36,
+        "column": 1
+       },
+       "end": {
+        "line": 36,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "Add ",
+        "key": "GjO6kL5IXF"
+       },
+       {
+        "type": "abbreviation",
+        "title": "Cascading Style Sheet",
+        "children": [
+         {
+          "type": "text",
+          "value": "CSS",
+          "key": "cQwO6lIHjn"
+         }
+        ],
+        "key": "B3L2igqrCl"
+       },
+       {
+        "type": "text",
+        "value": " Classes to content and blocks",
+        "key": "zToM05ZTm7"
+       }
+      ],
+      "label": "add-css-classes",
+      "identifier": "add-css-classes",
+      "html_id": "add-css-classes",
+      "key": "eopOZdsOXQ"
+     },
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 38,
+        "column": 1
+       },
+       "end": {
+        "line": 38,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "The intended way to apply custom styling to your ",
+        "key": "VqF8e249r5"
+       },
+       {
+        "type": "abbreviation",
+        "title": "Markedly Structured Text",
+        "children": [
+         {
+          "type": "text",
+          "value": "MyST",
+          "key": "ItAopccxY7"
+         }
+        ],
+        "key": "MdQnWgPxkh"
+       },
+       {
+        "type": "text",
+        "value": " website is to use ",
+        "key": "mOrTJf1Mdv"
+       },
+       {
+        "type": "abbreviation",
+        "title": "Cascading Style Sheet",
+        "children": [
+         {
+          "type": "text",
+          "value": "CSS",
+          "key": "LGlOgtxoG9"
+         }
+        ],
+        "key": "IM6TdgOP5N"
+       },
+       {
+        "type": "text",
+        "value": " classes to connect your content to the style sheet. There are several ways to do this.",
+        "key": "Eu6P7b04VN"
+       }
+      ],
+      "key": "KqxkGDj1Hg"
+     },
+     {
+      "type": "heading",
+      "depth": 3,
+      "position": {
+       "start": {
+        "line": 40,
+        "column": 1
+       },
+       "end": {
+        "line": 40,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "Use content blocks",
+        "position": {
+         "start": {
+          "line": 40,
+          "column": 1
+         },
+         "end": {
+          "line": 40,
+          "column": 1
+         }
+        },
+        "key": "ZJpGBrGvzJ"
+       }
+      ],
+      "identifier": "use-content-blocks",
+      "label": "Use content blocks",
+      "html_id": "use-content-blocks",
+      "implicit": true,
+      "key": "svmeHpXf5z"
+     },
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 42,
+        "column": 1
+       },
+       "end": {
+        "line": 44,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "link",
+        "url": "../blocks.md",
+        "position": {
+         "start": {
+          "line": 42,
+          "column": 1
+         },
+         "end": {
+          "line": 42,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "Content blocks",
+          "position": {
+           "start": {
+            "line": 42,
+            "column": 1
+           },
+           "end": {
+            "line": 42,
+            "column": 1
+           }
+          },
+          "key": "pLglV3ujQ7"
+         }
+        ],
+        "urlSource": "../blocks.md",
+        "key": "qVJ8VvrjkI"
+       },
+       {
+        "type": "text",
+        "value": " allow you to attach arbitrary metadata to chunks of content.\nYou can attach one or more ",
+        "key": "BIk2pkeNfT"
+       },
+       {
+        "type": "abbreviation",
+        "title": "Cascading Style Sheet",
+        "children": [
+         {
+          "type": "text",
+          "value": "CSS",
+          "key": "RUf0bzk8iw"
+         }
+        ],
+        "key": "sr0Mopuc30"
+       },
+       {
+        "type": "text",
+        "value": " classes by defining a ",
+        "key": "Pebu5U9Qfx"
+       },
+       {
+        "type": "inlineCode",
+        "value": "class",
+        "position": {
+         "start": {
+          "line": 42,
+          "column": 1
+         },
+         "end": {
+          "line": 42,
+          "column": 1
+         }
+        },
+        "key": "wGJa8yt02C"
+       },
+       {
+        "type": "text",
+        "value": " attribute for a block.\nFor example the following:",
+        "position": {
+         "start": {
+          "line": 42,
+          "column": 1
+         },
+         "end": {
+          "line": 42,
+          "column": 1
+         }
+        },
+        "key": "ErvtGYJQop"
+       }
+      ],
+      "key": "ambVE7gnOd"
+     },
+     {
+      "type": "myst",
+      "value": "+++ {\"class\": \"text-gradient\"}\nThis is _emphasized_. This is not emphasized.\n\n+++\n\nThis is not emphasized.",
+      "key": "XL3mfIUPcm"
+     },
+     {
+      "type": "heading",
+      "depth": 3,
+      "position": {
+       "start": {
+        "line": 55,
+        "column": 1
+       },
+       "end": {
+        "line": 55,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "Use ",
+        "position": {
+         "start": {
+          "line": 55,
+          "column": 1
+         },
+         "end": {
+          "line": 55,
+          "column": 1
+         }
+        },
+        "key": "Z7l43hFk6t"
+       },
+       {
+        "type": "inlineCode",
+        "value": "div",
+        "position": {
+         "start": {
+          "line": 55,
+          "column": 1
+         },
+         "end": {
+          "line": 55,
+          "column": 1
+         }
+        },
+        "key": "vhedaU6NLT"
+       },
+       {
+        "type": "text",
+        "value": " and ",
+        "position": {
+         "start": {
+          "line": 55,
+          "column": 1
+         },
+         "end": {
+          "line": 55,
+          "column": 1
+         }
+        },
+        "key": "jRYpMdZ3Cl"
+       },
+       {
+        "type": "inlineCode",
+        "value": "span",
+        "position": {
+         "start": {
+          "line": 55,
+          "column": 1
+         },
+         "end": {
+          "line": 55,
+          "column": 1
+         }
+        },
+        "key": "bIF0nnStsW"
+       },
+       {
+        "type": "text",
+        "value": " elements",
+        "position": {
+         "start": {
+          "line": 55,
+          "column": 1
+         },
+         "end": {
+          "line": 55,
+          "column": 1
+         }
+        },
+        "key": "DMns6ewEFu"
+       }
+      ],
+      "identifier": "use-div-and-span-elements",
+      "label": "Use div and span elements",
+      "html_id": "use-div-and-span-elements",
+      "implicit": true,
+      "key": "PAuFwOkCmN"
+     },
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 57,
+        "column": 1
+       },
+       "end": {
+        "line": 57,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "You can attach classes directly to ",
+        "position": {
+         "start": {
+          "line": 57,
+          "column": 1
+         },
+         "end": {
+          "line": 57,
+          "column": 1
+         }
+        },
+        "key": "nbvvsZHQjY"
+       },
+       {
+        "type": "crossReference",
+        "position": {
+         "start": {
+          "line": 57,
+          "column": 1
+         },
+         "end": {
+          "line": 57,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "inlineCode",
+          "value": "div",
+          "position": {
+           "start": {
+            "line": 57,
+            "column": 1
+           },
+           "end": {
+            "line": 57,
+            "column": 1
+           }
+          },
+          "key": "koTkH7fft7"
+         },
+         {
+          "type": "text",
+          "value": " and ",
+          "position": {
+           "start": {
+            "line": 57,
+            "column": 1
+           },
+           "end": {
+            "line": 57,
+            "column": 1
+           }
+          },
+          "key": "JZiZ3hX68w"
+         },
+         {
+          "type": "inlineCode",
+          "value": "span",
+          "position": {
+           "start": {
+            "line": 57,
+            "column": 1
+           },
+           "end": {
+            "line": 57,
+            "column": 1
+           }
+          },
+          "key": "LmOvxofCkC"
+         },
+         {
+          "type": "text",
+          "value": " elements",
+          "position": {
+           "start": {
+            "line": 57,
+            "column": 1
+           },
+           "end": {
+            "line": 57,
+            "column": 1
+           }
+          },
+          "key": "YTK7Frzivp"
+         }
+        ],
+        "identifier": "div-and-span",
+        "label": "div-and-span",
+        "kind": "heading",
+        "template": "{name}",
+        "resolved": true,
+        "html_id": "div-and-span",
+        "remote": true,
+        "url": "/blocks",
+        "dataUrl": "/blocks.json",
+        "key": "pWnviqnZwK"
+       },
+       {
+        "type": "text",
+        "value": ".",
+        "position": {
+         "start": {
+          "line": 57,
+          "column": 1
+         },
+         "end": {
+          "line": 57,
+          "column": 1
+         }
+        },
+        "key": "zkdfilUkNR"
+       }
+      ],
+      "key": "IkLfrZlph1"
+     },
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 59,
+        "column": 1
+       },
+       "end": {
+        "line": 59,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "crossReference",
+        "identifier": "directive-div",
+        "children": [
+         {
+          "type": "inlineCode",
+          "value": "{div}",
+          "key": "Ndimvb77C5"
+         }
+        ],
+        "key": "O4rhu4d7EN"
+       },
+       {
+        "type": "text",
+        "value": " and ",
+        "position": {
+         "start": {
+          "line": 59,
+          "column": 1
+         },
+         "end": {
+          "line": 59,
+          "column": 1
+         }
+        },
+        "key": "vhYwV8jg9g"
+       },
+       {
+        "type": "crossReference",
+        "identifier": "role-span",
+        "children": [
+         {
+          "type": "inlineCode",
+          "value": "{span}",
+          "key": "xRQA0JQ2Yh"
+         }
+        ],
+        "key": "qZGbUHiFdX"
+       },
+       {
+        "type": "text",
+        "value": " are analogous to their ",
+        "key": "AwRcyjxOBF"
+       },
+       {
+        "type": "abbreviation",
+        "title": "Hypertext Markup Language",
+        "children": [
+         {
+          "type": "text",
+          "value": "HTML",
+          "key": "ZkgRsYxXi1"
+         }
+        ],
+        "key": "WQCuQsFSJX"
+       },
+       {
+        "type": "text",
+        "value": " counterparts. Unlike their directive/role, the ",
+        "key": "g8n41SBemw"
+       },
+       {
+        "type": "abbreviation",
+        "title": "Hypertext Markup Language",
+        "children": [
+         {
+          "type": "text",
+          "value": "HTML",
+          "key": "U4lLIyxyMX"
+         }
+        ],
+        "key": "R0OiJKUulX"
+       },
+       {
+        "type": "text",
+        "value": " elements can also be given ",
+        "key": "Y1pInQcBg5"
+       },
+       {
+        "type": "inlineCode",
+        "value": "style",
+        "position": {
+         "start": {
+          "line": 59,
+          "column": 1
+         },
+         "end": {
+          "line": 59,
+          "column": 1
+         }
+        },
+        "key": "jwQG8JnDiD"
+       },
+       {
+        "type": "text",
+        "value": " options, e.g.",
+        "position": {
+         "start": {
+          "line": 59,
+          "column": 1
+         },
+         "end": {
+          "line": 59,
+          "column": 1
+         }
+        },
+        "key": "ORDugSa65d"
+       }
+      ],
+      "key": "eve4kRB2qR"
+     },
+     {
+      "type": "myst",
+      "value": "<div class=\"text-gradient\" style=\"font-weight: bold;\">Here's my <em>div</em></div>\n\nHere's some <span class=\"text-gradient\" style=\"font-weight:bold;\">span <em>styled</em></span> content",
+      "key": "ywkEwxRTHt"
+     },
+     {
+      "type": "heading",
+      "depth": 3,
+      "position": {
+       "start": {
+        "line": 67,
+        "column": 1
+       },
+       "end": {
+        "line": 67,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "Add ",
+        "key": "KB1PngM38a"
+       },
+       {
+        "type": "abbreviation",
+        "title": "Cascading Style Sheet",
+        "children": [
+         {
+          "type": "text",
+          "value": "CSS",
+          "key": "yQEX4mNJci"
+         }
+        ],
+        "key": "WrTCOEmySX"
+       },
+       {
+        "type": "text",
+        "value": " classes to directives",
+        "key": "dxleoyJlFG"
+       }
+      ],
+      "identifier": "add-css-classes-to-directives",
+      "label": "Add CSS classes to directives",
+      "html_id": "add-css-classes-to-directives",
+      "implicit": true,
+      "key": "DQpFoNUhjC"
+     },
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 69,
+        "column": 1
+       },
+       "end": {
+        "line": 70,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "Many directives and content blocks have a ",
+        "position": {
+         "start": {
+          "line": 69,
+          "column": 1
+         },
+         "end": {
+          "line": 69,
+          "column": 1
+         }
+        },
+        "key": "c3Tz3GfpgP"
+       },
+       {
+        "type": "inlineCode",
+        "value": ":class:",
+        "position": {
+         "start": {
+          "line": 69,
+          "column": 1
+         },
+         "end": {
+          "line": 69,
+          "column": 1
+         }
+        },
+        "key": "f1BH5edxB2"
+       },
+       {
+        "type": "text",
+        "value": " option that can be used to add arbitrary ",
+        "key": "YctvlpTl94"
+       },
+       {
+        "type": "abbreviation",
+        "title": "Cascading Style Sheet",
+        "children": [
+         {
+          "type": "text",
+          "value": "CSS",
+          "key": "q69IagSqCk"
+         }
+        ],
+        "key": "d2vwcVHBAP"
+       },
+       {
+        "type": "text",
+        "value": " classes.\nFor example, below we add a ",
+        "key": "QlHeoHB4tp"
+       },
+       {
+        "type": "abbreviation",
+        "title": "Cascading Style Sheet",
+        "children": [
+         {
+          "type": "text",
+          "value": "CSS",
+          "key": "BaTp872zTZ"
+         }
+        ],
+        "key": "JflvFgcTto"
+       },
+       {
+        "type": "text",
+        "value": " class to an admonition directive to snap it to the right:",
+        "key": "fN83Hz619j"
+       }
+      ],
+      "key": "RdOu3vwzys"
+     },
+     {
+      "type": "myst",
+      "value": "```{note}\n:class: text-gradient\nI'm _very stylish_.\n```",
+      "key": "s4AKHYJhrD"
+     },
+     {
+      "type": "heading",
+      "depth": 3,
+      "position": {
+       "start": {
+        "line": 79,
+        "column": 1
+       },
+       "end": {
+        "line": 79,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "Add ",
+        "key": "WuFkvk3OV8"
+       },
+       {
+        "type": "abbreviation",
+        "title": "Cascading Style Sheet",
+        "children": [
+         {
+          "type": "text",
+          "value": "CSS",
+          "key": "OPTYOiPsjv"
+         }
+        ],
+        "key": "c2ANUNWB1A"
+       },
+       {
+        "type": "text",
+        "value": " classes in-line to role and directive titles",
+        "key": "nBifv21LyC"
+       }
+      ],
+      "identifier": "add-css-classes-in-line-to-role-and-directive-titles",
+      "label": "Add CSS classes in-line to role and directive titles",
+      "html_id": "add-css-classes-in-line-to-role-and-directive-titles",
+      "implicit": true,
+      "key": "tcI4POvon9"
+     },
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 81,
+        "column": 1
+       },
+       "end": {
+        "line": 81,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "You can add ",
+        "key": "vwLnJYA3w5"
+       },
+       {
+        "type": "abbreviation",
+        "title": "Cascading Style Sheet",
+        "children": [
+         {
+          "type": "text",
+          "value": "CSS",
+          "key": "ofR0HJ1X5W"
+         }
+        ],
+        "key": "g37oTp97rf"
+       },
+       {
+        "type": "text",
+        "value": " classes directly to roles and divs using ",
+        "key": "Z6DPD4H6Jz"
+       },
+       {
+        "type": "link",
+        "url": "/inline-options",
+        "position": {
+         "start": {
+          "line": 81,
+          "column": 1
+         },
+         "end": {
+          "line": 81,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "Inline Options syntax",
+          "position": {
+           "start": {
+            "line": 81,
+            "column": 1
+           },
+           "end": {
+            "line": 81,
+            "column": 1
+           }
+          },
+          "key": "j04hifERp7"
+         }
+        ],
+        "urlSource": "./inline-options.md",
+        "dataUrl": "/inline-options.json",
+        "internal": true,
+        "protocol": "file",
+        "key": "ocVBu10r7r"
+       },
+       {
+        "type": "text",
+        "value": ".",
+        "position": {
+         "start": {
+          "line": 81,
+          "column": 1
+         },
+         "end": {
+          "line": 81,
+          "column": 1
+         }
+        },
+        "key": "GSHF8KXhSM"
+       }
+      ],
+      "key": "H0LHZRgtT5"
+     },
+     {
+      "type": "heading",
+      "depth": 2,
+      "position": {
+       "start": {
+        "line": 84,
+        "column": 1
+       },
+       "end": {
+        "line": 84,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "Built-in ",
+        "key": "RCkvtDvzQN"
+       },
+       {
+        "type": "abbreviation",
+        "title": "Cascading Style Sheet",
+        "children": [
+         {
+          "type": "text",
+          "value": "CSS",
+          "key": "Xte5Uaiane"
+         }
+        ],
+        "key": "Onjs9Tz7gE"
+       },
+       {
+        "type": "text",
+        "value": " Classes",
+        "key": "rUjy20yG6U"
+       }
+      ],
+      "label": "built-in-css",
+      "identifier": "built-in-css",
+      "html_id": "built-in-css",
+      "key": "vZjEIGeEjW"
+     },
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 86,
+        "column": 1
+       },
+       "end": {
+        "line": 86,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "The ",
+        "key": "ZlHR5N8TDE"
+       },
+       {
+        "type": "abbreviation",
+        "title": "Hypertext Markup Language",
+        "children": [
+         {
+          "type": "text",
+          "value": "HTML",
+          "key": "WKYWWTcYcV"
+         }
+        ],
+        "key": "Aq5s7uscPn"
+       },
+       {
+        "type": "text",
+        "value": " themes come with ",
+        "key": "XpdjUV0EgW"
+       },
+       {
+        "type": "link",
+        "url": "https://jupyter-book.github.io/myst-theme/?path=/docs/components-grid-system--docs",
+        "position": {
+         "start": {
+          "line": 86,
+          "column": 1
+         },
+         "end": {
+          "line": 86,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "a grid system of CSS classes",
+          "position": {
+           "start": {
+            "line": 86,
+            "column": 1
+           },
+           "end": {
+            "line": 86,
+            "column": 1
+           }
+          },
+          "key": "bfuybveE7V"
+         }
+        ],
+        "urlSource": "https://jupyter-book.github.io/myst-theme/?path=/docs/components-grid-system--docs",
+        "key": "mSy4aEJ91V"
+       },
+       {
+        "type": "text",
+        "value": ", which can be used out-of-the-box to position content.",
+        "position": {
+         "start": {
+          "line": 86,
+          "column": 1
+         },
+         "end": {
+          "line": 86,
+          "column": 1
+         }
+        },
+        "key": "tCjwW8iw0I"
+       }
+      ],
+      "key": "CGB12NpXac"
+     },
+     {
+      "type": "heading",
+      "depth": 2,
+      "position": {
+       "start": {
+        "line": 89,
+        "column": 1
+       },
+       "end": {
+        "line": 89,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "Provide Light and Dark Mode images",
+        "position": {
+         "start": {
+          "line": 89,
+          "column": 1
+         },
+         "end": {
+          "line": 89,
+          "column": 1
+         }
+        },
+        "key": "wQtVQmz4Mk"
+       }
+      ],
+      "label": "light-dark-css",
+      "identifier": "light-dark-css",
+      "html_id": "light-dark-css",
+      "key": "qQ9Rko3Ekj"
+     },
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 91,
+        "column": 1
+       },
+       "end": {
+        "line": 91,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "You can use ",
+        "position": {
+         "start": {
+          "line": 91,
+          "column": 1
+         },
+         "end": {
+          "line": 91,
+          "column": 1
+         }
+        },
+        "key": "fyxSyDDvQg"
+       },
+       {
+        "type": "link",
+        "url": "https://tailwindcss.com/docs/dark-mode",
+        "position": {
+         "start": {
+          "line": 91,
+          "column": 1
+         },
+         "end": {
+          "line": 91,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "Tailwind CSS classes",
+          "position": {
+           "start": {
+            "line": 91,
+            "column": 1
+           },
+           "end": {
+            "line": 91,
+            "column": 1
+           }
+          },
+          "key": "uq2zs2FtFv"
+         }
+        ],
+        "urlSource": "https://tailwindcss.com/docs/dark-mode",
+        "key": "Rikdpw8lu3"
+       },
+       {
+        "type": "text",
+        "value": " to make certain content show up in light vs. dark mode. By default items are shown in light mode, so here is how you can control light vs. dark behavior:",
+        "position": {
+         "start": {
+          "line": 91,
+          "column": 1
+         },
+         "end": {
+          "line": 91,
+          "column": 1
+         }
+        },
+        "key": "REd8WwIAEX"
+       }
+      ],
+      "key": "hUGc2lQywW"
+     },
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 93,
+        "column": 1
+       },
+       "end": {
+        "line": 93,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "strong",
+        "position": {
+         "start": {
+          "line": 93,
+          "column": 1
+         },
+         "end": {
+          "line": 93,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "To only show in dark mode",
+          "position": {
+           "start": {
+            "line": 93,
+            "column": 1
+           },
+           "end": {
+            "line": 93,
+            "column": 1
+           }
+          },
+          "key": "yseNezuzdJ"
+         }
+        ],
+        "key": "PYbUTVXYEJ"
+       },
+       {
+        "type": "text",
+        "value": ", attach the ",
+        "key": "sk1rFSaqoz"
+       },
+       {
+        "type": "abbreviation",
+        "title": "Cascading Style Sheet",
+        "children": [
+         {
+          "type": "text",
+          "value": "CSS",
+          "key": "maHMiQzoJY"
+         }
+        ],
+        "key": "W0gcGwt2Az"
+       },
+       {
+        "type": "text",
+        "value": " class ",
+        "key": "xFI1KZeIyj"
+       },
+       {
+        "type": "inlineCode",
+        "value": "hidden dark:block",
+        "position": {
+         "start": {
+          "line": 93,
+          "column": 1
+         },
+         "end": {
+          "line": 93,
+          "column": 1
+         }
+        },
+        "key": "o1hceGyFwF"
+       },
+       {
+        "type": "text",
+        "value": ". This hides the element by default, and sets its display to ",
+        "position": {
+         "start": {
+          "line": 93,
+          "column": 1
+         },
+         "end": {
+          "line": 93,
+          "column": 1
+         }
+        },
+        "key": "NYAkxUPEBx"
+       },
+       {
+        "type": "inlineCode",
+        "value": "block",
+        "position": {
+         "start": {
+          "line": 93,
+          "column": 1
+         },
+         "end": {
+          "line": 93,
+          "column": 1
+         }
+        },
+        "key": "igil5r480W"
+       },
+       {
+        "type": "text",
+        "value": " when the Dark theme is active.",
+        "position": {
+         "start": {
+          "line": 93,
+          "column": 1
+         },
+         "end": {
+          "line": 93,
+          "column": 1
+         }
+        },
+        "key": "vBN1XJzt3A"
+       }
+      ],
+      "key": "gGgQDw6uHi"
+     },
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 95,
+        "column": 1
+       },
+       "end": {
+        "line": 95,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "strong",
+        "position": {
+         "start": {
+          "line": 95,
+          "column": 1
+         },
+         "end": {
+          "line": 95,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "To only show in light mode",
+          "position": {
+           "start": {
+            "line": 95,
+            "column": 1
+           },
+           "end": {
+            "line": 95,
+            "column": 1
+           }
+          },
+          "key": "hwCqxqTdKH"
+         }
+        ],
+        "key": "eypVQDtwgA"
+       },
+       {
+        "type": "text",
+        "value": ", attach the ",
+        "key": "bM43WaHlsq"
+       },
+       {
+        "type": "abbreviation",
+        "title": "Cascading Style Sheet",
+        "children": [
+         {
+          "type": "text",
+          "value": "CSS",
+          "key": "yyV7PA3Asi"
+         }
+        ],
+        "key": "Yyi6sOip20"
+       },
+       {
+        "type": "text",
+        "value": " class ",
+        "key": "kh1qhfMtIB"
+       },
+       {
+        "type": "inlineCode",
+        "value": "dark:hidden",
+        "position": {
+         "start": {
+          "line": 95,
+          "column": 1
+         },
+         "end": {
+          "line": 95,
+          "column": 1
+         }
+        },
+        "key": "vsUjd8u2fc"
+       },
+       {
+        "type": "text",
+        "value": ". The element will be hidden when Dark mode is active.",
+        "position": {
+         "start": {
+          "line": 95,
+          "column": 1
+         },
+         "end": {
+          "line": 95,
+          "column": 1
+         }
+        },
+        "key": "oTbkK0voV5"
+       }
+      ],
+      "key": "OaSoFPgo67"
+     },
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 97,
+        "column": 1
+       },
+       "end": {
+        "line": 97,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "For example, here is how you can make two elements swap visibility during light and dark mode. This is useful if you have two versions of an image that are meant for light and dark modes, but the same approach could be applied to any element you can ",
+        "position": {
+         "start": {
+          "line": 97,
+          "column": 1
+         },
+         "end": {
+          "line": 97,
+          "column": 1
+         }
+        },
+        "key": "D7LyLkS0Cv"
+       },
+       {
+        "type": "crossReference",
+        "position": {
+         "start": {
+          "line": 97,
+          "column": 1
+         },
+         "end": {
+          "line": 97,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "attach CSS classes to",
+          "position": {
+           "start": {
+            "line": 97,
+            "column": 1
+           },
+           "end": {
+            "line": 97,
+            "column": 1
+           }
+          },
+          "key": "GwEzVduoHl"
+         }
+        ],
+        "identifier": "add-css-classes",
+        "label": "add-css-classes",
+        "kind": "heading",
+        "template": "{name}",
+        "resolved": true,
+        "html_id": "add-css-classes",
+        "key": "NDRCWm2Kwd"
+       },
+       {
+        "type": "text",
+        "value": ".",
+        "position": {
+         "start": {
+          "line": 97,
+          "column": 1
+         },
+         "end": {
+          "line": 97,
+          "column": 1
+         }
+        },
+        "key": "e1S0WKJYrE"
+       }
+      ],
+      "key": "RR3kNoN8h0"
+     },
+     {
+      "type": "myst",
+      "value": ":::{div}\n:class: hidden dark:block\nThe theme is dark.\n:::\n\n:::{div}\n:class: dark:hidden\nThe theme is light.\n:::",
+      "key": "lpPKy67bqb"
+     },
+     {
+      "type": "admonition",
+      "kind": "warning",
+      "children": [
+       {
+        "type": "admonitionTitle",
+        "children": [
+         {
+          "type": "text",
+          "value": "This will only work if you’re using the default themes",
+          "position": {
+           "start": {
+            "line": 111,
+            "column": 1
+           },
+           "end": {
+            "line": 111,
+            "column": 1
+           }
+          },
+          "key": "LtfaUIDaZ0"
+         }
+        ],
+        "key": "BivzJTmBpI"
+       },
+       {
+        "type": "paragraph",
+        "position": {
+         "start": {
+          "line": 112,
+          "column": 1
+         },
+         "end": {
+          "line": 112,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "This syntax depends on ",
+          "position": {
+           "start": {
+            "line": 112,
+            "column": 1
+           },
+           "end": {
+            "line": 112,
+            "column": 1
+           }
+          },
+          "key": "E0VVx9eJEX"
+         },
+         {
+          "type": "link",
+          "url": "https://tailwindcss.com/docs/dark-mode",
+          "position": {
+           "start": {
+            "line": 112,
+            "column": 1
+           },
+           "end": {
+            "line": 112,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "Tailwind CSS",
+            "position": {
+             "start": {
+              "line": 112,
+              "column": 1
+             },
+             "end": {
+              "line": 112,
+              "column": 1
+             }
+            },
+            "key": "Xx7rFMOWPh"
+           }
+          ],
+          "urlSource": "https://tailwindcss.com/docs/dark-mode",
+          "key": "KMR4WQPQ8v"
+         },
+         {
+          "type": "text",
+          "value": ", which comes with the default themes. If you’re using a custom ",
+          "key": "mLrY3mVy7F"
+         },
+         {
+          "type": "abbreviation",
+          "title": "Hypertext Markup Language",
+          "children": [
+           {
+            "type": "text",
+            "value": "HTML",
+            "key": "YHDN1p6JvI"
+           }
+          ],
+          "key": "YPwWgnt37z"
+         },
+         {
+          "type": "text",
+          "value": " theme, these classes may not work.",
+          "key": "SgX061UXO4"
+         }
+        ],
+        "key": "grIs2QK3Qr"
+       }
+      ],
+      "key": "Gl95COn0EQ"
+     }
+    ],
+    "key": "PVdNBWEh50"
+   }
+  ],
+  "key": "sQlUU11WwL"
+ },
+ "references": {
+  "cite": {
+   "order": [],
+   "data": {}
+  }
+ },
+ "footer": {
+  "navigation": {
+   "prev": {
+    "title": "Search Engines and Social",
+    "short_title": "Search Engines & Social",
+    "url": "/seo-and-social",
+    "group": "Websites"
+   },
+   "next": {
+    "title": "Accessibility and Performance",
+    "short_title": "Accessibility & Performance",
+    "url": "/accessibility-and-performance",
+    "group": "Websites"
+   }
+  }
+ }
+}

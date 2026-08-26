@@ -1,0 +1,1435 @@
+{
+ "version": 3,
+ "kind": "Article",
+ "sha256": "c0007e24a63902095d7714f47e187c52cc149c6aac9fe1a98a0d4a043a8222a9",
+ "slug": "community.team",
+ "location": "/community/team.md",
+ "dependencies": [],
+ "frontmatter": {
+  "title": "Core team",
+  "content_includes_title": false,
+  "github": "https://github.com/jupyter-book/jupyterbook.org",
+  "abbreviations": {
+   "MyST": "Markedly Structured Text",
+   "CLI": "Command-Line Interface",
+   "TOC": "Table of Contents"
+  },
+  "numbering": {
+   "title": {
+    "offset": 1
+   }
+  },
+  "source_url": "https://github.com/jupyter-book/jupyterbook.org/blob/main/docs/community/team.md",
+  "edit_url": "https://github.com/jupyter-book/jupyterbook.org/edit/main/docs/community/team.md",
+  "thumbnail": "/build/e5da0b8f5b4b0ba8740b4392e6f654e9.jpeg",
+  "exports": [
+   {
+    "format": "md",
+    "filename": "team.md",
+    "url": "/build/team-0ca5c81f6ba0081a4039ba259ef53faa.md"
+   }
+  ]
+ },
+ "mdast": {
+  "type": "root",
+  "children": [
+   {
+    "type": "block",
+    "children": [
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 3,
+        "column": 1
+       },
+       "end": {
+        "line": 4,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "This page describes the core team and steering council of Jupyter Book.\nThese are ",
+        "position": {
+         "start": {
+          "line": 3,
+          "column": 1
+         },
+         "end": {
+          "line": 3,
+          "column": 1
+         }
+        },
+        "key": "LKUIPhVPpX"
+       },
+       {
+        "type": "crossReference",
+        "url": "/embed",
+        "position": {
+         "start": {
+          "line": 3,
+          "column": 1
+         },
+         "end": {
+          "line": 3,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "embedded",
+          "position": {
+           "start": {
+            "line": 3,
+            "column": 1
+           },
+           "end": {
+            "line": 3,
+            "column": 1
+           }
+          },
+          "key": "IX21Havzxa"
+         }
+        ],
+        "urlSource": "xref:guide#docs-embed",
+        "remote": true,
+        "remoteBaseUrl": "https://mystmd.org/guide",
+        "dataUrl": "/embed.json",
+        "identifier": "docs:embed",
+        "label": "docs:embed",
+        "html_id": "docs-embed",
+        "protocol": "xref:myst",
+        "template": "{name}",
+        "resolved": true,
+        "key": "v75DEjNjvR"
+       },
+       {
+        "type": "text",
+        "value": " from ",
+        "position": {
+         "start": {
+          "line": 3,
+          "column": 1
+         },
+         "end": {
+          "line": 3,
+          "column": 1
+         }
+        },
+        "key": "cfKtBSWAgc"
+       },
+       {
+        "type": "link",
+        "url": "https://jupyterbook.org/compass/team",
+        "position": {
+         "start": {
+          "line": 3,
+          "column": 1
+         },
+         "end": {
+          "line": 3,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "our team compass",
+          "position": {
+           "start": {
+            "line": 3,
+            "column": 1
+           },
+           "end": {
+            "line": 3,
+            "column": 1
+           }
+          },
+          "key": "DCFpVjjaQE"
+         }
+        ],
+        "urlSource": "xref:compass/team",
+        "dataUrl": "https://jupyterbook.org/compass/team.json",
+        "internal": false,
+        "protocol": "xref:myst",
+        "key": "bkk8STWBFX"
+       },
+       {
+        "type": "text",
+        "value": ".",
+        "position": {
+         "start": {
+          "line": 3,
+          "column": 1
+         },
+         "end": {
+          "line": 3,
+          "column": 1
+         }
+        },
+        "key": "W8RvJ8NOXV"
+       }
+      ],
+      "key": "ugIXKVA7ul"
+     },
+     {
+      "type": "heading",
+      "depth": 2,
+      "position": {
+       "start": {
+        "line": 6,
+        "column": 1
+       },
+       "end": {
+        "line": 6,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "Core team",
+        "position": {
+         "start": {
+          "line": 6,
+          "column": 1
+         },
+         "end": {
+          "line": 6,
+          "column": 1
+         }
+        },
+        "key": "dqjbQMV8HK"
+       }
+      ],
+      "identifier": "core-team",
+      "label": "Core team",
+      "html_id": "core-team",
+      "implicit": true,
+      "key": "JqiRT9F1bw"
+     },
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 8,
+        "column": 1
+       },
+       "end": {
+        "line": 9,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "Our core team is made up of maintainers who support Jupyter Book and its subprojects in many ways.\nThis group includes the Steering Council below.",
+        "position": {
+         "start": {
+          "line": 8,
+          "column": 1
+         },
+         "end": {
+          "line": 8,
+          "column": 1
+         }
+        },
+        "key": "Qdyly45hfw"
+       }
+      ],
+      "key": "RitdStYYCm"
+     },
+     {
+      "type": "embed",
+      "position": {
+       "start": {
+        "line": 11,
+        "column": 1
+       },
+       "end": {
+        "line": 11,
+        "column": 1
+       }
+      },
+      "source": {
+       "url": "/team",
+       "remoteBaseUrl": "https://jupyterbook.org/compass",
+       "label": "xref:compass#core-team-list",
+       "kind": "Article",
+       "slug": "team",
+       "location": "/team.md",
+       "title": "Team"
+      },
+      "remove-input": true,
+      "children": [
+       {
+        "type": "grid",
+        "columns": [
+         3
+        ],
+        "children": [
+         {
+          "type": "card",
+          "url": "https://github.com/agoose77",
+          "children": [
+           {
+            "type": "cardTitle",
+            "children": [
+             {
+              "type": "text",
+              "value": "Angus Hollands",
+              "position": {
+               "start": {
+                "line": 36,
+                "column": 1
+               },
+               "end": {
+                "line": 36,
+                "column": 1
+               }
+              },
+              "key": "s6iqkMfH9Z"
+             }
+            ],
+            "key": "r63CXiPw4V"
+           },
+           {
+            "type": "image",
+            "url": "/build/e5da0b8f5b4b0ba8740b4392e6f654e9.jpeg",
+            "alt": "Angus Hollands avatar",
+            "position": {
+             "start": {
+              "line": 39,
+              "column": 1
+             },
+             "end": {
+              "line": 39,
+              "column": 1
+             }
+            },
+            "key": "F6pj2HtYs5",
+            "urlSource": "https://github.com/agoose77.png"
+           },
+           {
+            "type": "footer",
+            "children": [
+             {
+              "type": "paragraph",
+              "children": [
+               {
+                "type": "strong",
+                "position": {
+                 "start": {
+                  "line": 38,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 38,
+                  "column": 1
+                 }
+                },
+                "children": [
+                 {
+                  "type": "text",
+                  "value": "Affiliation:",
+                  "position": {
+                   "start": {
+                    "line": 38,
+                    "column": 1
+                   },
+                   "end": {
+                    "line": 38,
+                    "column": 1
+                   }
+                  },
+                  "key": "eO4G2C1wRs"
+                 }
+                ],
+                "key": "d0XMGUh6bI"
+               },
+               {
+                "type": "text",
+                "value": " 2i2c",
+                "position": {
+                 "start": {
+                  "line": 38,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 38,
+                  "column": 1
+                 }
+                },
+                "key": "Ql3hLPgEnw"
+               }
+              ],
+              "key": "DJcAdrIvaT"
+             }
+            ],
+            "key": "t2wEl9Rvsk"
+           }
+          ],
+          "urlSource": "https://github.com/agoose77",
+          "error": true,
+          "key": "kL8EkKTlWN"
+         },
+         {
+          "type": "card",
+          "url": "https://github.com/fwkoch",
+          "children": [
+           {
+            "type": "cardTitle",
+            "children": [
+             {
+              "type": "text",
+              "value": "Frank W Koch",
+              "position": {
+               "start": {
+                "line": 42,
+                "column": 1
+               },
+               "end": {
+                "line": 42,
+                "column": 1
+               }
+              },
+              "key": "GEGKwE1IPn"
+             }
+            ],
+            "key": "pvBBodfLNN"
+           },
+           {
+            "type": "image",
+            "url": "/build/0f45d41f4d2b8eb16179c78bc87ee76a.jpeg",
+            "alt": "Frank W Koch avatar",
+            "position": {
+             "start": {
+              "line": 45,
+              "column": 1
+             },
+             "end": {
+              "line": 45,
+              "column": 1
+             }
+            },
+            "key": "E5TXsmkpvT",
+            "urlSource": "https://github.com/fwkoch.png"
+           },
+           {
+            "type": "footer",
+            "children": [
+             {
+              "type": "paragraph",
+              "children": [
+               {
+                "type": "strong",
+                "position": {
+                 "start": {
+                  "line": 44,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 44,
+                  "column": 1
+                 }
+                },
+                "children": [
+                 {
+                  "type": "text",
+                  "value": "Affiliation:",
+                  "position": {
+                   "start": {
+                    "line": 44,
+                    "column": 1
+                   },
+                   "end": {
+                    "line": 44,
+                    "column": 1
+                   }
+                  },
+                  "key": "hGDGw8eARm"
+                 }
+                ],
+                "key": "i7vKulpUYG"
+               },
+               {
+                "type": "text",
+                "value": " Curvenote",
+                "position": {
+                 "start": {
+                  "line": 44,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 44,
+                  "column": 1
+                 }
+                },
+                "key": "kZC1TuAD3F"
+               }
+              ],
+              "key": "rXtfeeigxa"
+             }
+            ],
+            "key": "dPOdsCz5ta"
+           }
+          ],
+          "urlSource": "https://github.com/fwkoch",
+          "error": true,
+          "key": "Etf1EPNTF4"
+         },
+         {
+          "type": "card",
+          "url": "https://github.com/kirstiejane",
+          "children": [
+           {
+            "type": "cardTitle",
+            "children": [
+             {
+              "type": "text",
+              "value": "Kirstie Whitaker",
+              "position": {
+               "start": {
+                "line": 48,
+                "column": 1
+               },
+               "end": {
+                "line": 48,
+                "column": 1
+               }
+              },
+              "key": "ZOuec9kCh0"
+             }
+            ],
+            "key": "dFYxfuqMaN"
+           },
+           {
+            "type": "image",
+            "url": "/build/3fcb7c08bdf9972793df2ea71bd71fe2.jpeg",
+            "alt": "Kirstie Whitaker avatar",
+            "position": {
+             "start": {
+              "line": 51,
+              "column": 1
+             },
+             "end": {
+              "line": 51,
+              "column": 1
+             }
+            },
+            "key": "IbBPv0z7Zq",
+            "urlSource": "https://github.com/kirstiejane.png"
+           },
+           {
+            "type": "footer",
+            "children": [
+             {
+              "type": "paragraph",
+              "children": [
+               {
+                "type": "strong",
+                "position": {
+                 "start": {
+                  "line": 50,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 50,
+                  "column": 1
+                 }
+                },
+                "children": [
+                 {
+                  "type": "text",
+                  "value": "Affiliation:",
+                  "position": {
+                   "start": {
+                    "line": 50,
+                    "column": 1
+                   },
+                   "end": {
+                    "line": 50,
+                    "column": 1
+                   }
+                  },
+                  "key": "YRwVIQpZg1"
+                 }
+                ],
+                "key": "DtAfX3dfzC"
+               },
+               {
+                "type": "text",
+                "value": " Berkeley Institute for Data Science",
+                "position": {
+                 "start": {
+                  "line": 50,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 50,
+                  "column": 1
+                 }
+                },
+                "key": "VgjF6OtI57"
+               }
+              ],
+              "key": "XeSBcjX1OT"
+             }
+            ],
+            "key": "CFBvfQbOmz"
+           }
+          ],
+          "urlSource": "https://github.com/kirstiejane",
+          "error": true,
+          "key": "IUWTwLdtfM"
+         },
+         {
+          "type": "card",
+          "url": "https://github.com/stefanv",
+          "children": [
+           {
+            "type": "cardTitle",
+            "children": [
+             {
+              "type": "text",
+              "value": "Stefan van der Walt",
+              "position": {
+               "start": {
+                "line": 54,
+                "column": 1
+               },
+               "end": {
+                "line": 54,
+                "column": 1
+               }
+              },
+              "key": "JX9OFcicBq"
+             }
+            ],
+            "key": "sXZPlEciUK"
+           },
+           {
+            "type": "image",
+            "url": "/build/82de52aed2cfb9b9c4361588ea82c301.jpeg",
+            "alt": "Stefan van der Walt avatar",
+            "position": {
+             "start": {
+              "line": 57,
+              "column": 1
+             },
+             "end": {
+              "line": 57,
+              "column": 1
+             }
+            },
+            "key": "kLB59jHvU7",
+            "urlSource": "https://github.com/stefanv.png"
+           },
+           {
+            "type": "footer",
+            "children": [
+             {
+              "type": "paragraph",
+              "children": [
+               {
+                "type": "strong",
+                "position": {
+                 "start": {
+                  "line": 56,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 56,
+                  "column": 1
+                 }
+                },
+                "children": [
+                 {
+                  "type": "text",
+                  "value": "Affiliation:",
+                  "position": {
+                   "start": {
+                    "line": 56,
+                    "column": 1
+                   },
+                   "end": {
+                    "line": 56,
+                    "column": 1
+                   }
+                  },
+                  "key": "Dazu8ROTC9"
+                 }
+                ],
+                "key": "dMZYlAsDbf"
+               },
+               {
+                "type": "text",
+                "value": " Berkeley Institute for Data Science",
+                "position": {
+                 "start": {
+                  "line": 56,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 56,
+                  "column": 1
+                 }
+                },
+                "key": "hVuIFOf1UV"
+               }
+              ],
+              "key": "kcjYXGfCHx"
+             }
+            ],
+            "key": "I49aC3SAZa"
+           }
+          ],
+          "urlSource": "https://github.com/stefanv",
+          "error": true,
+          "key": "X6emdw2wQZ"
+         },
+         {
+          "type": "card",
+          "url": "https://github.com/stevejpurves",
+          "children": [
+           {
+            "type": "cardTitle",
+            "children": [
+             {
+              "type": "text",
+              "value": "Steve Purves",
+              "position": {
+               "start": {
+                "line": 60,
+                "column": 1
+               },
+               "end": {
+                "line": 60,
+                "column": 1
+               }
+              },
+              "key": "wrgTmGggPn"
+             }
+            ],
+            "key": "anWBEbFFDW"
+           },
+           {
+            "type": "image",
+            "url": "/build/8f0225ab7ebcf8897ec5cb61e08d3608.jpeg",
+            "alt": "Steve Purves avatar",
+            "position": {
+             "start": {
+              "line": 63,
+              "column": 1
+             },
+             "end": {
+              "line": 63,
+              "column": 1
+             }
+            },
+            "key": "PucT0XrhgJ",
+            "urlSource": "https://github.com/stevejpurves.png"
+           },
+           {
+            "type": "footer",
+            "children": [
+             {
+              "type": "paragraph",
+              "children": [
+               {
+                "type": "strong",
+                "position": {
+                 "start": {
+                  "line": 62,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 62,
+                  "column": 1
+                 }
+                },
+                "children": [
+                 {
+                  "type": "text",
+                  "value": "Affiliation:",
+                  "position": {
+                   "start": {
+                    "line": 62,
+                    "column": 1
+                   },
+                   "end": {
+                    "line": 62,
+                    "column": 1
+                   }
+                  },
+                  "key": "LX0FxpNEF2"
+                 }
+                ],
+                "key": "elyhFiyWrF"
+               },
+               {
+                "type": "text",
+                "value": " Curvenote",
+                "position": {
+                 "start": {
+                  "line": 62,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 62,
+                  "column": 1
+                 }
+                },
+                "key": "l4bi43toR4"
+               }
+              ],
+              "key": "NaVTcq89L7"
+             }
+            ],
+            "key": "d4sWhPtXDO"
+           }
+          ],
+          "urlSource": "https://github.com/stevejpurves",
+          "error": true,
+          "key": "wkLATAjUiS"
+         }
+        ],
+        "key": "hd2pSMx0jY"
+       }
+      ],
+      "key": "P1UNYNUqAB"
+     },
+     {
+      "type": "heading",
+      "depth": 2,
+      "position": {
+       "start": {
+        "line": 13,
+        "column": 1
+       },
+       "end": {
+        "line": 13,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "Steering council",
+        "position": {
+         "start": {
+          "line": 13,
+          "column": 1
+         },
+         "end": {
+          "line": 13,
+          "column": 1
+         }
+        },
+        "key": "pikS9nmaJl"
+       }
+      ],
+      "identifier": "steering-council",
+      "label": "Steering council",
+      "html_id": "steering-council",
+      "implicit": true,
+      "key": "Xft6lRXrqe"
+     },
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 15,
+        "column": 1
+       },
+       "end": {
+        "line": 15,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "Our steering council has the additional responsibility of providing strategic and structural direction to the project, in addition to core team duties.",
+        "position": {
+         "start": {
+          "line": 15,
+          "column": 1
+         },
+         "end": {
+          "line": 15,
+          "column": 1
+         }
+        },
+        "key": "k9PmBPMkTH"
+       }
+      ],
+      "key": "oZCXfFJcb8"
+     },
+     {
+      "type": "embed",
+      "position": {
+       "start": {
+        "line": 17,
+        "column": 1
+       },
+       "end": {
+        "line": 17,
+        "column": 1
+       }
+      },
+      "source": {
+       "url": "/team",
+       "remoteBaseUrl": "https://jupyterbook.org/compass",
+       "label": "xref:compass#steering-council-list",
+       "kind": "Article",
+       "slug": "team",
+       "location": "/team.md",
+       "title": "Team"
+      },
+      "remove-input": true,
+      "children": [
+       {
+        "type": "grid",
+        "columns": [
+         3
+        ],
+        "children": [
+         {
+          "type": "card",
+          "url": "https://github.com/choldgraf",
+          "children": [
+           {
+            "type": "cardTitle",
+            "children": [
+             {
+              "type": "text",
+              "value": "Chris Holdgraf",
+              "position": {
+               "start": {
+                "line": 26,
+                "column": 1
+               },
+               "end": {
+                "line": 26,
+                "column": 1
+               }
+              },
+              "key": "Cyo9q5HUGi"
+             }
+            ],
+            "key": "DY2mi2YbaY"
+           },
+           {
+            "type": "image",
+            "url": "/build/b0d2af8ada61151341b4e09208a94cb0.jpeg",
+            "alt": "Chris Holdgraf avatar",
+            "position": {
+             "start": {
+              "line": 29,
+              "column": 1
+             },
+             "end": {
+              "line": 29,
+              "column": 1
+             }
+            },
+            "key": "OOJ74ybPK9",
+            "urlSource": "https://github.com/choldgraf.png"
+           },
+           {
+            "type": "footer",
+            "children": [
+             {
+              "type": "paragraph",
+              "children": [
+               {
+                "type": "strong",
+                "position": {
+                 "start": {
+                  "line": 28,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 28,
+                  "column": 1
+                 }
+                },
+                "children": [
+                 {
+                  "type": "text",
+                  "value": "Affiliation:",
+                  "position": {
+                   "start": {
+                    "line": 28,
+                    "column": 1
+                   },
+                   "end": {
+                    "line": 28,
+                    "column": 1
+                   }
+                  },
+                  "key": "Ar2xOj9Ono"
+                 }
+                ],
+                "key": "J6qZo2rs0x"
+               },
+               {
+                "type": "text",
+                "value": " 2i2c",
+                "position": {
+                 "start": {
+                  "line": 28,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 28,
+                  "column": 1
+                 }
+                },
+                "key": "Yj7WYXV0rO"
+               }
+              ],
+              "key": "HkKrfn26wS"
+             }
+            ],
+            "key": "TgvfROH200"
+           }
+          ],
+          "urlSource": "https://github.com/choldgraf",
+          "error": true,
+          "key": "jQOFq4fjY5"
+         },
+         {
+          "type": "card",
+          "url": "https://github.com/gregcaporaso",
+          "children": [
+           {
+            "type": "cardTitle",
+            "children": [
+             {
+              "type": "text",
+              "value": "Greg Caporaso",
+              "position": {
+               "start": {
+                "line": 32,
+                "column": 1
+               },
+               "end": {
+                "line": 32,
+                "column": 1
+               }
+              },
+              "key": "I4uSfqhDd1"
+             }
+            ],
+            "key": "cKzq9kBSVs"
+           },
+           {
+            "type": "image",
+            "url": "/build/f7d16868a15b20242f7db0b31f4147a5.jpeg",
+            "alt": "Greg Caporaso avatar",
+            "position": {
+             "start": {
+              "line": 35,
+              "column": 1
+             },
+             "end": {
+              "line": 35,
+              "column": 1
+             }
+            },
+            "key": "oEPRmcAXHG",
+            "urlSource": "https://github.com/gregcaporaso.png"
+           },
+           {
+            "type": "footer",
+            "children": [
+             {
+              "type": "paragraph",
+              "children": [
+               {
+                "type": "strong",
+                "position": {
+                 "start": {
+                  "line": 34,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 34,
+                  "column": 1
+                 }
+                },
+                "children": [
+                 {
+                  "type": "text",
+                  "value": "Affiliation:",
+                  "position": {
+                   "start": {
+                    "line": 34,
+                    "column": 1
+                   },
+                   "end": {
+                    "line": 34,
+                    "column": 1
+                   }
+                  },
+                  "key": "MIDFxt00s9"
+                 }
+                ],
+                "key": "Xgneh3e8db"
+               },
+               {
+                "type": "text",
+                "value": " Northern Arizona University",
+                "position": {
+                 "start": {
+                  "line": 34,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 34,
+                  "column": 1
+                 }
+                },
+                "key": "BL22sC4hDL"
+               }
+              ],
+              "key": "InthxS5Ubi"
+             }
+            ],
+            "key": "AdgyKJuk5M"
+           }
+          ],
+          "urlSource": "https://github.com/gregcaporaso",
+          "error": true,
+          "key": "zISfKu9wwM"
+         },
+         {
+          "type": "card",
+          "url": "https://github.com/rowanc1",
+          "children": [
+           {
+            "type": "cardTitle",
+            "children": [
+             {
+              "type": "text",
+              "value": "Rowan Cockett",
+              "position": {
+               "start": {
+                "line": 38,
+                "column": 1
+               },
+               "end": {
+                "line": 38,
+                "column": 1
+               }
+              },
+              "key": "G9x6tdpC5G"
+             }
+            ],
+            "key": "pKKeFgu9cn"
+           },
+           {
+            "type": "image",
+            "url": "/build/d91a776659f10f7c6fd43dcf5e94ec76.png",
+            "alt": "Rowan Cockett avatar",
+            "position": {
+             "start": {
+              "line": 41,
+              "column": 1
+             },
+             "end": {
+              "line": 41,
+              "column": 1
+             }
+            },
+            "key": "D2hFapkxU8",
+            "urlSource": "https://github.com/rowanc1.png"
+           },
+           {
+            "type": "footer",
+            "children": [
+             {
+              "type": "paragraph",
+              "children": [
+               {
+                "type": "strong",
+                "position": {
+                 "start": {
+                  "line": 40,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 40,
+                  "column": 1
+                 }
+                },
+                "children": [
+                 {
+                  "type": "text",
+                  "value": "Affiliation:",
+                  "position": {
+                   "start": {
+                    "line": 40,
+                    "column": 1
+                   },
+                   "end": {
+                    "line": 40,
+                    "column": 1
+                   }
+                  },
+                  "key": "EMHac2ntuq"
+                 }
+                ],
+                "key": "aEqwr7yeAq"
+               },
+               {
+                "type": "text",
+                "value": " Curvenote",
+                "position": {
+                 "start": {
+                  "line": 40,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 40,
+                  "column": 1
+                 }
+                },
+                "key": "EcfuszkOL1"
+               }
+              ],
+              "key": "OvaBoIpt3f"
+             }
+            ],
+            "key": "K3z1nxD9z6"
+           }
+          ],
+          "urlSource": "https://github.com/rowanc1",
+          "error": true,
+          "key": "gatH4olA02"
+         }
+        ],
+        "key": "R45vkUKACf"
+       }
+      ],
+      "key": "CqF4hDMfj2"
+     },
+     {
+      "type": "embed",
+      "position": {
+       "start": {
+        "line": 19,
+        "column": 1
+       },
+       "end": {
+        "line": 19,
+        "column": 1
+       }
+      },
+      "source": {
+       "url": "/team",
+       "remoteBaseUrl": "https://jupyterbook.org/compass",
+       "label": "xref:compass#org-status",
+       "kind": "Article",
+       "slug": "team",
+       "location": "/team.md",
+       "title": "Team"
+      },
+      "remove-input": true,
+      "children": [
+       {
+        "type": "heading",
+        "depth": 2,
+        "position": {
+         "start": {
+          "line": 51,
+          "column": 1
+         },
+         "end": {
+          "line": 51,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "Organizational status",
+          "position": {
+           "start": {
+            "line": 51,
+            "column": 1
+           },
+           "end": {
+            "line": 51,
+            "column": 1
+           }
+          },
+          "key": "Z6eGnlozBH"
+         }
+        ],
+        "key": "bGKheDvdtp"
+       },
+       {
+        "type": "paragraph",
+        "position": {
+         "start": {
+          "line": 53,
+          "column": 1
+         },
+         "end": {
+          "line": 54,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "The Jupyter Book community is a sub-project of ",
+          "position": {
+           "start": {
+            "line": 53,
+            "column": 1
+           },
+           "end": {
+            "line": 53,
+            "column": 1
+           }
+          },
+          "key": "pvhYqtRYmJ"
+         },
+         {
+          "type": "link",
+          "url": "https://jupyter.org",
+          "position": {
+           "start": {
+            "line": 53,
+            "column": 1
+           },
+           "end": {
+            "line": 53,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "the Jupyter Project",
+            "position": {
+             "start": {
+              "line": 53,
+              "column": 1
+             },
+             "end": {
+              "line": 53,
+              "column": 1
+             }
+            },
+            "key": "aolEhY53LC"
+           }
+          ],
+          "urlSource": "https://jupyter.org",
+          "key": "ZLLpnrlvTN"
+         },
+         {
+          "type": "text",
+          "value": ".\nJupyter is a fiscally sponsored project of ",
+          "position": {
+           "start": {
+            "line": 53,
+            "column": 1
+           },
+           "end": {
+            "line": 53,
+            "column": 1
+           }
+          },
+          "key": "LzDDBey5TG"
+         },
+         {
+          "type": "link",
+          "url": "https://numfocus.org",
+          "position": {
+           "start": {
+            "line": 53,
+            "column": 1
+           },
+           "end": {
+            "line": 53,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "NumFocus",
+            "position": {
+             "start": {
+              "line": 53,
+              "column": 1
+             },
+             "end": {
+              "line": 53,
+              "column": 1
+             }
+            },
+            "key": "FaIIsKNTj7"
+           }
+          ],
+          "urlSource": "https://numfocus.org",
+          "key": "fcRpjQfTKn"
+         },
+         {
+          "type": "text",
+          "value": ", a 501(c)(3) non-profit.",
+          "position": {
+           "start": {
+            "line": 53,
+            "column": 1
+           },
+           "end": {
+            "line": 53,
+            "column": 1
+           }
+          },
+          "key": "UVJTLZXhsm"
+         }
+        ],
+        "key": "yFjUquE2Mw"
+       }
+      ],
+      "key": "dD4kXNrm2o"
+     }
+    ],
+    "key": "MZE4Wko7PM"
+   }
+  ],
+  "key": "lk5hZX2M2X"
+ },
+ "references": {
+  "cite": {
+   "order": [],
+   "data": {}
+  }
+ },
+ "footer": {
+  "navigation": {
+   "prev": {
+    "title": "Community",
+    "short_title": "🌍 Community Guide",
+    "url": "/community",
+    "group": "Community Guide"
+   },
+   "next": {
+    "title": "Jobs and Recruitment",
+    "url": "/community/jobs",
+    "group": "Community Guide"
+   }
+  }
+ },
+ "domain": "http://localhost:3000"
+}

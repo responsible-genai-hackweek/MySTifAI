@@ -1,0 +1,2863 @@
+{
+ "version": 3,
+ "kind": "Article",
+ "sha256": "0c8c3971eb346c6386eabcecae998f9086f7daf8149a8d9e7f250ed67b6181fd",
+ "slug": "index",
+ "location": "/index.md",
+ "dependencies": [],
+ "frontmatter": {
+  "title": "Jupyter Book",
+  "site": {
+   "hide_toc": true,
+   "hide_outline": true,
+   "hide_title_block": true
+  },
+  "github": "https://github.com/jupyter-book/jupyterbook.org",
+  "abbreviations": {
+   "MyST": "Markedly Structured Text",
+   "CLI": "Command-Line Interface",
+   "TOC": "Table of Contents"
+  },
+  "source_url": "https://github.com/jupyter-book/jupyterbook.org/blob/main/docs/index.md",
+  "edit_url": "https://github.com/jupyter-book/jupyterbook.org/edit/main/docs/index.md",
+  "exports": [
+   {
+    "format": "md",
+    "filename": "index.md",
+    "url": "/build/index-65049f05b78df69aba6ce568272475da.md"
+   }
+  ]
+ },
+ "mdast": {
+  "type": "root",
+  "children": [
+   {
+    "type": "block",
+    "position": {
+     "start": {
+      "line": 9,
+      "column": 1
+     },
+     "end": {
+      "line": 9,
+      "column": 1
+     }
+    },
+    "children": [
+     {
+      "type": "admonition",
+      "kind": "attention",
+      "children": [
+       {
+        "type": "admonitionTitle",
+        "children": [
+         {
+          "type": "text",
+          "value": "Jupyter Book 2 is here!",
+          "position": {
+           "start": {
+            "line": 11,
+            "column": 1
+           },
+           "end": {
+            "line": 11,
+            "column": 1
+           }
+          },
+          "key": "c36Z6rYCYn"
+         }
+        ],
+        "key": "G3wHU3wJlF"
+       },
+       {
+        "type": "paragraph",
+        "position": {
+         "start": {
+          "line": 12,
+          "column": 1
+         },
+         "end": {
+          "line": 14,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "Built on the ",
+          "position": {
+           "start": {
+            "line": 12,
+            "column": 1
+           },
+           "end": {
+            "line": 12,
+            "column": 1
+           }
+          },
+          "key": "kncJVTqNZK"
+         },
+         {
+          "type": "link",
+          "url": "https://mystmd.org",
+          "position": {
+           "start": {
+            "line": 12,
+            "column": 1
+           },
+           "end": {
+            "line": 12,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "MyST Document Engine",
+            "position": {
+             "start": {
+              "line": 12,
+              "column": 1
+             },
+             "end": {
+              "line": 12,
+              "column": 1
+             }
+            },
+            "key": "MNc0W59WYd"
+           }
+          ],
+          "urlSource": "https://mystmd.org",
+          "key": "wx7E9TrrJJ"
+         },
+         {
+          "type": "text",
+          "value": " with faster builds, modern features, and improved workflows.\nJupyter Book 2 still has many improvements to be made.\nPlease join us and ",
+          "position": {
+           "start": {
+            "line": 12,
+            "column": 1
+           },
+           "end": {
+            "line": 12,
+            "column": 1
+           }
+          },
+          "key": "CGB72L95Ct"
+         },
+         {
+          "type": "link",
+          "url": "/contribute",
+          "position": {
+           "start": {
+            "line": 12,
+            "column": 1
+           },
+           "end": {
+            "line": 12,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "contribute to Jupyter Book",
+            "position": {
+             "start": {
+              "line": 12,
+              "column": 1
+             },
+             "end": {
+              "line": 12,
+              "column": 1
+             }
+            },
+            "key": "yrnTTIvz9G"
+           }
+          ],
+          "urlSource": "./contribute/index.md",
+          "dataUrl": "/contribute.index.json",
+          "internal": true,
+          "protocol": "file",
+          "key": "P35gqXDUG3"
+         },
+         {
+          "type": "text",
+          "value": " so we can make it better!",
+          "position": {
+           "start": {
+            "line": 12,
+            "column": 1
+           },
+           "end": {
+            "line": 12,
+            "column": 1
+           }
+          },
+          "key": "vUYbgg7ZWc"
+         }
+        ],
+        "key": "DD9dknzlL3"
+       },
+       {
+        "type": "paragraph",
+        "position": {
+         "start": {
+          "line": 16,
+          "column": 1
+         },
+         "end": {
+          "line": 16,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "link",
+          "url": "https://jupyterbook.org/stable/resources/upgrade",
+          "position": {
+           "start": {
+            "line": 16,
+            "column": 1
+           },
+           "end": {
+            "line": 16,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "Upgrade from 1.0",
+            "position": {
+             "start": {
+              "line": 16,
+              "column": 1
+             },
+             "end": {
+              "line": 16,
+              "column": 1
+             }
+            },
+            "key": "Oy5EYzJgME"
+           }
+          ],
+          "urlSource": "xref:docs/resources/upgrade",
+          "dataUrl": "https://jupyterbook.org/stable/resources.upgrade.json",
+          "internal": false,
+          "protocol": "xref:myst",
+          "key": "aWGkI9Fzz6"
+         },
+         {
+          "type": "text",
+          "value": " • ",
+          "position": {
+           "start": {
+            "line": 16,
+            "column": 1
+           },
+           "end": {
+            "line": 16,
+            "column": 1
+           }
+          },
+          "key": "nUiAEVntlY"
+         },
+         {
+          "type": "crossReference",
+          "url": "/resources/faq",
+          "position": {
+           "start": {
+            "line": 16,
+            "column": 1
+           },
+           "end": {
+            "line": 16,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "Known limitations",
+            "position": {
+             "start": {
+              "line": 16,
+              "column": 1
+             },
+             "end": {
+              "line": 16,
+              "column": 1
+             }
+            },
+            "key": "QnthW38hBv"
+           }
+          ],
+          "urlSource": "xref:docs#known-limitations",
+          "remote": true,
+          "remoteBaseUrl": "https://jupyterbook.org/stable",
+          "dataUrl": "/resources.faq.json",
+          "identifier": "known-limitations",
+          "label": "known-limitations",
+          "html_id": "known-limitations",
+          "protocol": "xref:myst",
+          "template": "{name}",
+          "resolved": true,
+          "key": "nV6VzvKm3i"
+         },
+         {
+          "type": "text",
+          "value": " • ",
+          "position": {
+           "start": {
+            "line": 16,
+            "column": 1
+           },
+           "end": {
+            "line": 16,
+            "column": 1
+           }
+          },
+          "key": "TclnpBk3eR"
+         },
+         {
+          "type": "crossReference",
+          "url": "/resources/faq",
+          "position": {
+           "start": {
+            "line": 16,
+            "column": 1
+           },
+           "end": {
+            "line": 16,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "Frequently Asked Questions",
+            "position": {
+             "start": {
+              "line": 16,
+              "column": 1
+             },
+             "end": {
+              "line": 16,
+              "column": 1
+             }
+            },
+            "key": "GHXXT0ICes"
+           }
+          ],
+          "urlSource": "xref:docs/resources/faq#faq-general",
+          "remote": true,
+          "remoteBaseUrl": "https://jupyterbook.org/stable",
+          "dataUrl": "/resources.faq.json",
+          "identifier": "faq-general",
+          "label": "faq-general",
+          "html_id": "faq-general",
+          "protocol": "xref:myst",
+          "template": "Paragraph",
+          "resolved": true,
+          "key": "hK5ENdsrCF"
+         },
+         {
+          "type": "text",
+          "value": " • ",
+          "position": {
+           "start": {
+            "line": 16,
+            "column": 1
+           },
+           "end": {
+            "line": 16,
+            "column": 1
+           }
+          },
+          "key": "JQFRi9km1m"
+         },
+         {
+          "type": "link",
+          "url": "https://jupyterbook.org/v1/",
+          "position": {
+           "start": {
+            "line": 16,
+            "column": 1
+           },
+           "end": {
+            "line": 16,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "JBv1 documentation",
+            "position": {
+             "start": {
+              "line": 16,
+              "column": 1
+             },
+             "end": {
+              "line": 16,
+              "column": 1
+             }
+            },
+            "key": "bFPwfvn6RU"
+           }
+          ],
+          "urlSource": "https://jupyterbook.org/v1/",
+          "key": "Tk82DviNUf"
+         }
+        ],
+        "key": "gWXvoMnuc4"
+       }
+      ],
+      "key": "fQPXYbc8Gc"
+     }
+    ],
+    "class": "col-page-inset",
+    "key": "zSYm8CciFB"
+   },
+   {
+    "type": "block",
+    "position": {
+     "start": {
+      "line": 19,
+      "column": 1
+     },
+     "end": {
+      "line": 19,
+      "column": 1
+     }
+    },
+    "children": [
+     {
+      "type": "div",
+      "style": {
+       "fontWeight": "bold",
+       "fontSize": "4em",
+       "maxWidth": "80%",
+       "margin": ".5em auto",
+       "textAlign": "center",
+       "lineHeight": "normal"
+      },
+      "children": [
+       {
+        "type": "paragraph",
+        "position": {
+         "start": {
+          "line": 23,
+          "column": 1
+         },
+         "end": {
+          "line": 23,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "Jupyter ",
+          "position": {
+           "start": {
+            "line": 23,
+            "column": 1
+           },
+           "end": {
+            "line": 23,
+            "column": 1
+           }
+          },
+          "key": "lIbhD5UqP3"
+         },
+         {
+          "type": "span",
+          "style": {
+           "color": "#e07330"
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "Book",
+            "position": {
+             "start": {
+              "line": 23,
+              "column": 1
+             },
+             "end": {
+              "line": 23,
+              "column": 1
+             }
+            },
+            "key": "Dhwr8ZfkeU"
+           }
+          ],
+          "key": "e4Sp6CiZ0A"
+         }
+        ],
+        "key": "CoHMdF6h6N"
+       }
+      ],
+      "key": "tuFrccfv1U"
+     },
+     {
+      "type": "grid",
+      "columns": [
+       1,
+       2,
+       2,
+       2
+      ],
+      "children": [
+       {
+        "type": "grid-item",
+        "children": [
+         {
+          "type": "paragraph",
+          "position": {
+           "start": {
+            "line": 28,
+            "column": 1
+           },
+           "end": {
+            "line": 28,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "span",
+            "style": {
+             "fontSize": "1.5em"
+            },
+            "children": [
+             {
+              "type": "text",
+              "value": "Create computational narratives that are reusable, reproducible, and interactive.",
+              "position": {
+               "start": {
+                "line": 28,
+                "column": 1
+               },
+               "end": {
+                "line": 28,
+                "column": 1
+               }
+              },
+              "key": "bynGr3Uov6"
+             }
+            ],
+            "key": "ef4emRObYn"
+           }
+          ],
+          "key": "mPPbWtOyvf"
+         },
+         {
+          "type": "paragraph",
+          "position": {
+           "start": {
+            "line": 30,
+            "column": 1
+           },
+           "end": {
+            "line": 30,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "emphasis",
+            "position": {
+             "start": {
+              "line": 30,
+              "column": 1
+             },
+             "end": {
+              "line": 30,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "text",
+              "value": "Write in Notebooks or Markdown, execute code, cross-reference content, and publish to the web - built for and by researchers, educators, and data scientists.",
+              "position": {
+               "start": {
+                "line": 30,
+                "column": 1
+               },
+               "end": {
+                "line": 30,
+                "column": 1
+               }
+              },
+              "key": "DzgOjIDqll"
+             }
+            ],
+            "key": "eFs9IgdxZG"
+           }
+          ],
+          "key": "OlCPjkpWwf"
+         }
+        ],
+        "key": "TwRfVbNLH1"
+       },
+       {
+        "type": "grid-item",
+        "children": [
+         {
+          "type": "code",
+          "lang": "bash",
+          "filename": "install",
+          "value": "pip install jupyter-book\njupyter book start",
+          "key": "cJIRCvERSK"
+         },
+         {
+          "type": "paragraph",
+          "position": {
+           "start": {
+            "line": 40,
+            "column": 1
+           },
+           "end": {
+            "line": 40,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "link",
+            "url": "https://jupyterbook.org/stable/",
+            "children": [
+             {
+              "type": "text",
+              "value": "Get started →",
+              "key": "Eo8YUhMtAQ"
+             }
+            ],
+            "class": "button",
+            "urlSource": "xref:docs/",
+            "dataUrl": "https://jupyterbook.org/stable/index.json",
+            "internal": false,
+            "protocol": "xref:myst",
+            "key": "tUVSxzDtVS"
+           },
+           {
+            "type": "text",
+            "value": " ",
+            "position": {
+             "start": {
+              "line": 40,
+              "column": 1
+             },
+             "end": {
+              "line": 40,
+              "column": 1
+             }
+            },
+            "key": "xEtr2gH8Aw"
+           },
+           {
+            "type": "link",
+            "url": "https://jupyterbook.org/stable/resources/upgrade",
+            "children": [
+             {
+              "type": "text",
+              "value": "Upgrade from JB1 →",
+              "key": "AkMc9KoAMF"
+             }
+            ],
+            "class": "button",
+            "urlSource": "xref:docs/resources/upgrade",
+            "dataUrl": "https://jupyterbook.org/stable/resources.upgrade.json",
+            "internal": false,
+            "protocol": "xref:myst",
+            "key": "zI4EDYrlfS"
+           }
+          ],
+          "key": "MLKLgqBSuY"
+         }
+        ],
+        "key": "EgEFtevrFt"
+       }
+      ],
+      "key": "JqA8EgUo78"
+     }
+    ],
+    "class": "col-page-inset",
+    "key": "JmYTHEgePH"
+   },
+   {
+    "type": "block",
+    "position": {
+     "start": {
+      "line": 43,
+      "column": 1
+     },
+     "end": {
+      "line": 43,
+      "column": 1
+     }
+    },
+    "children": [
+     {
+      "type": "heading",
+      "depth": 2,
+      "position": {
+       "start": {
+        "line": 44,
+        "column": 1
+       },
+       "end": {
+        "line": 44,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "New to Jupyter Book?",
+        "position": {
+         "start": {
+          "line": 44,
+          "column": 1
+         },
+         "end": {
+          "line": 44,
+          "column": 1
+         }
+        },
+        "key": "QoraJk3lHF"
+       }
+      ],
+      "identifier": "new-to-jupyter-book",
+      "label": "New to Jupyter Book?",
+      "html_id": "new-to-jupyter-book",
+      "implicit": true,
+      "key": "fYRTe4aC8e"
+     },
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 46,
+        "column": 1
+       },
+       "end": {
+        "line": 46,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "Start here: ",
+        "position": {
+         "start": {
+          "line": 46,
+          "column": 1
+         },
+         "end": {
+          "line": 46,
+          "column": 1
+         }
+        },
+        "key": "NfLIUcwvQF"
+       },
+       {
+        "type": "link",
+        "url": "https://jupyterbook.org/stable/",
+        "position": {
+         "start": {
+          "line": 46,
+          "column": 1
+         },
+         "end": {
+          "line": 46,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "Docs",
+          "position": {
+           "start": {
+            "line": 46,
+            "column": 1
+           },
+           "end": {
+            "line": 46,
+            "column": 1
+           }
+          },
+          "key": "nCU4xyILBA"
+         }
+        ],
+        "urlSource": "xref:docs/",
+        "dataUrl": "https://jupyterbook.org/stable/index.json",
+        "internal": false,
+        "protocol": "xref:myst",
+        "key": "wHvE2wAeAb"
+       },
+       {
+        "type": "text",
+        "value": " • ",
+        "position": {
+         "start": {
+          "line": 46,
+          "column": 1
+         },
+         "end": {
+          "line": 46,
+          "column": 1
+         }
+        },
+        "key": "LjuSSZftsJ"
+       },
+       {
+        "type": "link",
+        "url": "/gallery",
+        "position": {
+         "start": {
+          "line": 46,
+          "column": 1
+         },
+         "end": {
+          "line": 46,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "Gallery",
+          "position": {
+           "start": {
+            "line": 46,
+            "column": 1
+           },
+           "end": {
+            "line": 46,
+            "column": 1
+           }
+          },
+          "key": "zgPZPLietT"
+         }
+        ],
+        "urlSource": "./gallery.md",
+        "dataUrl": "/gallery.json",
+        "internal": true,
+        "protocol": "file",
+        "key": "LZRIL0aVA4"
+       },
+       {
+        "type": "text",
+        "value": " • ",
+        "position": {
+         "start": {
+          "line": 46,
+          "column": 1
+         },
+         "end": {
+          "line": 46,
+          "column": 1
+         }
+        },
+        "key": "nWdFEmaYk8"
+       },
+       {
+        "type": "link",
+        "url": "/help",
+        "position": {
+         "start": {
+          "line": 46,
+          "column": 1
+         },
+         "end": {
+          "line": 46,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "Get help",
+          "position": {
+           "start": {
+            "line": 46,
+            "column": 1
+           },
+           "end": {
+            "line": 46,
+            "column": 1
+           }
+          },
+          "key": "YxGbvo13up"
+         }
+        ],
+        "urlSource": "./help.md",
+        "dataUrl": "/help.json",
+        "internal": true,
+        "protocol": "file",
+        "key": "pM2JsibufW"
+       },
+       {
+        "type": "text",
+        "value": " • ",
+        "position": {
+         "start": {
+          "line": 46,
+          "column": 1
+         },
+         "end": {
+          "line": 46,
+          "column": 1
+         }
+        },
+        "key": "OmQvvbDMf2"
+       },
+       {
+        "type": "link",
+        "url": "/community",
+        "position": {
+         "start": {
+          "line": 46,
+          "column": 1
+         },
+         "end": {
+          "line": 46,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "Community",
+          "position": {
+           "start": {
+            "line": 46,
+            "column": 1
+           },
+           "end": {
+            "line": 46,
+            "column": 1
+           }
+          },
+          "key": "kWsNBFUXQS"
+         }
+        ],
+        "urlSource": "./community/index.md",
+        "dataUrl": "/community.index.json",
+        "internal": true,
+        "protocol": "file",
+        "key": "NhHqjZmn6G"
+       },
+       {
+        "type": "text",
+        "value": " • ",
+        "position": {
+         "start": {
+          "line": 46,
+          "column": 1
+         },
+         "end": {
+          "line": 46,
+          "column": 1
+         }
+        },
+        "key": "BpFgbPgWkZ"
+       },
+       {
+        "type": "link",
+        "url": "/community/ecosystem",
+        "position": {
+         "start": {
+          "line": 46,
+          "column": 1
+         },
+         "end": {
+          "line": 46,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "Jupyter Book vs MyST",
+          "position": {
+           "start": {
+            "line": 46,
+            "column": 1
+           },
+           "end": {
+            "line": 46,
+            "column": 1
+           }
+          },
+          "key": "ahWsC9h5en"
+         }
+        ],
+        "urlSource": "./community/ecosystem.md",
+        "dataUrl": "/community.ecosystem.json",
+        "internal": true,
+        "protocol": "file",
+        "key": "QJ6c9xlhfJ"
+       }
+      ],
+      "key": "LLjf4grWBJ"
+     },
+     {
+      "type": "heading",
+      "depth": 2,
+      "position": {
+       "start": {
+        "line": 49,
+        "column": 1
+       },
+       "end": {
+        "line": 49,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "See It in Action",
+        "position": {
+         "start": {
+          "line": 49,
+          "column": 1
+         },
+         "end": {
+          "line": 49,
+          "column": 1
+         }
+        },
+        "key": "gU55XulNoW"
+       }
+      ],
+      "identifier": "see-it-in-action",
+      "label": "See It in Action",
+      "html_id": "see-it-in-action",
+      "implicit": true,
+      "key": "jhqwBCEfXc"
+     },
+     {
+      "type": "tabSet",
+      "children": [
+       {
+        "type": "tabItem",
+        "title": "Reusable",
+        "children": [
+         {
+          "type": "container",
+          "kind": "figure",
+          "children": [
+           {
+            "type": "image",
+            "url": "/build/reusable-add605c28b22f3c1afa23a825463c9ba.mp4",
+            "alt": "Reusable Knowledge - Cross-reference pages, sections, figures, and equations. Link to other MyST sites for a connected reading experience.",
+            "data": {
+             "altTextIsAutoGenerated": true
+            },
+            "key": "C3rpqQcxXl",
+            "urlSource": "media/videos/reusable.mp4"
+           },
+           {
+            "type": "caption",
+            "children": [
+             {
+              "type": "paragraph",
+              "position": {
+               "start": {
+                "line": 57,
+                "column": 1
+               },
+               "end": {
+                "line": 57,
+                "column": 1
+               }
+              },
+              "children": [
+               {
+                "type": "strong",
+                "position": {
+                 "start": {
+                  "line": 57,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 57,
+                  "column": 1
+                 }
+                },
+                "children": [
+                 {
+                  "type": "text",
+                  "value": "Reusable Knowledge",
+                  "position": {
+                   "start": {
+                    "line": 57,
+                    "column": 1
+                   },
+                   "end": {
+                    "line": 57,
+                    "column": 1
+                   }
+                  },
+                  "key": "jHdRgS44Av"
+                 }
+                ],
+                "key": "oPOeRWbjA5"
+               },
+               {
+                "type": "text",
+                "value": " - Cross-reference pages, sections, figures, and equations. Link to other ",
+                "key": "n42uYMWsEO"
+               },
+               {
+                "type": "abbreviation",
+                "title": "Markedly Structured Text",
+                "children": [
+                 {
+                  "type": "text",
+                  "value": "MyST",
+                  "key": "wz4eW37Czb"
+                 }
+                ],
+                "key": "pto142mvXp"
+               },
+               {
+                "type": "text",
+                "value": " sites for a connected reading experience.",
+                "key": "xU79gJ4uF6"
+               }
+              ],
+              "key": "vGlmzExNKp"
+             }
+            ],
+            "key": "QXedNwuHzf"
+           }
+          ],
+          "class": "sd-mb-0",
+          "enumerator": "1",
+          "key": "ixPjN1bnyU"
+         }
+        ],
+        "key": "lF83CH6MTj"
+       },
+       {
+        "type": "tabItem",
+        "title": "Reproducible",
+        "children": [
+         {
+          "type": "container",
+          "kind": "figure",
+          "children": [
+           {
+            "type": "image",
+            "url": "/build/reproducible-4546d5893bf2ba4750dc0a23263db11a.mp4",
+            "alt": "Reproducible Results - Execute Python, R, Julia, and more at build time. Include computational results directly in your documentation.",
+            "data": {
+             "altTextIsAutoGenerated": true
+            },
+            "key": "fugHHkcbPT",
+            "urlSource": "media/videos/reproducible.mp4"
+           },
+           {
+            "type": "caption",
+            "children": [
+             {
+              "type": "paragraph",
+              "position": {
+               "start": {
+                "line": 66,
+                "column": 1
+               },
+               "end": {
+                "line": 66,
+                "column": 1
+               }
+              },
+              "children": [
+               {
+                "type": "strong",
+                "position": {
+                 "start": {
+                  "line": 66,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 66,
+                  "column": 1
+                 }
+                },
+                "children": [
+                 {
+                  "type": "text",
+                  "value": "Reproducible Results",
+                  "position": {
+                   "start": {
+                    "line": 66,
+                    "column": 1
+                   },
+                   "end": {
+                    "line": 66,
+                    "column": 1
+                   }
+                  },
+                  "key": "jVH3jkLB0p"
+                 }
+                ],
+                "key": "xBom7COYfO"
+               },
+               {
+                "type": "text",
+                "value": " - Execute Python, R, Julia, and more at build time. Include computational results directly in your documentation.",
+                "position": {
+                 "start": {
+                  "line": 66,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 66,
+                  "column": 1
+                 }
+                },
+                "key": "YKNdM0Qt8T"
+               }
+              ],
+              "key": "MJodEQPywB"
+             }
+            ],
+            "key": "q7x3NoxIWA"
+           }
+          ],
+          "class": "sd-mb-0",
+          "enumerator": "2",
+          "key": "Gs2PKmRK4U"
+         }
+        ],
+        "key": "AuMGfqBK0o"
+       },
+       {
+        "type": "tabItem",
+        "title": "Interactive",
+        "children": [
+         {
+          "type": "container",
+          "kind": "figure",
+          "children": [
+           {
+            "type": "image",
+            "url": "/build/interactive-d5b049b0f20de72ac10772dd65832684.mp4",
+            "alt": "Interactive Exploration - Publish websites with live widgets. Connect to JupyterHub, Binder, or run Python in the browser.",
+            "data": {
+             "altTextIsAutoGenerated": true
+            },
+            "key": "y5fcaup9Pv",
+            "urlSource": "media/videos/interactive.mp4"
+           },
+           {
+            "type": "caption",
+            "children": [
+             {
+              "type": "paragraph",
+              "position": {
+               "start": {
+                "line": 75,
+                "column": 1
+               },
+               "end": {
+                "line": 75,
+                "column": 1
+               }
+              },
+              "children": [
+               {
+                "type": "strong",
+                "position": {
+                 "start": {
+                  "line": 75,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 75,
+                  "column": 1
+                 }
+                },
+                "children": [
+                 {
+                  "type": "text",
+                  "value": "Interactive Exploration",
+                  "position": {
+                   "start": {
+                    "line": 75,
+                    "column": 1
+                   },
+                   "end": {
+                    "line": 75,
+                    "column": 1
+                   }
+                  },
+                  "key": "PUIOhB4Ycs"
+                 }
+                ],
+                "key": "wFc2WrLZH8"
+               },
+               {
+                "type": "text",
+                "value": " - Publish websites with live widgets. Connect to JupyterHub, Binder, or run Python in the browser.",
+                "position": {
+                 "start": {
+                  "line": 75,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 75,
+                  "column": 1
+                 }
+                },
+                "key": "V84tZwFi43"
+               }
+              ],
+              "key": "fafk5YSeyH"
+             }
+            ],
+            "key": "q8afEq0DOP"
+           }
+          ],
+          "class": "sd-mb-0",
+          "enumerator": "3",
+          "key": "BAlPHRsDnx"
+         }
+        ],
+        "key": "q92mxXZQai"
+       }
+      ],
+      "key": "ipCq71jDXl"
+     }
+    ],
+    "key": "hV95grLKWi"
+   },
+   {
+    "type": "block",
+    "position": {
+     "start": {
+      "line": 82,
+      "column": 1
+     },
+     "end": {
+      "line": 82,
+      "column": 1
+     }
+    },
+    "children": [
+     {
+      "type": "heading",
+      "depth": 2,
+      "position": {
+       "start": {
+        "line": 84,
+        "column": 1
+       },
+       "end": {
+        "line": 84,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "Get started",
+        "position": {
+         "start": {
+          "line": 84,
+          "column": 1
+         },
+         "end": {
+          "line": 84,
+          "column": 1
+         }
+        },
+        "key": "a6SgU8pAec"
+       }
+      ],
+      "identifier": "get-started",
+      "label": "Get started",
+      "html_id": "get-started",
+      "implicit": true,
+      "key": "bSrIs4bbR3"
+     },
+     {
+      "type": "heading",
+      "depth": 3,
+      "position": {
+       "start": {
+        "line": 86,
+        "column": 1
+       },
+       "end": {
+        "line": 86,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "What do you want to do",
+        "position": {
+         "start": {
+          "line": 86,
+          "column": 1
+         },
+         "end": {
+          "line": 86,
+          "column": 1
+         }
+        },
+        "key": "xbnOuqGkWC"
+       }
+      ],
+      "identifier": "what-do-you-want-to-do",
+      "label": "What do you want to do",
+      "html_id": "what-do-you-want-to-do",
+      "implicit": true,
+      "key": "DBRwMDry10"
+     },
+     {
+      "type": "grid",
+      "columns": [
+       1,
+       2,
+       3,
+       3
+      ],
+      "children": [
+       {
+        "type": "card",
+        "url": "https://jupyterbook.org/stable/get-started",
+        "children": [
+         {
+          "type": "cardTitle",
+          "children": [
+           {
+            "type": "text",
+            "value": "📘 Get Started",
+            "position": {
+             "start": {
+              "line": 89,
+              "column": 1
+             },
+             "end": {
+              "line": 89,
+              "column": 1
+             }
+            },
+            "key": "I6q7PLDy6g"
+           }
+          ],
+          "key": "fpIN0980pC"
+         },
+         {
+          "type": "paragraph",
+          "position": {
+           "start": {
+            "line": 91,
+            "column": 1
+           },
+           "end": {
+            "line": 91,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "Build your first book in minutes",
+            "position": {
+             "start": {
+              "line": 91,
+              "column": 1
+             },
+             "end": {
+              "line": 91,
+              "column": 1
+             }
+            },
+            "key": "UeishaGjEv"
+           }
+          ],
+          "key": "e4K9qxNr5M"
+         },
+         {
+          "type": "footer",
+          "children": [
+           {
+            "type": "paragraph",
+            "position": {
+             "start": {
+              "line": 93,
+              "column": 1
+             },
+             "end": {
+              "line": 93,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "link",
+              "url": "https://jupyterbook.org/stable/get-started",
+              "position": {
+               "start": {
+                "line": 93,
+                "column": 1
+               },
+               "end": {
+                "line": 93,
+                "column": 1
+               }
+              },
+              "children": [
+               {
+                "type": "text",
+                "value": "Quick start →",
+                "position": {
+                 "start": {
+                  "line": 93,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 93,
+                  "column": 1
+                 }
+                },
+                "key": "AK6kDH2McA"
+               }
+              ],
+              "urlSource": "xref:docs/get-started",
+              "dataUrl": "https://jupyterbook.org/stable/get-started.index.json",
+              "internal": false,
+              "protocol": "xref:myst",
+              "key": "PfUKPTKIcG"
+             }
+            ],
+            "key": "GKMhQEbeHD"
+           }
+          ],
+          "key": "O4Q2RZfNaY"
+         }
+        ],
+        "urlSource": "xref:docs/get-started",
+        "dataUrl": "https://jupyterbook.org/stable/get-started.index.json",
+        "internal": false,
+        "protocol": "xref:myst",
+        "key": "W1Q7Ysqf0B"
+       },
+       {
+        "type": "card",
+        "url": "https://jupyterbook.org/stable/authoring",
+        "children": [
+         {
+          "type": "cardTitle",
+          "children": [
+           {
+            "type": "text",
+            "value": "📝 Author Content",
+            "position": {
+             "start": {
+              "line": 95,
+              "column": 1
+             },
+             "end": {
+              "line": 95,
+              "column": 1
+             }
+            },
+            "key": "v9WHAow0MS"
+           }
+          ],
+          "key": "vjsEPeMU6Q"
+         },
+         {
+          "type": "paragraph",
+          "position": {
+           "start": {
+            "line": 97,
+            "column": 1
+           },
+           "end": {
+            "line": 97,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "Write with ",
+            "key": "nRvOSdhTQu"
+           },
+           {
+            "type": "abbreviation",
+            "title": "Markedly Structured Text",
+            "children": [
+             {
+              "type": "text",
+              "value": "MyST",
+              "key": "eznbCbXiwf"
+             }
+            ],
+            "key": "TQCHujIHOm"
+           },
+           {
+            "type": "text",
+            "value": " Markdown",
+            "key": "ppIgd1Nt4K"
+           }
+          ],
+          "key": "xXZm5urcdX"
+         },
+         {
+          "type": "footer",
+          "children": [
+           {
+            "type": "paragraph",
+            "position": {
+             "start": {
+              "line": 99,
+              "column": 1
+             },
+             "end": {
+              "line": 99,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "link",
+              "url": "https://jupyterbook.org/stable/authoring",
+              "position": {
+               "start": {
+                "line": 99,
+                "column": 1
+               },
+               "end": {
+                "line": 99,
+                "column": 1
+               }
+              },
+              "children": [
+               {
+                "type": "text",
+                "value": "Learn authoring →",
+                "position": {
+                 "start": {
+                  "line": 99,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 99,
+                  "column": 1
+                 }
+                },
+                "key": "xVyWCSxd36"
+               }
+              ],
+              "urlSource": "xref:docs/authoring",
+              "dataUrl": "https://jupyterbook.org/stable/authoring.index.json",
+              "internal": false,
+              "protocol": "xref:myst",
+              "key": "CmyEoFbVKh"
+             }
+            ],
+            "key": "zxuHSoTL6i"
+           }
+          ],
+          "key": "nKf2vK6NuY"
+         }
+        ],
+        "urlSource": "xref:docs/authoring",
+        "dataUrl": "https://jupyterbook.org/stable/authoring.index.json",
+        "internal": false,
+        "protocol": "xref:myst",
+        "key": "pJEYnAWRG4"
+       },
+       {
+        "type": "card",
+        "url": "https://jupyterbook.org/stable/build-and-publish",
+        "children": [
+         {
+          "type": "cardTitle",
+          "children": [
+           {
+            "type": "text",
+            "value": "🚀 Build & Publish",
+            "position": {
+             "start": {
+              "line": 101,
+              "column": 1
+             },
+             "end": {
+              "line": 101,
+              "column": 1
+             }
+            },
+            "key": "S4Rk88dYo4"
+           }
+          ],
+          "key": "HzwVwP4hp8"
+         },
+         {
+          "type": "paragraph",
+          "position": {
+           "start": {
+            "line": 103,
+            "column": 1
+           },
+           "end": {
+            "line": 103,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "Deploy to the web",
+            "position": {
+             "start": {
+              "line": 103,
+              "column": 1
+             },
+             "end": {
+              "line": 103,
+              "column": 1
+             }
+            },
+            "key": "WidttUiYvr"
+           }
+          ],
+          "key": "ye7zp0btYS"
+         },
+         {
+          "type": "footer",
+          "children": [
+           {
+            "type": "paragraph",
+            "position": {
+             "start": {
+              "line": 105,
+              "column": 1
+             },
+             "end": {
+              "line": 105,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "link",
+              "url": "https://jupyterbook.org/stable/build-and-publish",
+              "position": {
+               "start": {
+                "line": 105,
+                "column": 1
+               },
+               "end": {
+                "line": 105,
+                "column": 1
+               }
+              },
+              "children": [
+               {
+                "type": "text",
+                "value": "Publish guide →",
+                "position": {
+                 "start": {
+                  "line": 105,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 105,
+                  "column": 1
+                 }
+                },
+                "key": "CpNmJ65MDv"
+               }
+              ],
+              "urlSource": "xref:docs/build-and-publish",
+              "dataUrl": "https://jupyterbook.org/stable/build-and-publish.index.json",
+              "internal": false,
+              "protocol": "xref:myst",
+              "key": "GH8f5Mimet"
+             }
+            ],
+            "key": "rlulmdDpkc"
+           }
+          ],
+          "key": "KwDCXK9pIC"
+         }
+        ],
+        "urlSource": "xref:docs/build-and-publish",
+        "dataUrl": "https://jupyterbook.org/stable/build-and-publish.index.json",
+        "internal": false,
+        "protocol": "xref:myst",
+        "key": "uffQviuCzV"
+       },
+       {
+        "type": "card",
+        "url": "https://jupyterbook.org/stable/plugins",
+        "children": [
+         {
+          "type": "cardTitle",
+          "children": [
+           {
+            "type": "text",
+            "value": "⚙️ Extend with Plugins",
+            "position": {
+             "start": {
+              "line": 107,
+              "column": 1
+             },
+             "end": {
+              "line": 107,
+              "column": 1
+             }
+            },
+            "key": "wBYstEKlKu"
+           }
+          ],
+          "key": "aGFchxo46R"
+         },
+         {
+          "type": "paragraph",
+          "position": {
+           "start": {
+            "line": 109,
+            "column": 1
+           },
+           "end": {
+            "line": 109,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "Customize your workflow",
+            "position": {
+             "start": {
+              "line": 109,
+              "column": 1
+             },
+             "end": {
+              "line": 109,
+              "column": 1
+             }
+            },
+            "key": "HPgp1P6rbF"
+           }
+          ],
+          "key": "xKj77EfAPX"
+         },
+         {
+          "type": "footer",
+          "children": [
+           {
+            "type": "paragraph",
+            "position": {
+             "start": {
+              "line": 111,
+              "column": 1
+             },
+             "end": {
+              "line": 111,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "link",
+              "url": "https://jupyterbook.org/stable/plugins",
+              "position": {
+               "start": {
+                "line": 111,
+                "column": 1
+               },
+               "end": {
+                "line": 111,
+                "column": 1
+               }
+              },
+              "children": [
+               {
+                "type": "text",
+                "value": "Explore plugins →",
+                "position": {
+                 "start": {
+                  "line": 111,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 111,
+                  "column": 1
+                 }
+                },
+                "key": "EWiGKXucY6"
+               }
+              ],
+              "urlSource": "xref:docs/plugins",
+              "dataUrl": "https://jupyterbook.org/stable/plugins.index.json",
+              "internal": false,
+              "protocol": "xref:myst",
+              "key": "vj8Tpq78Id"
+             }
+            ],
+            "key": "rW5c5qjA7O"
+           }
+          ],
+          "key": "DqiIlZsJQC"
+         }
+        ],
+        "urlSource": "xref:docs/plugins",
+        "dataUrl": "https://jupyterbook.org/stable/plugins.index.json",
+        "internal": false,
+        "protocol": "xref:myst",
+        "key": "bURcgccI9N"
+       },
+       {
+        "type": "card",
+        "url": "/community",
+        "children": [
+         {
+          "type": "cardTitle",
+          "children": [
+           {
+            "type": "text",
+            "value": "💬 Community",
+            "position": {
+             "start": {
+              "line": 113,
+              "column": 1
+             },
+             "end": {
+              "line": 113,
+              "column": 1
+             }
+            },
+            "key": "clzaD1lKbJ"
+           }
+          ],
+          "key": "RphZIDPf2Q"
+         },
+         {
+          "type": "paragraph",
+          "position": {
+           "start": {
+            "line": 115,
+            "column": 1
+           },
+           "end": {
+            "line": 115,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "Get help and contribute",
+            "position": {
+             "start": {
+              "line": 115,
+              "column": 1
+             },
+             "end": {
+              "line": 115,
+              "column": 1
+             }
+            },
+            "key": "tPMw4jtwKA"
+           }
+          ],
+          "key": "cgs2mTDJnP"
+         },
+         {
+          "type": "footer",
+          "children": [
+           {
+            "type": "paragraph",
+            "position": {
+             "start": {
+              "line": 117,
+              "column": 1
+             },
+             "end": {
+              "line": 117,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "link",
+              "url": "/community",
+              "position": {
+               "start": {
+                "line": 117,
+                "column": 1
+               },
+               "end": {
+                "line": 117,
+                "column": 1
+               }
+              },
+              "children": [
+               {
+                "type": "text",
+                "value": "Join us →",
+                "position": {
+                 "start": {
+                  "line": 117,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 117,
+                  "column": 1
+                 }
+                },
+                "key": "t5asJChW8r"
+               }
+              ],
+              "urlSource": "./community/index.md",
+              "dataUrl": "/community.index.json",
+              "internal": true,
+              "protocol": "file",
+              "key": "SzgXePy5Zo"
+             }
+            ],
+            "key": "ZZKQYbqYaF"
+           }
+          ],
+          "key": "FrEzlz5aVE"
+         }
+        ],
+        "urlSource": "./community/index.md",
+        "dataUrl": "/community.index.json",
+        "internal": true,
+        "protocol": "file",
+        "key": "VEimob6XbK"
+       },
+       {
+        "type": "card",
+        "url": "/gallery",
+        "children": [
+         {
+          "type": "cardTitle",
+          "children": [
+           {
+            "type": "text",
+            "value": "📚 Gallery",
+            "position": {
+             "start": {
+              "line": 119,
+              "column": 1
+             },
+             "end": {
+              "line": 119,
+              "column": 1
+             }
+            },
+            "key": "emtUopGLev"
+           }
+          ],
+          "key": "iLQ6NZqFrn"
+         },
+         {
+          "type": "paragraph",
+          "position": {
+           "start": {
+            "line": 121,
+            "column": 1
+           },
+           "end": {
+            "line": 121,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "Explore existing books and projects",
+            "position": {
+             "start": {
+              "line": 121,
+              "column": 1
+             },
+             "end": {
+              "line": 121,
+              "column": 1
+             }
+            },
+            "key": "ApHJoIDthP"
+           }
+          ],
+          "key": "qThhEZlfGL"
+         },
+         {
+          "type": "footer",
+          "children": [
+           {
+            "type": "paragraph",
+            "position": {
+             "start": {
+              "line": 123,
+              "column": 1
+             },
+             "end": {
+              "line": 123,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "link",
+              "url": "/gallery",
+              "position": {
+               "start": {
+                "line": 123,
+                "column": 1
+               },
+               "end": {
+                "line": 123,
+                "column": 1
+               }
+              },
+              "children": [
+               {
+                "type": "text",
+                "value": "Explore gallery →",
+                "position": {
+                 "start": {
+                  "line": 123,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 123,
+                  "column": 1
+                 }
+                },
+                "key": "tska6kU7CQ"
+               }
+              ],
+              "urlSource": "./gallery.md",
+              "dataUrl": "/gallery.json",
+              "internal": true,
+              "protocol": "file",
+              "key": "RgAKeVCC4W"
+             }
+            ],
+            "key": "WJFZ81IRqz"
+           }
+          ],
+          "key": "UohqB3TrHc"
+         }
+        ],
+        "urlSource": "./gallery.md",
+        "dataUrl": "/gallery.json",
+        "internal": true,
+        "protocol": "file",
+        "key": "U9MC4QgHDO"
+       }
+      ],
+      "key": "lisraNrJ87"
+     }
+    ],
+    "kind": "justified",
+    "key": "iRmDoFD4Ja"
+   },
+   {
+    "type": "block",
+    "position": {
+     "start": {
+      "line": 128,
+      "column": 1
+     },
+     "end": {
+      "line": 128,
+      "column": 1
+     }
+    },
+    "children": [
+     {
+      "type": "heading",
+      "depth": 3,
+      "position": {
+       "start": {
+        "line": 130,
+        "column": 1
+       },
+       "end": {
+        "line": 130,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "Important Information",
+        "position": {
+         "start": {
+          "line": 130,
+          "column": 1
+         },
+         "end": {
+          "line": 130,
+          "column": 1
+         }
+        },
+        "key": "WQEPd7LJzG"
+       }
+      ],
+      "identifier": "important-information",
+      "label": "Important Information",
+      "html_id": "important-information",
+      "implicit": true,
+      "key": "xFPrCeRuf2"
+     },
+     {
+      "type": "grid",
+      "columns": [
+       1,
+       1,
+       2,
+       2
+      ],
+      "children": [
+       {
+        "type": "card",
+        "url": "https://jupyterbook.org/stable/resources/upgrade",
+        "children": [
+         {
+          "type": "cardTitle",
+          "children": [
+           {
+            "type": "text",
+            "value": "Upgrade guide",
+            "position": {
+             "start": {
+              "line": 133,
+              "column": 1
+             },
+             "end": {
+              "line": 133,
+              "column": 1
+             }
+            },
+            "key": "v0rv4hLZPQ"
+           }
+          ],
+          "key": "yp0qtGpuOu"
+         },
+         {
+          "type": "paragraph",
+          "position": {
+           "start": {
+            "line": 135,
+            "column": 1
+           },
+           "end": {
+            "line": 135,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "Upgrade from Jupyter Book 1 to 2",
+            "position": {
+             "start": {
+              "line": 135,
+              "column": 1
+             },
+             "end": {
+              "line": 135,
+              "column": 1
+             }
+            },
+            "key": "JXTwlWmbMI"
+           }
+          ],
+          "key": "UThuDOTp1p"
+         },
+         {
+          "type": "footer",
+          "children": [
+           {
+            "type": "paragraph",
+            "position": {
+             "start": {
+              "line": 137,
+              "column": 1
+             },
+             "end": {
+              "line": 137,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "text",
+              "value": "Includes an FAQ about known limitations and gotchas",
+              "position": {
+               "start": {
+                "line": 137,
+                "column": 1
+               },
+               "end": {
+                "line": 137,
+                "column": 1
+               }
+              },
+              "key": "kCGoYKBFHE"
+             }
+            ],
+            "key": "Itxrskxnle"
+           }
+          ],
+          "key": "ICBEimwkUq"
+         }
+        ],
+        "urlSource": "xref:docs/resources/upgrade",
+        "dataUrl": "https://jupyterbook.org/stable/resources.upgrade.json",
+        "internal": false,
+        "protocol": "xref:myst",
+        "key": "Kdp9wYmnjc"
+       },
+       {
+        "type": "card",
+        "url": "/help",
+        "children": [
+         {
+          "type": "cardTitle",
+          "children": [
+           {
+            "type": "text",
+            "value": "Get Help",
+            "position": {
+             "start": {
+              "line": 140,
+              "column": 1
+             },
+             "end": {
+              "line": 140,
+              "column": 1
+             }
+            },
+            "key": "rNhNEiTWlp"
+           }
+          ],
+          "key": "CkETbkD1Cc"
+         },
+         {
+          "type": "paragraph",
+          "position": {
+           "start": {
+            "line": 142,
+            "column": 1
+           },
+           "end": {
+            "line": 142,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "Questions or issues?",
+            "position": {
+             "start": {
+              "line": 142,
+              "column": 1
+             },
+             "end": {
+              "line": 142,
+              "column": 1
+             }
+            },
+            "key": "kBYAwafaSg"
+           }
+          ],
+          "key": "dxigZDFXoy"
+         },
+         {
+          "type": "footer",
+          "children": [
+           {
+            "type": "paragraph",
+            "position": {
+             "start": {
+              "line": 144,
+              "column": 1
+             },
+             "end": {
+              "line": 144,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "text",
+              "value": "Visit our ",
+              "position": {
+               "start": {
+                "line": 144,
+                "column": 1
+               },
+               "end": {
+                "line": 144,
+                "column": 1
+               }
+              },
+              "key": "cBvQ0ggXy3"
+             },
+             {
+              "type": "link",
+              "url": "https://jupyterbook.org/stable/resources/faq",
+              "position": {
+               "start": {
+                "line": 144,
+                "column": 1
+               },
+               "end": {
+                "line": 144,
+                "column": 1
+               }
+              },
+              "children": [
+               {
+                "type": "text",
+                "value": "FAQ",
+                "position": {
+                 "start": {
+                  "line": 144,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 144,
+                  "column": 1
+                 }
+                },
+                "key": "FOwR6F0eNW"
+               }
+              ],
+              "urlSource": "xref:docs/resources/faq",
+              "dataUrl": "https://jupyterbook.org/stable/resources.faq.json",
+              "internal": false,
+              "protocol": "xref:myst",
+              "key": "USqJuKmUQP"
+             },
+             {
+              "type": "text",
+              "value": " for common questions, or reach out via ",
+              "position": {
+               "start": {
+                "line": 144,
+                "column": 1
+               },
+               "end": {
+                "line": 144,
+                "column": 1
+               }
+              },
+              "key": "VBvBRPkdMa"
+             },
+             {
+              "type": "link",
+              "url": "https://discord.mystmd.org",
+              "position": {
+               "start": {
+                "line": 144,
+                "column": 1
+               },
+               "end": {
+                "line": 144,
+                "column": 1
+               }
+              },
+              "children": [
+               {
+                "type": "text",
+                "value": "Discord",
+                "position": {
+                 "start": {
+                  "line": 144,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 144,
+                  "column": 1
+                 }
+                },
+                "key": "gb1HMsBQYu"
+               }
+              ],
+              "urlSource": "https://discord.mystmd.org",
+              "key": "hTf81xkqkX"
+             },
+             {
+              "type": "text",
+              "value": ", ",
+              "position": {
+               "start": {
+                "line": 144,
+                "column": 1
+               },
+               "end": {
+                "line": 144,
+                "column": 1
+               }
+              },
+              "key": "BUKjwGUeEH"
+             },
+             {
+              "type": "link",
+              "url": "https://github.com/orgs/jupyter-book/discussions",
+              "position": {
+               "start": {
+                "line": 144,
+                "column": 1
+               },
+               "end": {
+                "line": 144,
+                "column": 1
+               }
+              },
+              "children": [
+               {
+                "type": "text",
+                "value": "Discussions",
+                "position": {
+                 "start": {
+                  "line": 144,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 144,
+                  "column": 1
+                 }
+                },
+                "key": "XlLIRky5Z0"
+               }
+              ],
+              "urlSource": "https://github.com/orgs/jupyter-book/discussions",
+              "error": true,
+              "key": "hrGos8JRhJ"
+             },
+             {
+              "type": "text",
+              "value": ", or ",
+              "position": {
+               "start": {
+                "line": 144,
+                "column": 1
+               },
+               "end": {
+                "line": 144,
+                "column": 1
+               }
+              },
+              "key": "K3MjXeCuYv"
+             },
+             {
+              "type": "link",
+              "url": "/vote",
+              "position": {
+               "start": {
+                "line": 144,
+                "column": 1
+               },
+               "end": {
+                "line": 144,
+                "column": 1
+               }
+              },
+              "children": [
+               {
+                "type": "text",
+                "value": "Vote on features",
+                "position": {
+                 "start": {
+                  "line": 144,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 144,
+                  "column": 1
+                 }
+                },
+                "key": "EaDOL81dKk"
+               }
+              ],
+              "urlSource": "./vote.md",
+              "dataUrl": "/vote.json",
+              "internal": true,
+              "protocol": "file",
+              "key": "vHb77YfowB"
+             }
+            ],
+            "key": "qnjpvuRNS1"
+           }
+          ],
+          "key": "hSoTAc6i1x"
+         }
+        ],
+        "urlSource": "./help.md",
+        "dataUrl": "/help.json",
+        "internal": true,
+        "protocol": "file",
+        "key": "xxLDRScivy"
+       },
+       {
+        "type": "card",
+        "url": "/cite",
+        "children": [
+         {
+          "type": "cardTitle",
+          "children": [
+           {
+            "type": "text",
+            "value": "Cite Jupyter Book",
+            "position": {
+             "start": {
+              "line": 147,
+              "column": 1
+             },
+             "end": {
+              "line": 147,
+              "column": 1
+             }
+            },
+            "key": "V72HJGB3WI"
+           }
+          ],
+          "key": "x1MJECIU6L"
+         },
+         {
+          "type": "paragraph",
+          "position": {
+           "start": {
+            "line": 149,
+            "column": 1
+           },
+           "end": {
+            "line": 149,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "Using in research?",
+            "position": {
+             "start": {
+              "line": 149,
+              "column": 1
+             },
+             "end": {
+              "line": 149,
+              "column": 1
+             }
+            },
+            "key": "vriUJYsxZB"
+           }
+          ],
+          "key": "z7V7hPfB2e"
+         },
+         {
+          "type": "footer",
+          "children": [
+           {
+            "type": "paragraph",
+            "position": {
+             "start": {
+              "line": 151,
+              "column": 1
+             },
+             "end": {
+              "line": 151,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "text",
+              "value": "See our citation guide for proper attribution",
+              "position": {
+               "start": {
+                "line": 151,
+                "column": 1
+               },
+               "end": {
+                "line": 151,
+                "column": 1
+               }
+              },
+              "key": "Ivz5T25SfU"
+             }
+            ],
+            "key": "zJf2r0ox6O"
+           }
+          ],
+          "key": "DWTT5gyxnm"
+         }
+        ],
+        "urlSource": "./cite.md",
+        "dataUrl": "/cite.json",
+        "internal": true,
+        "protocol": "file",
+        "key": "oCO6VYwj83"
+       },
+       {
+        "type": "card",
+        "url": "/community/ecosystem",
+        "children": [
+         {
+          "type": "cardTitle",
+          "children": [
+           {
+            "type": "text",
+            "value": "Ecosystem",
+            "position": {
+             "start": {
+              "line": 154,
+              "column": 1
+             },
+             "end": {
+              "line": 154,
+              "column": 1
+             }
+            },
+            "key": "xMC7Ya3dmW"
+           }
+          ],
+          "key": "TtffR5aEKF"
+         },
+         {
+          "type": "paragraph",
+          "position": {
+           "start": {
+            "line": 156,
+            "column": 1
+           },
+           "end": {
+            "line": 156,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "Learn about the ",
+            "key": "iv7cTeZyoZ"
+           },
+           {
+            "type": "abbreviation",
+            "title": "Markedly Structured Text",
+            "children": [
+             {
+              "type": "text",
+              "value": "MyST",
+              "key": "D22WibMkJ3"
+             }
+            ],
+            "key": "eo3VZZN7jd"
+           },
+           {
+            "type": "text",
+            "value": " ecosystem",
+            "key": "fpCsOuHg6q"
+           }
+          ],
+          "key": "jB953ldIxm"
+         },
+         {
+          "type": "footer",
+          "children": [
+           {
+            "type": "paragraph",
+            "position": {
+             "start": {
+              "line": 158,
+              "column": 1
+             },
+             "end": {
+              "line": 158,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "text",
+              "value": "Understand how Jupyter Book fits into the broader ",
+              "key": "eA3LO4wZWJ"
+             },
+             {
+              "type": "abbreviation",
+              "title": "Markedly Structured Text",
+              "children": [
+               {
+                "type": "text",
+                "value": "MyST",
+                "key": "LCuywFe2Bx"
+               }
+              ],
+              "key": "ft22fcTDgv"
+             },
+             {
+              "type": "text",
+              "value": " ecosystem",
+              "key": "EW4pdi7bKq"
+             }
+            ],
+            "key": "Cz77XA8tMN"
+           }
+          ],
+          "key": "cO5UZmvdXc"
+         }
+        ],
+        "urlSource": "./community/ecosystem.md",
+        "dataUrl": "/community.ecosystem.json",
+        "internal": true,
+        "protocol": "file",
+        "key": "KoI0SMxgGt"
+       }
+      ],
+      "key": "JpU6NyLKaj"
+     }
+    ],
+    "kind": "justified",
+    "key": "muc2WXsdA3"
+   }
+  ],
+  "key": "iRt1eHrL4f"
+ },
+ "references": {
+  "cite": {
+   "order": [],
+   "data": {}
+  }
+ },
+ "footer": {
+  "navigation": {
+   "next": {
+    "title": "Help",
+    "short_title": "🙋 Get Help",
+    "url": "/help",
+    "group": "Community Guide"
+   }
+  }
+ },
+ "domain": "http://localhost:3000"
+}

@@ -1,0 +1,5378 @@
+{
+ "version": 3,
+ "kind": "Article",
+ "sha256": "fba925d270c5f24b3c93bd2e7bebcdd0995ae9648416e7f9f5c052858ab42dcf",
+ "slug": "index",
+ "location": "/index.md",
+ "dependencies": [
+  {
+   "url": "/quickstart",
+   "label": "quickstart-cards",
+   "kind": "Article",
+   "slug": "quickstart",
+   "location": "/quickstart.md",
+   "title": "Get Started"
+  }
+ ],
+ "frontmatter": {
+  "title": "MyST Markdown Tools",
+  "description": "MyST (Markedly Structured Text) is designed to create publication-quality documents written entirely in Markdown.",
+  "license": {
+   "content": {
+    "id": "CC-BY-4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "name": "Creative Commons Attribution 4.0 International",
+    "free": true,
+    "CC": true
+   },
+   "code": {
+    "id": "MIT",
+    "url": "https://opensource.org/licenses/MIT",
+    "name": "MIT License",
+    "free": true,
+    "osi": true
+   }
+  },
+  "github": "https://github.com/jupyter-book/mystmd",
+  "subject": "MyST Markdown",
+  "abbreviations": {
+   "AMS": "American Mathematical Society",
+   "API": "Application Programming Interface",
+   "AST": "Abstract Syntax Tree",
+   "CLI": "Command Line Interface",
+   "CRediT": "Contributor Roles Taxonomy",
+   "CSS": "Cascading Style Sheet",
+   "CSV": "comma-separated values",
+   "DOI": "Digital Object Identifier",
+   "ESM": "ECMAScript Modules",
+   "GPU": "Graphics Processing Unit",
+   "HTML": "Hypertext Markup Language",
+   "ID": "Identifier",
+   "ISNI": "International Standard Name Identifier",
+   "JATS": "Journal Article Tag Suite",
+   "JSON": "JavaScript Object Notation",
+   "LTS": "Long Term Support",
+   "MyST": "Markedly Structured Text",
+   "NISO": "National Information Standards Organization",
+   "OA": "Open Access",
+   "PDF": "Portable Document Format",
+   "PID": "Persistent Identifier",
+   "POSIX": "Portable Operating System Interface",
+   "REES": "Reproducible Execution Environment Specification",
+   "ROR": "Research Organization Registry",
+   "RRID": "Research Resource Identifier",
+   "RST": "reStructuredText",
+   "SPDX": "Software Package Data Exchange",
+   "TLA": "Three Letter Acronym",
+   "TOC": "table of contents",
+   "TPU": "Tensor Processing Unit",
+   "URL": "Uniform Resource Locator",
+   "VoR": "Version of Record",
+   "WASM": "WebAssembly",
+   "YAML": "Yet Another Markup Language",
+   "XML": "Extensible Markup Language"
+  },
+  "source_url": "https://github.com/jupyter-book/mystmd/blob/main/docs/index.md",
+  "edit_url": "https://github.com/jupyter-book/mystmd/edit/main/docs/index.md",
+  "thumbnail": "https://cdn.curvenote.com/019fe2a2-9548-72e2-bfb5-deba7d35df4f/public/myst-build-27dc0eda6a794627e35194c9c5eba588.png",
+  "thumbnailOptimized": "https://cdn.curvenote.com/019fe2a2-9548-72e2-bfb5-deba7d35df4f/public/myst-build-27dc0eda6a794627e35194c9c5eba588.webp",
+  "exports": [
+   {
+    "format": "md",
+    "filename": "index.md",
+    "url": "https://cdn.curvenote.com/019fe2a2-9548-72e2-bfb5-deba7d35df4f/public/index-a859d30955e8b6e3045d6f84fb9adb83.md"
+   }
+  ]
+ },
+ "mdast": {
+  "type": "root",
+  "children": [
+   {
+    "type": "block",
+    "children": [
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 6,
+        "column": 1
+       },
+       "end": {
+        "line": 6,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "abbreviation",
+        "title": "Markedly Structured Text",
+        "children": [
+         {
+          "type": "text",
+          "value": "MyST",
+          "key": "GNXrP0yzon"
+         }
+        ],
+        "key": "bxRReMkIi7"
+       },
+       {
+        "type": "text",
+        "value": " is an ",
+        "position": {
+         "start": {
+          "line": 6,
+          "column": 1
+         },
+         "end": {
+          "line": 6,
+          "column": 1
+         }
+        },
+        "key": "sg3A7otJAc"
+       },
+       {
+        "type": "link",
+        "url": "/overview",
+        "position": {
+         "start": {
+          "line": 6,
+          "column": 1
+         },
+         "end": {
+          "line": 6,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "ecosystem of open-source, community-driven tools",
+          "position": {
+           "start": {
+            "line": 6,
+            "column": 1
+           },
+           "end": {
+            "line": 6,
+            "column": 1
+           }
+          },
+          "key": "CuxKgp63wS"
+         }
+        ],
+        "urlSource": "./overview.md",
+        "dataUrl": "/overview.json",
+        "internal": true,
+        "protocol": "file",
+        "key": "X2NCQbVtyR"
+       },
+       {
+        "type": "text",
+        "value": " designed to revolutionize scientific communication. Our powerful authoring framework supports blogs, online books, scientific papers, reports and journals articles.",
+        "position": {
+         "start": {
+          "line": 6,
+          "column": 1
+         },
+         "end": {
+          "line": 6,
+          "column": 1
+         }
+        },
+        "key": "DGJomiy9sU"
+       }
+      ],
+      "key": "noNMc70ohs"
+     },
+     {
+      "type": "card",
+      "url": "/quickstart",
+      "children": [
+       {
+        "type": "cardTitle",
+        "children": [
+         {
+          "type": "text",
+          "value": "Get Started With ",
+          "key": "pmqlQaP2EM"
+         },
+         {
+          "type": "abbreviation",
+          "title": "Markedly Structured Text",
+          "children": [
+           {
+            "type": "text",
+            "value": "MyST",
+            "key": "CfZQlShRad"
+           }
+          ],
+          "key": "v31ttEjaF0"
+         },
+         {
+          "type": "text",
+          "value": " 👩‍💻",
+          "key": "sqg1WdZlph"
+         }
+        ],
+        "key": "yUKQvytFuZ"
+       },
+       {
+        "type": "paragraph",
+        "position": {
+         "start": {
+          "line": 10,
+          "column": 1
+         },
+         "end": {
+          "line": 10,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "Start here to get up and running with the ",
+          "position": {
+           "start": {
+            "line": 10,
+            "column": 1
+           },
+           "end": {
+            "line": 10,
+            "column": 1
+           }
+          },
+          "key": "bdM5w6FizP"
+         },
+         {
+          "type": "inlineCode",
+          "value": "myst",
+          "position": {
+           "start": {
+            "line": 10,
+            "column": 1
+           },
+           "end": {
+            "line": 10,
+            "column": 1
+           }
+          },
+          "key": "ahiQXtBuuZ"
+         },
+         {
+          "type": "text",
+          "value": " command-line tools.",
+          "position": {
+           "start": {
+            "line": 10,
+            "column": 1
+           },
+           "end": {
+            "line": 10,
+            "column": 1
+           }
+          },
+          "key": "wjW8cC8mC5"
+         }
+        ],
+        "key": "roqnKGxtma"
+       }
+      ],
+      "urlSource": "./quickstart.md",
+      "dataUrl": "/quickstart.json",
+      "internal": true,
+      "protocol": "file",
+      "key": "jNIC5Y3tZe"
+     },
+     {
+      "type": "heading",
+      "depth": 2,
+      "position": {
+       "start": {
+        "line": 13,
+        "column": 1
+       },
+       "end": {
+        "line": 13,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "Cool ",
+        "key": "WtzWm73u63"
+       },
+       {
+        "type": "abbreviation",
+        "title": "Markedly Structured Text",
+        "children": [
+         {
+          "type": "text",
+          "value": "MyST",
+          "key": "iBIL8MEeV8"
+         }
+        ],
+        "key": "NQ6dyMzpnM"
+       },
+       {
+        "type": "text",
+        "value": " Features 🪄",
+        "key": "ElyZPc6D1S"
+       }
+      ],
+      "identifier": "cool-myst-features",
+      "label": "Cool MyST Features 🪄",
+      "html_id": "cool-myst-features",
+      "implicit": true,
+      "key": "VWcxuW9pA9"
+     },
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 15,
+        "column": 1
+       },
+       "end": {
+        "line": 15,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "We think ",
+        "position": {
+         "start": {
+          "line": 15,
+          "column": 1
+         },
+         "end": {
+          "line": 15,
+          "column": 1
+         }
+        },
+        "key": "shRrH9DGh5"
+       },
+       {
+        "type": "abbreviation",
+        "title": "Markedly Structured Text",
+        "children": [
+         {
+          "type": "text",
+          "value": "MyST",
+          "key": "g7vboVeXeO"
+         }
+        ],
+        "key": "VDS2GU2b66"
+       },
+       {
+        "type": "text",
+        "value": " is really cool, some of the features that we think stand out are highlighted below with links to places in the documentation where you can reproduce them!",
+        "position": {
+         "start": {
+          "line": 15,
+          "column": 1
+         },
+         "end": {
+          "line": 15,
+          "column": 1
+         }
+        },
+        "key": "bAHPYiDAqF"
+       }
+      ],
+      "key": "P27xsewRZv"
+     },
+     {
+      "type": "thematicBreak",
+      "position": {
+       "start": {
+        "line": 17,
+        "column": 1
+       },
+       "end": {
+        "line": 17,
+        "column": 1
+       }
+      },
+      "key": "pIqACDyCqN"
+     },
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 19,
+        "column": 1
+       },
+       "end": {
+        "line": 19,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "🪄🐰 ",
+        "position": {
+         "start": {
+          "line": 19,
+          "column": 1
+         },
+         "end": {
+          "line": 19,
+          "column": 1
+         }
+        },
+        "key": "sBOs91hQnS"
+       },
+       {
+        "type": "strong",
+        "position": {
+         "start": {
+          "line": 19,
+          "column": 1
+         },
+         "end": {
+          "line": 19,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "Rabbit-hole links",
+          "position": {
+           "start": {
+            "line": 19,
+            "column": 1
+           },
+           "end": {
+            "line": 19,
+            "column": 1
+           }
+          },
+          "key": "TtbtHYJpKG"
+         }
+        ],
+        "key": "tL4RctnGiI"
+       },
+       {
+        "type": "text",
+        "value": " allow you to get information to your reader as fast as possible, and they can deep-dive all the way to computations, code and interactive figures. You can play with this demo yourself in ",
+        "position": {
+         "start": {
+          "line": 19,
+          "column": 1
+         },
+         "end": {
+          "line": 19,
+          "column": 1
+         }
+        },
+        "key": "yTL9Sv4hwL"
+       },
+       {
+        "type": "link",
+        "url": "/quickstart-myst-markdown",
+        "position": {
+         "start": {
+          "line": 19,
+          "column": 1
+         },
+         "end": {
+          "line": 19,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "Working with MyST Markdown",
+          "key": "Wb3RnV5xJ1"
+         }
+        ],
+        "urlSource": "./quickstart-myst-markdown.md",
+        "dataUrl": "/quickstart-myst-markdown.json",
+        "internal": true,
+        "protocol": "file",
+        "key": "SHHUv0OQhf"
+       },
+       {
+        "type": "text",
+        "value": ".",
+        "position": {
+         "start": {
+          "line": 19,
+          "column": 1
+         },
+         "end": {
+          "line": 19,
+          "column": 1
+         }
+        },
+        "key": "XaNaNv5GGI"
+       }
+      ],
+      "key": "ITLXvFFBDG"
+     },
+     {
+      "type": "container",
+      "kind": "figure",
+      "children": [
+       {
+        "type": "image",
+        "url": "https://cdn.curvenote.com/019fe2a2-9548-72e2-bfb5-deba7d35df4f/public/links-247a5831458ebc592842c06777ceecc5.mp4",
+        "key": "OHHhaY7VVz",
+        "urlSource": "./videos/links.mp4"
+       }
+      ],
+      "class": "framed",
+      "enumerator": "1",
+      "key": "JS1FC5Q1AS"
+     },
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 25,
+        "column": 1
+       },
+       "end": {
+        "line": 25,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "🪄📊 ",
+        "position": {
+         "start": {
+          "line": 25,
+          "column": 1
+         },
+         "end": {
+          "line": 25,
+          "column": 1
+         }
+        },
+        "key": "XrxoBvTmqy"
+       },
+       {
+        "type": "strong",
+        "position": {
+         "start": {
+          "line": 25,
+          "column": 1
+         },
+         "end": {
+          "line": 25,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "Live graphs",
+          "position": {
+           "start": {
+            "line": 25,
+            "column": 1
+           },
+           "end": {
+            "line": 25,
+            "column": 1
+           }
+          },
+          "key": "RIGxdvSLN9"
+         }
+        ],
+        "key": "I7m7abdgah"
+       },
+       {
+        "type": "text",
+        "value": " can be embedded directly in your documentation or articles with computation backed by Jupyter or JupyterLite – running locally, on Binder, or directly in your browser. Get up and running with Thebe in ",
+        "position": {
+         "start": {
+          "line": 25,
+          "column": 1
+         },
+         "end": {
+          "line": 25,
+          "column": 1
+         }
+        },
+        "key": "GWydAlA1kD"
+       },
+       {
+        "type": "link",
+        "url": "/in-page-execution",
+        "position": {
+         "start": {
+          "line": 25,
+          "column": 1
+         },
+         "end": {
+          "line": 25,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "In-Page Execution",
+          "key": "xKrkOGwj69"
+         }
+        ],
+        "urlSource": "./in-page-execution.md",
+        "dataUrl": "/in-page-execution.json",
+        "internal": true,
+        "protocol": "file",
+        "key": "vhkqXmKuaC"
+       }
+      ],
+      "key": "EPJDmReOeM"
+     },
+     {
+      "type": "container",
+      "kind": "figure",
+      "children": [
+       {
+        "type": "image",
+        "url": "https://cdn.curvenote.com/019fe2a2-9548-72e2-bfb5-deba7d35df4f/public/thebe-c20e5ac34cc2bb9eea70a17ed9261ed4.mp4",
+        "key": "Mg60ofb4OY",
+        "urlSource": "./videos/thebe.mp4"
+       }
+      ],
+      "class": "framed",
+      "enumerator": "2",
+      "key": "w4mhrTS9uQ"
+     },
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 31,
+        "column": 1
+       },
+       "end": {
+        "line": 31,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "🪄🪐 ",
+        "position": {
+         "start": {
+          "line": 31,
+          "column": 1
+         },
+         "end": {
+          "line": 31,
+          "column": 1
+         }
+        },
+        "key": "XKcc0WRlD4"
+       },
+       {
+        "type": "strong",
+        "position": {
+         "start": {
+          "line": 31,
+          "column": 1
+         },
+         "end": {
+          "line": 31,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "JupyterLab support",
+          "position": {
+           "start": {
+            "line": 31,
+            "column": 1
+           },
+           "end": {
+            "line": 31,
+            "column": 1
+           }
+          },
+          "key": "IoJwaLtZsJ"
+         }
+        ],
+        "key": "EiJgrwZole"
+       },
+       {
+        "type": "text",
+        "value": " for ",
+        "key": "zpIjWluHlI"
+       },
+       {
+        "type": "abbreviation",
+        "title": "Markedly Structured Text",
+        "children": [
+         {
+          "type": "text",
+          "value": "MyST",
+          "key": "B9kD5Ukeyr"
+         }
+        ],
+        "key": "kUFPZBvCvm"
+       },
+       {
+        "type": "text",
+        "value": " comes with inline computations, support for ",
+        "key": "oC68FSD9zR"
+       },
+       {
+        "type": "inlineCode",
+        "value": "ipywidgets",
+        "position": {
+         "start": {
+          "line": 31,
+          "column": 1
+         },
+         "end": {
+          "line": 31,
+          "column": 1
+         }
+        },
+        "key": "RFvaduHYRS"
+       },
+       {
+        "type": "text",
+        "value": ", matplotlib sparklines, editable task-lists, rich frontmatter, and beautiful typography and other elements like dropdowns, grids and cards. Install ",
+        "position": {
+         "start": {
+          "line": 31,
+          "column": 1
+         },
+         "end": {
+          "line": 31,
+          "column": 1
+         }
+        },
+        "key": "uFVCgSXOFp"
+       },
+       {
+        "type": "link",
+        "url": "/quickstart-jupyter-lab-myst",
+        "position": {
+         "start": {
+          "line": 31,
+          "column": 1
+         },
+         "end": {
+          "line": 31,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "inlineCode",
+          "value": "jupyterlab-myst",
+          "position": {
+           "start": {
+            "line": 31,
+            "column": 1
+           },
+           "end": {
+            "line": 31,
+            "column": 1
+           }
+          },
+          "key": "oD4HiIzHih"
+         }
+        ],
+        "urlSource": "./quickstart-jupyter-lab-myst.md",
+        "dataUrl": "/quickstart-jupyter-lab-myst.json",
+        "internal": true,
+        "protocol": "file",
+        "key": "BlGzIvKa8N"
+       },
+       {
+        "type": "text",
+        "value": " today!",
+        "position": {
+         "start": {
+          "line": 31,
+          "column": 1
+         },
+         "end": {
+          "line": 31,
+          "column": 1
+         }
+        },
+        "key": "ecCAtgpGtg"
+       }
+      ],
+      "key": "DYt7Qacepw"
+     },
+     {
+      "type": "container",
+      "kind": "figure",
+      "children": [
+       {
+        "type": "image",
+        "url": "https://cdn.curvenote.com/019fe2a2-9548-72e2-bfb5-deba7d35df4f/public/jupyterlab-myst-a51ae35e5622d4bc3e420cc08683469a.mp4",
+        "key": "tUcXxIikuw",
+        "urlSource": "./videos/jupyterlab-myst.mp4"
+       }
+      ],
+      "class": "framed",
+      "enumerator": "3",
+      "key": "s1BOsmt5Ud"
+     },
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 37,
+        "column": 1
+       },
+       "end": {
+        "line": 37,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "🪄📜 ",
+        "position": {
+         "start": {
+          "line": 37,
+          "column": 1
+         },
+         "end": {
+          "line": 37,
+          "column": 1
+         }
+        },
+        "key": "xpijarfp1h"
+       },
+       {
+        "type": "strong",
+        "position": {
+         "start": {
+          "line": 37,
+          "column": 1
+         },
+         "end": {
+          "line": 37,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "Export to ",
+          "key": "AGStLBXEmQ"
+         },
+         {
+          "type": "abbreviation",
+          "title": "Portable Document Format",
+          "children": [
+           {
+            "type": "text",
+            "value": "PDF",
+            "key": "XN8H3WRpFO"
+           }
+          ],
+          "key": "q8IOfgGoaP"
+         }
+        ],
+        "key": "CJR4ea7mLI"
+       },
+       {
+        "type": "text",
+        "value": " is easy with ",
+        "key": "OAFk9b4gg8"
+       },
+       {
+        "type": "abbreviation",
+        "title": "Markedly Structured Text",
+        "children": [
+         {
+          "type": "text",
+          "value": "MyST",
+          "key": "jYf6KiBJNZ"
+         }
+        ],
+        "key": "C3L3zonnms"
+       },
+       {
+        "type": "text",
+        "value": ", and we support hundreds of different journals out of the box, see ",
+        "key": "GItJSkfrQv"
+       },
+       {
+        "type": "link",
+        "url": "https://github.com/myst-templates",
+        "position": {
+         "start": {
+          "line": 37,
+          "column": 1
+         },
+         "end": {
+          "line": 37,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "myst-templates",
+          "position": {
+           "start": {
+            "line": 37,
+            "column": 1
+           },
+           "end": {
+            "line": 37,
+            "column": 1
+           }
+          },
+          "key": "Y86PzQVEud"
+         }
+        ],
+        "urlSource": "https://github.com/myst-templates",
+        "error": true,
+        "key": "Qbme9ZQgcO"
+       },
+       {
+        "type": "text",
+        "value": "! You can also export to Microsoft Word or even ",
+        "key": "xcNJpFQZ9U"
+       },
+       {
+        "type": "abbreviation",
+        "title": "Journal Article Tag Suite",
+        "children": [
+         {
+          "type": "text",
+          "value": "JATS",
+          "key": "yMBLFJ2TvU"
+         }
+        ],
+        "key": "l8DrnKxOsf"
+       },
+       {
+        "type": "text",
+        "value": ", which is used in scientific publishing. See the ",
+        "key": "jJvNWKibaS"
+       },
+       {
+        "type": "link",
+        "url": "/quickstart-myst-documents",
+        "position": {
+         "start": {
+          "line": 37,
+          "column": 1
+         },
+         "end": {
+          "line": 37,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "Scientific Articles",
+          "key": "XQgyqUer39"
+         }
+        ],
+        "urlSource": "./quickstart-myst-documents.md",
+        "dataUrl": "/quickstart-myst-documents.json",
+        "internal": true,
+        "protocol": "file",
+        "key": "kLP4ZqQkvD"
+       },
+       {
+        "type": "text",
+        "value": "!",
+        "position": {
+         "start": {
+          "line": 37,
+          "column": 1
+         },
+         "end": {
+          "line": 37,
+          "column": 1
+         }
+        },
+        "key": "FXstquNOld"
+       }
+      ],
+      "key": "BHgGhPxo3U"
+     },
+     {
+      "type": "container",
+      "kind": "figure",
+      "children": [
+       {
+        "type": "image",
+        "url": "https://cdn.curvenote.com/019fe2a2-9548-72e2-bfb5-deba7d35df4f/public/myst-build-27dc0eda6a794627e35194c9c5eba588.png",
+        "key": "DH1wY8KVsu",
+        "urlSource": "./images/myst-build.png",
+        "urlOptimized": "https://cdn.curvenote.com/019fe2a2-9548-72e2-bfb5-deba7d35df4f/public/myst-build-27dc0eda6a794627e35194c9c5eba588.webp"
+       }
+      ],
+      "class": "framed",
+      "enumerator": "4",
+      "key": "BRM7fI0oXk"
+     },
+     {
+      "type": "thematicBreak",
+      "position": {
+       "start": {
+        "line": 43,
+        "column": 1
+       },
+       "end": {
+        "line": 43,
+        "column": 1
+       }
+      },
+      "key": "JaTkihugvb"
+     },
+     {
+      "type": "heading",
+      "depth": 2,
+      "position": {
+       "start": {
+        "line": 45,
+        "column": 1
+       },
+       "end": {
+        "line": 45,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "Quickstart Tutorials",
+        "position": {
+         "start": {
+          "line": 45,
+          "column": 1
+         },
+         "end": {
+          "line": 45,
+          "column": 1
+         }
+        },
+        "key": "m2xbfQL96T"
+       }
+      ],
+      "identifier": "quickstart-tutorials",
+      "label": "Quickstart Tutorials",
+      "html_id": "quickstart-tutorials",
+      "implicit": true,
+      "key": "aBN3VRKfXK"
+     },
+     {
+      "type": "embed",
+      "position": {
+       "start": {
+        "line": 47,
+        "column": 1
+       },
+       "end": {
+        "line": 47,
+        "column": 1
+       }
+      },
+      "source": {
+       "url": "/quickstart",
+       "label": "quickstart-cards",
+       "kind": "Article",
+       "slug": "quickstart",
+       "location": "/quickstart.md",
+       "title": "Get Started"
+      },
+      "remove-input": true,
+      "children": [
+       {
+        "type": "paragraph",
+        "position": {
+         "start": {
+          "line": 271,
+          "column": 1
+         },
+         "end": {
+          "line": 271,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "Check out the following tutorials for more step-by-step guides:",
+          "position": {
+           "start": {
+            "line": 271,
+            "column": 1
+           },
+           "end": {
+            "line": 271,
+            "column": 1
+           }
+          },
+          "key": "DUS48q84hQ"
+         }
+        ],
+        "key": "rkgIkdL2pZ"
+       },
+       {
+        "type": "grid",
+        "columns": [
+         1,
+         1,
+         2,
+         2
+        ],
+        "children": [
+         {
+          "type": "card",
+          "url": "/quickstart-myst-documents",
+          "children": [
+           {
+            "type": "cardTitle",
+            "children": [
+             {
+              "type": "text",
+              "value": "Author enriched ",
+              "key": "rA0RF0SlQ1"
+             },
+             {
+              "type": "abbreviation",
+              "title": "Markedly Structured Text",
+              "children": [
+               {
+                "type": "text",
+                "value": "MyST",
+                "key": "c0dZAQp62x"
+               }
+              ],
+              "key": "kCiKqRa09x"
+             },
+             {
+              "type": "text",
+              "value": " articles ✨",
+              "key": "mwQN1vPDzr"
+             }
+            ],
+            "key": "WWmgL1NzFu"
+           },
+           {
+            "type": "paragraph",
+            "position": {
+             "start": {
+              "line": 276,
+              "column": 1
+             },
+             "end": {
+              "line": 276,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "text",
+              "value": "Write scientific articles using ",
+              "key": "IQlkkfSdKb"
+             },
+             {
+              "type": "abbreviation",
+              "title": "Markedly Structured Text",
+              "children": [
+               {
+                "type": "text",
+                "value": "MyST",
+                "key": "HUMVp5bb6u"
+               }
+              ],
+              "key": "KXk5imxbsm"
+             },
+             {
+              "type": "text",
+              "value": " Markdown with easy-to-use citations, metadata, and cross-references.",
+              "key": "BdhSZf4FJ0"
+             }
+            ],
+            "key": "boBUbQHOqE"
+           }
+          ],
+          "urlSource": "./quickstart-myst-documents.md",
+          "dataUrl": "/quickstart-myst-documents.json",
+          "internal": true,
+          "protocol": "file",
+          "key": "pWx0k7NaYk"
+         },
+         {
+          "type": "card",
+          "url": "/quickstart-executable-documents",
+          "children": [
+           {
+            "type": "cardTitle",
+            "children": [
+             {
+              "type": "text",
+              "value": "Executable Documents with ",
+              "key": "oZfo8h37PJ"
+             },
+             {
+              "type": "abbreviation",
+              "title": "Markedly Structured Text",
+              "children": [
+               {
+                "type": "text",
+                "value": "MyST",
+                "key": "W8yghkW5Cj"
+               }
+              ],
+              "key": "f02I6zmfAs"
+             },
+             {
+              "type": "text",
+              "value": " 🐍",
+              "key": "aA41jvZcJd"
+             }
+            ],
+            "key": "SufMFTpSRk"
+           },
+           {
+            "type": "paragraph",
+            "position": {
+             "start": {
+              "line": 281,
+              "column": 1
+             },
+             "end": {
+              "line": 281,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "text",
+              "value": "Learn how to use computation and execution with Jupyter in ",
+              "key": "lSM8C3dUNY"
+             },
+             {
+              "type": "abbreviation",
+              "title": "Markedly Structured Text",
+              "children": [
+               {
+                "type": "text",
+                "value": "MyST",
+                "key": "rgzztDdvEm"
+               }
+              ],
+              "key": "ZThD0n2dcb"
+             },
+             {
+              "type": "text",
+              "value": ".",
+              "key": "ueoLFwbdnm"
+             }
+            ],
+            "key": "pN7ZktVDeG"
+           }
+          ],
+          "urlSource": "./quickstart-executable-documents.md",
+          "dataUrl": "/quickstart-executable-documents.json",
+          "internal": true,
+          "protocol": "file",
+          "key": "kfy1b9waH5"
+         },
+         {
+          "type": "card",
+          "url": "/quickstart-static-exports",
+          "children": [
+           {
+            "type": "cardTitle",
+            "children": [
+             {
+              "type": "text",
+              "value": "Export to static documents 📑",
+              "position": {
+               "start": {
+                "line": 284,
+                "column": 1
+               },
+               "end": {
+                "line": 284,
+                "column": 1
+               }
+              },
+              "key": "qfNuYB49pl"
+             }
+            ],
+            "key": "Wnscm3iOkM"
+           },
+           {
+            "type": "paragraph",
+            "position": {
+             "start": {
+              "line": 286,
+              "column": 1
+             },
+             "end": {
+              "line": 286,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "text",
+              "value": "Export ",
+              "key": "VtK0rkpCoS"
+             },
+             {
+              "type": "abbreviation",
+              "title": "Markedly Structured Text",
+              "children": [
+               {
+                "type": "text",
+                "value": "MyST",
+                "key": "swNOT5LvkI"
+               }
+              ],
+              "key": "wJj11otazs"
+             },
+             {
+              "type": "text",
+              "value": " documents to a Word document, ",
+              "key": "iH6AjsjPoV"
+             },
+             {
+              "type": "abbreviation",
+              "title": "Portable Document Format",
+              "children": [
+               {
+                "type": "text",
+                "value": "PDF",
+                "key": "fMZmZzTitX"
+               }
+              ],
+              "key": "rS0d3kkO5i"
+             },
+             {
+              "type": "text",
+              "value": ", and ",
+              "key": "GdThQaCyck"
+             },
+             {
+              "type": "inlineMath",
+              "value": "\\LaTeX",
+              "position": {
+               "start": {
+                "line": 286,
+                "column": 1
+               },
+               "end": {
+                "line": 286,
+                "column": 1
+               }
+              },
+              "html": "<span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mtext>LaTeX</mtext></mrow><annotation encoding=\"application/x-tex\">\\LaTeX</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.8988em;vertical-align:-0.2155em;\"></span><span class=\"mord text\"><span class=\"mord textrm\">L</span><span class=\"mspace\" style=\"margin-right:-0.36em;\"></span><span class=\"vlist-t\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.6833em;\"><span style=\"top:-2.905em;\"><span class=\"pstrut\" style=\"height:2.7em;\"></span><span class=\"mord\"><span class=\"mord textrm mtight sizing reset-size6 size3\">A</span></span></span></span></span></span><span class=\"mspace\" style=\"margin-right:-0.15em;\"></span><span class=\"mord text\"><span class=\"mord textrm\">T</span><span class=\"mspace\" style=\"margin-right:-0.1667em;\"></span><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.4678em;\"><span style=\"top:-2.7845em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"mord\"><span class=\"mord textrm\">E</span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.2155em;\"><span></span></span></span></span><span class=\"mspace\" style=\"margin-right:-0.125em;\"></span><span class=\"mord textrm\">X</span></span></span></span></span></span>",
+              "key": "o2EU7sDZ7D"
+             },
+             {
+              "type": "text",
+              "value": "!",
+              "position": {
+               "start": {
+                "line": 286,
+                "column": 1
+               },
+               "end": {
+                "line": 286,
+                "column": 1
+               }
+              },
+              "key": "MlJvXV3BVy"
+             }
+            ],
+            "key": "IyCH5WwCY2"
+           }
+          ],
+          "urlSource": "./quickstart-static-exports.md",
+          "dataUrl": "/quickstart-static-exports.json",
+          "internal": true,
+          "protocol": "file",
+          "key": "DBRBII5siM"
+         },
+         {
+          "type": "card",
+          "url": "/quickstart-myst-markdown",
+          "children": [
+           {
+            "type": "cardTitle",
+            "children": [
+             {
+              "type": "abbreviation",
+              "title": "Markedly Structured Text",
+              "children": [
+               {
+                "type": "text",
+                "value": "MyST",
+                "key": "CiiWXy4ezQ"
+               }
+              ],
+              "key": "QqDBg2F0DR"
+             },
+             {
+              "type": "text",
+              "value": " Markdown Guide 📖",
+              "key": "iQXk6abwED"
+             }
+            ],
+            "key": "gXs2zTIE3I"
+           },
+           {
+            "type": "paragraph",
+            "position": {
+             "start": {
+              "line": 291,
+              "column": 1
+             },
+             "end": {
+              "line": 291,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "text",
+              "value": "See an overview of ",
+              "key": "xODm8fw0Lc"
+             },
+             {
+              "type": "abbreviation",
+              "title": "Markedly Structured Text",
+              "children": [
+               {
+                "type": "text",
+                "value": "MyST",
+                "key": "Ei6kLwapZa"
+               }
+              ],
+              "key": "GPzDpCaIRy"
+             },
+             {
+              "type": "text",
+              "value": " Markdown syntax with inline demos and examples.",
+              "key": "iNCcCVVZ42"
+             }
+            ],
+            "key": "eEW5ui5FXy"
+           }
+          ],
+          "urlSource": "./quickstart-myst-markdown.md",
+          "dataUrl": "/quickstart-myst-markdown.json",
+          "internal": true,
+          "protocol": "file",
+          "key": "QHDn2RuMM7"
+         },
+         {
+          "type": "card",
+          "url": "/quickstart-jupyter-lab-myst",
+          "children": [
+           {
+            "type": "cardTitle",
+            "children": [
+             {
+              "type": "text",
+              "value": "Use ",
+              "key": "heM5E8WmgE"
+             },
+             {
+              "type": "abbreviation",
+              "title": "Markedly Structured Text",
+              "children": [
+               {
+                "type": "text",
+                "value": "MyST",
+                "key": "ihNfQl651s"
+               }
+              ],
+              "key": "tsce499uzB"
+             },
+             {
+              "type": "text",
+              "value": " in Jupyter Interfaces 🌕",
+              "key": "IvcOBOYElB"
+             }
+            ],
+            "key": "iCMgMO6XTJ"
+           },
+           {
+            "type": "paragraph",
+            "position": {
+             "start": {
+              "line": 296,
+              "column": 1
+             },
+             "end": {
+              "line": 296,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "text",
+              "value": "Learn how to use ",
+              "key": "Q5LssbcRvk"
+             },
+             {
+              "type": "abbreviation",
+              "title": "Markedly Structured Text",
+              "children": [
+               {
+                "type": "text",
+                "value": "MyST",
+                "key": "PR9zleUhd0"
+               }
+              ],
+              "key": "VzchZLKocw"
+             },
+             {
+              "type": "text",
+              "value": " in Jupyter Interfaces.",
+              "key": "xiSpb7Ipt4"
+             }
+            ],
+            "key": "cr0e5oMdHq"
+           }
+          ],
+          "urlSource": "./quickstart-jupyter-lab-myst.md",
+          "dataUrl": "/quickstart-jupyter-lab-myst.json",
+          "internal": true,
+          "protocol": "file",
+          "key": "HWLTbNILqm"
+         }
+        ],
+        "key": "G6sPeWirwX"
+       },
+       {
+        "type": "footnoteDefinition",
+        "identifier": "no-git",
+        "label": "no-git",
+        "position": {
+         "start": {
+          "line": 296,
+          "column": 1
+         },
+         "end": {
+          "line": 296,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "paragraph",
+          "position": {
+           "start": {
+            "line": 63,
+            "column": 1
+           },
+           "end": {
+            "line": 63,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "If you aren’t familiar with git, it isn’t required for this tutorial, you can download the zip file with the contents from the ",
+            "position": {
+             "start": {
+              "line": 63,
+              "column": 1
+             },
+             "end": {
+              "line": 63,
+              "column": 1
+             }
+            },
+            "key": "iDhoaCrwga"
+           },
+           {
+            "type": "link",
+            "url": "https://github.com/jupyter-book/mystmd-quickstart",
+            "position": {
+             "start": {
+              "line": 63,
+              "column": 1
+             },
+             "end": {
+              "line": 63,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "text",
+              "value": "quickstart repository",
+              "position": {
+               "start": {
+                "line": 63,
+                "column": 1
+               },
+               "end": {
+                "line": 63,
+                "column": 1
+               }
+              },
+              "key": "JIk92pNOOK"
+             }
+            ],
+            "urlSource": "https://github.com/jupyter-book/mystmd-quickstart",
+            "error": true,
+            "key": "hrmWiquilR"
+           },
+           {
+            "type": "text",
+            "value": ".",
+            "position": {
+             "start": {
+              "line": 63,
+              "column": 1
+             },
+             "end": {
+              "line": 63,
+              "column": 1
+             }
+            },
+            "key": "tfkDXVsrhj"
+           }
+          ],
+          "key": "pHqxRhxliW"
+         }
+        ],
+        "enumerator": "1",
+        "key": "YhMnnVzjkg"
+       },
+       {
+        "type": "footnoteDefinition",
+        "identifier": "open-port",
+        "label": "open-port",
+        "position": {
+         "start": {
+          "line": 63,
+          "column": 1
+         },
+         "end": {
+          "line": 63,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "paragraph",
+          "position": {
+           "start": {
+            "line": 130,
+            "column": 1
+           },
+           "end": {
+            "line": 130,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "If port ",
+            "position": {
+             "start": {
+              "line": 130,
+              "column": 1
+             },
+             "end": {
+              "line": 130,
+              "column": 1
+             }
+            },
+            "key": "ZtOg8u2uLh"
+           },
+           {
+            "type": "inlineCode",
+            "value": "3000",
+            "position": {
+             "start": {
+              "line": 130,
+              "column": 1
+             },
+             "end": {
+              "line": 130,
+              "column": 1
+             }
+            },
+            "key": "ItsJUxlotm"
+           },
+           {
+            "type": "text",
+            "value": " is in use on your machine, an open port will be used instead, follow the link provided in the terminal.",
+            "position": {
+             "start": {
+              "line": 130,
+              "column": 1
+             },
+             "end": {
+              "line": 130,
+              "column": 1
+             }
+            },
+            "key": "zjyyKoowbu"
+           }
+          ],
+          "key": "PgObze8dgT"
+         }
+        ],
+        "enumerator": "2",
+        "key": "zj7MmEuppY"
+       },
+       {
+        "type": "footnoteDefinition",
+        "identifier": "clean-all",
+        "label": "clean-all",
+        "position": {
+         "start": {
+          "line": 130,
+          "column": 1
+         },
+         "end": {
+          "line": 130,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "paragraph",
+          "position": {
+           "start": {
+            "line": 181,
+            "column": 1
+           },
+           "end": {
+            "line": 183,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "By default the ",
+            "position": {
+             "start": {
+              "line": 181,
+              "column": 1
+             },
+             "end": {
+              "line": 181,
+              "column": 1
+             }
+            },
+            "key": "KeGDfdXXhz"
+           },
+           {
+            "type": "inlineCode",
+            "value": "myst clean",
+            "position": {
+             "start": {
+              "line": 181,
+              "column": 1
+             },
+             "end": {
+              "line": 181,
+              "column": 1
+             }
+            },
+            "key": "n0ak63ZNlt"
+           },
+           {
+            "type": "text",
+            "value": " command doesn’t remove installed templates or cached web responses; however, the function can with a:",
+            "position": {
+             "start": {
+              "line": 181,
+              "column": 1
+             },
+             "end": {
+              "line": 181,
+              "column": 1
+             }
+            },
+            "key": "UNwT8K66EW"
+           },
+           {
+            "type": "break",
+            "position": {
+             "start": {
+              "line": 181,
+              "column": 1
+             },
+             "end": {
+              "line": 181,
+              "column": 1
+             }
+            },
+            "key": "UGITgwvv9S"
+           },
+           {
+            "type": "inlineCode",
+            "value": "myst clean --all",
+            "position": {
+             "start": {
+              "line": 181,
+              "column": 1
+             },
+             "end": {
+              "line": 181,
+              "column": 1
+             }
+            },
+            "key": "TivUQsDxqt"
+           },
+           {
+            "type": "text",
+            "value": ", or",
+            "position": {
+             "start": {
+              "line": 181,
+              "column": 1
+             },
+             "end": {
+              "line": 181,
+              "column": 1
+             }
+            },
+            "key": "dSxAO84Vcw"
+           },
+           {
+            "type": "break",
+            "position": {
+             "start": {
+              "line": 181,
+              "column": 1
+             },
+             "end": {
+              "line": 181,
+              "column": 1
+             }
+            },
+            "key": "tnqTSRWmXy"
+           },
+           {
+            "type": "inlineCode",
+            "value": "myst clean --templates --cache",
+            "position": {
+             "start": {
+              "line": 181,
+              "column": 1
+             },
+             "end": {
+              "line": 181,
+              "column": 1
+             }
+            },
+            "key": "jXDgLKCDmR"
+           },
+           {
+            "type": "text",
+            "value": ".",
+            "position": {
+             "start": {
+              "line": 181,
+              "column": 1
+             },
+             "end": {
+              "line": 181,
+              "column": 1
+             }
+            },
+            "key": "PRxrsIBLYr"
+           }
+          ],
+          "key": "ylMXDtv4Vb"
+         },
+         {
+          "type": "paragraph",
+          "position": {
+           "start": {
+            "line": 185,
+            "column": 1
+           },
+           "end": {
+            "line": 185,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "Before deleting any folders ",
+            "position": {
+             "start": {
+              "line": 185,
+              "column": 1
+             },
+             "end": {
+              "line": 185,
+              "column": 1
+             }
+            },
+            "key": "HHqnLoJzX8"
+           },
+           {
+            "type": "inlineCode",
+            "value": "myst",
+            "position": {
+             "start": {
+              "line": 185,
+              "column": 1
+             },
+             "end": {
+              "line": 185,
+              "column": 1
+             }
+            },
+            "key": "NRjrKu2LcI"
+           },
+           {
+            "type": "text",
+            "value": " will confirm what is going to happen, or you can bypass this confirmation with the ",
+            "position": {
+             "start": {
+              "line": 185,
+              "column": 1
+             },
+             "end": {
+              "line": 185,
+              "column": 1
+             }
+            },
+            "key": "JdfPqvSLsd"
+           },
+           {
+            "type": "inlineCode",
+            "value": "-y",
+            "position": {
+             "start": {
+              "line": 185,
+              "column": 1
+             },
+             "end": {
+              "line": 185,
+              "column": 1
+             }
+            },
+            "key": "Y56JqdCBqR"
+           },
+           {
+            "type": "text",
+            "value": " option. For example:",
+            "position": {
+             "start": {
+              "line": 185,
+              "column": 1
+             },
+             "end": {
+              "line": 185,
+              "column": 1
+             }
+            },
+            "key": "AUoI8Pk7xd"
+           }
+          ],
+          "key": "QANc4lmUgR"
+         },
+         {
+          "type": "code",
+          "lang": "text",
+          "value": "Deleting all the following paths:\n\n  - _build/site\n  - _build/templates\n\n? Would you like to continue? Yes\n\n🗑 Deleting: _build/site\n🗑 Deleting: _build/templates",
+          "position": {
+           "start": {
+            "line": 187,
+            "column": 1
+           },
+           "end": {
+            "line": 197,
+            "column": 1
+           }
+          },
+          "enumerator": "1",
+          "key": "n6IGfhCbWI"
+         }
+        ],
+        "enumerator": "3",
+        "key": "A5omMQn9ro"
+       },
+       {
+        "type": "footnoteDefinition",
+        "identifier": "myst-start",
+        "label": "myst-start",
+        "position": {
+         "start": {
+          "line": 187,
+          "column": 1
+         },
+         "end": {
+          "line": 187,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "paragraph",
+          "position": {
+           "start": {
+            "line": 248,
+            "column": 1
+           },
+           "end": {
+            "line": 248,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "If the server stopped, you can restart the server using ",
+            "position": {
+             "start": {
+              "line": 248,
+              "column": 1
+             },
+             "end": {
+              "line": 248,
+              "column": 1
+             }
+            },
+            "key": "ltpbAWiWnm"
+           },
+           {
+            "type": "inlineCode",
+            "value": "myst start",
+            "position": {
+             "start": {
+              "line": 248,
+              "column": 1
+             },
+             "end": {
+              "line": 248,
+              "column": 1
+             }
+            },
+            "key": "WvE30gV5CP"
+           },
+           {
+            "type": "text",
+            "value": ".",
+            "position": {
+             "start": {
+              "line": 248,
+              "column": 1
+             },
+             "end": {
+              "line": 248,
+              "column": 1
+             }
+            },
+            "key": "DCMYSKc2NK"
+           }
+          ],
+          "key": "ReBvXVHcQB"
+         }
+        ],
+        "enumerator": "4",
+        "key": "PNDOUII8kF"
+       }
+      ],
+      "key": "SSFobwSVyp"
+     },
+     {
+      "type": "admonition",
+      "kind": "seealso",
+      "children": [
+       {
+        "type": "admonitionTitle",
+        "children": [
+         {
+          "type": "text",
+          "value": "Coming from Jupyter Book V1 or Sphinx?",
+          "position": {
+           "start": {
+            "line": 52,
+            "column": 1
+           },
+           "end": {
+            "line": 52,
+            "column": 1
+           }
+          },
+          "key": "nSsbArfVfH"
+         }
+        ],
+        "key": "cRjHxwcAQV"
+       },
+       {
+        "type": "paragraph",
+        "position": {
+         "start": {
+          "line": 54,
+          "column": 1
+         },
+         "end": {
+          "line": 54,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "👋 We are glad you are here! 💚",
+          "position": {
+           "start": {
+            "line": 54,
+            "column": 1
+           },
+           "end": {
+            "line": 54,
+            "column": 1
+           }
+          },
+          "key": "hrzq8rkZ4m"
+         }
+        ],
+        "key": "UiAnpakoms"
+       },
+       {
+        "type": "paragraph",
+        "position": {
+         "start": {
+          "line": 56,
+          "column": 1
+         },
+         "end": {
+          "line": 56,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "There are many ways that ",
+          "position": {
+           "start": {
+            "line": 56,
+            "column": 1
+           },
+           "end": {
+            "line": 56,
+            "column": 1
+           }
+          },
+          "key": "NTHcpyJ9JG"
+         },
+         {
+          "type": "inlineCode",
+          "value": "mystmd",
+          "position": {
+           "start": {
+            "line": 56,
+            "column": 1
+           },
+           "end": {
+            "line": 56,
+            "column": 1
+           }
+          },
+          "key": "FL3ae7hajt"
+         },
+         {
+          "type": "text",
+          "value": " can be used with Jupyter Book and Sphinx. We recommend that you read ",
+          "position": {
+           "start": {
+            "line": 56,
+            "column": 1
+           },
+           "end": {
+            "line": 56,
+            "column": 1
+           }
+          },
+          "key": "mTiEOZyWqP"
+         },
+         {
+          "type": "link",
+          "url": "/overview",
+          "position": {
+           "start": {
+            "line": 56,
+            "column": 1
+           },
+           "end": {
+            "line": 56,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "a high-level overview of MyST",
+            "position": {
+             "start": {
+              "line": 56,
+              "column": 1
+             },
+             "end": {
+              "line": 56,
+              "column": 1
+             }
+            },
+            "key": "McUx18FE5R"
+           }
+          ],
+          "urlSource": "./overview.md",
+          "dataUrl": "/overview.json",
+          "internal": true,
+          "protocol": "file",
+          "key": "asILQNPIHA"
+         },
+         {
+          "type": "text",
+          "value": " as well as ",
+          "position": {
+           "start": {
+            "line": 56,
+            "column": 1
+           },
+           "end": {
+            "line": 56,
+            "column": 1
+           }
+          },
+          "key": "JxWEbCB0Bl"
+         },
+         {
+          "type": "link",
+          "url": "/background",
+          "position": {
+           "start": {
+            "line": 56,
+            "column": 1
+           },
+           "end": {
+            "line": 56,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "the project background",
+            "position": {
+             "start": {
+              "line": 56,
+              "column": 1
+             },
+             "end": {
+              "line": 56,
+              "column": 1
+             }
+            },
+            "key": "QMzI29LvfG"
+           }
+          ],
+          "urlSource": "./background.md",
+          "dataUrl": "/background.json",
+          "internal": true,
+          "protocol": "file",
+          "key": "Djfkan47MA"
+         },
+         {
+          "type": "text",
+          "value": ", which goes over how these projects overlap and work together!",
+          "position": {
+           "start": {
+            "line": 56,
+            "column": 1
+           },
+           "end": {
+            "line": 56,
+            "column": 1
+           }
+          },
+          "key": "FMCrcXtSTa"
+         }
+        ],
+        "key": "MyNdKc0JHd"
+       },
+       {
+        "type": "definitionList",
+        "position": {
+         "start": {
+          "line": 58,
+          "column": 1
+         },
+         "end": {
+          "line": 62,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "definitionTerm",
+          "position": {
+           "start": {
+            "line": 58,
+            "column": 1
+           },
+           "end": {
+            "line": 57,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "TL;DR",
+            "position": {
+             "start": {
+              "line": 58,
+              "column": 1
+             },
+             "end": {
+              "line": 58,
+              "column": 1
+             }
+            },
+            "key": "dXajOrNhfd"
+           }
+          ],
+          "key": "Q9nDIvkLfT"
+         },
+         {
+          "type": "definitionDescription",
+          "position": {
+           "start": {
+            "line": 59,
+            "column": 1
+           },
+           "end": {
+            "line": 59,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "strong",
+            "position": {
+             "start": {
+              "line": 59,
+              "column": 1
+             },
+             "end": {
+              "line": 59,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "text",
+              "value": "Yes",
+              "position": {
+               "start": {
+                "line": 59,
+                "column": 1
+               },
+               "end": {
+                "line": 59,
+                "column": 1
+               }
+              },
+              "key": "IafNlgdXqR"
+             }
+            ],
+            "key": "Zk0ffO7te0"
+           },
+           {
+            "type": "text",
+            "value": ", you can use ",
+            "position": {
+             "start": {
+              "line": 59,
+              "column": 1
+             },
+             "end": {
+              "line": 59,
+              "column": 1
+             }
+            },
+            "key": "eiGslh2m7f"
+           },
+           {
+            "type": "inlineCode",
+            "value": "mystmd",
+            "position": {
+             "start": {
+              "line": 59,
+              "column": 1
+             },
+             "end": {
+              "line": 59,
+              "column": 1
+             }
+            },
+            "key": "G3qi8CB6I3"
+           },
+           {
+            "type": "text",
+            "value": " with your Jupyter Book! ",
+            "position": {
+             "start": {
+              "line": 59,
+              "column": 1
+             },
+             "end": {
+              "line": 59,
+              "column": 1
+             }
+            },
+            "key": "LV8wrESjNl"
+           },
+           {
+            "type": "inlineCode",
+            "value": "mystmd",
+            "position": {
+             "start": {
+              "line": 59,
+              "column": 1
+             },
+             "end": {
+              "line": 59,
+              "column": 1
+             }
+            },
+            "key": "NFF5x6g1Yl"
+           },
+           {
+            "type": "text",
+            "value": " can create ",
+            "position": {
+             "start": {
+              "line": 59,
+              "column": 1
+             },
+             "end": {
+              "line": 59,
+              "column": 1
+             }
+            },
+            "key": "XFCcVkJ0UB"
+           },
+           {
+            "type": "link",
+            "url": "/creating-pdf-documents",
+            "position": {
+             "start": {
+              "line": 59,
+              "column": 1
+             },
+             "end": {
+              "line": 59,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "text",
+              "value": "scientific PDFs",
+              "position": {
+               "start": {
+                "line": 59,
+                "column": 1
+               },
+               "end": {
+                "line": 59,
+                "column": 1
+               }
+              },
+              "key": "BohqtleR2O"
+             }
+            ],
+            "urlSource": "./creating-pdf-documents.md",
+            "dataUrl": "/creating-pdf-documents.json",
+            "internal": true,
+            "protocol": "file",
+            "key": "Tg4jThoeAb"
+           },
+           {
+            "type": "text",
+            "value": " and can natively read the ",
+            "position": {
+             "start": {
+              "line": 59,
+              "column": 1
+             },
+             "end": {
+              "line": 59,
+              "column": 1
+             }
+            },
+            "key": "rNju7hxnye"
+           },
+           {
+            "type": "link",
+            "url": "/table-of-contents",
+            "position": {
+             "start": {
+              "line": 59,
+              "column": 1
+             },
+             "end": {
+              "line": 59,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "inlineCode",
+              "value": "_toc.yml",
+              "position": {
+               "start": {
+                "line": 59,
+                "column": 1
+               },
+               "end": {
+                "line": 59,
+                "column": 1
+               }
+              },
+              "key": "ecSYpsngoX"
+             }
+            ],
+            "urlSource": "./table-of-contents.md",
+            "dataUrl": "/table-of-contents.json",
+            "internal": true,
+            "protocol": "file",
+            "key": "XYJr56AxgY"
+           },
+           {
+            "type": "text",
+            "value": " as well as all of your existing ",
+            "key": "pmMSarJYHB"
+           },
+           {
+            "type": "abbreviation",
+            "title": "Markedly Structured Text",
+            "children": [
+             {
+              "type": "text",
+              "value": "MyST",
+              "key": "qarkSfsEN3"
+             }
+            ],
+            "key": "yxM1tHn6l2"
+           },
+           {
+            "type": "text",
+            "value": " Markdown content and ",
+            "key": "aVr0Bhxzpi"
+           },
+           {
+            "type": "link",
+            "url": "/interactive-notebooks",
+            "position": {
+             "start": {
+              "line": 59,
+              "column": 1
+             },
+             "end": {
+              "line": 59,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "text",
+              "value": "Jupyter Notebooks",
+              "position": {
+               "start": {
+                "line": 59,
+                "column": 1
+               },
+               "end": {
+                "line": 59,
+                "column": 1
+               }
+              },
+              "key": "vLiUHZOszd"
+             }
+            ],
+            "urlSource": "./interactive-notebooks.ipynb",
+            "dataUrl": "/interactive-notebooks.json",
+            "internal": true,
+            "protocol": "file",
+            "key": "wFPmW1CdIM"
+           },
+           {
+            "type": "text",
+            "value": ".",
+            "position": {
+             "start": {
+              "line": 59,
+              "column": 1
+             },
+             "end": {
+              "line": 59,
+              "column": 1
+             }
+            },
+            "key": "UklEkuiVkT"
+           }
+          ],
+          "key": "pELicrsRzP"
+         },
+         {
+          "type": "definitionDescription",
+          "position": {
+           "start": {
+            "line": 60,
+            "column": 1
+           },
+           "end": {
+            "line": 60,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "strong",
+            "position": {
+             "start": {
+              "line": 60,
+              "column": 1
+             },
+             "end": {
+              "line": 60,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "text",
+              "value": "Yes",
+              "position": {
+               "start": {
+                "line": 60,
+                "column": 1
+               },
+               "end": {
+                "line": 60,
+                "column": 1
+               }
+              },
+              "key": "LPLDOu5F6P"
+             }
+            ],
+            "key": "cFeZm0yiXH"
+           },
+           {
+            "type": "text",
+            "value": ", ",
+            "position": {
+             "start": {
+              "line": 60,
+              "column": 1
+             },
+             "end": {
+              "line": 60,
+              "column": 1
+             }
+            },
+            "key": "NdiHm3qfqa"
+           },
+           {
+            "type": "inlineCode",
+            "value": "mystmd",
+            "position": {
+             "start": {
+              "line": 60,
+              "column": 1
+             },
+             "end": {
+              "line": 60,
+              "column": 1
+             }
+            },
+            "key": "D3ToEiTfCT"
+           },
+           {
+            "type": "text",
+            "value": " is compatible with ",
+            "position": {
+             "start": {
+              "line": 60,
+              "column": 1
+             },
+             "end": {
+              "line": 60,
+              "column": 1
+             }
+            },
+            "key": "JCJW2NI7g0"
+           },
+           {
+            "type": "crossReference",
+            "position": {
+             "start": {
+              "line": 60,
+              "column": 1
+             },
+             "end": {
+              "line": 60,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "text",
+              "value": "intersphinx",
+              "position": {
+               "start": {
+                "line": 60,
+                "column": 1
+               },
+               "end": {
+                "line": 60,
+                "column": 1
+               }
+              },
+              "key": "FDkHmFWFr5"
+             }
+            ],
+            "identifier": "intersphinx",
+            "label": "intersphinx",
+            "kind": "heading",
+            "template": "{name}",
+            "resolved": true,
+            "html_id": "intersphinx",
+            "remote": true,
+            "url": "/external-references",
+            "dataUrl": "/external-references.json",
+            "key": "sD3fwK7635"
+           },
+           {
+            "type": "text",
+            "value": " even though it is written in JavaScript not Python!",
+            "position": {
+             "start": {
+              "line": 60,
+              "column": 1
+             },
+             "end": {
+              "line": 60,
+              "column": 1
+             }
+            },
+            "key": "W2oYFrNpr0"
+           }
+          ],
+          "key": "u0po7IL40h"
+         },
+         {
+          "type": "definitionDescription",
+          "position": {
+           "start": {
+            "line": 61,
+            "column": 1
+           },
+           "end": {
+            "line": 61,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "Jupyter Book and ",
+            "position": {
+             "start": {
+              "line": 61,
+              "column": 1
+             },
+             "end": {
+              "line": 61,
+              "column": 1
+             }
+            },
+            "key": "EKJHvkaMJS"
+           },
+           {
+            "type": "inlineCode",
+            "value": "mystmd",
+            "position": {
+             "start": {
+              "line": 61,
+              "column": 1
+             },
+             "end": {
+              "line": 61,
+              "column": 1
+             }
+            },
+            "key": "Jr2v5vcELq"
+           },
+           {
+            "type": "text",
+            "value": " have ",
+            "position": {
+             "start": {
+              "line": 61,
+              "column": 1
+             },
+             "end": {
+              "line": 61,
+              "column": 1
+             }
+            },
+            "key": "iY1YuaazQT"
+           },
+           {
+            "type": "strong",
+            "position": {
+             "start": {
+              "line": 61,
+              "column": 1
+             },
+             "end": {
+              "line": 61,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "text",
+              "value": "overlap",
+              "position": {
+               "start": {
+                "line": 61,
+                "column": 1
+               },
+               "end": {
+                "line": 61,
+                "column": 1
+               }
+              },
+              "key": "SVkF7be8lC"
+             }
+            ],
+            "key": "v4cE6WVwOE"
+           },
+           {
+            "type": "text",
+            "value": " in the ability to create online books like this one. ",
+            "position": {
+             "start": {
+              "line": 61,
+              "column": 1
+             },
+             "end": {
+              "line": 61,
+              "column": 1
+             }
+            },
+            "key": "TpjIcaJkdm"
+           },
+           {
+            "type": "inlineCode",
+            "value": "mystmd",
+            "position": {
+             "start": {
+              "line": 61,
+              "column": 1
+             },
+             "end": {
+              "line": 61,
+              "column": 1
+             }
+            },
+            "key": "UJrpKm9hHZ"
+           },
+           {
+            "type": "text",
+            "value": " has some extra capabilities for ",
+            "position": {
+             "start": {
+              "line": 61,
+              "column": 1
+             },
+             "end": {
+              "line": 61,
+              "column": 1
+             }
+            },
+            "key": "wMIlmndYic"
+           },
+           {
+            "type": "link",
+            "url": "/cross-references",
+            "position": {
+             "start": {
+              "line": 61,
+              "column": 1
+             },
+             "end": {
+              "line": 61,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "text",
+              "value": "cross-references",
+              "position": {
+               "start": {
+                "line": 61,
+                "column": 1
+               },
+               "end": {
+                "line": 61,
+                "column": 1
+               }
+              },
+              "key": "AtBxgPYSNy"
+             }
+            ],
+            "urlSource": "./cross-references.md",
+            "dataUrl": "/cross-references.json",
+            "internal": true,
+            "protocol": "file",
+            "key": "SOsYkiBkFC"
+           },
+           {
+            "type": "text",
+            "value": ", interactivity and ",
+            "position": {
+             "start": {
+              "line": 61,
+              "column": 1
+             },
+             "end": {
+              "line": 61,
+              "column": 1
+             }
+            },
+            "key": "bm6DIyh0xW"
+           },
+           {
+            "type": "link",
+            "url": "/accessibility-and-performance",
+            "position": {
+             "start": {
+              "line": 61,
+              "column": 1
+             },
+             "end": {
+              "line": 61,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "text",
+              "value": "performance",
+              "position": {
+               "start": {
+                "line": 61,
+                "column": 1
+               },
+               "end": {
+                "line": 61,
+                "column": 1
+               }
+              },
+              "key": "gF4hS7DuIj"
+             }
+            ],
+            "urlSource": "./accessibility-and-performance.md",
+            "dataUrl": "/accessibility-and-performance.json",
+            "internal": true,
+            "protocol": "file",
+            "key": "EM5kfOGZ6Y"
+           },
+           {
+            "type": "text",
+            "value": ".",
+            "position": {
+             "start": {
+              "line": 61,
+              "column": 1
+             },
+             "end": {
+              "line": 61,
+              "column": 1
+             }
+            },
+            "key": "YBfpeuQmTp"
+           }
+          ],
+          "key": "utfuhVY7GS"
+         },
+         {
+          "type": "definitionDescription",
+          "position": {
+           "start": {
+            "line": 62,
+            "column": 1
+           },
+           "end": {
+            "line": 62,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "For more information see this ",
+            "position": {
+             "start": {
+              "line": 62,
+              "column": 1
+             },
+             "end": {
+              "line": 62,
+              "column": 1
+             }
+            },
+            "key": "TsfXKSw5hL"
+           },
+           {
+            "type": "link",
+            "url": "https://next.jupyterbook.org/upgrade/",
+            "position": {
+             "start": {
+              "line": 62,
+              "column": 1
+             },
+             "end": {
+              "line": 62,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "text",
+              "value": "upgrade guide from Jupyter Book v1 to v2",
+              "position": {
+               "start": {
+                "line": 62,
+                "column": 1
+               },
+               "end": {
+                "line": 62,
+                "column": 1
+               }
+              },
+              "key": "dcWzQJvZ3W"
+             }
+            ],
+            "urlSource": "https://next.jupyterbook.org/upgrade/",
+            "key": "PrK6TJUdCp"
+           },
+           {
+            "type": "text",
+            "value": ".",
+            "position": {
+             "start": {
+              "line": 62,
+              "column": 1
+             },
+             "end": {
+              "line": 62,
+              "column": 1
+             }
+            },
+            "key": "E1nKuryS3E"
+           }
+          ],
+          "key": "riMnR7NURi"
+         }
+        ],
+        "key": "wOJwjS7pzb"
+       }
+      ],
+      "class": "dropdown",
+      "key": "ej4b6QhCZ0"
+     },
+     {
+      "type": "heading",
+      "depth": 2,
+      "position": {
+       "start": {
+        "line": 65,
+        "column": 1
+       },
+       "end": {
+        "line": 65,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "Cite ",
+        "position": {
+         "start": {
+          "line": 65,
+          "column": 1
+         },
+         "end": {
+          "line": 65,
+          "column": 1
+         }
+        },
+        "key": "SAkmUISKb2"
+       },
+       {
+        "type": "inlineCode",
+        "value": "mystmd",
+        "position": {
+         "start": {
+          "line": 65,
+          "column": 1
+         },
+         "end": {
+          "line": 65,
+          "column": 1
+         }
+        },
+        "key": "xGER2Zsu8o"
+       }
+      ],
+      "identifier": "cite-mystmd",
+      "label": "Cite mystmd",
+      "html_id": "cite-mystmd",
+      "implicit": true,
+      "key": "yGT9DDBPCx"
+     },
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 67,
+        "column": 1
+       },
+       "end": {
+        "line": 67,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "To cite or read more references about the ",
+        "position": {
+         "start": {
+          "line": 67,
+          "column": 1
+         },
+         "end": {
+          "line": 67,
+          "column": 1
+         }
+        },
+        "key": "qqkowbNveQ"
+       },
+       {
+        "type": "inlineCode",
+        "value": "mystmd",
+        "position": {
+         "start": {
+          "line": 67,
+          "column": 1
+         },
+         "end": {
+          "line": 67,
+          "column": 1
+         }
+        },
+        "key": "ZQ5oilAPZ7"
+       },
+       {
+        "type": "text",
+        "value": " project and related tools, see ",
+        "position": {
+         "start": {
+          "line": 67,
+          "column": 1
+         },
+         "end": {
+          "line": 67,
+          "column": 1
+         }
+        },
+        "key": "r6z5qbRMPv"
+       },
+       {
+        "type": "link",
+        "url": "/cite",
+        "position": {
+         "start": {
+          "line": 67,
+          "column": 1
+         },
+         "end": {
+          "line": 67,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "Cite MyST Markdown",
+          "key": "rvujJe93AI"
+         }
+        ],
+        "urlSource": "./cite.md",
+        "dataUrl": "/cite.json",
+        "internal": true,
+        "protocol": "file",
+        "key": "D7WShfZxqG"
+       },
+       {
+        "type": "text",
+        "value": ".",
+        "position": {
+         "start": {
+          "line": 67,
+          "column": 1
+         },
+         "end": {
+          "line": 67,
+          "column": 1
+         }
+        },
+        "key": "MZBI9VWxup"
+       }
+      ],
+      "key": "hdpGdh4hnT"
+     },
+     {
+      "type": "heading",
+      "depth": 2,
+      "position": {
+       "start": {
+        "line": 69,
+        "column": 1
+       },
+       "end": {
+        "line": 69,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "Project Goals",
+        "position": {
+         "start": {
+          "line": 69,
+          "column": 1
+         },
+         "end": {
+          "line": 69,
+          "column": 1
+         }
+        },
+        "key": "WmIG164OsR"
+       }
+      ],
+      "identifier": "project-goals",
+      "label": "Project Goals",
+      "html_id": "project-goals",
+      "implicit": true,
+      "key": "E0RYQjO3pz"
+     },
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 71,
+        "column": 1
+       },
+       "end": {
+        "line": 71,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "abbreviation",
+        "title": "Markedly Structured Text",
+        "children": [
+         {
+          "type": "text",
+          "value": "MyST",
+          "key": "xHl1ycbnkG"
+         }
+        ],
+        "key": "HH7MPW0UCP"
+       },
+       {
+        "type": "text",
+        "value": " is part of the ",
+        "key": "SIaOwf5J3x"
+       },
+       {
+        "type": "link",
+        "url": "https://jupyter.org/",
+        "position": {
+         "start": {
+          "line": 71,
+          "column": 1
+         },
+         "end": {
+          "line": 71,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "Project Jupyter",
+          "position": {
+           "start": {
+            "line": 71,
+            "column": 1
+           },
+           "end": {
+            "line": 71,
+            "column": 1
+           }
+          },
+          "key": "tJark5JUFC"
+         }
+        ],
+        "urlSource": "https://jupyter.org/",
+        "key": "vSDlN2liTA"
+       },
+       {
+        "type": "text",
+        "value": " organization, and is an open-source, community-driven project to improve scientific communication, including integrations into Jupyter Notebooks and computational results.",
+        "position": {
+         "start": {
+          "line": 71,
+          "column": 1
+         },
+         "end": {
+          "line": 71,
+          "column": 1
+         }
+        },
+        "key": "bRE4LqS2OA"
+       }
+      ],
+      "key": "MVfrvUNhqb"
+     },
+     {
+      "type": "grid",
+      "columns": [
+       1,
+       1,
+       2,
+       3
+      ],
+      "children": [
+       {
+        "type": "card",
+        "url": "/citations",
+        "children": [
+         {
+          "type": "header",
+          "children": [
+           {
+            "type": "paragraph",
+            "position": {
+             "start": {
+              "line": 78,
+              "column": 1
+             },
+             "end": {
+              "line": 79,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "strong",
+              "position": {
+               "start": {
+                "line": 78,
+                "column": 1
+               },
+               "end": {
+                "line": 78,
+                "column": 1
+               }
+              },
+              "children": [
+               {
+                "type": "text",
+                "value": "Built for Science",
+                "position": {
+                 "start": {
+                  "line": 78,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 78,
+                  "column": 1
+                 }
+                },
+                "key": "eUXfDZJoSq"
+               }
+              ],
+              "key": "q6Y818DwlI"
+             },
+             {
+              "type": "text",
+              "value": " 👩‍🔬",
+              "key": "ZNHCL7iGYB"
+             }
+            ],
+            "key": "bmhQEs84hY"
+           }
+          ],
+          "key": "FbbbwJ1m7w"
+         },
+         {
+          "type": "paragraph",
+          "position": {
+           "start": {
+            "line": 81,
+            "column": 1
+           },
+           "end": {
+            "line": 81,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "Extend Markdown with equations, cross-references, citations, and export to a preprint or rich, interactive website or book.",
+            "position": {
+             "start": {
+              "line": 81,
+              "column": 1
+             },
+             "end": {
+              "line": 81,
+              "column": 1
+             }
+            },
+            "key": "Mj8Oq4qMav"
+           }
+          ],
+          "key": "dWPVKzIPzF"
+         },
+         {
+          "type": "footer",
+          "children": [
+           {
+            "type": "paragraph",
+            "position": {
+             "start": {
+              "line": 83,
+              "column": 1
+             },
+             "end": {
+              "line": 83,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "abbreviation",
+              "title": "Markedly Structured Text",
+              "children": [
+               {
+                "type": "text",
+                "value": "MyST",
+                "key": "ljsxsjZ8q4"
+               }
+              ],
+              "key": "fNRqaJXy1b"
+             },
+             {
+              "type": "text",
+              "value": " for Science »",
+              "key": "MZ8bVabHlX"
+             }
+            ],
+            "key": "WYhLBHbLsT"
+           }
+          ],
+          "key": "qmMg7RuEr7"
+         }
+        ],
+        "urlSource": "./citations.md",
+        "dataUrl": "/citations.json",
+        "internal": true,
+        "protocol": "file",
+        "key": "f34luYodOg"
+       },
+       {
+        "type": "card",
+        "url": "/interactive-notebooks",
+        "children": [
+         {
+          "type": "header",
+          "children": [
+           {
+            "type": "paragraph",
+            "position": {
+             "start": {
+              "line": 89,
+              "column": 1
+             },
+             "end": {
+              "line": 90,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "strong",
+              "position": {
+               "start": {
+                "line": 89,
+                "column": 1
+               },
+               "end": {
+                "line": 89,
+                "column": 1
+               }
+              },
+              "children": [
+               {
+                "type": "text",
+                "value": "Dynamic Documents",
+                "position": {
+                 "start": {
+                  "line": 89,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 89,
+                  "column": 1
+                 }
+                },
+                "key": "x4ymJrnuuO"
+               }
+              ],
+              "key": "HcxTmNVGQu"
+             },
+             {
+              "type": "text",
+              "value": " 📈",
+              "key": "PQTpvWQK2z"
+             }
+            ],
+            "key": "oko4cHE9sd"
+           }
+          ],
+          "key": "SrmQZRPDKH"
+         },
+         {
+          "type": "paragraph",
+          "position": {
+           "start": {
+            "line": 92,
+            "column": 1
+           },
+           "end": {
+            "line": 92,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "Make your pages interactive by connecting to custom JupyterHubs, public Binders or even Python running directly in your browser.",
+            "position": {
+             "start": {
+              "line": 92,
+              "column": 1
+             },
+             "end": {
+              "line": 92,
+              "column": 1
+             }
+            },
+            "key": "mKNbYh3PPx"
+           }
+          ],
+          "key": "hNkbimP4TC"
+         },
+         {
+          "type": "footer",
+          "children": [
+           {
+            "type": "paragraph",
+            "position": {
+             "start": {
+              "line": 94,
+              "column": 1
+             },
+             "end": {
+              "line": 94,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "text",
+              "value": "Bring your pages to life »",
+              "position": {
+               "start": {
+                "line": 94,
+                "column": 1
+               },
+               "end": {
+                "line": 94,
+                "column": 1
+               }
+              },
+              "key": "uA4nOACkfZ"
+             }
+            ],
+            "key": "rVIPb0Ndqp"
+           }
+          ],
+          "key": "NsELekwomP"
+         }
+        ],
+        "urlSource": "./interactive-notebooks.ipynb",
+        "dataUrl": "/interactive-notebooks.json",
+        "internal": true,
+        "protocol": "file",
+        "key": "S21CyvVROI"
+       },
+       {
+        "type": "card",
+        "url": "/accessibility-and-performance",
+        "children": [
+         {
+          "type": "header",
+          "children": [
+           {
+            "type": "paragraph",
+            "position": {
+             "start": {
+              "line": 100,
+              "column": 1
+             },
+             "end": {
+              "line": 102,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "strong",
+              "position": {
+               "start": {
+                "line": 100,
+                "column": 1
+               },
+               "end": {
+                "line": 100,
+                "column": 1
+               }
+              },
+              "children": [
+               {
+                "type": "text",
+                "value": "Fast & Accessible",
+                "position": {
+                 "start": {
+                  "line": 100,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 100,
+                  "column": 1
+                 }
+                },
+                "key": "oBPAtOyGWA"
+               }
+              ],
+              "key": "DgNv0Bwa9R"
+             },
+             {
+              "type": "text",
+              "value": " ⚡️",
+              "key": "pWcu9eIsGV"
+             }
+            ],
+            "key": "oBRTCMrjyD"
+           }
+          ],
+          "key": "yel5OtPZsL"
+         },
+         {
+          "type": "paragraph",
+          "position": {
+           "start": {
+            "line": 100,
+            "column": 1
+           },
+           "end": {
+            "line": 102,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "Publish next-generation articles and books that are beautifully designed, without compromising on accessibility or performance.",
+            "key": "vI8m1dd78q"
+           }
+          ],
+          "key": "WHsHlyJTyW"
+         },
+         {
+          "type": "footer",
+          "children": [
+           {
+            "type": "paragraph",
+            "position": {
+             "start": {
+              "line": 104,
+              "column": 1
+             },
+             "end": {
+              "line": 104,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "text",
+              "value": "Read about performance »",
+              "position": {
+               "start": {
+                "line": 104,
+                "column": 1
+               },
+               "end": {
+                "line": 104,
+                "column": 1
+               }
+              },
+              "key": "ZpC481ZWAD"
+             }
+            ],
+            "key": "SJHlxhK2cC"
+           }
+          ],
+          "key": "GHs7uH030d"
+         }
+        ],
+        "urlSource": "./accessibility-and-performance.md",
+        "dataUrl": "/accessibility-and-performance.json",
+        "internal": true,
+        "protocol": "file",
+        "key": "SdvOOOUnSi"
+       }
+      ],
+      "key": "Bz9IuDJitj"
+     },
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 109,
+        "column": 1
+       },
+       "end": {
+        "line": 109,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "strong",
+        "position": {
+         "start": {
+          "line": 109,
+          "column": 1
+         },
+         "end": {
+          "line": 109,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "Technical Goals",
+          "position": {
+           "start": {
+            "line": 109,
+            "column": 1
+           },
+           "end": {
+            "line": 109,
+            "column": 1
+           }
+          },
+          "key": "XKSreBoBDJ"
+         }
+        ],
+        "key": "k0kUWgtoqL"
+       }
+      ],
+      "key": "i53ccpaSP1"
+     },
+     {
+      "type": "list",
+      "ordered": false,
+      "spread": false,
+      "position": {
+       "start": {
+        "line": 111,
+        "column": 1
+       },
+       "end": {
+        "line": 118,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "listItem",
+        "spread": true,
+        "position": {
+         "start": {
+          "line": 111,
+          "column": 1
+         },
+         "end": {
+          "line": 111,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "paragraph",
+          "children": [
+           {
+            "type": "inlineCode",
+            "value": "mystmd",
+            "position": {
+             "start": {
+              "line": 111,
+              "column": 1
+             },
+             "end": {
+              "line": 111,
+              "column": 1
+             }
+            },
+            "key": "NWC6mCIpa3"
+           },
+           {
+            "type": "text",
+            "value": " is a JavaScript parser and command line tool for working with ",
+            "key": "tmtq1Dz6kb"
+           },
+           {
+            "type": "abbreviation",
+            "title": "Markedly Structured Text",
+            "children": [
+             {
+              "type": "text",
+              "value": "MyST",
+              "key": "v7AoyRJMgf"
+             }
+            ],
+            "key": "bWng2cJnRZ"
+           },
+           {
+            "type": "text",
+            "value": " Markdown",
+            "key": "ZxrnT0hhPo"
+           }
+          ],
+          "key": "fiDZllFkY8"
+         }
+        ],
+        "key": "HwXF7LwnRR"
+       },
+       {
+        "type": "listItem",
+        "spread": true,
+        "position": {
+         "start": {
+          "line": 112,
+          "column": 1
+         },
+         "end": {
+          "line": 112,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "paragraph",
+          "children": [
+           {
+            "type": "text",
+            "value": "Parse ",
+            "key": "fX0vNZHQLI"
+           },
+           {
+            "type": "abbreviation",
+            "title": "Markedly Structured Text",
+            "children": [
+             {
+              "type": "text",
+              "value": "MyST",
+              "key": "OCIbkpAzkL"
+             }
+            ],
+            "key": "AALrWzvfIg"
+           },
+           {
+            "type": "text",
+            "value": " into a standardized ",
+            "key": "A5mJhhcpcI"
+           },
+           {
+            "type": "link",
+            "url": "https://en.wikipedia.org/wiki/Abstract_Syntax_Tree",
+            "position": {
+             "start": {
+              "line": 112,
+              "column": 1
+             },
+             "end": {
+              "line": 112,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "text",
+              "value": "AST",
+              "position": {
+               "start": {
+                "line": 112,
+                "column": 1
+               },
+               "end": {
+                "line": 112,
+                "column": 1
+               }
+              },
+              "key": "DJxkyT2uO5"
+             }
+            ],
+            "urlSource": "wiki:Abstract_Syntax_Tree",
+            "data": {
+             "page": "Abstract_Syntax_Tree",
+             "wiki": "https://en.wikipedia.org/",
+             "lang": "en"
+            },
+            "internal": false,
+            "protocol": "wiki",
+            "key": "iVjUXFsxk4"
+           },
+           {
+            "type": "text",
+            "value": ", that follows ",
+            "position": {
+             "start": {
+              "line": 112,
+              "column": 1
+             },
+             "end": {
+              "line": 112,
+              "column": 1
+             }
+            },
+            "key": "OWCNOrwTpa"
+           },
+           {
+            "type": "link",
+            "url": "https://mystmd.org/spec",
+            "position": {
+             "start": {
+              "line": 112,
+              "column": 1
+             },
+             "end": {
+              "line": 112,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "text",
+              "value": "the MyST Spec",
+              "position": {
+               "start": {
+                "line": 112,
+                "column": 1
+               },
+               "end": {
+                "line": 112,
+                "column": 1
+               }
+              },
+              "key": "l7x3t6UVsz"
+             }
+            ],
+            "urlSource": "https://mystmd.org/spec",
+            "key": "XRcLY4bCq5"
+           }
+          ],
+          "key": "Z8dR04qQXi"
+         }
+        ],
+        "key": "WgpZOH7T3m"
+       },
+       {
+        "type": "listItem",
+        "spread": true,
+        "position": {
+         "start": {
+          "line": 113,
+          "column": 1
+         },
+         "end": {
+          "line": 116,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "paragraph",
+          "children": [
+           {
+            "type": "text",
+            "value": "Translate and render ",
+            "key": "tCiOrzga73"
+           },
+           {
+            "type": "abbreviation",
+            "title": "Markedly Structured Text",
+            "children": [
+             {
+              "type": "text",
+              "value": "MyST",
+              "key": "WJtPsiGJfe"
+             }
+            ],
+            "key": "ccnZugDbU7"
+           },
+           {
+            "type": "text",
+            "value": " into:",
+            "key": "Cu9iZuWYVU"
+           }
+          ],
+          "key": "FZkThTZh8V"
+         },
+         {
+          "type": "list",
+          "ordered": false,
+          "spread": false,
+          "position": {
+           "start": {
+            "line": 114,
+            "column": 1
+           },
+           "end": {
+            "line": 116,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "listItem",
+            "spread": true,
+            "position": {
+             "start": {
+              "line": 114,
+              "column": 1
+             },
+             "end": {
+              "line": 114,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "paragraph",
+              "children": [
+               {
+                "type": "text",
+                "value": "Modern ",
+                "position": {
+                 "start": {
+                  "line": 114,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 114,
+                  "column": 1
+                 }
+                },
+                "key": "AioXVu2YCw"
+               },
+               {
+                "type": "link",
+                "url": "/quickstart-myst-documents",
+                "position": {
+                 "start": {
+                  "line": 114,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 114,
+                  "column": 1
+                 }
+                },
+                "children": [
+                 {
+                  "type": "text",
+                  "value": "interactive websites",
+                  "position": {
+                   "start": {
+                    "line": 114,
+                    "column": 1
+                   },
+                   "end": {
+                    "line": 114,
+                    "column": 1
+                   }
+                  },
+                  "key": "ewQgqn0idx"
+                 }
+                ],
+                "urlSource": "./quickstart-myst-documents.md",
+                "dataUrl": "/quickstart-myst-documents.json",
+                "internal": true,
+                "protocol": "file",
+                "key": "Meyhgr0Cei"
+               },
+               {
+                "type": "text",
+                "value": ", using React (like this website!)",
+                "position": {
+                 "start": {
+                  "line": 114,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 114,
+                  "column": 1
+                 }
+                },
+                "key": "dhs8a7lMTX"
+               }
+              ],
+              "key": "Y9pSkAoQ7H"
+             }
+            ],
+            "key": "UwR1YWOE7l"
+           },
+           {
+            "type": "listItem",
+            "spread": true,
+            "position": {
+             "start": {
+              "line": 115,
+              "column": 1
+             },
+             "end": {
+              "line": 115,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "paragraph",
+              "children": [
+               {
+                "type": "abbreviation",
+                "title": "Portable Document Format",
+                "children": [
+                 {
+                  "type": "text",
+                  "value": "PDF",
+                  "key": "vor2SJyEA6"
+                 }
+                ],
+                "key": "dpY5Bb4v62"
+               },
+               {
+                "type": "text",
+                "value": "s and ",
+                "key": "UWwBhYoETP"
+               },
+               {
+                "type": "inlineMath",
+                "value": "\\LaTeX",
+                "position": {
+                 "start": {
+                  "line": 115,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 115,
+                  "column": 1
+                 }
+                },
+                "html": "<span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mtext>LaTeX</mtext></mrow><annotation encoding=\"application/x-tex\">\\LaTeX</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.8988em;vertical-align:-0.2155em;\"></span><span class=\"mord text\"><span class=\"mord textrm\">L</span><span class=\"mspace\" style=\"margin-right:-0.36em;\"></span><span class=\"vlist-t\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.6833em;\"><span style=\"top:-2.905em;\"><span class=\"pstrut\" style=\"height:2.7em;\"></span><span class=\"mord\"><span class=\"mord textrm mtight sizing reset-size6 size3\">A</span></span></span></span></span></span><span class=\"mspace\" style=\"margin-right:-0.15em;\"></span><span class=\"mord text\"><span class=\"mord textrm\">T</span><span class=\"mspace\" style=\"margin-right:-0.1667em;\"></span><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.4678em;\"><span style=\"top:-2.7845em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"mord\"><span class=\"mord textrm\">E</span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.2155em;\"><span></span></span></span></span><span class=\"mspace\" style=\"margin-right:-0.125em;\"></span><span class=\"mord textrm\">X</span></span></span></span></span></span>",
+                "key": "YxuRlWwAoq"
+               },
+               {
+                "type": "text",
+                "value": " documents, with ",
+                "position": {
+                 "start": {
+                  "line": 115,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 115,
+                  "column": 1
+                 }
+                },
+                "key": "mqx7xOzMxr"
+               },
+               {
+                "type": "link",
+                "url": "/creating-pdf-documents",
+                "position": {
+                 "start": {
+                  "line": 115,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 115,
+                  "column": 1
+                 }
+                },
+                "children": [
+                 {
+                  "type": "text",
+                  "value": "specific templates for over 400 journals",
+                  "position": {
+                   "start": {
+                    "line": 115,
+                    "column": 1
+                   },
+                   "end": {
+                    "line": 115,
+                    "column": 1
+                   }
+                  },
+                  "key": "caqU1NPkM6"
+                 }
+                ],
+                "urlSource": "./creating-pdf-documents.md",
+                "dataUrl": "/creating-pdf-documents.json",
+                "internal": true,
+                "protocol": "file",
+                "key": "ZhjDNTsQNQ"
+               }
+              ],
+              "key": "vGp6udtaau"
+             }
+            ],
+            "key": "BVeawpvSRf"
+           },
+           {
+            "type": "listItem",
+            "spread": true,
+            "position": {
+             "start": {
+              "line": 116,
+              "column": 1
+             },
+             "end": {
+              "line": 116,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "paragraph",
+              "children": [
+               {
+                "type": "text",
+                "value": "Microsoft Word ",
+                "position": {
+                 "start": {
+                  "line": 116,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 116,
+                  "column": 1
+                 }
+                },
+                "key": "xsbfM7pod3"
+               },
+               {
+                "type": "link",
+                "url": "/creating-word-documents",
+                "position": {
+                 "start": {
+                  "line": 116,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 116,
+                  "column": 1
+                 }
+                },
+                "children": [
+                 {
+                  "type": "text",
+                  "value": "export",
+                  "position": {
+                   "start": {
+                    "line": 116,
+                    "column": 1
+                   },
+                   "end": {
+                    "line": 116,
+                    "column": 1
+                   }
+                  },
+                  "key": "Kqfq8GsbmT"
+                 }
+                ],
+                "urlSource": "./creating-word-documents.md",
+                "dataUrl": "/creating-word-documents.json",
+                "internal": true,
+                "protocol": "file",
+                "key": "UhHgQXXGVm"
+               }
+              ],
+              "key": "VZCsVid8qj"
+             }
+            ],
+            "key": "nK4HSeCkdn"
+           }
+          ],
+          "key": "GtOScoRAPQ"
+         }
+        ],
+        "key": "MPMuNECH6G"
+       },
+       {
+        "type": "listItem",
+        "spread": true,
+        "position": {
+         "start": {
+          "line": 117,
+          "column": 1
+         },
+         "end": {
+          "line": 118,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "paragraph",
+          "children": [
+           {
+            "type": "text",
+            "value": "Provide functionality for ",
+            "position": {
+             "start": {
+              "line": 117,
+              "column": 1
+             },
+             "end": {
+              "line": 117,
+              "column": 1
+             }
+            },
+            "key": "Jh4l755ZlE"
+           },
+           {
+            "type": "link",
+            "url": "/cross-references",
+            "position": {
+             "start": {
+              "line": 117,
+              "column": 1
+             },
+             "end": {
+              "line": 117,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "text",
+              "value": "cross-referencing",
+              "position": {
+               "start": {
+                "line": 117,
+                "column": 1
+               },
+               "end": {
+                "line": 117,
+                "column": 1
+               }
+              },
+              "key": "BDFwY3NbTK"
+             }
+            ],
+            "urlSource": "./cross-references.md",
+            "dataUrl": "/cross-references.json",
+            "internal": true,
+            "protocol": "file",
+            "key": "jao9SHxXal"
+           },
+           {
+            "type": "text",
+            "value": ", ",
+            "position": {
+             "start": {
+              "line": 117,
+              "column": 1
+             },
+             "end": {
+              "line": 117,
+              "column": 1
+             }
+            },
+            "key": "csFwkW6UsS"
+           },
+           {
+            "type": "link",
+            "url": "/external-references",
+            "position": {
+             "start": {
+              "line": 117,
+              "column": 1
+             },
+             "end": {
+              "line": 117,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "text",
+              "value": "external structured links",
+              "position": {
+               "start": {
+                "line": 117,
+                "column": 1
+               },
+               "end": {
+                "line": 117,
+                "column": 1
+               }
+              },
+              "key": "kQa0P7W9Vr"
+             }
+            ],
+            "urlSource": "./external-references.md",
+            "dataUrl": "/external-references.json",
+            "internal": true,
+            "protocol": "file",
+            "key": "d9Li8VJC46"
+           },
+           {
+            "type": "text",
+            "value": ", and ",
+            "position": {
+             "start": {
+              "line": 117,
+              "column": 1
+             },
+             "end": {
+              "line": 117,
+              "column": 1
+             }
+            },
+            "key": "O8luZDkcHX"
+           },
+           {
+            "type": "link",
+            "url": "/citations",
+            "position": {
+             "start": {
+              "line": 117,
+              "column": 1
+             },
+             "end": {
+              "line": 117,
+              "column": 1
+             }
+            },
+            "children": [
+             {
+              "type": "text",
+              "value": "scientific citations",
+              "position": {
+               "start": {
+                "line": 117,
+                "column": 1
+               },
+               "end": {
+                "line": 117,
+                "column": 1
+               }
+              },
+              "key": "pXFwi42oAm"
+             }
+            ],
+            "urlSource": "./citations.md",
+            "dataUrl": "/citations.json",
+            "internal": true,
+            "protocol": "file",
+            "key": "W0RAWcPrNF"
+           }
+          ],
+          "key": "PmLaCdmmBW"
+         }
+        ],
+        "key": "LUdvhAvIZF"
+       }
+      ],
+      "key": "qMkRR8tiT8"
+     },
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 119,
+        "column": 1
+       },
+       "end": {
+        "line": 119,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "strong",
+        "position": {
+         "start": {
+          "line": 119,
+          "column": 1
+         },
+         "end": {
+          "line": 119,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "Architecture",
+          "position": {
+           "start": {
+            "line": 119,
+            "column": 1
+           },
+           "end": {
+            "line": 119,
+            "column": 1
+           }
+          },
+          "key": "SdCW3HZ1Qq"
+         }
+        ],
+        "key": "eNYFULIcrd"
+       }
+      ],
+      "key": "KOxJGMLtDj"
+     },
+     {
+      "type": "paragraph",
+      "position": {
+       "start": {
+        "line": 121,
+        "column": 1
+       },
+       "end": {
+        "line": 121,
+        "column": 1
+       }
+      },
+      "children": [
+       {
+        "type": "text",
+        "value": "The ",
+        "position": {
+         "start": {
+          "line": 121,
+          "column": 1
+         },
+         "end": {
+          "line": 121,
+          "column": 1
+         }
+        },
+        "key": "s9TOtIcEco"
+       },
+       {
+        "type": "inlineCode",
+        "value": "mystmd",
+        "position": {
+         "start": {
+          "line": 121,
+          "column": 1
+         },
+         "end": {
+          "line": 121,
+          "column": 1
+         }
+        },
+        "key": "yC34Z34VdB"
+       },
+       {
+        "type": "text",
+        "value": " command line tool can be used to parse ",
+        "key": "byWR9DahmA"
+       },
+       {
+        "type": "abbreviation",
+        "title": "Markedly Structured Text",
+        "children": [
+         {
+          "type": "text",
+          "value": "MyST",
+          "key": "pgkIIw8r5Q"
+         }
+        ],
+        "key": "xNOlFuqWLI"
+       },
+       {
+        "type": "text",
+        "value": " Markdown and Jupyter Notebooks into an ",
+        "key": "mC8FDVecTT"
+       },
+       {
+        "type": "abbreviation",
+        "title": "Abstract Syntax Tree",
+        "children": [
+         {
+          "type": "text",
+          "value": "AST",
+          "key": "mJRK68yi3j"
+         }
+        ],
+        "key": "s7Rcf9oNkA"
+       },
+       {
+        "type": "text",
+        "value": ". This data can be saved as ",
+        "key": "O2cjNUknQ7"
+       },
+       {
+        "type": "abbreviation",
+        "title": "JavaScript Object Notation",
+        "children": [
+         {
+          "type": "text",
+          "value": "JSON",
+          "key": "Vdd43giOXR"
+         }
+        ],
+        "key": "epZpdSW8bH"
+       },
+       {
+        "type": "text",
+        "value": ", or rendered to a website (like this one!) or any number of formats including ",
+        "key": "KDEfGuUVjX"
+       },
+       {
+        "type": "link",
+        "url": "/creating-pdf-documents",
+        "position": {
+         "start": {
+          "line": 121,
+          "column": 1
+         },
+         "end": {
+          "line": 121,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "PDF & ",
+          "position": {
+           "start": {
+            "line": 121,
+            "column": 1
+           },
+           "end": {
+            "line": 121,
+            "column": 1
+           }
+          },
+          "key": "sDDa7uZahZ"
+         },
+         {
+          "type": "inlineMath",
+          "value": "\\LaTeX",
+          "position": {
+           "start": {
+            "line": 121,
+            "column": 1
+           },
+           "end": {
+            "line": 121,
+            "column": 1
+           }
+          },
+          "html": "<span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mtext>LaTeX</mtext></mrow><annotation encoding=\"application/x-tex\">\\LaTeX</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.8988em;vertical-align:-0.2155em;\"></span><span class=\"mord text\"><span class=\"mord textrm\">L</span><span class=\"mspace\" style=\"margin-right:-0.36em;\"></span><span class=\"vlist-t\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.6833em;\"><span style=\"top:-2.905em;\"><span class=\"pstrut\" style=\"height:2.7em;\"></span><span class=\"mord\"><span class=\"mord textrm mtight sizing reset-size6 size3\">A</span></span></span></span></span></span><span class=\"mspace\" style=\"margin-right:-0.15em;\"></span><span class=\"mord text\"><span class=\"mord textrm\">T</span><span class=\"mspace\" style=\"margin-right:-0.1667em;\"></span><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.4678em;\"><span style=\"top:-2.7845em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"mord\"><span class=\"mord textrm\">E</span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.2155em;\"><span></span></span></span></span><span class=\"mspace\" style=\"margin-right:-0.125em;\"></span><span class=\"mord textrm\">X</span></span></span></span></span></span>",
+          "key": "MjyJB0i1st"
+         }
+        ],
+        "urlSource": "./creating-pdf-documents.md",
+        "dataUrl": "/creating-pdf-documents.json",
+        "internal": true,
+        "protocol": "file",
+        "key": "E2deTWC1BU"
+       },
+       {
+        "type": "text",
+        "value": ", ",
+        "position": {
+         "start": {
+          "line": 121,
+          "column": 1
+         },
+         "end": {
+          "line": 121,
+          "column": 1
+         }
+        },
+        "key": "vOE9g3BoNp"
+       },
+       {
+        "type": "link",
+        "url": "/creating-word-documents",
+        "position": {
+         "start": {
+          "line": 121,
+          "column": 1
+         },
+         "end": {
+          "line": 121,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "Word",
+          "position": {
+           "start": {
+            "line": 121,
+            "column": 1
+           },
+           "end": {
+            "line": 121,
+            "column": 1
+           }
+          },
+          "key": "JavLpeeB6l"
+         }
+        ],
+        "urlSource": "./creating-word-documents.md",
+        "dataUrl": "/creating-word-documents.json",
+        "internal": true,
+        "protocol": "file",
+        "key": "Vrs9VV1Kyq"
+       },
+       {
+        "type": "text",
+        "value": ", ",
+        "position": {
+         "start": {
+          "line": 121,
+          "column": 1
+         },
+         "end": {
+          "line": 121,
+          "column": 1
+         }
+        },
+        "key": "cy46B6UuIq"
+       },
+       {
+        "type": "link",
+        "url": "/quickstart-myst-documents",
+        "position": {
+         "start": {
+          "line": 121,
+          "column": 1
+         },
+         "end": {
+          "line": 121,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "React",
+          "position": {
+           "start": {
+            "line": 121,
+            "column": 1
+           },
+           "end": {
+            "line": 121,
+            "column": 1
+           }
+          },
+          "key": "ue5ZdHczmL"
+         }
+        ],
+        "urlSource": "./quickstart-myst-documents.md",
+        "dataUrl": "/quickstart-myst-documents.json",
+        "internal": true,
+        "protocol": "file",
+        "key": "uCqB1UgSjO"
+       },
+       {
+        "type": "text",
+        "value": ", or ",
+        "position": {
+         "start": {
+          "line": 121,
+          "column": 1
+         },
+         "end": {
+          "line": 121,
+          "column": 1
+         }
+        },
+        "key": "WU6re8Oa5y"
+       },
+       {
+        "type": "link",
+        "url": "/creating-jats-xml",
+        "position": {
+         "start": {
+          "line": 121,
+          "column": 1
+         },
+         "end": {
+          "line": 121,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "JATS",
+          "position": {
+           "start": {
+            "line": 121,
+            "column": 1
+           },
+           "end": {
+            "line": 121,
+            "column": 1
+           }
+          },
+          "key": "g3sY7H6TMo"
+         }
+        ],
+        "urlSource": "./creating-jats-xml.md",
+        "dataUrl": "/creating-jats-xml.json",
+        "internal": true,
+        "protocol": "file",
+        "key": "TmoXo7tOm3"
+       },
+       {
+        "type": "text",
+        "value": ".",
+        "position": {
+         "start": {
+          "line": 121,
+          "column": 1
+         },
+         "end": {
+          "line": 121,
+          "column": 1
+         }
+        },
+        "key": "t1CLe1wBTI"
+       }
+      ],
+      "key": "IsLhSIoW41"
+     },
+     {
+      "type": "mermaid",
+      "value": "flowchart LR\n  A[Jupyter Notebook] --> C\n  B[MyST Markdown] --> C\n  C(mystmd) --> D{AST}\n  D <--> E[LaTeX]\n  E --> F[PDF]\n  D --> G[Word]\n  D --> H[React]\n  D --> I[HTML]\n  D <--> J[JATS]",
+      "key": "bQO1NSMPce"
+     },
+     {
+      "type": "admonition",
+      "kind": "important",
+      "children": [
+       {
+        "type": "admonitionTitle",
+        "children": [
+         {
+          "type": "text",
+          "value": "Using Sphinx or Python?",
+          "position": {
+           "start": {
+            "line": 136,
+            "column": 1
+           },
+           "end": {
+            "line": 136,
+            "column": 1
+           }
+          },
+          "key": "y6gm5ODcoW"
+         }
+        ],
+        "key": "Cigec0ChGf"
+       },
+       {
+        "type": "paragraph",
+        "position": {
+         "start": {
+          "line": 138,
+          "column": 1
+         },
+         "end": {
+          "line": 138,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "For integration with ",
+          "position": {
+           "start": {
+            "line": 138,
+            "column": 1
+           },
+           "end": {
+            "line": 138,
+            "column": 1
+           }
+          },
+          "key": "dI1WIos0lp"
+         },
+         {
+          "type": "strong",
+          "position": {
+           "start": {
+            "line": 138,
+            "column": 1
+           },
+           "end": {
+            "line": 138,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "Sphinx",
+            "position": {
+             "start": {
+              "line": 138,
+              "column": 1
+             },
+             "end": {
+              "line": 138,
+              "column": 1
+             }
+            },
+            "key": "hClzVTVhIU"
+           }
+          ],
+          "key": "qNA3hiHlkP"
+         },
+         {
+          "type": "text",
+          "value": ", use the Python implementation for ",
+          "key": "ovLaoHGeyu"
+         },
+         {
+          "type": "abbreviation",
+          "title": "Markedly Structured Text",
+          "children": [
+           {
+            "type": "text",
+            "value": "MyST",
+            "key": "XkospVnpMf"
+           }
+          ],
+          "key": "OTuIpJrTgC"
+         },
+         {
+          "type": "text",
+          "value": " or Jupyter Book V1, which can be found at:",
+          "key": "Trn1FRYwWV"
+         }
+        ],
+        "key": "MqQGItg59j"
+       },
+       {
+        "type": "list",
+        "ordered": false,
+        "spread": false,
+        "position": {
+         "start": {
+          "line": 140,
+          "column": 1
+         },
+         "end": {
+          "line": 142,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "listItem",
+          "spread": true,
+          "position": {
+           "start": {
+            "line": 140,
+            "column": 1
+           },
+           "end": {
+            "line": 140,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "paragraph",
+            "children": [
+             {
+              "type": "link",
+              "url": "https://myst-parser.readthedocs.io/en/latest/",
+              "position": {
+               "start": {
+                "line": 140,
+                "column": 1
+               },
+               "end": {
+                "line": 140,
+                "column": 1
+               }
+              },
+              "children": [
+               {
+                "type": "text",
+                "value": "MyST Python Parser for Sphinx",
+                "position": {
+                 "start": {
+                  "line": 140,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 140,
+                  "column": 1
+                 }
+                },
+                "key": "ImaP3dPk8F"
+               }
+              ],
+              "urlSource": "https://myst-parser.readthedocs.io/en/latest/",
+              "key": "PjXybRRmv9"
+             }
+            ],
+            "key": "plao8H4Q2h"
+           }
+          ],
+          "key": "d5x6ox9lxE"
+         },
+         {
+          "type": "listItem",
+          "spread": true,
+          "position": {
+           "start": {
+            "line": 141,
+            "column": 1
+           },
+           "end": {
+            "line": 142,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "paragraph",
+            "children": [
+             {
+              "type": "link",
+              "url": "https://jupyterbook.org/",
+              "position": {
+               "start": {
+                "line": 141,
+                "column": 1
+               },
+               "end": {
+                "line": 141,
+                "column": 1
+               }
+              },
+              "children": [
+               {
+                "type": "text",
+                "value": "Jupyter Book",
+                "position": {
+                 "start": {
+                  "line": 141,
+                  "column": 1
+                 },
+                 "end": {
+                  "line": 141,
+                  "column": 1
+                 }
+                },
+                "key": "ULc3JWChk0"
+               }
+              ],
+              "urlSource": "https://jupyterbook.org/",
+              "key": "MMTPtoG7BV"
+             }
+            ],
+            "key": "mp0nA2EXVz"
+           }
+          ],
+          "key": "a2s8yE7whN"
+         }
+        ],
+        "key": "UVSePW0pTw"
+       },
+       {
+        "type": "paragraph",
+        "position": {
+         "start": {
+          "line": 143,
+          "column": 1
+         },
+         "end": {
+          "line": 143,
+          "column": 1
+         }
+        },
+        "children": [
+         {
+          "type": "text",
+          "value": "Although many tools in the ",
+          "position": {
+           "start": {
+            "line": 143,
+            "column": 1
+           },
+           "end": {
+            "line": 143,
+            "column": 1
+           }
+          },
+          "key": "uCQhHfxgv0"
+         },
+         {
+          "type": "link",
+          "url": "https://mystmd.org",
+          "position": {
+           "start": {
+            "line": 143,
+            "column": 1
+           },
+           "end": {
+            "line": 143,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "MyST Ecosystem",
+            "position": {
+             "start": {
+              "line": 143,
+              "column": 1
+             },
+             "end": {
+              "line": 143,
+              "column": 1
+             }
+            },
+            "key": "TR4e0mir2q"
+           }
+          ],
+          "urlSource": "https://mystmd.org",
+          "key": "Mmp2TrIrzQ"
+         },
+         {
+          "type": "text",
+          "value": " follow the same conventions and ",
+          "position": {
+           "start": {
+            "line": 143,
+            "column": 1
+           },
+           "end": {
+            "line": 143,
+            "column": 1
+           }
+          },
+          "key": "iFJ6SSBWU2"
+         },
+         {
+          "type": "link",
+          "url": "https://mystmd.org/spec",
+          "position": {
+           "start": {
+            "line": 143,
+            "column": 1
+           },
+           "end": {
+            "line": 143,
+            "column": 1
+           }
+          },
+          "children": [
+           {
+            "type": "text",
+            "value": "specification",
+            "position": {
+             "start": {
+              "line": 143,
+              "column": 1
+             },
+             "end": {
+              "line": 143,
+              "column": 1
+             }
+            },
+            "key": "NAr9esmYAh"
+           }
+          ],
+          "urlSource": "https://mystmd.org/spec",
+          "key": "FvZDC4QJaj"
+         },
+         {
+          "type": "text",
+          "value": ", the following documentation refers only to the ",
+          "position": {
+           "start": {
+            "line": 143,
+            "column": 1
+           },
+           "end": {
+            "line": 143,
+            "column": 1
+           }
+          },
+          "key": "Hn5tS42PRU"
+         },
+         {
+          "type": "inlineCode",
+          "value": "mystmd",
+          "position": {
+           "start": {
+            "line": 143,
+            "column": 1
+           },
+           "end": {
+            "line": 143,
+            "column": 1
+           }
+          },
+          "key": "E4GLiEGrQv"
+         },
+         {
+          "type": "text",
+          "value": " ",
+          "key": "olm6GhxSJA"
+         },
+         {
+          "type": "abbreviation",
+          "title": "Command Line Interface",
+          "children": [
+           {
+            "type": "text",
+            "value": "CLI",
+            "key": "Xvph7Qe1PW"
+           }
+          ],
+          "key": "FZ9Ps2cRMt"
+         },
+         {
+          "type": "text",
+          "value": ".",
+          "key": "OQyfjKKj6A"
+         }
+        ],
+        "key": "fj88fjjaCJ"
+       }
+      ],
+      "class": "dropdown",
+      "key": "DEi65si6WN"
+     }
+    ],
+    "key": "Ss2TLgCQ54"
+   }
+  ],
+  "key": "fuA5cMFIHm"
+ },
+ "references": {
+  "cite": {
+   "order": [],
+   "data": {}
+  }
+ },
+ "footer": {
+  "navigation": {
+   "next": {
+    "title": "Install the MyST Markdown Command Line Interface",
+    "short_title": "Install MyST",
+    "url": "/installing",
+    "group": "MyST Markdown"
+   }
+  }
+ }
+}

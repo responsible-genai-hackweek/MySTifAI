@@ -1,0 +1,1413 @@
+{
+ "version": "1",
+ "records": [
+  {
+   "hierarchy": {
+    "lvl1": "Accessibility"
+   },
+   "type": "lvl1",
+   "url": "/accessibility",
+   "position": 0
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Accessibility"
+   },
+   "content": "Jupyter Book is a distribution of the \n\nMyST Document Engine, and uses the \n\nMyST Book Theme for web exports.\nThese come with a number of accessibility features out of the box.\nSee the \n\naccessibility documentation in the MyST guide.",
+   "type": "content",
+   "url": "/accessibility",
+   "position": 1
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Accessibility",
+    "lvl2": "Our goals"
+   },
+   "type": "lvl2",
+   "url": "/accessibility#our-goals",
+   "position": 2
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Accessibility",
+    "lvl2": "Our goals"
+   },
+   "content": "Jupyter Book aims to produce websites that meet \n\nWCAG 2.1 AA.\nAccessibility bugs are treated like any other bug, and accessibility contributions follow the \n\nnormal contribution process.\n\nIf you find a barrier on a site built with Jupyter Book, please \n\nopen an issue in myst-theme.",
+   "type": "content",
+   "url": "/accessibility#our-goals",
+   "position": 3
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Accessibility",
+    "lvl2": "Get involved"
+   },
+   "type": "lvl2",
+   "url": "/accessibility#get-involved",
+   "position": 4
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Accessibility",
+    "lvl2": "Get involved"
+   },
+   "content": "Technical details »\n\nWhat MyST themes do today, how to audit your own site, and which tools and standards we use.\n\nTrack open work »\n\nOpen accessibility issues are tracked under the a11y label in myst-theme.\n\nReport an a11y barrier »\n\nA clear reproduction is enormously helpful, even if you can’t propose a fix.\n\nContribute »\n\nAccessibility contributions follow the same workflow as any other contribution.\n\nThis only covers the myst-theme in Jupyter Book\n\nSee the \n\nJupyter Accessibility Working Group for broader project-wide resources about accessibility.",
+   "type": "content",
+   "url": "/accessibility#get-involved",
+   "position": 5
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Cite Jupyter Book"
+   },
+   "type": "lvl1",
+   "url": "/cite",
+   "position": 0
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Cite Jupyter Book"
+   },
+   "content": "If you use Jupyter Book in research or teaching, please cite it to support the project and credit the contributors.\n\nRead the paper at SciPy 2025 Proceedings →",
+   "type": "content",
+   "url": "/cite",
+   "position": 1
+  },
+  {
+   "hierarchy": {
+    "lvl1": "The Jupyter Book and MyST ecosystem"
+   },
+   "type": "lvl1",
+   "url": "/community/ecosystem",
+   "position": 0
+  },
+  {
+   "hierarchy": {
+    "lvl1": "The Jupyter Book and MyST ecosystem"
+   },
+   "content": "Jupyter Book 2 is built upon the \n\nMyST Markdown Document Engine (or mystmd for shorthand). mystmd is a next-generation document engine that is data-driven, computation-centric, and flexible. The mystmd project is also built by the \n\nJupyter Book team, and the two are evolving hand-in-hand.",
+   "type": "content",
+   "url": "/community/ecosystem",
+   "position": 1
+  },
+  {
+   "hierarchy": {
+    "lvl1": "The Jupyter Book and MyST ecosystem",
+    "lvl2": "Where can I learn more about the MyST Document Engine?"
+   },
+   "type": "lvl2",
+   "url": "/community/ecosystem#where-can-i-learn-more-about-the-myst-document-engine",
+   "position": 2
+  },
+  {
+   "hierarchy": {
+    "lvl1": "The Jupyter Book and MyST ecosystem",
+    "lvl2": "Where can I learn more about the MyST Document Engine?"
+   },
+   "content": "The MyST Document Engine and Markdown syntax is also developed by the \n\nJupyter Book community. Learn more at the \n\nMyST Document Engine documentation. Read the paper at \n\nParagraph.",
+   "type": "content",
+   "url": "/community/ecosystem#where-can-i-learn-more-about-the-myst-document-engine",
+   "position": 3
+  },
+  {
+   "hierarchy": {
+    "lvl1": "The Jupyter Book and MyST ecosystem",
+    "lvl2": "What’s different between Jupyter Book and the MyST Document Engine?"
+   },
+   "type": "lvl2",
+   "url": "/community/ecosystem#whats-different-between-jupyter-book-and-the-myst-document-engine",
+   "position": 4
+  },
+  {
+   "hierarchy": {
+    "lvl1": "The Jupyter Book and MyST ecosystem",
+    "lvl2": "What’s different between Jupyter Book and the MyST Document Engine?"
+   },
+   "content": "In short: not much. Here are the two biggest differences:\n\nJupyter Book is opinionated about multi-document and book-based workflows. For example, community knowledge bases, data science books, and documentation. mystmd is much more flexible - it includes components that can be re-used in many kinds of applications, and targets single-document workflows for things like articles as well.\n\nJupyter Book is a lightweight re-skin and default configuration for mystmd. As such, Jupyter Book is mostly a default set of options for mystmd, and a command line interface that builds upon jupyter-book 1.0 for user familiarity.\n\nYou can just use mystmd if you prefer! For the time being, Jupyter Book is \"just a configuration of mystmd. The CLIs are identical (except for re-naming and a few upgrade pathways from Jupyter Book 1) and the functionality is the same between the two.\nOver time, they may diverge as Jupyter Book leans into multi-document workflows and the MyST Document Engine remains workflow-agnostic, but we’ll let you know if that is the case.",
+   "type": "content",
+   "url": "/community/ecosystem#whats-different-between-jupyter-book-and-the-myst-document-engine",
+   "position": 5
+  },
+  {
+   "hierarchy": {
+    "lvl1": "The Jupyter Book and MyST ecosystem",
+    "lvl2": "A comparison with Jupyter Book 1 and Sphinx"
+   },
+   "type": "lvl2",
+   "url": "/community/ecosystem#a-comparison-with-jupyter-book-1-and-sphinx",
+   "position": 6
+  },
+  {
+   "hierarchy": {
+    "lvl1": "The Jupyter Book and MyST ecosystem",
+    "lvl2": "A comparison with Jupyter Book 1 and Sphinx"
+   },
+   "content": "The Jupyter Book 1 stack was built on top of \n\nthe Sphinx Document Engine. Jupyter Book 1 included a number of custom Sphinx extensions to enable functionality like Markdown parsing, Jupyter Notebooks, cacheing, etc. As the \n\nMyST Document Engine was built with workflows like Jupyter Book in mind from day one, it incorporates much of this functionality into the core MyST Document Engine. This means the gap between “default MyST Document Engine” and “default Jupyter Book” is narrower.\n\nBelow is a small diagram to show off the high-level differences in technical components within each stack. As you’ll see, the Jupyter Book 2 / MyST Document Engine stack is simpler, and requires fewer independent components.To modify this diagram, upload the SVG below to ExcaliDraw and make edits\n then paste over the SVG content in the text file.\n\n",
+   "type": "content",
+   "url": "/community/ecosystem#a-comparison-with-jupyter-book-1-and-sphinx",
+   "position": 7
+  },
+  {
+   "hierarchy": {
+    "lvl1": "History of the Jupyter Book project"
+   },
+   "type": "lvl1",
+   "url": "/community/history",
+   "position": 0
+  },
+  {
+   "hierarchy": {
+    "lvl1": "History of the Jupyter Book project"
+   },
+   "content": "gantt\n    dateFormat YYYY-MM\n    title The history of Jupyter Book\n\n    Jupyter Book 0.1 - 0.7 (Jekyll)               : des2, 2018-06, 2020-07\n    Jupyter Book 0.7 - 1.x (Sphinx)               : des2, 2020-07, 2024-07\n    Jupyter Book 1.0                              : milestone, 2024-02, 1d\n    Jupyter Book 2.x (MyST-MD)                    :active, des2, 2024-07, 2024-07",
+   "type": "content",
+   "url": "/community/history",
+   "position": 1
+  },
+  {
+   "hierarchy": {
+    "lvl1": "History of the Jupyter Book project",
+    "lvl2": "A first attempt using Jekyll"
+   },
+   "type": "lvl2",
+   "url": "/community/history#a-first-attempt-using-jekyll",
+   "position": 2
+  },
+  {
+   "hierarchy": {
+    "lvl1": "History of the Jupyter Book project",
+    "lvl2": "A first attempt using Jekyll"
+   },
+   "content": "The Jupyter Book project was started with \n\nthe first commit in June of 2018. Initially, work was focussed on building a series of scripts to compile Jupyter Notebooks into a textbook using \n\nJekyll.",
+   "type": "content",
+   "url": "/community/history#a-first-attempt-using-jekyll",
+   "position": 3
+  },
+  {
+   "hierarchy": {
+    "lvl1": "History of the Jupyter Book project",
+    "lvl2": "Creation of the jupyter book application"
+   },
+   "type": "lvl2",
+   "url": "/community/history#creation-of-the-jupyter-book-application",
+   "position": 4
+  },
+  {
+   "hierarchy": {
+    "lvl1": "History of the Jupyter Book project",
+    "lvl2": "Creation of the jupyter book application"
+   },
+   "content": "In 2020, the “new” Jupyter Book (0.7) \n\nwas announced which re-built Jupyter Book from the ground up to make it\n\neasier to install, faster to use, and able to create more complex publishing content in your books.\n\nExecutable Books\n\nThis work was supported by the Executable Books project, an open community building open-source tools \n\npowered by a grant from the Sloan foundation.\n\nThe 0.7 re-write established the Jupyter Book application on top the Sphinx documentation engine, which was at the time used primarily for documentation of Python projects. With this move to Sphinx, a new Markdown dialect MyST Markdown (Markedly Structured Text Markdown) was created to combine the expressiveness of Sphinx’s Restructured Text with the familiarity and readability of Markdown.\n\nIn addition to using a new documentation engine, Jupyter Book 0.7 saw the introduction of Thebe which brought interactivity and widgets to published books using the power of \n\nBinder.\n\nIn 2023, a broad effort to recognize the stability of the Jupyter Book software stack was made through a series of 1.0 releases. This saw updates to core Jupyter Book packages such as myst-nb and sphinx-book-theme to support Sphinx 7 and Python 3.11+, and marked the “maintenance phase” of the Jupyter Book tools.",
+   "type": "content",
+   "url": "/community/history#creation-of-the-jupyter-book-application",
+   "position": 5
+  },
+  {
+   "hierarchy": {
+    "lvl1": "History of the Jupyter Book project",
+    "lvl2": "Jupyter Book 2 is rebuilt on top of MyST-MD"
+   },
+   "type": "lvl2",
+   "url": "/community/history#jupyter-book-2-is-rebuilt-on-top-of-myst-md",
+   "position": 6
+  },
+  {
+   "hierarchy": {
+    "lvl1": "History of the Jupyter Book project",
+    "lvl2": "Jupyter Book 2 is rebuilt on top of MyST-MD"
+   },
+   "content": "As outlined above, Jupyter Book has a long history. Over its lifetime, it has become a well-established tool for authoring and publishing in the Jupyter ecosystem with \n\nover 13,000 GitHub repositories now using the tool. During that time, the Executable Books team have learned a great deal about the ways in which our communities use Jupyter Book, witnessed first-hand the pain-points in building a book publishing tool on top of Sphinx, and \n\nexplored new ways in which the Jupyter Book tools can be used. Following these learnings, and the success of the MyST-MD project that was launched in 2022, it became clear that the future of Jupyter Book lay in a new direction.\n\nJupyter Book 2 is built on top of the \n\nMyST Document Engine, which uses the latest web frameworks and JavaScript libraries to produce beautiful documents and websites that provide rich reading experiences on top of powerful structured representations.",
+   "type": "content",
+   "url": "/community/history#jupyter-book-2-is-rebuilt-on-top-of-myst-md",
+   "position": 7
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Community"
+   },
+   "type": "lvl1",
+   "url": "/community",
+   "position": 0
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Community"
+   },
+   "content": "Jupyter Book is an open source project with a diverse community of contributors and leaders. It is a sub-project of \n\nProject Jupyter. Here are a few ways that you can engage with our community.",
+   "type": "content",
+   "url": "/community",
+   "position": 1
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Community",
+    "lvl2": "About the project"
+   },
+   "type": "lvl2",
+   "url": "/community#about-the-project",
+   "position": 2
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Community",
+    "lvl2": "About the project"
+   },
+   "content": "Jupyter Book & MyST ecosystem: how Jupyter Book fits into the broader MyST ecosystem\n\nCore team and governance: who maintains the project and how it’s run\n\nJobs and recruitment: funded opportunities to work on Jupyter Book\n\nContributing guide: where and how to contribute to this project\n\nProject history: how Jupyter Book got here",
+   "type": "content",
+   "url": "/community#about-the-project",
+   "position": 3
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Community",
+    "lvl2": "Where to talk"
+   },
+   "type": "lvl2",
+   "url": "/community#where-to-talk",
+   "position": 4
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Community",
+    "lvl2": "Where to talk"
+   },
+   "content": "Contributor and user Discord 💬\n\nFor general chat in the Jupyter Book and MyST community\n\nClick to visit the Discord →\n\nDiscussions forum 💬\n\nFor general conversation about the MyST Markdown engine.\n\nClick to visit the GitHub Discussions forum →\n\nEvents calendar 🗓️\n\nConnect with others in the Jupyter Book community in real-time.\n\nClick to see our events calendar →",
+   "type": "content",
+   "url": "/community#where-to-talk",
+   "position": 5
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Community",
+    "lvl2": "Where to learn"
+   },
+   "type": "lvl2",
+   "url": "/community#where-to-learn",
+   "position": 6
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Community",
+    "lvl2": "Where to learn"
+   },
+   "content": "The Jupyter Book user guide\n\nLearn how to use Jupyter Book.\n\nClick to visit the Jupyter Book user guide →\n\nThe MyST Document Engine guide\n\nA more complete guide to building and customizing documents with MyST.\n\nClick to visit the mystmd guide →",
+   "type": "content",
+   "url": "/community#where-to-learn",
+   "position": 7
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Community",
+    "lvl2": "How to help"
+   },
+   "type": "lvl2",
+   "url": "/community#how-to-help",
+   "position": 8
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Community",
+    "lvl2": "How to help"
+   },
+   "content": "Contributing guide\n\nResources for getting involved in our community.\n\nClick to visit the Contributing Guide →\n\nHow you can help\n\nA few ideas for where we could use your help.\n\nClick to see the Giving Help Guide →",
+   "type": "content",
+   "url": "/community#how-to-help",
+   "position": 9
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Community Manager for JupyterHub and Jupyter Book"
+   },
+   "type": "lvl1",
+   "url": "/community/jobs/2026-03-community-mgr",
+   "position": 0
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Community Manager for JupyterHub and Jupyter Book"
+   },
+   "content": "The \n\nJupyterHub and \n\nJupyter Book communities are hiring a community manager.\n\nIn JupyterHub we are democratizing access to interactive computing environments to allow everyone, no matter where they are, to explore data, develop code, and advance knowledge without barriers.\nIn Jupyter Book we are building the next generation of open, community-driven technical publication tooling, leveraging the MyST document engine to create modular, reusable, and reproducible computational narratives.\n\nWe are excited to fund dedicated time for someone - maybe you! - to join these teams.\n\nThe community manager will be responsible for identifying and developing activities and communication pathways that align maintainer and contributor actions with the goals of each project, and that build bridges across the Jupyter ecosystem.\n\nYou can read more about our motivation for this role in the 🟣 \n\nproposal, part of the Jupyter Foundation’s \n\nCommunity Funding initiative.\nWe particularly encourage applicants to review the section “Impact Metrics: How do we define success?”\n\nIn this post we have outlined the community manager’s \n\nResponsibilities, their \n\nPreferred expertise, and \n\nHow to apply.\n\nThis is a contract role, funded at $90,000 to be spent by the end of April 2027.\nThe community manager will be engaged as a contractor of the Linux Foundation and will follow the standard Linux Foundation contractor onboarding process.",
+   "type": "content",
+   "url": "/community/jobs/2026-03-community-mgr",
+   "position": 1
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Community Manager for JupyterHub and Jupyter Book",
+    "lvl2": "Responsibilities"
+   },
+   "type": "lvl2",
+   "url": "/community/jobs/2026-03-community-mgr#id-2026-cm-responsibilities",
+   "position": 2
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Community Manager for JupyterHub and Jupyter Book",
+    "lvl2": "Responsibilities"
+   },
+   "content": "Strategic alignment and contributor guidance\n\nCollaborate with the maintainer teams from both projects to understand, document, and broadcast each project’s priorities to their communities.\n\nActively connect contributors to open issues and workstreams that align with the respective project’s goals, and redirect well-intentioned contributions that are not aligned with the project’s currently prioritized efforts.\n\nEfficiently connect contributors with maintainers to provide them the guidance and review needed to make efficient progress, managing workload on both sides of the mentorship pair.\n\nContributor growth and leadership development\n\nDesign, visualize, and manage a clear contributor journey, including identifying requisite skills and project context knowledge, for each community.\n\nIdentify engaged community members and create pathways for them to take on more responsibility, such as triaging issues, reviewing pull requests, or mentoring others within their project of interest.\n\nFostering knowledge sharing and collaboration\n\nIdentify and create opportunities for the community of each project to share information, best practices, and technical knowledge, while respecting their distinct roadmaps.\n\nFacilitate cross-community events, such as running “collaboration cafes” for both JupyterHub and JupyterBook, and strategically shape them into meetings that provide value and foster connection for both projects.\n\nDevelop re-usable templates for explaining contributor pathways, such as onboarding documentation, skills maps/matrices for progression into contribution and maintenance roles, and Collaboration Cafe guides.\n\nLearn in the open\n\nEnsure all materials are publicly available and discoverable, including progress against our community health metrics described below.\n\nPromote these learnings across the Jupyter community including within the Zulip channel, at regular community calls, and by “visiting” other sub-projects (at synchronous meetings or in asynchronous discussion spaces) to discuss community management efforts as requested.\n\nJoin the Jupyter Community Building Working Group and be an active member throughout their paid time on the project.",
+   "type": "content",
+   "url": "/community/jobs/2026-03-community-mgr#id-2026-cm-responsibilities",
+   "position": 3
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Community Manager for JupyterHub and Jupyter Book",
+    "lvl2": "Preferred expertise"
+   },
+   "type": "lvl2",
+   "url": "/community/jobs/2026-03-community-mgr#id-2026-cm-preferred-expertise",
+   "position": 4
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Community Manager for JupyterHub and Jupyter Book",
+    "lvl2": "Preferred expertise"
+   },
+   "content": "We have not marked any of the expertise categories listed here as required.\nWe recognise that we are looking for a unicorn, and they are curiously hard to find!\nIf you do not have expertise across all of these categories we encourage you to apply.\nWe are looking forward to getting to know candidates better, including where they have identified opportunities for career and skill development as part of the JupyterHub and Jupyter Book teams.\n\nOur assessment pathway is included as part of this list to guide applicants in curating their strongest application.\nIf you are uncertain how to answer any of the questions and/or prompts, please ask in our \n\nJupyter Hub Zulip channel or email Kirstie Whitaker directly at \n\nkirstie​.whitaker@berkeley​.edu.\n\nTrack record of contributions to open source projects.\n\nAssessment: Cover letter & links\n\nUnderstanding of multi-stakeholder, community governed open source community dynamics.\n\nAssessment: Interview question\n\nDescribe two situations - one featuring a success and one a failure - where you have sought to align diverse stakeholders around a common goal.\nFor both, share what you learned from the experiences.\n\nUnderstanding of the challenges that Jupyter Hub and Jupyter Book are designed to solve (or reduce) in the world.\n\nAssessment: Interview question\n\nDescribe two deployments - one each of Jupyter Hub and Jupyter Book - that each meet a need in either education, research or technical development.\n\nYou do not need to have run these deployments yourself.\n\nTechnical skills in Python and/or TypeScript.\n\nAssessment: Cover letter & links\n\nTrack record of identifying and completing tasks in the presence of significant uncertainty.\n\nAssessment: Cover letter\n\nAbility to work effectively with two distinct and diverse teams whose community members are geographically distributed with significant time zone differences.\n\nAssessment: Cover letter\n\nAll instructions from this recruitment call followed, the letter is clearly and concisely written, includes concrete examples, and publicly accessible links where appropriate.\n\nAssessment: Interview question\n\nGiven your knowledge of Jupyter Hub and Jupyter Book, and your previous experience, how will you know if you are working effectively within these two communities?\n\nAbility to ask for help and self manage time allocations and tasks.\n\nAssessment: Interview question\n\nWhich aspects of this role do you think will be hard for you?\nWhich aspects will be easy (or easier) for you?\nWhere do you expect to ask for help and/or support in the role?",
+   "type": "content",
+   "url": "/community/jobs/2026-03-community-mgr#id-2026-cm-preferred-expertise",
+   "position": 5
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Community Manager for JupyterHub and Jupyter Book",
+    "lvl2": "How to apply"
+   },
+   "type": "lvl2",
+   "url": "/community/jobs/2026-03-community-mgr#id-2026-cm-how-to-apply",
+   "position": 6
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Community Manager for JupyterHub and Jupyter Book",
+    "lvl2": "How to apply"
+   },
+   "content": "Submit a cover letter and resume through this Google Form: \n\nhttps://​forms​.gle​/Qw6ddyJ8rzZY5vQm6\n\nPlease include:\n\nYour motivation to apply for this role.\n\nLinks to up to 3 publicly available GitHub repositories that highlight engagement in issues, pull requests, community discussions (or equivalent conversations on alternative git forge platforms).\n\nIf you don’t have publicly available links, provide a letter from a team member from a private initiative who can endorse these collaboration skills.\n\nIf you can not meet this requirement, please note that in your application.\n\nLinks to up to 3 examples of code you have written in Python and/or TypeScript.\n\nIf you don’t have publicly available links, provide a letter from a team member on a private initiative endorsing these development skills.\n\nIf you can not meet this requirement, please note that in your application.\n\nA description of a previous role (paid or volunteer) where you have identified and delivered outcomes in the presence of uncertainty.\n\nInclude links to task documentation (issue / PR / report) if publicly available.\n\nIf you can not meet this requirement, please note that in your application.",
+   "type": "content",
+   "url": "/community/jobs/2026-03-community-mgr#id-2026-cm-how-to-apply",
+   "position": 7
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Community Manager for JupyterHub and Jupyter Book",
+    "lvl2": "What to expect"
+   },
+   "type": "lvl2",
+   "url": "/community/jobs/2026-03-community-mgr#id-2026-cm-what-to-expect",
+   "position": 8
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Community Manager for JupyterHub and Jupyter Book",
+    "lvl2": "What to expect"
+   },
+   "content": "We’ll accept applications from now through 22 March, 2026.\n\nOnce applications are in, here’s our process:\n\nResume and cover letter review: The recruitment panel will review all applications and invite up to 5 applicants for an interview on zoom at a time that is convenient for the applicant and the panel members.\n\nInterview: The recruitment panel will meet with applicants for 30 minutes over Zoom. They will ask the same questions of every applicant.\n\nPanel discussion & alignment: The recruitment panel will discuss interview outcomes and align on a decision.\n\nOffer: We expect to communicate a final decision to all applicants by 30 April, 2026.",
+   "type": "content",
+   "url": "/community/jobs/2026-03-community-mgr#id-2026-cm-what-to-expect",
+   "position": 9
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Community Manager for JupyterHub and Jupyter Book",
+    "lvl3": "Timeline",
+    "lvl2": "What to expect"
+   },
+   "type": "lvl3",
+   "url": "/community/jobs/2026-03-community-mgr#id-2026-cm-timeline",
+   "position": 10
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Community Manager for JupyterHub and Jupyter Book",
+    "lvl3": "Timeline",
+    "lvl2": "What to expect"
+   },
+   "content": "22 March 2026, \n\nAoE: Deadline for resume and cover letter applications.\n\nBefore 29 March 2026: Invite up to 5 applicants to interview.\n\n6 April - 15 April 2026: Interviews conducted over Zoom.\n\nBefore 30 April 2026: Communicate final decision to all applicants.\n\nMay 2026: Post holder coordinates a contract with the Linux Foundation, following their standard onboarding process.",
+   "type": "content",
+   "url": "/community/jobs/2026-03-community-mgr#id-2026-cm-timeline",
+   "position": 11
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Community Manager for JupyterHub and Jupyter Book",
+    "lvl2": "Acknowledgments"
+   },
+   "type": "lvl2",
+   "url": "/community/jobs/2026-03-community-mgr#id-2026-cm-acknowledgements",
+   "position": 12
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Community Manager for JupyterHub and Jupyter Book",
+    "lvl2": "Acknowledgments"
+   },
+   "content": "This job description was co-created by April Johnson, Yuvi, and Kirstie Whitaker, with guidance from Chris Holdgraf, Min Ragan-Kelley, Raniere Silva, and Stéfan van der Walt, along with community input at the JupyterHub and Jupyter Book collaboration cafes.",
+   "type": "content",
+   "url": "/community/jobs/2026-03-community-mgr#id-2026-cm-acknowledgements",
+   "position": 13
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Jobs and Recruitment"
+   },
+   "type": "lvl1",
+   "url": "/community/jobs",
+   "position": 0
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Jobs and Recruitment"
+   },
+   "content": "This page highlights any open calls we have for funded positions within JupyterHub.",
+   "type": "content",
+   "url": "/community/jobs",
+   "position": 1
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Jobs and Recruitment",
+    "lvl2": "Open calls"
+   },
+   "type": "lvl2",
+   "url": "/community/jobs#open-calls",
+   "position": 2
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Jobs and Recruitment",
+    "lvl2": "Open calls"
+   },
+   "content": "Community Manager for JupyterHub and Jupyter Book\n\n📆 Apply by \n\n29 March 2026",
+   "type": "content",
+   "url": "/community/jobs#open-calls",
+   "position": 3
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Jobs and Recruitment",
+    "lvl2": "Previous calls"
+   },
+   "type": "lvl2",
+   "url": "/community/jobs#previous-calls",
+   "position": 4
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Jobs and Recruitment",
+    "lvl2": "Previous calls"
+   },
+   "content": "We don’t have any previous calls linked from this team compass... yet!",
+   "type": "content",
+   "url": "/community/jobs#previous-calls",
+   "position": 5
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Core team"
+   },
+   "type": "lvl1",
+   "url": "/community/team",
+   "position": 0
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Core team"
+   },
+   "content": "This page describes the core team and steering council of Jupyter Book.\nThese are \n\nembedded from \n\nour team compass.",
+   "type": "content",
+   "url": "/community/team",
+   "position": 1
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Core team",
+    "lvl2": "Core team"
+   },
+   "type": "lvl2",
+   "url": "/community/team#core-team",
+   "position": 2
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Core team",
+    "lvl2": "Core team"
+   },
+   "content": "Our core team is made up of maintainers who support Jupyter Book and its subprojects in many ways.\nThis group includes the Steering Council below.\n\nAngus Hollands\n\nAffiliation: 2i2c\n\nFrank W Koch\n\nAffiliation: Curvenote\n\nKirstie Whitaker\n\nAffiliation: Berkeley Institute for Data Science\n\nStefan van der Walt\n\nAffiliation: Berkeley Institute for Data Science\n\nSteve Purves\n\nAffiliation: Curvenote",
+   "type": "content",
+   "url": "/community/team#core-team",
+   "position": 3
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Core team",
+    "lvl2": "Steering council"
+   },
+   "type": "lvl2",
+   "url": "/community/team#steering-council",
+   "position": 4
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Core team",
+    "lvl2": "Steering council"
+   },
+   "content": "Our steering council has the additional responsibility of providing strategic and structural direction to the project, in addition to core team duties.\n\nChris Holdgraf\n\nAffiliation: 2i2c\n\nGreg Caporaso\n\nAffiliation: Northern Arizona University\n\nRowan Cockett\n\nAffiliation: Curvenote\n\n",
+   "type": "content",
+   "url": "/community/team#steering-council",
+   "position": 5
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Core team",
+    "lvl2": "Organizational status"
+   },
+   "type": "lvl2",
+   "url": "/community/team",
+   "position": 6
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Core team",
+    "lvl2": "Organizational status"
+   },
+   "content": "The Jupyter Book community is a sub-project of \n\nthe Jupyter Project.\nJupyter is a fiscally sponsored project of \n\nNumFocus, a 501(c)(3) non-profit.",
+   "type": "content",
+   "url": "/community/team",
+   "position": 7
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Code contributions"
+   },
+   "type": "lvl1",
+   "url": "/contribute/code",
+   "position": 0
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Code contributions"
+   },
+   "content": "Use this page to find the right repository and next step.",
+   "type": "content",
+   "url": "/contribute/code",
+   "position": 1
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Code contributions",
+    "lvl2": "Choose a repository"
+   },
+   "type": "lvl2",
+   "url": "/contribute/code#choose-a-repository",
+   "position": 2
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Code contributions",
+    "lvl2": "Choose a repository"
+   },
+   "content": "jupyter-book/mystmd: MyST engine and core behavior.\n\njupyter​-book​/myst​-theme: Theme and frontend rendering.\n\njupyter​-book​/jupyter​-book: Python packaging, CLI distribution, and Jupyter Book integration.\n\njupyter​-book​/myst​-plugins: Community-maintained plugins.\n\nThere are also many other repositories for plugins and other tools, but these are the major cross-project ones.",
+   "type": "content",
+   "url": "/contribute/code#choose-a-repository",
+   "position": 3
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Code contributions",
+    "lvl2": "Start contributing"
+   },
+   "type": "lvl2",
+   "url": "/contribute/code#start-contributing",
+   "position": 4
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Code contributions",
+    "lvl2": "Start contributing"
+   },
+   "content": "Check \n\nteam priorities and open issues in the target repository.\n\nPick a small issue and comment that you’d like to work on it.\n\nFollow that repository’s CONTRIBUTING.md for setup and workflow.\n\nIf unsure where to start, ask in \n\nDiscord or \n\nDiscussions.",
+   "type": "content",
+   "url": "/contribute/code#start-contributing",
+   "position": 5
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Code contributions",
+    "lvl2": "Detailed guides"
+   },
+   "type": "lvl2",
+   "url": "/contribute/code#detailed-guides",
+   "position": 6
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Code contributions",
+    "lvl2": "Detailed guides"
+   },
+   "content": "MyST Developer Guide\n\nContributing Code to Jupyter Book",
+   "type": "content",
+   "url": "/contribute/code#detailed-guides",
+   "position": 7
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Contribute to documentation"
+   },
+   "type": "lvl1",
+   "url": "/contribute/docs",
+   "position": 0
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Contribute to documentation"
+   },
+   "content": "Use this page to decide which repository should host your documentation change.",
+   "type": "content",
+   "url": "/contribute/docs",
+   "position": 1
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Contribute to documentation",
+    "lvl2": "How documentation is split across repositories"
+   },
+   "type": "lvl2",
+   "url": "/contribute/docs#how-documentation-is-split-across-repositories",
+   "position": 2
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Contribute to documentation",
+    "lvl2": "How documentation is split across repositories"
+   },
+   "content": "jupyter-book/jupyterbook.org: Community/project pages (landing page, community content, project resources, contribution entrypoint).\n\njupyter-book/jupyter-book: User documentation for the Jupyter Book tool (served at /stable and /latest).\n\njupyter-book/mystmd: MyST docs and developer guides (\n\nmystmd.org).\n\njupyter-book/myst-theme: Theme/UI docs and preview workflows.\n\nThere is also repository-specific documentation in many repositories, but these are the major cross-project ones.",
+   "type": "content",
+   "url": "/contribute/docs#how-documentation-is-split-across-repositories",
+   "position": 3
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Contribute to documentation",
+    "lvl2": "Detailed guides"
+   },
+   "type": "lvl2",
+   "url": "/contribute/docs#detailed-guides",
+   "position": 4
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Contribute to documentation",
+    "lvl2": "Detailed guides"
+   },
+   "content": "Jupyter Book docs strategy\n\nMyST contribution guide\n\nMyST developer guide",
+   "type": "content",
+   "url": "/contribute/docs#detailed-guides",
+   "position": 5
+  },
+  {
+   "hierarchy": {
+    "lvl1": "How to help the community"
+   },
+   "type": "lvl1",
+   "url": "/contribute/help",
+   "position": 0
+  },
+  {
+   "hierarchy": {
+    "lvl1": "How to help the community"
+   },
+   "content": "Help Others - We Need You!\n\nThe most valuable contribution? Answer questions on \n\nDiscord and \n\nDiscussions. Your experience helps newcomers succeed.",
+   "type": "content",
+   "url": "/contribute/help",
+   "position": 1
+  },
+  {
+   "hierarchy": {
+    "lvl1": "How to help the community",
+    "lvl2": "Answer questions and help others"
+   },
+   "type": "lvl2",
+   "url": "/contribute/help#answer-questions-and-help-others",
+   "position": 2
+  },
+  {
+   "hierarchy": {
+    "lvl1": "How to help the community",
+    "lvl2": "Answer questions and help others"
+   },
+   "content": "Discussion forum - Answer questions based on your experience\n\nDiscord - Help with quick questions and troubleshooting\n\nUpgrade questions - Share migration tips and workarounds\n\nShare knowledge - Write tutorials, blog posts, or give talks",
+   "type": "content",
+   "url": "/contribute/help#answer-questions-and-help-others",
+   "position": 3
+  },
+  {
+   "hierarchy": {
+    "lvl1": "How to help the community",
+    "lvl2": "Contribute to the project"
+   },
+   "type": "lvl2",
+   "url": "/contribute/help#contribute-to-the-project",
+   "position": 4
+  },
+  {
+   "hierarchy": {
+    "lvl1": "How to help the community",
+    "lvl2": "Contribute to the project"
+   },
+   "content": "The Jupyter Book Team Compass 🧭\n\nA guide to the Jupyter Book community and a place to learn team practices.\n\nClick to visit the Team Compass →\n\nThe mystmd contributor guide 📚\n\nA get-started page to point you in the right direction for contributions.\n\nClick to visit the mystmd contributor guide →\n\nThe mystmd developer guide 📚\n\nA guide to making technical contributions to the MyST Document Engine stack.\n\nClick to visit the mystmd developer guide →",
+   "type": "content",
+   "url": "/contribute/help#contribute-to-the-project",
+   "position": 5
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Contributing to Jupyter Book"
+   },
+   "type": "lvl1",
+   "url": "/contribute",
+   "position": 0
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Contributing to Jupyter Book"
+   },
+   "content": "Thank you for your interest in contributing to Jupyter Book!\n\nJupyter Book is part of the wider MyST ecosystem. Use this page to find the right place to contribute.",
+   "type": "content",
+   "url": "/contribute",
+   "position": 1
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Contributing to Jupyter Book",
+    "lvl2": "Start here"
+   },
+   "type": "lvl2",
+   "url": "/contribute#start-here",
+   "position": 2
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Contributing to Jupyter Book",
+    "lvl2": "Start here"
+   },
+   "content": "Code contributions: where code changes go and how to get started\n\nDocumentation strategy: which repo should host your docs change\n\nCommunity help: ways to support others\n\nTeam priorities: issues the team is most interested in",
+   "type": "content",
+   "url": "/contribute#start-here",
+   "position": 3
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Contributing to Jupyter Book",
+    "lvl2": "Shared project guidance"
+   },
+   "type": "lvl2",
+   "url": "/contribute#shared-project-guidance",
+   "position": 4
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Contributing to Jupyter Book",
+    "lvl2": "Shared project guidance"
+   },
+   "content": "MyST contribution guide\n\nCode of conduct\n\nTeam compass and governance",
+   "type": "content",
+   "url": "/contribute#shared-project-guidance",
+   "position": 5
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Contributing to Jupyter Book",
+    "lvl2": "Project Resources"
+   },
+   "type": "lvl2",
+   "url": "/contribute#project-resources",
+   "position": 6
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Contributing to Jupyter Book",
+    "lvl2": "Project Resources"
+   },
+   "content": "GitHub Organization: \n\ngithub​.com​/jupyter​-book\n\nMain Repository: \n\ngithub​.com​/jupyter​-book​/jupyter​-book\n\nTeam Compass: \n\njupyterbook​.org​/compass\n\nMyST Markdown: \n\nmystmd.org",
+   "type": "content",
+   "url": "/contribute#project-resources",
+   "position": 7
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Contributing to Jupyter Book",
+    "lvl2": "Getting Help"
+   },
+   "type": "lvl2",
+   "url": "/contribute#getting-help",
+   "position": 8
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Contributing to Jupyter Book",
+    "lvl2": "Getting Help"
+   },
+   "content": "Join our \n\nDiscord community\n\nAsk in \n\nGitHub Discussions\n\nCheck the \n\nMyST guide for technical documentation",
+   "type": "content",
+   "url": "/contribute#getting-help",
+   "position": 9
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Events and calendar"
+   },
+   "type": "lvl1",
+   "url": "/events",
+   "position": 0
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Events and calendar"
+   },
+   "content": "",
+   "type": "content",
+   "url": "/events",
+   "position": 1
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Events and calendar",
+    "lvl2": "Events and meetings"
+   },
+   "type": "lvl2",
+   "url": "/events#events",
+   "position": 2
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Events and calendar",
+    "lvl2": "Events and meetings"
+   },
+   "content": "The \n\nJupyter Book Calendar has a list of all Jupyter Book team meetings.\nHere it is:\n\n\n\nFigure 1:The meeting schedule for Jupyter Book Collaboration Cafes",
+   "type": "content",
+   "url": "/events#events",
+   "position": 3
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Events and calendar",
+    "lvl3": "Collaboration cafes",
+    "lvl2": "Events and meetings"
+   },
+   "type": "lvl3",
+   "url": "/events#collaboration-cafe",
+   "position": 4
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Events and calendar",
+    "lvl3": "Collaboration cafes",
+    "lvl2": "Events and meetings"
+   },
+   "content": "Collaboration cafes are a way for any member of the Jupyter Book community to remotely get together to share what they’ve been up to, have discussions, and work together. You are welcome to join as long as you’re interested in Jupyter Book!\n\nSee \n\nthe Jupyter Book Collaboration Cafe notes for more details and meeting notes.\n\nFacilitator checklist\n\nSee \n\nFacilitator Checklist for Collaboration Cafes for instructions on how to facilitate this meeting. We encourage anyone who is willing to serve in this role.\n\nThis is an experiment!\n\nThis is an experiment in opening up our team practices. \n\nHere’s a blog post explaining our goals. We’d love feedback on how we can improve these meetings in a sustainable way.",
+   "type": "content",
+   "url": "/events#collaboration-cafe",
+   "position": 5
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Events and calendar",
+    "lvl3": "Working sessions",
+    "lvl2": "Events and meetings"
+   },
+   "type": "lvl3",
+   "url": "/events#working-sessions",
+   "position": 6
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Events and calendar",
+    "lvl3": "Working sessions",
+    "lvl2": "Events and meetings"
+   },
+   "content": "The development team has a semi-regular working meeting, see the calendar for times and invitation links.\nThese are places for us to dig into code, have deeper design discussions and decisions, and move forward major project efforts that require in-depth discussion.\nAnyone is welcome to join, though the agenda and conversation is driven by the development priorities of the \n\ncore team.",
+   "type": "content",
+   "url": "/events#working-sessions",
+   "position": 7
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Events and calendar",
+    "lvl3": "Jupyter-wide events",
+    "lvl2": "Events and meetings"
+   },
+   "type": "lvl3",
+   "url": "/events#jupyter-events",
+   "position": 8
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Events and calendar",
+    "lvl3": "Jupyter-wide events",
+    "lvl2": "Events and meetings"
+   },
+   "content": "There are also many other events in the Jupyter ecosystem! See the \n\nJupyter Community events page for events across the Jupyter community.",
+   "type": "content",
+   "url": "/events#jupyter-events",
+   "position": 9
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Gallery of Jupyter Books"
+   },
+   "type": "lvl1",
+   "url": "/gallery",
+   "position": 0
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Gallery of Jupyter Books"
+   },
+   "content": "Jupyter Book technology has been applied across a wide range of use cases, including curricula vitae, official educational textbooks, student portfolios, lab manuals, and technical documentation.\nThis is a gallery of Jupyter Books built from across the community.\nTo add your book to this list, \n\nadd an entry to this gallery.yml file and open a Pull Request.\n\n\n\nNumPy Tutorials\n\nNumPy tutorials & educational content in notebook format\n\nNumPy\n\nTutorials\n\n\n\nProject Pythia\n\nProject Pythia is the education working group for Pangeo and is an educational resource for the entire geoscience community. Together these initiatives are helping geoscientists make sense of huge volumes of numerical scientific data using tools that facilitate open, reproducible science, and building a community of practice around these goals.\n\nGeoscience\n\nEducation\n\n\n\nNASA Astrophysics Fornax Science Platform Notebook Tutorials\n\nThe Fornax Initiative is a NASA Astrophysics project developed by the HEASARC, IRSA, and MAST archives to bring data, software, and computing together on the cloud so that researchers can focus on science. This repository contains Python notebook tutorials demonstrating a range of topics, including data access on-premises and on the cloud, cross-archive analysis, big data workflows, and computationally intensive science.\n\nAstronomy\n\nTutorials\n\nData access\n\nNASA\n\n\n\nPyRIT - Python Risk Identification Tool for Generative AI\n\nThe guide for the PyRIT open source framework built to empower security professionals and engineers to proactively identify risks in generative AI systems.\n\nPython\n\nAI Red Teaming\n\nAI Security\n\nAI Safety\n\n\n\nProbability in Practice - A Hands-On Journey with Python\n\nAn interactive textbook exploring probability theory through practical Python programming. Covers foundations, conditional probability, random variables, distributions, limit theorems, and advanced topics like Bayesian inference and Markov chains. Designed for students, data scientists, and developers using Jupyter notebooks with hands-on examples and exercises.\n\nProbability\n\nStatistics\n\nPython\n\nEducation\n\nData Science\n\nJupyter\n\n\n\nThe Turing Way handbook to reproducible, ethical and collaborative data science.\n\nThe Turing Way is an open science, open collaboration, and community-driven project. We involve and support a diverse community of contributors to make data science accessible, comprehensible and effective for everyone.\n\nOpen Science\n\nData\n\nDocumentation\n\n\n\nIntroduction to GIS Programming\n\nA hands-on introduction to GIS programming with Python, covering core concepts, geospatial data processing, and interactive mapping using open-source tools.\n\nGIS\n\nPython\n\nGeospatial\n\nOpen Source\n\nEducation\n\n\n\nVoices of Jupyter Hub\n\nJupyterHub’s impact on the world deserves to be celebrated. This report aims to celebrate these accomplishments. These conversations have also highlighted areas for improvement, from those that support better software to those that encourage a healthier, more vibrant community.\n\nJupyter\n\nJupyterHub\n\n\n\ndolfiny: high-level convenience wrappers for DOLFINx\n\nComputational mechanics demos of dolfiny, an extension module of the finite element library FEniCSx, rendered as jupyter book.\n\nComputational Mechanics\n\nFEniCS\n\nDocumentation\n\nUniversity of Luxembourg\n\n\n\nMastering Security Testing for Python\n\nGain a deep understanding of the methodologies and specialized tools used to conduct professional-grade security validation for Python applications.\n\nPython\n\nCybersecurity\n\nSAST\n\nCourse\n\nEducation\n\n\n\nNASA Astrophysics Fornax Science Platform Documentation\n\nThe Fornax Initiative is a NASA Astrophysics project developed by the HEASARC, IRSA, and MAST archives to bring data, software, and computing together on the cloud so that researchers can focus on science. This repository holds the source for the user documentation and therefore is an example of a non-notebook based narrative documentation project.\n\nDocumentation\n\nNASA\n\n\n\nSpatial Data Management with DuckDB\n\nA practical guide to managing and analyzing large-scale spatial data using DuckDB, focusing on efficient SQL workflows and modern geospatial analytics.\n\nDuckDB\n\nSQL\n\nSpatial Data\n\nAnalytics\n\nGeospatial\n\n\n\nJupyter Book Template with Editable Pyodide Code Cells\n\nA Jupyter Book v2 (MyST) template with editable, syntax-highlighted Python code cells powered by JupyterLite (Pyodide), enabling client-side execution in the browser without a backend, including offline use after initial load.\n\nJupyterBook\n\nTemplate\n\nJupyterLite\n\nPyodide\n\nInteractive\n\nOffline\n\n\n\nGeoAI with Python\n\nA comprehensive guide to applying artificial intelligence to geospatial data, including remote sensing, deep learning, and foundation models for Earth observation.\n\nGeoAI\n\nMachine Learning\n\nRemote Sensing\n\nPython\n\nAI\n\n\n\nUC OSPO Network\n\nThe official website of the University of California Network of Open Source Program Offices (OSPOs).\n\nUniversity of California\n\nEducation\n\n\n\nIntroducing Classical Mechanics & Special Relativity\n\nThis book provides an introduction for freshman students into the world of classical mechanics and special relativity theory\n\nPhysics\n\nMechanics\n\nEducation\n\nDelft University of Technology\n\n\n\nMathematics for Machine Learning\n\nAn introduction to linear algebra in the context of machine learning, with some statistics, calculus, and Python sprinkled in.\n\nEducation\n\nMachine Learning\n\nLinear Algebra\n\nCalculus\n\nStatistics\n\nMathematics\n\n\n\nTopology in Condensed Matter: Tying Quantum Knots\n\nAn extensive graduate course on topology in condensed matter physics\n\nquantum physics\n\ncondensed matter\n\n\n\nBDI 475 Introduction to Data Analytics Applications in Business\n\nThis is the online textbook for BDI 475 - Introduction to Data Analytics Applications in Business, a course offered by the University of Illinois Urbana-Champaign. The course is designed to introduce students to the fundamentals of data analytics and its applications in business contexts.\n\nData analytics\n\nEducation\n\nPython\n\nUniversity of Illinois\n\n\n\nJupyter Book Workshop Template\n\nA GitHub Template repository designed for use in Jupyter Book 2 and MyST workshops.\n\nJupyterBook\n\nTutorial\n\n\n\nProtein–Peptide Molecular Mimicry Study\n\nA Jupyter Book presenting an exploratory and educational computational workflow to study protein–peptide molecular mimicry in the HLA-B27 protein, which is associated with autoimmune diseases such as ankylosing spondylitis. The book covers peptide screening, docking, molecular dynamics simulations, trajectory correction, and post-MD analysis, with an emphasis on methodological understanding and hands-on learning.\n\nComputational Chemistry\n\nMolecular Dynamics\n\nBioinformatics\n\nEducational Resource\n\nComputational Biology\n\n\n\nNASA/IPAC Infrared Science Archive Python Notebook Tutorials for Astronomy\n\nThese tutorials demonstrate access methods and techniques for working with data served by the [NASA/IPAC Infrared Science Archive (IRSA)](https://irsa.ipac.caltech.edu/). They cover topics like querying IRSA, working with catalogs in Parquet format, visualizing with Firefly, and general other techniques.\n\nAstronomy\n\nTutorials\n\nData access\n\nNASA",
+   "type": "content",
+   "url": "/gallery",
+   "position": 1
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Help"
+   },
+   "type": "lvl1",
+   "url": "/help",
+   "position": 0
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Help"
+   },
+   "content": "What is MyST? How is it different from Jupyter Book?\n\nJupyter Book is built on top of the MyST Document Engine.\nThe separation between the two applications is so small that we share the same CLI and configuration files.\nSee \n\nour ecosystem documentation for more information.\n\nBug reports and requests should take place on the \n\nmystmd/ repository, since that is where most changes will happen.\n\nAsk a question »\n\nNeed some help using Jupyter Book (MyST)? Unsure whether something is a bug or a feature? Discord is where MyST users and developers gather!\n\nDiscord\n\nRequest a bugfix or feature »\n\nFound a bug? Have an idea for a new feature? Visit the MyST GitHub repository and create an issue.\n\nGitHub Issues\n\nVote on Features  »\n\nWant to see what issues the community cares about most? Browse the feature voting table to see what’s getting attention and add your vote!\n\nFeature Voting Board",
+   "type": "content",
+   "url": "/help",
+   "position": 1
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Jupyter Book"
+   },
+   "type": "lvl1",
+   "url": "/",
+   "position": 0
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Jupyter Book"
+   },
+   "content": "Jupyter Book 2 is here!\n\nBuilt on the \n\nMyST Document Engine with faster builds, modern features, and improved workflows.\nJupyter Book 2 still has many improvements to be made.\nPlease join us and \n\ncontribute to Jupyter Book so we can make it better!\n\nUpgrade from 1.0 • \n\nKnown limitations • \n\nFrequently Asked Questions • \n\nJBv1 documentation\n\nJupyter \n\nBook\n\nCreate computational narratives that are reusable, reproducible, and interactive.\n\nWrite in Notebooks or Markdown, execute code, cross-reference content, and publish to the web - built for and by researchers, educators, and data scientists.\n\npip install jupyter-book\njupyter book start\n\nGet started → \n\nUpgrade from JB1 →\n\n",
+   "type": "content",
+   "url": "/",
+   "position": 1
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Jupyter Book",
+    "lvl2": "New to Jupyter Book?"
+   },
+   "type": "lvl2",
+   "url": "/#new-to-jupyter-book",
+   "position": 2
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Jupyter Book",
+    "lvl2": "New to Jupyter Book?"
+   },
+   "content": "Start here: \n\nDocs • \n\nGallery • \n\nGet help • \n\nCommunity • \n\nJupyter Book vs MyST",
+   "type": "content",
+   "url": "/#new-to-jupyter-book",
+   "position": 3
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Jupyter Book",
+    "lvl2": "See It in Action"
+   },
+   "type": "lvl2",
+   "url": "/#see-it-in-action",
+   "position": 4
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Jupyter Book",
+    "lvl2": "See It in Action"
+   },
+   "content": "\n\nReusable Knowledge - Cross-reference pages, sections, figures, and equations. Link to other MyST sites for a connected reading experience.\n\n\n\nReproducible Results - Execute Python, R, Julia, and more at build time. Include computational results directly in your documentation.\n\n\n\nInteractive Exploration - Publish websites with live widgets. Connect to JupyterHub, Binder, or run Python in the browser.\n\n",
+   "type": "content",
+   "url": "/#see-it-in-action",
+   "position": 5
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Jupyter Book",
+    "lvl2": "Get started"
+   },
+   "type": "lvl2",
+   "url": "/#get-started",
+   "position": 6
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Jupyter Book",
+    "lvl2": "Get started"
+   },
+   "content": "",
+   "type": "content",
+   "url": "/#get-started",
+   "position": 7
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Jupyter Book",
+    "lvl3": "What do you want to do",
+    "lvl2": "Get started"
+   },
+   "type": "lvl3",
+   "url": "/#what-do-you-want-to-do",
+   "position": 8
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Jupyter Book",
+    "lvl3": "What do you want to do",
+    "lvl2": "Get started"
+   },
+   "content": "📘 Get Started\n\nBuild your first book in minutes\n\nQuick start →\n\n📝 Author Content\n\nWrite with MyST Markdown\n\nLearn authoring →\n\n🚀 Build & Publish\n\nDeploy to the web\n\nPublish guide →\n\n⚙️ Extend with Plugins\n\nCustomize your workflow\n\nExplore plugins →\n\n💬 Community\n\nGet help and contribute\n\nJoin us →\n\n📚 Gallery\n\nExplore existing books and projects\n\nExplore gallery →\n\n",
+   "type": "content",
+   "url": "/#what-do-you-want-to-do",
+   "position": 9
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Jupyter Book",
+    "lvl3": "Important Information",
+    "lvl2": "Get started"
+   },
+   "type": "lvl3",
+   "url": "/#important-information",
+   "position": 10
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Jupyter Book",
+    "lvl3": "Important Information",
+    "lvl2": "Get started"
+   },
+   "content": "Upgrade guide\n\nUpgrade from Jupyter Book 1 to 2\n\nIncludes an FAQ about known limitations and gotchas\n\nGet Help\n\nQuestions or issues?\n\nVisit our \n\nFAQ for common questions, or reach out via \n\nDiscord, \n\nDiscussions, or \n\nVote on features\n\nCite Jupyter Book\n\nUsing in research?\n\nSee our citation guide for proper attribution\n\nEcosystem\n\nLearn about the MyST ecosystem\n\nUnderstand how Jupyter Book fits into the broader MyST ecosystem",
+   "type": "content",
+   "url": "/#important-information",
+   "position": 11
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Release Notes"
+   },
+   "type": "lvl1",
+   "url": "/releases",
+   "position": 0
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Release Notes"
+   },
+   "content": "Release notes for the Jupyter Book ecosystem of tools.\nClick each of the links below for a concatenated list of release notes over the last six months.\n\nJupyter Book\n\nMyST Document Engine\n\nMyST Theme\n\nJupyterLab MyST\n\nThebe",
+   "type": "content",
+   "url": "/releases",
+   "position": 1
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Jupyter Book Releases"
+   },
+   "type": "lvl1",
+   "url": "/releases/jupyter-book",
+   "position": 0
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Jupyter Book Releases"
+   },
+   "content": "Release notes for \n\nJupyter Book.\n\n",
+   "type": "content",
+   "url": "/releases/jupyter-book",
+   "position": 1
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Jupyter Book Releases",
+    "lvl2": "v2.1.x"
+   },
+   "type": "lvl2",
+   "url": "/releases/jupyter-book#v2-1-x",
+   "position": 2
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Jupyter Book Releases",
+    "lvl2": "v2.1.x"
+   },
+   "content": "July 5, 2026\n\nReleases: \n\nv2.1.6 · \n\nv2.1.5 · \n\nv2.1.4\n\nThis brings in two new releases and several bugfixes, accessibility improvements, and enhancements in mystmd and myst-theme. Release notes for each below:\n\nhttps://​github​.com​/jupyter​-book​/mystmd​/releases​/tag​/mystmd​%401​.9.0\n\nhttps://​github​.com​/jupyter​-book​/myst​-theme​/releases​/tag​/myst​-to​-react​%401​.3.0\n\n2.1.6\n\nMaintenance and upkeep improvements\n\nBump myst-cli to v1.10.1 \n\n#2640 (\n\n@sbonaretti, \n\n@choldgraf)\n\nBump the actions group in /.github/workflows with 2 updates \n\n#2628 (\n\n@bsipocz)\n\nBump the actions group in /.github/workflows with 5 updates \n\n#2617 (\n\n@bsipocz)\n\nFix docs noxfile and add a footer \n\n#2609 (\n\n@choldgraf)\n\nBump the actions group in /.github/workflows with 3 updates \n\n#2608 (\n\n@bsipocz)\n\nbump myst version \n\n#2607 (\n\n@choldgraf)\n\n🔑 Remove NPM_TOKEN in publish workflow \n\n#2605 (\n\n@agoose77)\n\nBump MyST and add toc children option \n\n#2600 (\n\n@choldgraf)\n\nBump actions/setup-python from 5 to 6 in /.github/workflows in the actions group \n\n#2596 (\n\n@agoose77)\n\nDocumentation improvements\n\nDocs: Separate objective and other hosting options in publishing tutorial \n\n#2635 (\n\n@sbonaretti, \n\n@agoose77)\n\nPoint to mystmd docs more and move to index pages \n\n#2620 (\n\n@choldgraf)\n\nDocs: patch url for v1 docs (*/v1 --> */v1/intro.html) \n\n#2598 (\n\n@evdcush, \n\n@bsipocz)\n\nOther merged PRs\n\nUpdate myst cli \n\n#2621 (\n\n@choldgraf)\n\n2.1.4",
+   "type": "content",
+   "url": "/releases/jupyter-book#v2-1-x",
+   "position": 3
+  },
+  {
+   "hierarchy": {
+    "lvl1": "JupyterLab MyST Releases"
+   },
+   "type": "lvl1",
+   "url": "/releases/jupyterlab-myst",
+   "position": 0
+  },
+  {
+   "hierarchy": {
+    "lvl1": "JupyterLab MyST Releases"
+   },
+   "content": "Release notes for \n\nJupyterLab MyST, the MyST extension for JupyterLab.\n\n",
+   "type": "content",
+   "url": "/releases/jupyterlab-myst",
+   "position": 1
+  },
+  {
+   "hierarchy": {
+    "lvl1": "JupyterLab MyST Releases",
+    "lvl2": "v2.7.x"
+   },
+   "type": "lvl2",
+   "url": "/releases/jupyterlab-myst#v2-7-x",
+   "position": 2
+  },
+  {
+   "hierarchy": {
+    "lvl1": "JupyterLab MyST Releases",
+    "lvl2": "v2.7.x"
+   },
+   "content": "June 17, 2026\n\nReleases: \n\nv2.7.0\n\n2.7.0\n\nEnhancements made\n\n💘 Update to latest myst packages \n\n#293 (\n\n@agoose77)\n\nMaintenance and upkeep improvements\n\nUse pnpm instead of npm \n\n#294 (\n\n@agoose77)",
+   "type": "content",
+   "url": "/releases/jupyterlab-myst#v2-7-x",
+   "position": 3
+  },
+  {
+   "hierarchy": {
+    "lvl1": "MyST Theme Releases"
+   },
+   "type": "lvl1",
+   "url": "/releases/myst-theme",
+   "position": 0
+  },
+  {
+   "hierarchy": {
+    "lvl1": "MyST Theme Releases"
+   },
+   "content": "Release notes for the \n\nMyST Theme package.\n\n",
+   "type": "content",
+   "url": "/releases/myst-theme",
+   "position": 1
+  },
+  {
+   "hierarchy": {
+    "lvl1": "MyST Theme Releases",
+    "lvl2": "myst-to-react@main"
+   },
+   "type": "lvl2",
+   "url": "/releases/myst-theme#myst-to-react-main",
+   "position": 2
+  },
+  {
+   "hierarchy": {
+    "lvl1": "MyST Theme Releases",
+    "lvl2": "myst-to-react@main"
+   },
+   "content": "August 10, 2026\n\npre-release\n\nBleeding-edge theme assets, rebuilt from main on each push (currently 6498c64bc64e0a061818a0dc88dd11d446334f79). Use at your own risk! This tracks unreleased changes and can break at any time.\n\n",
+   "type": "content",
+   "url": "/releases/myst-theme#myst-to-react-main",
+   "position": 3
+  },
+  {
+   "hierarchy": {
+    "lvl1": "MyST Theme Releases",
+    "lvl2": "myst-to-react@1.3.x"
+   },
+   "type": "lvl2",
+   "url": "/releases/myst-theme#myst-to-react-1-3-x",
+   "position": 4
+  },
+  {
+   "hierarchy": {
+    "lvl1": "MyST Theme Releases",
+    "lvl2": "myst-to-react@1.3.x"
+   },
+   "content": "June 4, 2026\n\nReleases: \n\nmyst-to-react@1.3.1 · \n\nmyst-to-react@1.3.0\n\nThis release fixes a number of accessibility issues that were surfaced in 🟣 \n\nmystmd#2802. It improves structure and metadata for assistive technologies as well as color contrast.\n\nEnhancements made\n\nHighlight ts as typescript \n\n#888 (\n\n@stefanv, \n\n@choldgraf)\n\nBugs fixed\n\nSupport dark mode with mermaid diagrams \n\n#881 (\n\n@choldgraf)\n\nFix vertical height for stacked buttons \n\n#872 (\n\n@choldgraf)\n\nFix id link for ‘Link to Keywords’ HashLink \n\n#654 (\n\n@kevinlin1, \n\n@agoose77, \n\n@choldgraf)\n\nAdd not-prose to active thebe case \n\n#869 (\n\n@choldgraf, \n\n@agoose77)\n\nMake cell outputs focusable if they aren’t stdin/stderr \n\n#864 (\n\n@pancakereport, \n\n@choldgraf)\n\nAllow navbar to grow in height \n\n#863 (\n\n@choldgraf, \n\n@agoose77)\n\nFix equations scrollable  \n\n#860 (\n\n@pancakereport, \n\n@agoose77, \n\n@rowanc1)\n\nAdd full-colour support to ANSI renderers \n\n#857 (\n\n@agoose77, \n\n@choldgraf, \n\n@rowanc1)\n\nMaintenance and upkeep improvements\n\nFix a11y check workflow \n\n#893 (\n\n@choldgraf)\n\nAdd additional publish step for themes through GH releases \n\n#659 (\n\n@parmentelat, \n\n@agoose77, \n\n@choldgraf, \n\n@rowanc1, \n\n@stevejpurves)\n\nDocumentation improvements\n\nDocument static files behavior \n\n#892 (\n\n@choldgraf, \n\n@stefanv)\n\nConfirm #1 no longer a problem \n\n#882 (\n\n@choldgraf, \n\n@rowanc1)\n\nAdd Binder docs config \n\n#868 (\n\n@choldgraf)\n\nOther merged PRs\n\nImprove the accessibility report script \n\n#895 (\n\n@choldgraf)\n\nServe project static_files through the dev server \n\n#887 (\n\n@stefanv, \n\n@agoose77)\n\nAllow env vars to be passed to npm run theme:* \n\n#886 (\n\n@stefanv, \n\n@choldgraf)\n\nVersion Packages \n\n#885 (\n\n@rowanc1)\n\nPrevent theme change animation to avoid confusing transitions \n\n#884 (\n\n@stefanv, \n\n@choldgraf, \n\n@rowanc1)\n\nSyntax highlight TOML \n\n#883 (\n\n@stefanv, \n\n@choldgraf, \n\n@rowanc1)\n\nsoft code THEME_REPO_OWNER \n\n#878 (\n\n@joequant, \n\n@rowanc1)\n\nDocument routes in dev docs \n\n#877 (\n\n@choldgraf, \n\n@rowanc1)\n\nDo not override logo background color in dark mode \n\n#876 (\n\n@stefanv, \n\n@choldgraf)\n\nFix hydration mismatch on static builds with BASE_URL \n\n#875 (\n\n@chad-earthscope, \n\n@agoose77, \n\n@choldgraf, \n\n@parmentelat)\n\nAdd Accessibility Checks \n\n#865 (\n\n@pancakereport, \n\n@choldgraf)\n\nVersion Packages \n\n#861 (\n\n@choldgraf)\n\n",
+   "type": "content",
+   "url": "/releases/myst-theme#myst-to-react-1-3-x",
+   "position": 5
+  },
+  {
+   "hierarchy": {
+    "lvl1": "MyST Theme Releases",
+    "lvl2": "myst-to-react@1.2.x"
+   },
+   "type": "lvl2",
+   "url": "/releases/myst-theme#myst-to-react-1-2-x",
+   "position": 6
+  },
+  {
+   "hierarchy": {
+    "lvl1": "MyST Theme Releases",
+    "lvl2": "myst-to-react@1.2.x"
+   },
+   "content": "April 20, 2026\n\nReleases: \n\nmyst-to-react@1.2.2 · \n\nmyst-to-react@1.2.0\n\nEnhancements made\n\nImprove search accessibility \n\n#854 (\n\n@choldgraf, \n\n@agoose77)\n\n✨ Add navbar_end part in navbar UI \n\n#802 (\n\n@choldgraf, \n\n@parmentelat, \n\n@rowanc1, \n\n@stefanv)\n\nBugs fixed\n\nDestructure aria-controls and only use it when its target exists in search \n\n#853 (\n\n@choldgraf, \n\n@agoose77)\n\nFix wide tables overflow \n\n#852 (\n\n@choldgraf, \n\n@agoose77)\n\nFix scrollable region focusable (code/code output) \n\n#849 (\n\n@pancakereport, \n\n@agoose77, \n\n@choldgraf)\n\nOther merged PRs\n\nVersion Packages \n\n#856 (\n\n@agoose77)\n\nChange ANSI palette to restricted \n\n#855 (\n\n@agoose77, \n\n@choldgraf, \n\n@pancakereport, \n\n@rowanc1)\n\nVersion Packages \n\n#850 (\n\n@agoose77)\n\nVersion Packages \n\n#833 (\n\n@choldgraf)\n\nApply position: relative to anywidget container \n\n#840 (\n\n@stevejpurves, \n\n@choldgraf, \n\n@stefanv)\n\nRender grid-item, taking columns into consideration \n\n#838 (\n\n@stefanv, \n\n@agoose77, \n\n@choldgraf)\n\n🔧 Fix package-lock.json conflict \n\n#836 (\n\n@fwkoch, \n\n@agoose77)\n\n↔️↕️ Add both vert and horiz gap for badges \n\n#835 (\n\n@choldgraf, \n\n@rowanc1)\n\nVersion Packages \n\n#833 (\n\n@choldgraf)\n\nAdd accessible labels to footer links \n\n#832 (\n\n@agoose77, \n\n@choldgraf)\n\nfeat: add build-cache for netlify \n\n#826 (\n\n@agoose77)\n\nVersion Packages \n\n#825 (\n\n@agoose77)\n\nfix: allow single-wildcard for leading component \n\n#822 (\n\n@agoose77, \n\n@choldgraf, \n\n@rowanc1)\n\nMaintenance and upkeep improvements\n\n🐛 Fix netlify branch script for our theme docs \n\n#844 (\n\n@choldgraf, \n\n@stefanv)\n\nSet netlify build branch from GitHub project \n\n#841 (\n\n@stefanv, \n\n@choldgraf)\n\nDocumentation improvements\n\nAdd an authorship example in the documentation \n\n#845 (\n\n@choldgraf)\n\n",
+   "type": "content",
+   "url": "/releases/myst-theme#myst-to-react-1-2-x",
+   "position": 7
+  },
+  {
+   "hierarchy": {
+    "lvl1": "MyST Theme Releases",
+    "lvl2": "myst-to-react@1.1.x"
+   },
+   "type": "lvl2",
+   "url": "/releases/myst-theme#myst-to-react-1-1-x",
+   "position": 8
+  },
+  {
+   "hierarchy": {
+    "lvl1": "MyST Theme Releases",
+    "lvl2": "myst-to-react@1.1.x"
+   },
+   "content": "March 4, 2026\n\nReleases: \n\nmyst-to-react@1.1.4\n\nThis release adds rendering support for the new \n\n{anywidget} directive, including model logic and non-scheme URL handling. It also adds the ability to \n\nconfigure a domain as “internal” for link styling in multi-site projects.\n\nEnhancements made\n\n✨ Add anywidget directive rendering and model logic \n\n#795 (\n\n@stevejpurves, \n\n@agoose77, \n\n@choldgraf)\n\nBugs fixed\n\n🐛 Fix bug with trailing slash in URLs \n\n#811 (\n\n@choldgraf, \n\n@rowanc1)\n\nOther merged PRs\n\nVersion Packages \n\n#825 (\n\n@agoose77)\n\nAllow non-scheme URLs for anywidgets \n\n#824 (\n\n@agoose77)\n\ninternal vs external links docs \n\n#821 (\n\n@jukent, \n\n@agoose77, \n\n@choldgraf)\n\n🐛 Validate changesets (e.g. ensure private packages are not included) \n\n#819 (\n\n@rowanc1)\n\nSupport single domain to treat as internal URL \n\n#816 (\n\n@choldgraf, \n\n@agoose77, \n\n@jukent, \n\n@rowanc1, \n\n@stefanv)\n\nFix ROR renderer for v2 API \n\n#815 (\n\n@agoose77, \n\n@rowanc1)\n\nVersion Packages \n\n#814 (\n\n@rowanc1)\n\nFix linked images inlined \n\n#812 (\n\n@choldgraf, \n\n@agoose77, \n\n@brian-rose)\n\nVersion Packages \n\n#796 (\n\n@choldgraf)",
+   "type": "content",
+   "url": "/releases/myst-theme#myst-to-react-1-1-x",
+   "position": 9
+  },
+  {
+   "hierarchy": {
+    "lvl1": "MyST Document Engine Releases"
+   },
+   "type": "lvl1",
+   "url": "/releases/mystmd",
+   "position": 0
+  },
+  {
+   "hierarchy": {
+    "lvl1": "MyST Document Engine Releases"
+   },
+   "content": "Release notes for the \n\nMyST Document Engine (mystmd).\n\n",
+   "type": "content",
+   "url": "/releases/mystmd",
+   "position": 1
+  },
+  {
+   "hierarchy": {
+    "lvl1": "MyST Document Engine Releases",
+    "lvl2": "mystmd@1.10.x"
+   },
+   "type": "lvl2",
+   "url": "/releases/mystmd#mystmd-1-10-x",
+   "position": 2
+  },
+  {
+   "hierarchy": {
+    "lvl1": "MyST Document Engine Releases",
+    "lvl2": "mystmd@1.10.x"
+   },
+   "content": "June 5, 2026\n\nReleases: \n\nmystmd@1.10.1 · \n\nmystmd@1.10.0\n\nEnhancements made\n\nRevert thebe \n\n#2903 (\n\n@choldgraf, \n\n@rowanc1)\n\nAccept myst.yaml as an alternative to myst.yml \n\n#2884 (\n\n@stefanv, \n\n@choldgraf, \n\n@rowanc1, \n\n@yuvipanda)\n\nOnly copy thebe JS when necessary \n\n#2878 (\n\n@stefanv, \n\n@choldgraf, \n\n@rowanc1)\n\nAdd option to specify static files for site builds \n\n#2770 (\n\n@stefanv, \n\n@RRiva, \n\n@agoose77, \n\n@choldgraf, \n\n@cycomachead, \n\n@espg, \n\n@rowanc1)\n\n🃏 Wrap card in a passthrough typst function, that can be redefined by the user \n\n#2640 (\n\n@jan-david-fischbach, \n\n@rowanc1, \n\n@stefanv)\n\nBugs fixed\n\n🐛 Citation @mention followed by html parsing bug \n\n#2891 (\n\n@rowanc1, \n\n@stefanv)\n\nAdd kernel startup timeout and retry + choose open port on execute \n\n#2874 (\n\n@choldgraf, \n\n@rowanc1, \n\n@stefanv)\n\nAdd extra guidance around changesets and myst-cli bumping \n\n#2862 (\n\n@choldgraf, \n\n@rowanc1)\n\nfix(myst-cli): append index-redirect script to end of  instead of prepending \n\n#2851 (\n\n@chad-earthscope, \n\n@choldgraf)\n\nMaintenance and upkeep improvements\n\nPin new tex-to-typst \n\n#2889 (\n\n@stefanv, \n\n@choldgraf, \n\n@rowanc1)\n\nDocument deprecated projects config \n\n#2888 (\n\n@choldgraf, \n\n@rowanc1)\n\nIgnore ./worktrees dir in linting/formatting \n\n#2881 (\n\n@stefanv, \n\n@choldgraf, \n\n@rowanc1)\n\nDocumentation improvements\n\nDocument the a11y workflow \n\n#2896 (\n\n@choldgraf, \n\n@stefanv)\n\n📖 Document JupyterHub PDF export tools \n\n#2880 (\n\n@sgibler-droid, \n\n@choldgraf, \n\n@rowanc1)\n\n📖 Clarify jtex frontmatter template fields \n\n#2879 (\n\n@sgibler-droid, \n\n@rowanc1)\n\nDocument site options config w page frontmatter \n\n#2873 (\n\n@choldgraf, \n\n@cycomachead, \n\n@rowanc1, \n\n@stefanv)\n\ndocs: clarify PDF export prerequisites \n\n#2867 (\n\n@sgibler-droid, \n\n@choldgraf)\n\nAdd additional documentation for LaTeX PDFs \n\n#2806 (\n\n@Songtech-0912, \n\n@agoose77, \n\n@choldgraf, \n\n@cycomachead, \n\n@schmoelder)\n\n",
+   "type": "content",
+   "url": "/releases/mystmd#mystmd-1-10-x",
+   "position": 3
+  },
+  {
+   "hierarchy": {
+    "lvl1": "MyST Document Engine Releases",
+    "lvl2": "mystmd@1.9.x"
+   },
+   "type": "lvl2",
+   "url": "/releases/mystmd#mystmd-1-9-x",
+   "position": 4
+  },
+  {
+   "hierarchy": {
+    "lvl1": "MyST Document Engine Releases",
+    "lvl2": "mystmd@1.9.x"
+   },
+   "content": "May 20, 2026\n\nReleases: \n\nmystmd@1.9.1 · \n\nmystmd@1.9.0\n\nThis brings some quality of life improvements for users and fixes several under-the-hood bugs. You can now \n\nskip link-checking in --strict mode, which will improve performance significantly for documentation sites with many links!\n\nBugs fixed\n\nAwait connection end for jupyter kernel \n\n#2853 (\n\n@choldgraf, \n\n@agoose77, \n\n@rowanc1)\n\n:bug: Fix type of stop function \n\n#2841 (\n\n@agoose77)\n\nAwait signals to terminate processes \n\n#2834 (\n\n@choldgraf, \n\n@agoose77, \n\n@ryanlovett)\n\nfix: in static builds, redirect index.html to canonical route for hydration \n\n#2825 (\n\n@stefanv, \n\n@choldgraf)\n\n🐛 Reduce scope of citation tests for sept months \n\n#2823 (\n\n@rowanc1, \n\n@choldgraf)\n\n🔧 fix exports when anywidgets are in containers \n\n#2810 (\n\n@stevejpurves, \n\n@agoose77)\n\nMaintenance and upkeep improvements\n\n✊ Bump mystmd to release \n\n#2858 (\n\n@rowanc1)\n\nExpose content server with sockets on starting dev server \n\n#2827 (\n\n@stevejpurves, \n\n@agoose77)\n\nDocumentation improvements\n\nDocument dark mode logo \n\n#2856 (\n\n@stefanv, \n\n@choldgraf)\n\n📝 Experience Report Template Issue \n\n#2848 (\n\n@rowanc1, \n\n@choldgraf, \n\n@stefanv)\n\nUpdate accessibility docs with links and simplify page \n\n#2845 (\n\n@choldgraf, \n\n@bsipocz)\n\nFix typos and improve clarity in index.md \n\n#2837 (\n\n@engyrus, \n\n@choldgraf)\n\nAdd banner to the documentation \n\n#2832 (\n\n@FreekPols, \n\n@choldgraf)\n\nInclude CSS workaround for fixed image sizing \n\n#2826 (\n\n@FreekPols, \n\n@choldgraf)\n\n📖 Developer Guide: Fixed typo on a sentence \n\n#2814 (\n\n@Polirecyliente, \n\n@agoose77)\n\nDocument credit role more clearly \n\n#2807 (\n\n@choldgraf, \n\n@rowanc1)\n\n📖 Install NodeJS guide: Removed unnecessary verb on a sentence \n\n#2798 (\n\n@Polirecyliente, \n\n@rowanc1)\n\nClean up gitlab docs a bit \n\n#2794 (\n\n@FreekPols, \n\n@choldgraf)\n\nEnhancements made\n\nDon’t check links with strict mode \n\n#2819 (\n\n@choldgraf, \n\n@agoose77, \n\n@rowanc1)\n\nExclude a few more TLDs from linkify \n\n#2796 (\n\n@choldgraf)\n\n",
+   "type": "content",
+   "url": "/releases/mystmd#mystmd-1-9-x",
+   "position": 5
+  },
+  {
+   "hierarchy": {
+    "lvl1": "MyST Document Engine Releases",
+    "lvl2": "mystmd@1.8.x"
+   },
+   "type": "lvl2",
+   "url": "/releases/mystmd#mystmd-1-8-x",
+   "position": 6
+  },
+  {
+   "hierarchy": {
+    "lvl1": "MyST Document Engine Releases",
+    "lvl2": "mystmd@1.8.x"
+   },
+   "content": "April 1, 2026\n\nReleases: \n\nmystmd@1.8.3 · \n\nmystmd@1.8.2\n\nThis release adds experimental \n\nwidget support via the new {anywidget} directive, letting you embed interactive JavaScript components in your MyST documents. The {toc} directive also gains a children context option for showing only child pages.\n\nEnhancements made\n\n🔌 Defer config-level part resolution until plugins are all loaded \n\n#2789 (\n\n@fwkoch, \n\n@agoose77, \n\n@choldgraf, \n\n@rowanc1, \n\n@stefanv)\n\n🆕 Emit Node20 for mystmd \n\n#2783 (\n\n@agoose77, \n\n@choldgraf, \n\n@rowanc1)\n\nSupport columns on grid-item directive \n\n#2766 (\n\n@stefanv, \n\n@agoose77, \n\n@choldgraf, \n\n@jarrodmillman)\n\nAdd error kind icon to strict build report \n\n#2755 (\n\n@mfisher87, \n\n@rowanc1, \n\n@stefanv)\n\n👨🏻‍💻 Allow code-cell directive to use code options \n\n#2745 (\n\n@choldgraf, \n\n@fwkoch, \n\n@rowanc1, \n\n@stefanv)\n\nDocument folder and landing page behavior \n\n#2704 (\n\n@choldgraf)\n\n🏷️ Render span identifiers as Typst labels \n\n#2698 (\n\n@luukfroling, \n\n@FreekPols, \n\n@rowanc1)\n\nAdd children context to toc directive \n\n#2705 (\n\n@choldgraf, \n\n@agoose77)\n\n✨ Add {anywidget} directive and AST node \n\n#2602 (\n\n@stevejpurves, \n\n@agoose77, \n\n@choldgraf, \n\n@rowanc1)\n\nBugs fixed\n\n📺 Partially fix update of display data \n\n#2786 (\n\n@agoose77, \n\n@rowanc1)\n\n🍞 Add bun to flake \n\n#2776 (\n\n@agoose77)\n\nFix \\string macro leaking its name into image filenames in tex-to-myst \n\n#2774 (\n\n@stefanv, \n\n@rowanc1)\n\n🧹 Add typecheck to the mystmd client \n\n#2761 (\n\n@rowanc1)\n\n🪟 Windows paths on upgrade, resolve paths correctly \n\n#2758 (\n\n@rowanc1, \n\n@agoose77)\n\n🧹 Fix json type annotation in anywidget directive \n\n#2740 (\n\n@fwkoch)\n\nFix bug by adding multi-line to role parsing \n\n#2725 (\n\n@choldgraf, \n\n@agoose77)\n\n:globe_with_meridians:  Use v2 ROR API \n\n#2718 (\n\n@agoose77, \n\n@choldgraf)\n\n🖊️ Separate references into paragraphs when exporting to docx \n\n#2699 (\n\n@cmarmo, \n\n@agoose77)\n\nMaintenance and upkeep improvements\n\n🧪 Increase test timeout \n\n#2759 (\n\n@rowanc1, \n\n@agoose77, \n\n@stefanv)\n\n🫓 npm to bun \n\n#2748 (\n\n@stefanv, \n\n@agoose77, \n\n@rowanc1)\n\n🧪 Add names and a changeset to CICD action \n\n#2736 (\n\n@choldgraf, \n\n@rowanc1)\n\n:package: Bump Node.js version minimum \n\n#2716 (\n\n@agoose77, \n\n@choldgraf, \n\n@rowanc1)\n\nChange get_baseurl to match naming conventions \n\n#2713 (\n\n@yuvipanda, \n\n@rowanc1)\n\nDocumentation improvements\n\nAdd documentation about gitlab \n\n#2792 (\n\n@FreekPols, \n\n@choldgraf)\n\ndocs: Added missing preposition in sentence \n\n#2790 (\n\n@Polirecyliente, \n\n@Julian-Tovar, \n\n@agoose77)\n\nfloating :::: breaking last part \n\n#2782 (\n\n@FreekPols, \n\n@rowanc1)\n\n📖 Document how to upgrade the theme dependencies for \n\nmystmd.org \n\n#2739 (\n\n@choldgraf, \n\n@rowanc1)\n\n📖 Document new package steps for developers and add changeset validation to PRs \n\n#2734 (\n\n@choldgraf, \n\n@rowanc1, \n\n@stefanv)\n\n📖 Making text and example consistent \n\n#2732 (\n\n@bsipocz, \n\n@rowanc1)\n\nDocument corresponding author behavior \n\n#2730 (\n\n@choldgraf, \n\n@rowanc1)\n\nRename anywidget document \n\n#2721 (\n\n@agoose77)",
+   "type": "content",
+   "url": "/releases/mystmd#mystmd-1-8-x",
+   "position": 7
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Thebe Releases"
+   },
+   "type": "lvl1",
+   "url": "/releases/thebe",
+   "position": 0
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Thebe Releases"
+   },
+   "content": "Release notes for \n\nThebe, a library for interactive computing in static web pages.\n\nNo items found.",
+   "type": "content",
+   "url": "/releases/thebe",
+   "position": 1
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Roadmap and priorities"
+   },
+   "type": "lvl1",
+   "url": "/roadmap",
+   "position": 0
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Roadmap and priorities"
+   },
+   "content": "We use a GitHub Project board to track our team’s short- and long-term priorities. This \n\nPriorities View has issues we’re actively interested in resolving, and this \n\nRoadmap view has a longer-term vision for major milestones of the project.\n\nTITLE\n\nTEAM PRIORITY\n\nLINKED PRS\n\nREACTIONS\n\nUPDATED\n\n🟢 \n\nDiscuss next steps for improvements `anywidget`\n\nDesign and Discussion\n\n\n\n👀 1\n\n3mo ago\n\n🟢 \n\nDesign and discuss AST alternatives and output parsing\n\nDesign and Discussion\n\n\n\n \n\n5mo ago\n\n🟢 \n\nA few proposals to improve our async coordination and prioritization board\n\nDesign and Discussion\n\n\n\n \n\n5mo ago\n\n🟢 \n\nImplement support for composing MyST applications from components\n\nDesign and Discussion\n\n\n\n \n\n2mo ago\n\n🟢 \n\nUpgrade to React-Router 7 or 8\n\nPriority\n\n\n\n \n\n1mo ago\n\n🟢 \n\nAllow code execution to generate rich outputs that are incorporated into the AST\n\nPriority\n\n\n\n👍 3\n\n6mo ago\n\n🟢 \n\nIssues needed to have native blog plugin integration\n\nPriority\n\n\n\n \n\n7mo ago\n\n🟢 \n\nTracking: Scientific Python using MyST Engine\n\nPriority\n\n\n\n🚀 2\n\n3mo ago\n\n🟢 \n\nAllow authors to link custom JavaScript scripts to their pages by adding HTML manually or via configuration\n\nSide Quest\n\n\n\n👍 7\n\n5mo ago\n\n🟢 \n\nAllow users to specify static files to include in their MyST sites\n\nSide Quest\n\n\n\n👍 12\n\n1mo ago\n\n🟢 \n\nSupport running MyST previews / running a myst server on JupyterHub\n\nSide Quest\n\n\n\n👍 3\n\n3mo ago\n\n🟢 \n\nLaunch button fields should be able to be pre-populated / pre-configured for default launch links\n\nSide Quest\n\n\n\n👍 3 · \n\n❤️ 1\n\n1mo ago\n\n🟢 \n\nEnable editing code cells\n\nSide Quest\n\n\n\n👍 17 · \n\n❤️ 5\n\n3mo ago\n\n🟢 \n\nSubstitutions and variable insertion\n\nSide Quest\n\n\n\n👍 5\n\n7mo ago\n\n🟢 \n\nDocument linking myst-config to myst-theme for development\n\nSide Quest\n\n\n\n \n\n7mo ago\n\n🟢 \n\nVews of content / document listings based on page metadata (e.g. for blogs, site navigation, etc)\n\nSide Quest\n\n\n\n❤️ 10\n\n1mo ago\n\n🟢 \n\nSupport URL toc entries in article-theme `SupportingDocuments`\n\nSide Quest\n\n\n\n \n\n1y ago\n\n🟢 \n\nOption for external document links to open in the same tab\n\nSide Quest\n\n\n\n \n\n1y ago\n\n🟢 \n\nProvide examples of non-python execution workflows\n\nSide Quest\n\n\n\n👍 1\n\n1y ago\n\n🟢 \n\nAllow numbering for only some pages / sections of a book\n\nSide Quest\n\n\n\n👍 3\n\n1y ago\n\n🟢 \n\nAllow primary sidebar to only show pages from currently active section\n\nSide Quest\n\n\n\n👀 3\n\n11mo ago\n\n🟢 \n\nButton role renders as plain link when wrapped in a div\n\nSide Quest\n\n\n\n👍 1\n\n1mo ago\n\n🟢 \n\nImprove executable plugin support\n\nSide Quest\n\n\n\n \n\n1y ago\n\n🟢 \n\nAdd a background to the content dropdown so it doesn't clash with `aside` blocks\n\nSide Quest\n\n\n\n \n\n11mo ago\n\n🟢 \n\nSupport lightbox experience for viewing full-size images\n\nSide Quest\n\n\n\n👍 2\n\n6mo ago\n\n🟢 \n\nFeatured Image Banner in Book Theme\n\nSide Quest\n\n\n\n \n\n10mo ago\n\n🟢 \n\nRespect `prefers-reduced-motion` or remove autoplay\n\nSide Quest\n\n\n\n❤️ 1\n\n3mo ago\n\n🟢 \n\nAllow users to turn off linkifying urls without a scheme (e.g. `http`, `ftp` etc)\n\nSide Quest\n\n\n\n \n\n3mo ago\n\n🟢 \n\nButton Styles Not Contrast-y Enough (a11y)\n\nSide Quest\n\n\n\n \n\n3mo ago\n\n🟢 \n\nAllow plugins to link their own CSS stylesheets\n\nSide Quest\n\n\n\n \n\n18d ago\n\nOur roadmap and priorities are constantly changing, and they are not commitments to do the work on any kind of timeline (or at all!). They are simply a way for us to help coordinate attention and work in the community, and to focus them on the things that feel most important to the team.",
+   "type": "content",
+   "url": "/roadmap",
+   "position": 1
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Issue voting board"
+   },
+   "type": "lvl1",
+   "url": "/vote",
+   "position": 0
+  },
+  {
+   "hierarchy": {
+    "lvl1": "Issue voting board"
+   },
+   "content": "This page shows open issues from repositories in the jupyter-book organization, sorted by 👍 reactions. To show your support for an issue, open it in GitHub and give it a 👍 reaction.\n\nTITLE\n\nREPO\n\nLINKED PRS\n\nUPDATED\n\nREACTIONS\n\n🟢 \n\nSupport for RISE slides\n\njupyter​-book​/jupyter​-book\n\n\n\n3y ago\n\n👍 35\n\n🟢 \n\nSupport blogs\n\njupyter​-book​/jupyter​-book\n\n\n\n8mo ago\n\n👍 35\n\n🟢 \n\nAllow margin notes to have references in the text and hide them by default on mobile\n\njupyter​-book​/jupyter​-book\n\n\n\n1y ago\n\n👍 34\n\n🟢 \n\nAdd support for multiple themes / theming\n\njupyter​-book​/jupyter​-book\n\n\n\n3y ago\n\n👍 28\n\n🟢 \n\nSupport for executing notebooks in parallel during JupyterBook Build\n\njupyter​-book​/jupyter​-book\n\n\n\n9mo ago\n\n👍 27\n\n🟢 \n\nAdd support for API documentation generation\n\njupyter-book/mystmd\n\n\n\n1mo ago\n\n👍 26 · \n\n❤️ 4 · \n\n🚀 6 · \n\n👀 7\n\n🟢 \n\nExport a single HTML file with all assets included\n\njupyter​-book​/jupyter​-book\n\n\n\n3y ago\n\n👍 20\n\n🟢 \n\nEnable editing code cells\n\njupyter-book/mystmd\n\n\n\n3mo ago\n\n👍 17 · \n\n❤️ 5\n\n🟢 \n\nAdding directives for \"question and answer\" blocks\n\njupyter​-book​/jupyter​-book\n\n\n\n4y ago\n\n👍 17\n\n🟢 \n\nAllow setting all inputs as hidden by default\n\njupyter​-book​/jupyter​-book\n\n\n\n8mo ago\n\n👍 16\n\n🟢 \n\nRun code client-side with JupyterLite\n\njupyter​-book​/jupyter​-book\n\n\n\n4y ago\n\n👍 15\n\n🟢 \n\nAllow raw HTML / script / style blocks in MyST documents\n\njupyter-book/mystmd\n\n\n\n5mo ago\n\n👍 12\n\n🟢 \n\nAllow users to specify static files to include in their MyST sites\n\njupyter-book/mystmd\n\n\n\n1mo ago\n\n👍 12\n\n🟢 \n\nTables and figures produced by code cells are not numbered and tables don't have captions\n\njupyter​-book​/jupyter​-book\n\n\n\n4y ago\n\n👍 12\n\n🟢 \n\nGenerating a PDF of an entire Jupyter Book\n\njupyter​-book​/jupyter​-book\n\n\n\n8mo ago\n\n👍 11\n\n🟢 \n\nVersioning support\n\njupyter​-book​/jupyter​-book\n\n\n\n3y ago\n\n👍 10\n\n🟢 \n\nAdd an author to pages\n\njupyter​-book​/jupyter​-book\n\n\n\n2y ago\n\n👍 9\n\n🟢 \n\nAdd Tufte style\n\njupyter​-book​/jupyter​-book\n\n\n\n3y ago\n\n👍 8\n\n🟢 \n\nDocument how to disable the download button\n\njupyter​-book​/jupyter​-book\n\n\n\n2mo ago\n\n👍 8\n\n🟢 \n\nAllow authors to link custom JavaScript scripts to their pages by adding HTML manually or via configuration\n\njupyter​-book​/myst​-theme\n\n\n\n5mo ago\n\n👍 7\n\n🟢 \n\nScrolling over notebook got unexpected jump backs\n\njupyter​-book​/jupyterlab​-myst\n\n\n\n1y ago\n\n👍 7\n\n🟢 \n\nConsider allowing multiple kernels in the same document.\n\njupyter-book/thebe\n\n\n\n5y ago\n\n👍 7\n\n🟢 \n\nAutomatic figure captioning for both static and interactive plots\n\njupyter​-book​/jupyter​-book\n\n\n\n5y ago\n\n👍 7\n\n🟢 \n\nImages embeded in a notebook are not rendered in the  HTML output\n\njupyter​-book​/jupyter​-book\n\n\n\n1y ago\n\n👍 6\n\n🟢 \n\nEnable line numbers to show on code cells.\n\njupyter​-book​/jupyter​-book\n\n\n\n3y ago\n\n👍 6\n\n🟢 \n\nAdd the ability to run custom code (in any language) with a book build\n\njupyter​-book​/jupyter​-book\n\n\n\n2y ago\n\n👍 6\n\n🟢 \n\nENH: Use LaTeX template to build more concise page-level pdf files using --individualpdf option\n\njupyter​-book​/jupyter​-book\n\n\n\n6y ago\n\n👍 5\n\n🟢 \n\nSubstitutions and variable insertion\n\njupyter-book/mystmd\n\n\n\n7mo ago\n\n👍 5\n\n🟢 \n\nProvide and document template .gitlab-ci.yml for easy deployment on GitLab\n\njupyter​-book​/jupyter​-book\n\n\n\n5y ago\n\n👍 5\n\n🟢 \n\nAllow authors to add extra links to the top of pages\n\njupyter​-book​/jupyter​-book\n\n\n\n6y ago\n\n👍 5\n\nThis is not a guarantee any of these will be worked on! It’s just a way for the community to signal-boost things - our volunteer team ultimately works on what we can based on our capacity.",
+   "type": "content",
+   "url": "/vote",
+   "position": 1
+  }
+ ]
+}
