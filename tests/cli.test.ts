@@ -52,9 +52,9 @@ describe('myst-docs get', () => {
 });
 
 describe('myst-docs outline', () => {
-  it('lists pages for a site', async () => {
+  it('lists pages for a site with titles', async () => {
     const { stdout } = await cli('outline', guide.base);
-    expect(stdout).toContain('/interactive-notebooks');
+    expect(stdout).toMatch(/\/interactive-notebooks\tGenerate and Display Rich Outputs/);
   }, TIMEOUT);
   it('lists headings with anchors for a page', async () => {
     const { stdout } = await cli('outline', guide.base, '/interactive-notebooks');

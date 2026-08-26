@@ -78,11 +78,13 @@ program
     try {
       if (!pagePath) {
         const { root, xref } = await findSiteRoot(new URL(site));
-        // shortcut: URLs only, no titles — myst.xref.json doesn't carry page
-        // titles, and fetching every page to get one would hammer sites.
-        // Absolute URLs so output feeds straight into `get`.
+        const pages = await fetchAllPages(root, xref);
+        const titles = new Map(pages.map((p) => [p.url, p.title]));
+        // Absolute URLs so output feeds straight into `get`. Pages that
+        // failed to fetch (e.g. a stale xref entry) still get a line, just
+        // with an empty title, rather than being silently dropped.
         for (const r of xref.references.filter((r: any) => r.kind === 'page')) {
-          console.log(root + r.url);
+          console.log(`${root + r.url}\t${titles.get(r.url) ?? ''}`);
         }
         return;
       }
@@ -111,17 +113,26 @@ program
 // Fetch every page's JSON, a handful at a time so a large site doesn't open
 // dozens of connections at once. A page that fails to fetch (e.g. a stale
 // xref entry) is skipped rather than failing the whole search.
-async function fetchAllPages(root: string, xref: any): Promise<{ url: string; mdast: any }[]> {
+async function fetchAllPages(
+  root: string,
+  xref: any,
+): Promise<{ url: string; mdast: any; title: string }[]> {
   const records = xref.references.filter((r: any) => r.kind === 'page');
   const CONCURRENCY = 8;
-  const pages: { url: string; mdast: any }[] = [];
+  const pages: { url: string; mdast: any; title: string }[] = [];
   for (let i = 0; i < records.length; i += CONCURRENCY) {
     const batch = records.slice(i, i + CONCURRENCY);
     const fetched = await Promise.allSettled(
       batch.map((r: any) => fetchJson(r.data.startsWith('http') ? r.data : root + r.data)),
     );
     fetched.forEach((res, j) => {
-      if (res.status === 'fulfilled') pages.push({ url: batch[j].url, mdast: res.value.mdast });
+      if (res.status === 'fulfilled') {
+        pages.push({
+          url: batch[j].url,
+          mdast: res.value.mdast,
+          title: res.value.frontmatter?.title ?? '',
+        });
+      }
     });
   }
   return pages;
