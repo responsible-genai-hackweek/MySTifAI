@@ -137,13 +137,17 @@ program
       if (!pages.length && xref.references.some((r: any) => r.kind === 'page')) {
         console.error('warning: no pages could be fetched');
       }
-      const hits = searchPages(pages, query);
+      const hits = await searchPages(pages, query);
       if (!hits.length) {
         console.error(`no matches for "${query}"`);
         process.exit(1);
       }
+      const SHOWN = 20;
+      if (hits.length > SHOWN) {
+        console.error(`showing ${SHOWN} of ${hits.length} matches; refine the query to narrow`);
+      }
       // Absolute URLs so output feeds straight into `get`.
-      for (const h of hits) {
+      for (const h of hits.slice(0, SHOWN)) {
         console.log(`${root}${h.url}${h.anchor ? '#' + h.anchor : ''}\t${h.snippet}`);
       }
     } catch (err) {
