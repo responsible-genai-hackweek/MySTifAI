@@ -1,3 +1,5 @@
+// Subprocess tests pin the CLI wiring: argv parsing, printed formats, and
+// exit codes. Command behaviour is tested in-process in commands.test.ts.
 import { describe, it, expect, afterAll } from 'vitest';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
@@ -43,26 +45,16 @@ describe('docslice get', () => {
   it('exits 2 on a non-MyST site', async () => {
     await expect(cli('get', `${mounted.base}/x`)).rejects.toMatchObject({ code: 2 });
   }, TIMEOUT);
-  it('finds a label anywhere on the site when given the site root', async () => {
-    // img:mpl / #img-mpl lives on /interactive-notebooks, not the root page;
-    // this only works via the site-wide xref lookup fallback.
-    const { stdout } = await cli('get', `${guide.base}#img-mpl`);
-    expect(stdout).toContain('img:mpl');
-  }, TIMEOUT);
 });
 
-describe('docslice outline', () => {
-  it('lists pages for a site with titles', async () => {
-    const { stdout } = await cli('outline', guide.base);
-    expect(stdout).toMatch(/\/interactive-notebooks\tGenerate and Display Rich Outputs/);
+describe('docslice search', () => {
+  it('prints tab-separated url#anchor and snippet for a matching query', async () => {
+    const { stdout } = await cli('search', guide.base, 'altair');
+    expect(stdout).toMatch(/\t/);
+    expect(stdout).toContain('#interactive-visualizations');
   }, TIMEOUT);
-  it('lists headings with anchors for a page', async () => {
-    const { stdout } = await cli('outline', guide.base, '/interactive-notebooks');
-    expect(stdout).toContain('#static-images');
-  }, TIMEOUT);
-  it('accepts a full URL as the page argument', async () => {
-    const { stdout } = await cli('outline', guide.base, `${guide.base}/interactive-notebooks`);
-    expect(stdout).toContain('#static-images');
+  it('exits 1 when nothing matches', async () => {
+    await expect(cli('search', guide.base, 'zzzgibberishzzz')).rejects.toMatchObject({ code: 1 });
   }, TIMEOUT);
 });
 

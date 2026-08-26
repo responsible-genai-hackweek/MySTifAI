@@ -1,24 +1,6 @@
-import { describe, it, expect, afterAll } from 'vitest';
-import { execFile } from 'node:child_process';
-import { promisify } from 'node:util';
+import { describe, it, expect } from 'vitest';
 import { searchPages } from '../src/search.js';
 import { loadFixture } from './helpers.js';
-import { serveFixtures } from './serve-fixtures.js';
-
-const run = promisify(execFile);
-const guide = await serveFixtures('mystmd-guide');
-afterAll(() => guide.close());
-
-// Run via tsx so no build step is needed; cache off so tests stay hermetic.
-function cli(...args: string[]) {
-  return run('npx', ['tsx', 'src/cli.ts', ...args], {
-    env: { ...process.env, DOCSLICE_CACHE: 'off' },
-  });
-}
-
-// Cold `npx tsx` subprocess spawns can brush vitest's 5s default on a cold
-// CI runner.
-const TIMEOUT = 15_000;
 
 // A single-heading page's mdast, in the same block-wrapped shape a deployed
 // site serves; used to build a pile of synthetic pages for the cap test.
@@ -103,15 +85,13 @@ describe('searchPages', () => {
     expect(hits.length).toBeGreaterThan(20);
     expect(hits.slice(0, 20)).toHaveLength(20);
   });
-});
 
-describe('docslice search', () => {
-  it('prints tab-separated url#anchor and snippet for a matching query', async () => {
-    const { stdout } = await cli('search', guide.base, 'altair');
-    expect(stdout).toMatch(/\t/);
-    expect(stdout).toContain('#interactive-visualizations');
-  }, TIMEOUT);
-  it('exits 1 when nothing matches', async () => {
-    await expect(cli('search', guide.base, 'zzzgibberishzzz')).rejects.toMatchObject({ code: 1 });
-  }, TIMEOUT);
+  it('matches a page by its frontmatter title, which the mdast alone lacks', async () => {
+    const hits = await searchPages(
+      [{ url: '/w', title: 'Zebra migration guide', mdast: widgetPage(1) }],
+      'zebra',
+    );
+    expect(hits.length).toBeGreaterThan(0);
+    expect(hits[0].url).toBe('/w');
+  });
 });

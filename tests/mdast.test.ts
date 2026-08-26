@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { subsetByAnchor, flattenBlocks } from '../src/mdast.js';
+import { subsetByAnchor, flattenBlocks, textOf } from '../src/mdast.js';
 import { loadFixture, fixtureSites, fixturePages } from './helpers.js';
 
 const h = (depth: number, id: string) => ({
@@ -32,6 +32,21 @@ describe('flattenBlocks', () => {
     const flat = flattenBlocks(wrapped as any);
     expect(flat.map((n) => n.type)).toEqual(['heading', 'paragraph', 'heading', 'paragraph']);
     expect(subsetByAnchor(wrapped as any, 'title').children.length).toBe(4);
+  });
+});
+
+describe('textOf', () => {
+  it('collects nested text, including inline math values', () => {
+    const heading = {
+      type: 'heading',
+      depth: 2,
+      children: [
+        { type: 'text', value: 'The ' },
+        { type: 'inlineMath', value: 'E=mc^2' },
+        { type: 'emphasis', children: [{ type: 'text', value: 'equation' }] },
+      ],
+    };
+    expect(textOf(heading as any)).toBe('The E=mc^2 equation');
   });
 });
 

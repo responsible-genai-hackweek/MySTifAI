@@ -14,6 +14,15 @@ export class HttpError extends Error {
   }
 }
 
+/** A connection-level failure (DNS, refused, timeout): the server never responded. */
+export class NetworkError extends Error {
+  constructor(url: string, cause: unknown) {
+    const reason = (cause as any)?.cause?.message ?? (cause as any)?.message ?? String(cause);
+    super(`could not reach ${url}: ${reason}`);
+    this.name = 'NetworkError';
+  }
+}
+
 /**
  * Where cached responses live. Reads DOCSLICE_CACHE_DIR on every call
  * (rather than once at import time) so tests can point it at a temp
@@ -46,7 +55,11 @@ export async function fetchJson(url: string, ttlMs = DAY_MS): Promise<any> {
       }
     } catch {} // no cache entry, or unreadable/corrupt one: fall through to a fresh fetch
   }
-  const res = await fetch(url, { headers: { 'user-agent': 'docslice' } });
+  // Node's fetch signals connection failures as TypeError; surface them as
+  // our own error mode so callers never depend on the runtime's internals.
+  const res = await fetch(url, { headers: { 'user-agent': 'docslice' } }).catch((e) => {
+    throw new NetworkError(url, e);
+  });
   if (!res.ok) throw new HttpError(res.status, url);
   const data = await res.json();
   if (!off) {
