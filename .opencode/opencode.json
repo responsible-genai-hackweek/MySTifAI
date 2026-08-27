@@ -8,7 +8,7 @@
                 "baseURL": "http://localhost:11434/v1"
             },
             "models": {
-                "qwen3-32k": {}
+                "qwen3-64k": {}
             }
         }
     }
