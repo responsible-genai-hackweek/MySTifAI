@@ -1,3 +1,8 @@
+### Install OpenCode
+
+```
+curl -fsSL https://opencode.ai/install | bash
+```
 
 ### Install Ollama
 
