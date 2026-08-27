@@ -12,6 +12,9 @@
 
 session-ses_fba9.md
 
+### Docslice Generic Request
+
+session-ses_fba7.md
 
 ## Instance Setup
 
