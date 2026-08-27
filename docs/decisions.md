@@ -12,3 +12,4 @@ See [](./recon-notes.md) for full detail behind each one.
 - `scripts/recon.ts` has been retired now that the CLI can inspect sites directly.
 - `myst.search.json` is deliberately unused by `search`: it only exists on static-export hosting, and deriving records from page JSONs gives identical behavior on every site.
 - `search` and `get` define sections differently on purpose: `search` treats every anchored heading as a flat boundary, while `get` follows heading depth so a section includes its subsections. A search hit points at the nearest anchor, and `get` on that anchor retrieves it with its subtree.
+- All `myst.xref.json` interpretation lives in `src/site.ts` (`openSite`): nothing outside it reads xref records or joins `data` URLs, so a change in the index format touches one file. The same duplication kept reappearing in commands before this rule.

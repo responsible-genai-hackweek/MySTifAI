@@ -1,11 +1,30 @@
 {
-  "name": "myst-docs",
-  "version": "0.0.1",
+  "name": "docslice",
+  "version": "0.1.0",
   "description": "Section-level access to deployed MyST sites for humans and LLMs",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/responsible-genai-hackweek/MySTifAI.git"
+  },
+  "homepage": "https://responsible-genai-hackweek.github.io/MySTifAI/",
+  "bugs": {
+    "url": "https://github.com/responsible-genai-hackweek/MySTifAI/issues"
+  },
+  "keywords": [
+    "myst",
+    "jupyter-book",
+    "documentation",
+    "cli",
+    "llm",
+    "agents"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
   "bin": {
-    "myst-docs": "./dist/cli.js"
+    "docslice": "./dist/cli.js"
   },
   "files": [
     "dist"
@@ -14,8 +33,8 @@
     "build": "tsc -p tsconfig.build.json",
     "prepublishOnly": "npm run build",
     "test": "vitest run",
-    "docs": "cd docs && myst build --html",
-    "docs:live": "cd docs && myst start"
+    "docs": "cd docs && myst build --html --execute",
+    "docs:live": "cd docs && myst start --execute"
   },
   "devDependencies": {
     "@types/node": "^26.3.0",
@@ -25,6 +44,8 @@
     "vitest": "^4.1.11"
   },
   "dependencies": {
+    "@myst-theme/search": "^1.3.1",
+    "@myst-theme/search-minisearch": "^1.3.1",
     "commander": "^14.0.3",
     "myst-spec-ext": "^1.10.0",
     "myst-to-md": "^1.0.16",

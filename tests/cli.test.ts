@@ -1,3 +1,5 @@
+// Subprocess tests pin the CLI wiring: argv parsing, printed formats, and
+// exit codes. Command behaviour is tested in-process in commands.test.ts.
 import { describe, it, expect, afterAll } from 'vitest';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
@@ -17,7 +19,7 @@ afterAll(() => {
 // Run via tsx so no build step is needed; cache off so tests stay hermetic.
 function cli(...args: string[]) {
   return run('npx', ['tsx', 'src/cli.ts', ...args], {
-    env: { ...process.env, MYST_DOCS_CACHE: 'off' },
+    env: { ...process.env, DOCSLICE_CACHE: 'off' },
   });
 }
 
@@ -25,7 +27,7 @@ function cli(...args: string[]) {
 // CI runner.
 const TIMEOUT = 15_000;
 
-describe('myst-docs get', () => {
+describe('docslice get', () => {
   it('prints a section as markdown', async () => {
     const { stdout } = await cli('get', `${guide.base}/interactive-notebooks#static-images`);
     expect(stdout).toContain('### Static images');
@@ -43,26 +45,20 @@ describe('myst-docs get', () => {
   it('exits 2 on a non-MyST site', async () => {
     await expect(cli('get', `${mounted.base}/x`)).rejects.toMatchObject({ code: 2 });
   }, TIMEOUT);
-  it('finds a label anywhere on the site when given the site root', async () => {
-    // img:mpl / #img-mpl lives on /interactive-notebooks, not the root page;
-    // this only works via the site-wide xref lookup fallback.
-    const { stdout } = await cli('get', `${guide.base}#img-mpl`);
-    expect(stdout).toContain('img:mpl');
+});
+
+describe('docslice search', () => {
+  it('prints tab-separated url#anchor and snippet for a matching query', async () => {
+    const { stdout } = await cli('search', guide.base, 'altair');
+    expect(stdout).toMatch(/\t/);
+    expect(stdout).toContain('#interactive-visualizations');
+  }, TIMEOUT);
+  it('exits 1 when nothing matches', async () => {
+    await expect(cli('search', guide.base, 'zzzgibberishzzz')).rejects.toMatchObject({ code: 1 });
   }, TIMEOUT);
 });
 
-describe('myst-docs outline', () => {
-  it('lists pages for a site', async () => {
-    const { stdout } = await cli('outline', guide.base);
-    expect(stdout).toContain('/interactive-notebooks');
-  }, TIMEOUT);
-  it('lists headings with anchors for a page', async () => {
-    const { stdout } = await cli('outline', guide.base, '/interactive-notebooks');
-    expect(stdout).toContain('#static-images');
-  }, TIMEOUT);
-});
-
-describe('myst-docs list', () => {
+describe('docslice list', () => {
   it('lists figures with identifier and url#anchor', async () => {
     const { stdout } = await cli('list', 'figures', guide.base);
     expect(stdout).toMatch(/^img:mpl\t.+#img-mpl/m);
