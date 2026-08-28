@@ -1,3 +1,7 @@
+---
+short_title: Development
+---
+
 # Developing docslice
 
 How to get set up, and the conventions for working on this codebase.

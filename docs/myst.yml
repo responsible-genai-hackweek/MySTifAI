@@ -1,14 +1,17 @@
 version: 1
 project:
-  title: docslice
+  title: MyST Sites as Skills
   toc:
     - file: index.md
+    - file: agent-skill.md
+    - file: docslice.md
     - file: evaluation.md
-    - title: Development
+    - file: develop.md
       children:
-        - file: develop.md
         - file: decisions.md
         - file: recon-notes.md
         - file: renderer-gaps.md
 site:
   template: book-theme
+  options:
+    logo_text: MySTifAI
