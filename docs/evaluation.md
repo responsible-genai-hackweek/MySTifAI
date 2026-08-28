@@ -1,4 +1,8 @@
-# Does it actually help?
+---
+short_title: Evaluating
+---
+
+# Does it Help?
 
 We measured whether docslice helps agents answer questions from a docs site, compared to generic web fetching.
 This page reports the method and the numbers, including the parts that don't flatter the tool.
