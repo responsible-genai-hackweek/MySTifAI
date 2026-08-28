@@ -1,5 +1,4 @@
 ---
-short_title: MyST Sites as Skills
 authors:
   - Chris Holdgraf
   - JP Swinski
@@ -8,9 +7,9 @@ authors:
   - Ian Carroll
 ---
 
-# Progressive Disclosure for LLM Agent Skills
+# Up-skill your LLM Agents from MyST based Documentation using Progressive Disclosure
 
-## Welcome!
+## Welcome
 
 The specific aim is progressive disclosure for LLM agents: peek at a documentation site, then read it one relevant piece at a time, and never clobber your context.
 A design goal is to force no changes on existing documentation.
