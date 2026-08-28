@@ -7,7 +7,7 @@ authors:
   - Ian Carroll
 ---
 
-# Up-skill your LLM Agents from MyST based Documentation using Progressive Disclosure
+# Up-skill your LLM Agent using Progressive Disclosure and MyST
 
 ## Welcome
 
