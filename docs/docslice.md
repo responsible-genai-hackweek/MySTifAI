@@ -91,8 +91,7 @@ Still to come:
 
 - An MCP server exposing the same operations
 
-There is a skill teaching LLM agents to use the CLI in [`skills/docslice/`](https://github.com/responsible-genai-hackweek/MySTifAI/blob/main/skills/docslice/SKILL.md).
-It stays small on purpose: it teaches the commands and points agents at this site to learn the rest with the tool itself.
+For a skill teaching LLM agents to use the CLI, see [](./agent-skill.md).
 
 ## Contributing
 
