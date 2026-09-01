@@ -1,0 +1,42 @@
+# Retrieval arms and model roster for the docslice retrieval eval.
+#
+# arms: the three retrieval conditions every (question x model) pair runs under.
+#   The operative prompt text for each arm lives in run.workflow.js (the
+#   Workflow script can't read files); these entries are the list of arm ids to
+#   run plus human-facing descriptions. Keep the ids in sync with the script.
+arms:
+  - id: cold
+    description: >
+      No retrieval. The model is instructed to answer from parametric knowledge
+      only, or admit it doesn't know. Floor every retrieval arm must beat; a
+      correct cold answer flags a fact that leaked into training data.
+  - id: raw-fetch
+    description: >
+      Naive full-page fetch. The model may fetch whole pages and read them end
+      to end, starting from only the site root - the baseline section-level
+      retrieval is meant to beat.
+  - id: docslice
+    description: >
+      Section-level retrieval via docslice outline/search, then
+      docslice get 'url#anchor' for just the relevant section. The arm under test.
+
+# models: the roster.
+#   provider claude-native: run as a native Workflow agent() call; model is a
+#     Claude Code tier name (haiku/sonnet/opus), deliberately not a dated API
+#     model id - the tiers track current models so this file doesn't go stale.
+#     Record the tier->model mapping of a run in its results/ entry.
+#   Other providers: an earlier design routed non-Claude models through Simon
+#     Willison's `llm` CLI from a Bash-enabled asker agent. It was cut before
+#     ever running - its unique value was exact token counts, which the
+#     workflow run metadata now provides for the Claude legs anyway. If you
+#     revive it, add a provider field the asker stage dispatches on.
+models:
+  - id: claude-haiku
+    provider: claude-native
+    model: haiku
+  - id: claude-sonnet
+    provider: claude-native
+    model: sonnet
+  - id: claude-opus
+    provider: claude-native
+    model: opus

@@ -1,0 +1,96 @@
+# Question bank: CryoCloud (book.cryointhecloud.com), a JupyterHub operations manual.
+#
+# Question style: what a scientist learning this community's workflows would ask -
+# how to access data, where things live, how to run an analysis. Phrase questions
+# the way a researcher would, but anchor every answer key to a site-specific
+# detail (a bucket name, an exact command, a tool choice) so the cold arm can't
+# succeed from general knowledge.
+#
+# Schema, per entry:
+#   id:       short slug, unique within this file
+#   source:   page URL where the answer lives (for not_stated: the most relevant page)
+#   section:  url#anchor of the smallest docslice section containing the answer
+#             (the page URL itself if the page has no heading anchors;
+#              omit for not_stated questions - nothing contains the answer)
+#   grep:     literal substring (case-insensitive) that must appear in that
+#             section's markdown - lets context-cost.mjs verify the answer is
+#             really there without a model (omit for not_stated)
+#   question: what the asker model is asked, verbatim
+#   answer:   the answer key the evaluator grades against
+#   match:    exact_fact   - one verbatim fact; paraphrase ok, the fact itself must be exact
+#             must_include - every listed part must appear in the answer
+#             not_stated   - trick question: the site does NOT answer it; correct
+#                            means saying so (grounded), wrong means inventing an answer
+#   notes:    grading guidance for the evaluator
+#
+# Verified against the live site 2026-08-27. If a question stops matching the
+# site, fix or drop it here; nothing else needs to change.
+#
+# Site quirk worth keeping: hub-best-practices has NO heading anchors, so its
+# smallest section is the whole page - a real data point about when docslice's
+# granularity helps and when it can't.
+site: https://book.cryointhecloud.com
+questions:
+  - id: scratch-bucket
+    source: https://book.cryointhecloud.com/cryocloud-scratch-bucket
+    section: https://book.cryointhecloud.com/cryocloud-scratch-bucket#access-the-scratch-bucket
+    grep: nasa-cryo-scratch
+    question: >
+      I want to share a large temporary dataset with other CryoCloud users.
+      Which S3 bucket should I use, and what happens to files I put there?
+    answer: "s3://nasa-cryo-scratch (the preconfigured scratch bucket); files are automatically deleted 7 days after upload"
+    match: must_include
+    notes: >
+      Must name the nasa-cryo-scratch bucket AND the 7-day automatic deletion.
+      Mentioning the SCRATCH_BUCKET env var is a bonus, not required.
+  - id: atl06-bucket
+    source: https://book.cryointhecloud.com/earthaccess-1
+    question: >
+      According to the CryoCloud book, which S3 bucket holds the ICESat-2
+      ATL06 dataset?
+    answer: >
+      Not stated anywhere in the book. The tutorials access ATL06 through
+      libraries (earthaccess, icepyx, SlideRule) that handle cloud access
+      without ever naming a bucket; the only bucket the book names is the
+      nasa-cryo-scratch scratch bucket, which does not hold ATL06.
+    match: not_stated
+    notes: >
+      correct: says the book does not name such a bucket (ideally noting access
+      goes through earthaccess/icepyx/SlideRule). partial: says it could not
+      find one, without claiming a bucket. wrong: asserts any concrete bucket
+      name (e.g. an invented nsidc-cumulus-* bucket, or nasa-cryo-scratch).
+  - id: atl10-reader
+    source: https://book.cryointhecloud.com/icesat2-atl10-h5coro-large-scale-time-series
+    section: https://book.cryointhecloud.com/icesat2-atl10-h5coro-large-scale-time-series#id-1-tutorial-overview
+    grep: h5coro
+    question: >
+      I want to build a large-scale time series of ICESat-2 ATL10 sea ice
+      height on CryoCloud. What cloud-optimized HDF5 reader does the tutorial
+      use to read the granules efficiently?
+    answer: h5coro
+    match: exact_fact
+    notes: Must name h5coro; mentioning earthaccess alongside it is fine.
+  - id: du-command
+    source: https://book.cryointhecloud.com/hub-best-practices
+    section: https://book.cryointhecloud.com/hub-best-practices
+    grep: du -hs --exclude="shared*" ~/
+    question: >
+      I've been asked to keep my CryoCloud home directory under 10 GB. What
+      exact terminal command do the docs recommend for checking how much disk
+      space I'm using, excluding the shared folders?
+    answer: du -hs --exclude="shared*" ~/
+    match: exact_fact
+    notes: >
+      Flags and the shared* exclude pattern must match; quoting style of the
+      exclude argument may differ.
+  - id: package-install
+    source: https://book.cryointhecloud.com/hub-best-practices
+    section: https://book.cryointhecloud.com/hub-best-practices
+    grep: "%pip install packagename"
+    question: >
+      A Python package I need is missing from the CryoCloud environment. Per
+      the docs, how should I install it for my session - %pip or !pip, and
+      where in the notebook should the install go?
+    answer: "%pip, run in the first cell of the notebook"
+    match: must_include
+    notes: Must name %pip over !pip AND the first-cell placement.

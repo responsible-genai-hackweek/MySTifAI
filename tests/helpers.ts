@@ -1,4 +1,4 @@
-// Load the JSON captured from real MyST sites in tests/fixtures/ (see docs/recon-notes.md).
+// Load the JSON captured from real MyST sites in tests/fixtures/.
 import { readFileSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';

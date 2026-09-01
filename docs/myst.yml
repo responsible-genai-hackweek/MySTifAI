@@ -10,9 +10,8 @@ project:
     - file: evaluation.md
     - file: develop.md
       children:
-        - file: decisions.md
-        - file: recon-notes.md
         - file: renderer-gaps.md
+        - file: decisions.md
 site:
   template: book-theme
   options:

@@ -1,0 +1,65 @@
+# Question bank: ASF NISAR Cookbook (asfopensarlab.github.io/NISAR_Cookbook),
+# a SAR remote-sensing cookbook. Schema and question-style guidance documented
+# in cryocloud.yaml. Answers verified against the live site 2026-08-27.
+site: https://asfopensarlab.github.io/NISAR_Cookbook
+questions:
+  - id: earthdata-eula-name
+    source: https://asfopensarlab.github.io/NISAR_Cookbook/notebooks/set-up-earthdata-login
+    section: https://asfopensarlab.github.io/NISAR_Cookbook/notebooks/set-up-earthdata-login#accept-the-alaska-satellite-facility-data-access-eula
+    grep: Alaska Satellite Facility Data Access
+    question: >
+      I have an Earthdata Login account but my NISAR downloads are being
+      rejected. What is the exact name of the EULA the cookbook says I must
+      accept for NISAR data access?
+    answer: Alaska Satellite Facility Data Access
+    match: exact_fact
+    notes: The proper-noun EULA name must match; "EULA" suffix optional.
+  - id: gcov-search
+    source: https://asfopensarlab.github.io/NISAR_Cookbook/notebooks/search-download-nisar-gcov-asf-search
+    section: https://asfopensarlab.github.io/NISAR_Cookbook/notebooks/search-download-nisar-gcov-asf-search#id-2a-search-for-gcov-data-with-asf-search-search
+    grep: processingLevel
+    question: >
+      I want to search for NISAR GCOV granules over my study area with the
+      asf_search Python package. Which two ASFSearchOptions parameters does the
+      cookbook set to select the NISAR GCOV product, and to what values?
+    answer: 'processingLevel: ["GCOV"] and dataset: ["NISAR"]'
+    match: must_include
+    notes: >
+      Both parameter names (processingLevel, dataset) with their values (GCOV,
+      NISAR) must appear; other search parameters like intersectsWith are fine
+      to mention but not required.
+  - id: pixi-install-command
+    source: https://asfopensarlab.github.io/NISAR_Cookbook/notebooks/software-environment-docker
+    section: https://asfopensarlab.github.io/NISAR_Cookbook/notebooks/software-environment-docker#id-2b-install-the-isce3-environment-with-pixi
+    grep: pixi install -e isce3
+    question: >
+      I'm setting up my machine to work through the cookbook's ISCE3 examples.
+      What exact command installs the isce3 environment with the Pixi package
+      manager?
+    answer: pixi install -e isce3
+    match: exact_fact
+    notes: Notebook prefixes like "!" or the work_dir context manager wrapper are fine.
+  - id: kernel-registration-command
+    source: https://asfopensarlab.github.io/NISAR_Cookbook/notebooks/software-environment-docker
+    section: https://asfopensarlab.github.io/NISAR_Cookbook/notebooks/software-environment-docker#id-2c-register-the-isce3-environments-python-kernel-with-ipykernel
+    grep: ipykernel install
+    question: >
+      After installing the isce3 environment, how do I make it available as a
+      kernel in Jupyter? Give the command the cookbook uses.
+    answer: pixi run -e isce3 python -m ipykernel install --user --name isce3 --display-name "isce3 (Python)"
+    match: must_include
+    notes: >
+      Must include "pixi run -e isce3", "ipykernel install", and "--user";
+      the name/display-name flags may be elided or use variables.
+  - id: gcov-hdf5-path
+    source: https://asfopensarlab.github.io/NISAR_Cookbook/notebooks/opening-hdf5-python
+    section: https://asfopensarlab.github.io/NISAR_Cookbook/notebooks/opening-hdf5-python#hdf5-frequency
+    grep: science/LSAR/GCOV/grids/frequencyA
+    question: >
+      I've downloaded a NISAR GCOV HDF5 file and want to get at the backscatter
+      grids for frequency A. What is the full group path inside the file, and
+      what are two example real-valued polarization covariance datasets I'll
+      find there?
+    answer: "/science/LSAR/GCOV/grids/frequencyA; example datasets HHHH and HVHV"
+    match: must_include
+    notes: The full group path AND both HHHH and HVHV must appear.

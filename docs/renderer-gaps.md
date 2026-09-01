@@ -1,7 +1,8 @@
-# Renderer gaps
+# AST renderer gaps
 
 These are node shapes that `myst-to-md` doesn't render cleanly, found by running our renderer over real deployed pages.
-Each is a candidate upstream `mystmd` issue, paired with the fallback we use in the meantime.
+Being able to render these probably requires changing `mystmd` upstream.
+We try to describe what would need to be done in each case below.
 
 `renderMd` (`src/render.ts`) delegates to `myst-to-md`'s `writeMd`, which targets parsed mdast.
 Deployed page JSON is post-transform mdast, so some node shapes it never expected to see turn up.

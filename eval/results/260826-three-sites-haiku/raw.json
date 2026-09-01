@@ -1,0 +1,1222 @@
+{
+  "run": {
+    "date": "2026-08-26",
+    "workflow_run_id": "wf_966096a6-0b5",
+    "matrix": "3 sites (15 questions) x claude-haiku x [cold, raw-fetch, docslice] = 45 cells (1 raw-fetch cell lost: asker returned no structured output)",
+    "arm_prompts": "both retrieval arms start from the site root only; the question source URL is never given",
+    "tier_models": {
+      "haiku": "claude-haiku-4-5-20251001",
+      "evaluator (sonnet)": "claude-sonnet-5",
+      "report": "claude-fable-5"
+    },
+    "token_note": "asker_total_tokens is the whole asker agent (system prompt + question + retrieval + reasoning); the cold arm is the no-retrieval baseline (~22.3K), so per-arm retrieval cost = mean_asker_tokens - cold mean",
+    "total_subagent_tokens": 3067275,
+    "duration_ms": 370807
+  },
+  "aggregates": {
+    "by_arm": {
+      "cold": {
+        "cells": 15,
+        "score": 0,
+        "correct": 0,
+        "partial": 0,
+        "wrong": 15,
+        "tool_calls": 0,
+        "unknowns": 15,
+        "asker_tokens": 334481,
+        "mean_score": 0.0,
+        "mean_tool_calls": 0.0,
+        "mean_asker_tokens": 22298
+      },
+      "docslice": {
+        "cells": 15,
+        "score": 26,
+        "correct": 13,
+        "partial": 0,
+        "wrong": 2,
+        "tool_calls": 98,
+        "unknowns": 1,
+        "asker_tokens": 437140,
+        "mean_score": 1.73,
+        "mean_tool_calls": 6.5,
+        "mean_asker_tokens": 29142
+      },
+      "raw-fetch": {
+        "cells": 14,
+        "score": 25,
+        "correct": 12,
+        "partial": 1,
+        "wrong": 1,
+        "tool_calls": 168,
+        "unknowns": 0,
+        "asker_tokens": 706473,
+        "mean_score": 1.79,
+        "mean_tool_calls": 12.0,
+        "mean_asker_tokens": 50462
+      }
+    },
+    "by_model_and_arm": {
+      "claude-haiku/cold": {
+        "cells": 15,
+        "score": 0,
+        "correct": 0,
+        "partial": 0,
+        "wrong": 15,
+        "tool_calls": 0,
+        "unknowns": 15,
+        "asker_tokens": 334481,
+        "mean_score": 0.0,
+        "mean_tool_calls": 0.0,
+        "mean_asker_tokens": 22298
+      },
+      "claude-haiku/docslice": {
+        "cells": 15,
+        "score": 26,
+        "correct": 13,
+        "partial": 0,
+        "wrong": 2,
+        "tool_calls": 98,
+        "unknowns": 1,
+        "asker_tokens": 437140,
+        "mean_score": 1.73,
+        "mean_tool_calls": 6.5,
+        "mean_asker_tokens": 29142
+      },
+      "claude-haiku/raw-fetch": {
+        "cells": 14,
+        "score": 25,
+        "correct": 12,
+        "partial": 1,
+        "wrong": 1,
+        "tool_calls": 168,
+        "unknowns": 0,
+        "asker_tokens": 706473,
+        "mean_score": 1.79,
+        "mean_tool_calls": 12.0,
+        "mean_asker_tokens": 50462
+      }
+    },
+    "by_model": {
+      "claude-haiku": {
+        "cells": 44,
+        "score": 51,
+        "correct": 25,
+        "partial": 1,
+        "wrong": 18,
+        "tool_calls": 266,
+        "unknowns": 16,
+        "asker_tokens": 1478094,
+        "mean_score": 1.16,
+        "mean_tool_calls": 6.0,
+        "mean_asker_tokens": 33593
+      }
+    }
+  },
+  "report": "# Docslice retrieval eval \u2014 claude-haiku, 2026-08-26\n\n## Headline\n\nBoth retrieval arms beat cold decisively; docslice and raw-fetch are effectively tied on accuracy. Mean scores (0\u20132 scale): raw-fetch 1.79, docslice 1.73, cold 0.00. The cold arm answered nothing \u2014 all 15 cells were admitted unknowns, so retrieval provides all of the signal here. Docslice matched raw-fetch's accuracy at roughly half the tool-call cost: 6.5 mean tool calls per question versus 12. On raw counts, docslice got 13/15 correct and raw-fetch 12/14 correct with 1 partial. Note the raw-fetch arm has only 14 cells (the `gcov-hdf5-path` cell is missing from its results), so the arm means are not computed over identical question sets.\n\n## Results by arm\n\n| Arm | Cells | Correct | Partial | Wrong | Unknowns | Mean score | Mean tool calls |\n|---|---|---|---|---|---|---|---|\n| cold | 15 | 0 | 0 | 15 | 15 | 0.00 | 0.0 |\n| raw-fetch | 14 | 12 | 1 | 1 | 0 | 1.79 | 12.0 |\n| docslice | 15 | 13 | 0 | 2 | 1 | 1.73 | 6.5 |\n\n## Results by model \u00d7 arm\n\nOnly one model ran in this pass, so this table mirrors the by-arm table.\n\n| Model / arm | Cells | Correct | Partial | Wrong | Unknowns | Mean score | Mean tool calls |\n|---|---|---|---|---|---|---|---|\n| claude-haiku / cold | 15 | 0 | 0 | 15 | 15 | 0.00 | 0.0 |\n| claude-haiku / raw-fetch | 14 | 12 | 1 | 1 | 0 | 1.79 | 12.0 |\n| claude-haiku / docslice | 15 | 13 | 0 | 2 | 1 | 1.73 | 6.5 |\n\n## Notable cells\n\n**Cold answers that were correct (possible training-data leakage):** none. Every cold cell was an admitted unknown, which is the desired behavior for this control \u2014 it suggests the questions genuinely require the target docs and the prompt-only suppression held.\n\n**Suspicious cold cells with tool calls:** none. All 15 cold cells made zero tool calls.\n\n**Retrieval answers that were still wrong:**\n\n- `clean-exec-command` failed in both retrieval arms, and is the only question neither arm got right. The key is `myst clean --exec`. Raw-fetch answered `myst clean --all` / `myst clean --templates --cache` after 47 tool calls \u2014 its most expensive cell by far, and still wrong. Docslice answered `myst clean --execute` after only 3 calls \u2014 the right concept with a hallucinated long-form flag. This looks like a case where the exact flag string is hard to surface from the docs and the model fills the gap from priors.\n- `docker-image-tag` (docslice): the model found `quay.io` but burned 27 tool calls without locating the `cryo-hub-image` name and admitted it could not determine it. Raw-fetch got the same question fully correct in 6 calls, so the content is retrievable \u2014 this is docslice's one clear retrieval miss.\n- `gcov-supporting-layers` (raw-fetch, partial): got `numberOfLooks` and `rtcGammaToSigmaFactor` but substituted `projection` for `mask`. Docslice got all three in 3 calls.\n\n**Tool-call spread:** docslice's per-cell counts are mostly very low (2\u20135 calls for 10 of 15 cells) but with heavy tails on its two failures (17, 27). Raw-fetch is more uniformly expensive (typically 6\u201315) with one extreme outlier (47). Docslice's efficiency advantage comes from its cheap successes, not from capping its failures.\n\n## Caveats\n\n- **Cold-arm suppression is prompt-only.** The model was instructed not to use tools rather than having them removed, so cold results measure instruction-following plus parametric knowledge, not a hard no-retrieval condition. In this run the instruction held (zero tool calls), but that is not guaranteed across models or reruns.\n- **Cost is measured in tool calls, not tokens.** The arms are Claude-native and token accounting was not captured. A docslice call and a raw fetch can return very different payload sizes, so the 6.5-vs-12 comparison understates or overstates the true cost gap depending on per-call payload; treat it as a proxy.\n- **Grading is single-pass.** Each cell was graded once by an LLM judge with no second opinion or human adjudication, so individual verdicts (especially partial-vs-wrong boundaries and the admitted-unknown rule) carry some noise. With only 14\u201315 cells per arm, one or two flipped verdicts would move the arm means materially \u2014 the raw-fetch/docslice gap (1.79 vs 1.73) is well within that noise.\n- **One model, one run.** All results are claude-haiku on a single pass; no variance estimate, and the missing raw-fetch cell means arm totals are not over identical question sets.",
+  "cells": [
+    {
+      "set": "cryocloud",
+      "question": "docker-image-tag",
+      "model": "claude-haiku",
+      "arm": "cold",
+      "asked": {
+        "answer": "I do not know the answer. The question requires specific technical details about CryoCloud's Docker image registry and naming that are not in my training knowledge.",
+        "admitted_unknown": true,
+        "tool_calls_made": 0,
+        "commands_run": []
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 22302,
+      "graded": {
+        "rationale": "Model admitted it did not know the answer, providing no facts.",
+        "verdict": "wrong",
+        "score": 0
+      }
+    },
+    {
+      "set": "cryocloud",
+      "question": "docker-image-tag",
+      "model": "claude-haiku",
+      "arm": "docslice",
+      "asked": {
+        "answer": "The CryoCloud Python images are hosted on quay.io under the organization \"cryointhecloud\" (URL: https://quay.io/organization/cryointhecloud). The exact Python image name could not be fully determined from the available documentation snippets, though it appears to start with \"cryo-\" based on the partially visible text in the hub-best-practices page.",
+        "admitted_unknown": true,
+        "tool_calls_made": 27,
+        "commands_run": [
+          "which docslice || npm install -g docslice",
+          "docslice search https://book.cryointhecloud.com \"custom docker image\"",
+          "docslice search https://book.cryointhecloud.com \"CryoCloud Python images\"",
+          "docslice search https://book.cryointhecloud.com \"docker registry\"",
+          "docslice outline https://book.cryointhecloud.com/hub-best-practices",
+          "docslice search https://book.cryointhecloud.com \"docker\"",
+          "docslice outline https://book.cryointhecloud.com/hub-best-practices",
+          "docslice search https://book.cryointhecloud.com \"ghcr\"",
+          "docslice search https://book.cryointhecloud.com \"Using Other docker images\"",
+          "docslice search https://book.cryointhecloud.com \"server start\"",
+          "docslice search https://book.cryointhecloud.com \"image\"",
+          "docslice search https://book.cryointhecloud.com \"hub-image\"",
+          "docslice search https://book.cryointhecloud.com \"select server\"",
+          "docslice search https://book.cryointhecloud.com \"custom\"",
+          "docslice get 'https://book.cryointhecloud.com/hub-best-practices#using-other-docker-images'",
+          "docslice search https://book.cryointhecloud.com \"quay.io\"",
+          "docslice get 'https://book.cryointhecloud.com/hub-best-practices#quay'",
+          "docslice search https://book.cryointhecloud.com \"cryointhecloud\"",
+          "docslice search https://book.cryointhecloud.com \"Select the image you want\"",
+          "docslice get 'https://book.cryointhecloud.com/hub-best-practices#using-other-docker-images-and-environments-at-startup'",
+          "docslice search https://book.cryointhecloud.com \"When selecting server size\"",
+          "docslice search https://book.cryointhecloud.com \"environments at startup\"",
+          "docslice get 'https://book.cryointhecloud.com/hub-best-practices#docker-images'",
+          "docslice search https://book.cryointhecloud.com \"our Python image\"",
+          "docslice search https://book.cryointhecloud.com \"A box, called 'Custom'\"",
+          "docslice get 'https://book.cryointhecloud.com/questions'",
+          "docslice search https://book.cryointhecloud.com \"cryo-python\""
+        ]
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 54063,
+      "graded": {
+        "rationale": "The model got quay.io correct but explicitly admitted it could not determine the exact image name (cryo-hub-image), and an admitted unknown is never partial.",
+        "verdict": "wrong",
+        "score": 0
+      }
+    },
+    {
+      "set": "cryocloud",
+      "question": "docker-image-tag",
+      "model": "claude-haiku",
+      "arm": "raw-fetch",
+      "asked": {
+        "answer": "When starting a CryoCloud server with a custom docker image, the CryoCloud Python images are hosted on quay.io (registry host), and the image is called cryo-hub-image. The full image reference is quay.io/cryointhecloud/cryo-hub-image with specific version tags appended (e.g., quay.io/cryointhecloud/cryo-hub-image:4047b77921f5).",
+        "admitted_unknown": false,
+        "tool_calls_made": 6,
+        "commands_run": [
+          "curl -sL https://book.cryointhecloud.com/ | head -200",
+          "curl -sL https://book.cryointhecloud.com/ | grep -i \"server\\|docker\\|image\" | head -20",
+          "curl -sL https://book.cryointhecloud.com/sitemap.xml 2>&1 | head -50",
+          "curl -sL https://book.cryointhecloud.com/sitemap.xml 2>&1 | grep -i \"server\\|docker\\|image\\|hub\"",
+          "curl -sL https://book.cryointhecloud.com/jupyterhub",
+          "curl -sL https://book.cryointhecloud.com/jupyterhub | grep -i \"docker\\|registry\\|image\" | head -20",
+          "curl -sL https://book.cryointhecloud.com/hub-best-practices > /tmp/hub_bp.html",
+          "python3 << 'EOF'... [text extraction]"
+        ]
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 34871,
+      "graded": {
+        "rationale": "Includes quay.io, quay.io/cryointhecloud, and cryo-hub-image name; matches key fully.",
+        "verdict": "correct",
+        "score": 2
+      }
+    },
+    {
+      "set": "cryocloud",
+      "question": "du-command",
+      "model": "claude-haiku",
+      "arm": "cold",
+      "asked": {
+        "answer": "I do not know the specific terminal command recommended in the CryoCloud documentation for checking disk space usage excluding shared folders.",
+        "admitted_unknown": true,
+        "tool_calls_made": 0,
+        "commands_run": []
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 22297,
+      "graded": {
+        "rationale": "Model admitted not knowing the answer, which is never partial credit.",
+        "verdict": "wrong",
+        "score": 0
+      }
+    },
+    {
+      "set": "cryocloud",
+      "question": "du-command",
+      "model": "claude-haiku",
+      "arm": "docslice",
+      "asked": {
+        "answer": "du -hs --exclude=\"shared*\" ~/",
+        "admitted_unknown": false,
+        "tool_calls_made": 7,
+        "commands_run": [
+          "which docslice",
+          "docslice search https://book.cryointhecloud.com \"disk space\"",
+          "docslice get 'https://book.cryointhecloud.com/hub-best-practices#id-1-modes-of-data-access'",
+          "docslice outline https://book.cryointhecloud.com/hub-best-practices",
+          "docslice search https://book.cryointhecloud.com \"du -hs\"",
+          "docslice search https://book.cryointhecloud.com \"terminal command du\"",
+          "docslice get 'https://book.cryointhecloud.com/hub-best-practices' | head -200"
+        ]
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 27814,
+      "graded": {
+        "verdict": "correct",
+        "score": 2,
+        "rationale": "Answer matches the key exactly."
+      }
+    },
+    {
+      "set": "cryocloud",
+      "question": "du-command",
+      "model": "claude-haiku",
+      "arm": "raw-fetch",
+      "asked": {
+        "answer": "The exact terminal command that the CryoCloud docs recommend for checking disk space usage while excluding shared folders is: `du -hs --exclude=\"shared*\" ~/`",
+        "admitted_unknown": false,
+        "tool_calls_made": 10,
+        "commands_run": [
+          "curl -sL \"https://book.cryointhecloud.com\" | head -100",
+          "curl -sL \"https://book.cryointhecloud.com\" | grep -i \"disk\\|storage\\|space\" | head -20",
+          "curl -sL \"https://book.cryointhecloud.com\" 2>&1 | grep -oE 'href=\"[^\"]*\"' | sort -u | head -30",
+          "curl -sL \"https://book.cryointhecloud.com\" 2>&1 | grep -oE 'href=\"[^\"]*\"' | sort -u | grep -E '/(docs|guide|tutorial|help|faq|user|storage|disk|space|manage)' | head -20",
+          "curl -sL \"https://book.cryointhecloud.com/getting-started\" 2>&1 | grep -oE 'href=\"[^\"]*\"' | sort -u | head -40",
+          "curl -sL \"https://book.cryointhecloud.com/getting-started\" 2>&1 | grep -i \"disk\\|storage\\|space\\|quota\" | head -10",
+          "curl -sL \"https://book.cryointhecloud.com/index-1\" 2>&1 | grep -i \"disk\\|storage\\|space\\|quota\" | head -20",
+          "curl -sL \"https://book.cryointhecloud.com/hub-best-practices\" 2>&1 | grep -i \"disk\\|storage\\|space\\|quota\" | head -20",
+          "curl -sL \"https://book.cryointhecloud.com/hub-best-practices\" 2>&1 | grep -o '<code>[^<]*</code>' | head -20",
+          "curl -sL \"https://book.cryointhecloud.com/hub-best-practices\" 2>&1 | sed 's/<[^>]*>//g' | grep -B3 -A3 'du -hs'"
+        ]
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 38676,
+      "graded": {
+        "rationale": "Model's answer exactly matches the key command and flags.",
+        "verdict": "correct",
+        "score": 2
+      }
+    },
+    {
+      "set": "cryocloud",
+      "question": "pip-persistence",
+      "model": "claude-haiku",
+      "arm": "cold",
+      "asked": {
+        "answer": "I do not have reliable knowledge of CryoCloud's specific documentation recommendations for whether to use %pip or !pip in notebooks or where to run these commands.",
+        "admitted_unknown": true,
+        "tool_calls_made": 0,
+        "commands_run": []
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 22304,
+      "graded": {
+        "verdict": "wrong",
+        "score": 0,
+        "rationale": "Model admitted it did not know, which is never partial credit and does not satisfy the must_include key."
+      }
+    },
+    {
+      "set": "cryocloud",
+      "question": "pip-persistence",
+      "model": "claude-haiku",
+      "arm": "docslice",
+      "asked": {
+        "answer": "Per the CryoCloud docs, you should use **%pip** (not !pip) to install a package in a notebook session. \n\nThe package installation should be run in **its own notebook cell at the top of the notebook, before the main imports section**. According to the SWOT tutorial, this best practice \"ensures replicability for next person and that the library gets installed in the correct location.\" \n\nThe documentation also notes that pip installations in CryoCloud \"will not persist between logins,\" so you need to run the %pip install command each session.\n\nExample from the docs:\n```python\n%pip install -q pyTMD\n%pip install -q cmap\n# ... other %pip installs ...\n\n# --- Imports ---\n%matplotlib widget\n# ... rest of imports ...\n```",
+        "admitted_unknown": false,
+        "tool_calls_made": 5,
+        "commands_run": [
+          "which docslice",
+          "docslice search \"https://book.cryointhecloud.com\" \"%pip OR !pip\"",
+          "docslice get 'https://book.cryointhecloud.com/swot-hr-w-is2#imports-paths-and-constants-to-get-started'",
+          "docslice get 'https://book.cryointhecloud.com/is2-atl15-surface-height-anomalies#using-icepyx-to-simplify-searching-for-icesat-2-data'",
+          "docslice get 'https://book.cryointhecloud.com/is2-atl15-surface-height-anomalies#computing-environment'"
+        ]
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 39049,
+      "graded": {
+        "verdict": "correct",
+        "score": 2,
+        "rationale": "Model correctly states %pip (not !pip) and first cell/top of notebook placement, satisfying both must_include facts."
+      }
+    },
+    {
+      "set": "cryocloud",
+      "question": "pip-persistence",
+      "model": "claude-haiku",
+      "arm": "raw-fetch",
+      "asked": {
+        "answer": "Per the CryoCloud docs on the hub-best-practices page, you should use %pip (not !pip) to install a package in a session, and run it in the first cell of your Jupyter notebook. The docs specifically state that \"%pip is better than !pip because it ensures installation to the right directory.\"",
+        "admitted_unknown": false,
+        "tool_calls_made": 9,
+        "commands_run": [
+          "curl -sL \"https://book.cryointhecloud.com\" | head -200",
+          "curl -sL \"https://book.cryointhecloud.com/getting_started.html\" 2>&1 | head -300",
+          "curl -sL \"https://book.cryointhecloud.com/hub/user-guide.html\" 2>&1 | head -200",
+          "curl -sL \"https://book.cryointhecloud.com/\" 2>&1 | grep -E '(python|pip|install|notebook)' | head -20",
+          "curl -sL \"https://book.cryointhecloud.com/\" 2>&1 | grep -oE '\"[^\"]*\"' | grep -i \"python\\|install\\|pip\\|notebook\" | head -20",
+          "curl -sL \"https://book.cryointhecloud.com/\" 2>&1 | grep -o 'href=\"[^\"]*\"' | head -50",
+          "curl -sL \"https://book.cryointhecloud.com/getting-started\" 2>&1 > /tmp/getting_started.html && grep -i \"pip\\|%pip\\|!pip\" /tmp/getting_started.html",
+          "curl -sL \"https://book.cryointhecloud.com/hub-best-practices\" 2>&1 > /tmp/hub_best_practices.html && grep -i \"pip\\|%pip\\|!pip\" /tmp/hub_best_practices.html",
+          "grep -o \"Pip installs.*\" /tmp/hub_best_practices.html | head -1"
+        ]
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 66798,
+      "graded": {
+        "verdict": "correct",
+        "score": 2,
+        "rationale": "Answer states %pip over !pip and first-cell placement, satisfying both required facts."
+      }
+    },
+    {
+      "set": "cryocloud",
+      "question": "session-timeout",
+      "model": "claude-haiku",
+      "arm": "cold",
+      "asked": {
+        "admitted_unknown": true,
+        "answer": "I do not know the specific number of minutes of no active use before the CryoCloud hub automatically shuts off. This detail is not in my training knowledge.",
+        "tool_calls_made": 0,
+        "commands_run": []
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 22288,
+      "graded": {
+        "verdict": "wrong",
+        "score": 0,
+        "rationale": "Model admitted it did not know the answer; per grading rules an admitted unknown is always wrong, never partial."
+      }
+    },
+    {
+      "set": "cryocloud",
+      "question": "session-timeout",
+      "model": "claude-haiku",
+      "arm": "docslice",
+      "asked": {
+        "answer": "On CryoCloud, the hub automatically shuts off after 90 minutes of no active use. This is stated in the hub-best-practices documentation page which says: \"The hub will automatically shut off after 90 minute of no active use or by the user logging off\"",
+        "admitted_unknown": false,
+        "tool_calls_made": 10,
+        "commands_run": [
+          "which docslice",
+          "docslice search \"https://book.cryointhecloud.com\" \"hub shutdown\"",
+          "docslice search \"https://book.cryointhecloud.com\" \"automatically shut off idle\"",
+          "docslice search \"https://book.cryointhecloud.com\" \"shutdown\"",
+          "docslice search \"https://book.cryointhecloud.com\" \"idle\"",
+          "docslice search \"https://book.cryointhecloud.com\" \"timeout\"",
+          "docslice search \"https://book.cryointhecloud.com\" \"inactive\"",
+          "docslice get 'https://book.cryointhecloud.com/hub-best-practices#automatically-shut-off'",
+          "docslice outline \"https://book.cryointhecloud.com/hub-best-practices\"",
+          "docslice get 'https://book.cryointhecloud.com/hub-best-practices'"
+        ]
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 28864,
+      "graded": {
+        "verdict": "correct",
+        "score": 2,
+        "rationale": "Answer states 90 minutes, matching the key exactly, with supporting quote."
+      }
+    },
+    {
+      "set": "cryocloud",
+      "question": "session-timeout",
+      "model": "claude-haiku",
+      "arm": "raw-fetch",
+      "asked": {
+        "answer": "90 minutes",
+        "admitted_unknown": false,
+        "tool_calls_made": 8,
+        "commands_run": [
+          "curl -sL https://book.cryointhecloud.com 2>&1 | head -100",
+          "curl -sL \"https://book.cryointhecloud.com\" 2>&1 | python3 -c \"import sys, re; html = sys.stdin.read(); links = re.findall(r'href=\\\"([^\\\"]+)\\\"', html); print('\\n'.join(sorted(set(links))))\" | head -30",
+          "curl -sL \"https://book.cryointhecloud.com/about\" 2>&1 | python3 -c \"import sys, re; html = sys.stdin.read(); links = re.findall(r'href=\\\"(/[^\\\"]+)\\\"', html); print('\\n'.join(sorted(set(links))))\" | grep -v \"^/build\" | grep -v \"^#\"",
+          "curl -sL \"https://book.cryointhecloud.com/hub-best-practices\" 2>&1 | grep -i \"shutdown\\|idle\\|minute\" | head -20",
+          "curl -sL \"https://book.cryointhecloud.com/hub-best-practices\" 2>&1 > /private/tmp/claude-501/-Users-choldgraf-github-2i2c-events-2608-ai-hackweek-myst-doc/918bbc3a-9dd6-41ff-be06-89fdadb9f4ce/scratchpad/hub-practices.html && python3",
+          "grep -i \"shutdown\\|idle\\|minute\" /Users/choldgraf/.claude/projects/-Users-choldgraf-github-2i2c-events-2608-ai-hackweek-myst-doc/918bbc3a-9dd6-41ff-be06-89fdadb9f4ce/tool-results/bnm290nmc.txt | head -20",
+          "curl -sL https://book.cryointhecloud.com/hub/configuration 2>&1 | grep -i \"shutdown\\|idle\\|minute\" | head -20",
+          "curl -sL https://book.cryointhecloud.com/admin 2>&1 | head -50"
+        ]
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 38619,
+      "graded": {
+        "verdict": "correct",
+        "score": 2,
+        "rationale": "Answer \"90 minutes\" exactly matches the key."
+      }
+    },
+    {
+      "set": "cryocloud",
+      "question": "shared-permissions",
+      "model": "claude-haiku",
+      "arm": "cold",
+      "asked": {
+        "answer": "Unknown - CryoCloud's specific read/write permissions for shared drive versus shared-public drive for ordinary users is not established in my training knowledge.",
+        "admitted_unknown": true,
+        "tool_calls_made": 0,
+        "commands_run": []
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 22297,
+      "graded": {
+        "rationale": "Model admitted not knowing the answer, providing no information.",
+        "verdict": "wrong",
+        "score": 0
+      }
+    },
+    {
+      "set": "cryocloud",
+      "question": "shared-permissions",
+      "model": "claude-haiku",
+      "arm": "docslice",
+      "asked": {
+        "answer": "On CryoCloud, for ordinary users:\n- Shared drive: Read-only access (everyone can read, only admins can write)\n- Shared-public drive: Read/write access (everyone can read and write)\nSource: hub-best-practices page at https://book.cryointhecloud.com/hub-best-practices",
+        "admitted_unknown": false,
+        "tool_calls_made": 17,
+        "commands_run": [
+          "docslice search \"https://book.cryointhecloud.com\" \"shared drive permissions\"",
+          "docslice search \"https://book.cryointhecloud.com\" \"shared drive\"",
+          "docslice search \"https://book.cryointhecloud.com\" \"shared-public\"",
+          "docslice search \"https://book.cryointhecloud.com\" \"permissions\"",
+          "docslice outline \"https://book.cryointhecloud.com\" | head -50",
+          "docslice outline \"https://book.cryointhecloud.com/hub-best-practices\"",
+          "docslice get 'https://book.cryointhecloud.com/jupyterhub#after-each-login'",
+          "docslice search \"https://book.cryointhecloud.com\" \"disk space\"",
+          "docslice search \"https://book.cryointhecloud.com\" \"home/jovyan\"",
+          "docslice get 'https://book.cryointhecloud.com/cryocloud-scratch-bucket#uploading-data'",
+          "docslice search \"https://book.cryointhecloud.com\" \"read only\"",
+          "docslice search \"https://book.cryointhecloud.com\" \"everyone can read\"",
+          "docslice search \"https://book.cryointhecloud.com\" \"admins can\""
+        ]
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 41641,
+      "graded": {
+        "rationale": "Both facts correctly stated: shared is read-only with admin write, shared-public is read/write for everyone.",
+        "verdict": "correct",
+        "score": 2
+      }
+    },
+    {
+      "set": "cryocloud",
+      "question": "shared-permissions",
+      "model": "claude-haiku",
+      "arm": "raw-fetch",
+      "asked": {
+        "answer": "On CryoCloud, for ordinary users: the \"shared drive\" has READ-only permissions (everyone can read, admins only can write), while the \"shared-public drive\" has both READ and WRITE permissions for everyone. Source: CryoCloud Best Practices documentation page at https://book.cryointhecloud.com/hub-best-practices",
+        "admitted_unknown": false,
+        "tool_calls_made": 6,
+        "commands_run": [
+          "curl -sL https://book.cryointhecloud.com | head -200",
+          "curl -sL https://book.cryointhecloud.com 2>&1 | grep -oE 'href=\"[^\"]*\"' | head -30",
+          "for page in \"storage\" \"file-system\" \"filesystem\" \"files\" \"data-management\" \"shared-files\" \"shared-drives\" \"accessing-data\"; do echo \"=== Trying $page ===\"; curl -sL \"https://book.cryointhecloud.com/$page\" 2>&1 | grep -i \"shared|drive|permission|read|write\" | head -3; done",
+          "curl -sL https://book.cryointhecloud.com/hub-best-practices 2>&1 | sed 's/<[^>]*>//g' | grep -i \"shared|drive\" | head -30",
+          "curl -sL https://book.cryointhecloud.com/hub-best-practices 2>&1 | sed 's/<[^>]*>//g' | grep -A 10 \"The shared drive is a folder\""
+        ]
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 49247,
+      "graded": {
+        "rationale": "Both facts match the key exactly: shared drive read-only for ordinary users (admins write), shared-public read/write for everyone.",
+        "verdict": "correct",
+        "score": 2
+      }
+    },
+    {
+      "set": "mystmd-guide",
+      "question": "clean-exec-command",
+      "model": "claude-haiku",
+      "arm": "cold",
+      "asked": {
+        "answer": "Unknown - I cannot confidently state the exact myst command to clear the execution cache without verification.",
+        "admitted_unknown": true,
+        "tool_calls_made": 0,
+        "commands_run": []
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 22294,
+      "graded": {
+        "rationale": "The model admitted it did not know the answer, which is always graded as wrong per the rubric.",
+        "verdict": "wrong",
+        "score": 0
+      }
+    },
+    {
+      "set": "mystmd-guide",
+      "question": "clean-exec-command",
+      "model": "claude-haiku",
+      "arm": "docslice",
+      "asked": {
+        "answer": "myst clean --execute",
+        "admitted_unknown": false,
+        "tool_calls_made": 3,
+        "commands_run": [
+          "which docslice",
+          "docslice search https://mystmd.org/guide \"cache\"",
+          "docslice get 'https://mystmd.org/guide/execute-notebooks#force-execution-by-deleting-the-cache'"
+        ]
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 24627,
+      "graded": {
+        "rationale": "The key requires the exact command \"myst clean --exec\" but the model answered \"myst clean --execute\", which uses the wrong flag.",
+        "verdict": "wrong",
+        "score": 0
+      }
+    },
+    {
+      "set": "mystmd-guide",
+      "question": "clean-exec-command",
+      "model": "claude-haiku",
+      "arm": "raw-fetch",
+      "asked": {
+        "answer": "The exact myst command that forces re-execution of all code by deleting the execution cache is: `myst clean --all`. This command removes all build artifacts and caches, forcing a complete rebuild with re-execution of all code. Alternatively, `myst clean --templates --cache` can be used to specifically clean templates and cache.",
+        "admitted_unknown": false,
+        "tool_calls_made": 47,
+        "commands_run": [
+          "curl -sL \"https://mystmd.org/guide\" | head -100",
+          "curl -sL \"https://mystmd.org/guide/cli\" | head -50",
+          "curl -sL \"https://mystmd.org/guide/cli\" | sed -n '/<main/,/<\\/main>/p' | grep -i \"cache|clean|force|execute\" | head -30",
+          "curl -sL \"https://mystmd.org/guide\" | grep -o 'href=\"[^\"]*\"' | grep -i \"build\\|execute\\|cache\\|cli\" | head -20",
+          "curl -sL \"https://mystmd.org/guide/build\" > /tmp/build_page.html && wc -l /tmp/build_page.html",
+          "curl -sL \"https://mystmd.org/guide/execution\" > /tmp/exec_page.html && wc -l /tmp/exec_page.html && head -200 /tmp/exec_page.html | tail -100",
+          "curl -sL \"https://mystmd.org/guide\" | grep -o 'href=\"/guide/[^\"]*\"' | sed 's|href=\"||g' | sed 's|\"||g' | sort -u | head -50",
+          "curl -sL \"https://mystmd.org/guide/in-page-execution\" | sed 's/<[^>]*>//g' | sed 's/&[a-z]*;//g' | grep -i \"cache\\|clean\\|force\" | head -40",
+          "curl -sL \"https://mystmd.org/guide/quickstart-executable-documents\" | sed 's/<[^>]*>//g' | sed 's/&[a-z]*;//g' | grep -i \"cache\\|clean\\|force\\|delete\" | head -40",
+          "curl -sL \"https://mystmd.org/guide/quickstart-executable-documents\" | grep -o 'href=\"/guide/[^\"]*\"' | sed 's|href=\"||g' | sed 's|\"||g' | sort -u",
+          "curl -sL \"https://mystmd.org/guide/quickstart-executable-documents\" | sed 's/<code[^>]*>/\u00a7/g' | sed 's/<\\/code>/\u00a7/g' | sed 's/<[^>]*>//g' | sed 's/&[a-z]*;//g' | sed 's/\u00a7/`/g' | grep -A 5 -B 5 \"myst clean\" | head -60",
+          "curl -sL \"https://mystmd.org/guide/quickstart-executable-documents\" | grep -o 'clean.*--[a-z-]*' | sort -u",
+          "curl -sL \"https://mystmd.org/guide/quickstart-executable-documents\" | sed 's/<code[^>]*>/\u00a7/g' | sed 's/<\\/code>/\u00a7/g' | sed 's/<[^>]*>//g' | sed 's/&[a-z]*;//g' | sed 's/\u00a7/`/g' | grep -A 20 \"By default the.*myst clean\"",
+          "curl -sL \"https://mystmd.org/guide/quickstart-myst-markdown\" | sed 's/<code[^>]*>/\u00a7/g' | sed 's/<\\/code>/\u00a7/g' | sed 's/<[^>]*>//g' | sed 's/&[a-z]*;//g' | sed 's/\u00a7/`/g' | grep -A 10 -B 5 \"myst clean\" | head -60",
+          "curl -sL \"https://mystmd.org/guide\" | grep -o 'href=\"/guide/[^\"]*\"' | while read url; do url=$(echo $url | sed 's|href=\"||g; s|\"||g'); content=$(curl -sL \"https://mystmd.org$url\" 2>/dev/null | grep -i \"cache\" 2>/dev/null | head -1); if [ ! -z \"$content\" ]; then echo \"Found in: $url\"; fi; done",
+          "curl -sL \"https://mystmd.org/guide/quickstart-myst-documents\" | sed 's/<code[^>]*>/\u00a7/g' | sed 's/<\\/code>/\u00a7/g' | sed 's/<[^>]*>//g' | sed 's/&[a-z]*;//g' | sed 's/\u00a7/`/g' | grep -A 10 -B 5 \"myst clean\" | head -60",
+          "curl -sL \"https://mystmd.org/guide/quickstart-jupyter-lab-myst\" | sed 's/<code[^>]*>/\u00a7/g' | sed 's/<\\/code>/\u00a7/g' | sed 's/<[^>]*>//g' | sed 's/&[a-z]*;//g' | sed 's/\u00a7/`/g' | grep -i \"clean\" | head -20",
+          "curl -sL \"https://mystmd.org/guide/quickstart-static-exports\" | sed 's/<code[^>]*>/\u00a7/g' | sed 's/<\\/code>/\u00a7/g' | sed 's/<[^>]*>//g' | sed 's/&[a-z]*;//g' | sed 's/\u00a7/`/g' | grep -A 15 \"By default the.*myst clean\"",
+          "curl -sL \"https://mystmd.org/guide\" | sed 's/\"/\\n\"/g' | grep -i \"command\\|cli\" | head -30",
+          "for page in \"installing\" \"guide\" \"interactive-notebooks\" \"quickstart\"; do echo \"=== Searching page: $page ===\"  curl -sL \"https://mystmd.org/guide/$page\" | sed 's/<code[^>]*>/\u00a7/g' | sed 's/<\\/code>/\u00a7/g' | sed 's/<[^>]*>//g' | sed 's/&[a-z]*;//g' | sed 's/\u00a7/`/g' | grep -E \"clean.*--[a-z-]*|--[a-z-]*.*cache\" | head -5; done",
+          "curl -sL \"https://mystmd.org/guide/quickstart\" | sed 's/<code[^>]*>/\u00a7/g' | sed 's/<\\/code>/\u00a7/g' | sed 's/<[^>]*>//g' | sed 's/&[a-z]*;//g' | sed 's/\u00a7/`/g' | grep -A 20 \"myst clean\" | head -60",
+          "curl -sL \"https://mystmd.org/guide/quickstart\" | sed 's/<code[^>]*>/\u00a7/g' | sed 's/<\\/code>/\u00a7/g' | sed 's/<[^>]*>//g' | sed 's/&[a-z]*;//g' | sed 's/\u00a7/`/g' | grep -A 100 \"myst clean\" | grep -i \"cache\\|clean\\|template\\|all\\|jupyter\" | head -30"
+        ]
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 59065,
+      "graded": {
+        "rationale": "Key requires \"myst clean --exec\"; model gave \"myst clean --all\" and \"myst clean --templates --cache\", neither matches the required flag.",
+        "verdict": "wrong",
+        "score": 0
+      }
+    },
+    {
+      "set": "mystmd-guide",
+      "question": "content-server-port",
+      "model": "claude-haiku",
+      "arm": "cold",
+      "asked": {
+        "answer": "I do not know the specific port for MyST raw JSON pages served with --headless mode.",
+        "admitted_unknown": true,
+        "tool_calls_made": 0,
+        "commands_run": []
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 22306,
+      "graded": {
+        "verdict": "wrong",
+        "score": 0,
+        "rationale": "Model admitted not knowing the answer; per grading rules, admitted unknown is always wrong, never partial."
+      }
+    },
+    {
+      "set": "mystmd-guide",
+      "question": "content-server-port",
+      "model": "claude-haiku",
+      "arm": "docslice",
+      "asked": {
+        "answer": "Port 3100. The MyST developer guide states: \"When you start a content server *without* a theme server, you can still visit the pages in your site (often on port `3100`). If you do so, you will see raw JSON and images.\"",
+        "admitted_unknown": false,
+        "tool_calls_made": 3,
+        "commands_run": [
+          "which docslice || npm install -g docslice",
+          "docslice search https://mystmd.org/guide \"myst start --headless\"",
+          "docslice get 'https://mystmd.org/guide/developer#content-server'"
+        ]
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 23794,
+      "graded": {
+        "verdict": "correct",
+        "score": 2,
+        "rationale": "Answer states port 3100 with supporting quote matching the key exactly."
+      }
+    },
+    {
+      "set": "mystmd-guide",
+      "question": "content-server-port",
+      "model": "claude-haiku",
+      "arm": "raw-fetch",
+      "asked": {
+        "answer": "Port 3100. The MyST developer guide states: \"When you start a content server without a theme server, you can still 'visit' the pages in your site (often on port 3100). If you do so, you will see raw JSON and images.\"",
+        "admitted_unknown": false,
+        "tool_calls_made": 3,
+        "commands_run": [
+          "curl -sL https://mystmd.org/guide 2>&1 | head -100",
+          "curl -sL https://mystmd.org/guide/developer 2>&1 | python3 -c \"import sys; import re; html = sys.stdin.read(); text = re.sub(r'<script[^>]*>.*?</script>', '', html, flags=re.DOTALL); text = re.sub(r'<style[^>]*>.*?</style>', '', text, flags=re.DOTALL); text = re.sub(r'<[^>]*>', ' ', text); text = re.sub(r'\\s+', ' ', text); print(text)\" | grep -i 'headless|port|3000|3001|raw' | head -40",
+          "grep -i 'When you start a content server|port 3100|often on port' /Users/choldgraf/.claude/projects/-Users-choldgraf-github-2i2c-events-2608-ai-hackweek-myst-doc/918bbc3a-9dd6-41ff-be06-89fdadb9f4ce/tool-results/b8o7794ot.txt"
+        ]
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 35903,
+      "graded": {
+        "verdict": "correct",
+        "score": 2,
+        "rationale": "Answer states port 3100 exactly, matching the key, with correct supporting quote."
+      }
+    },
+    {
+      "set": "mystmd-guide",
+      "question": "gh-pages-base-url",
+      "model": "claude-haiku",
+      "arm": "cold",
+      "asked": {
+        "answer": "I do not know the specific value of the BASE_URL environment variable in the GitHub Actions workflow generated by \"myst init --gh-pages\" without examining the actual implementation.",
+        "admitted_unknown": true,
+        "tool_calls_made": 0,
+        "commands_run": []
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 22299,
+      "graded": {
+        "score": 0,
+        "verdict": "wrong",
+        "rationale": "Model admitted it did not know the answer; per rules an admitted unknown is never partial and must be scored wrong."
+      }
+    },
+    {
+      "set": "mystmd-guide",
+      "question": "gh-pages-base-url",
+      "model": "claude-haiku",
+      "arm": "docslice",
+      "asked": {
+        "answer": "The BASE_URL environment variable is set to `/${{ github.event.repository.name }}`. This GitHub Actions expression expands to a forward slash followed by the repository name, allowing the site to be deployed to a GitHub Pages URL like https://username.github.io/repository-name/.",
+        "admitted_unknown": false,
+        "tool_calls_made": 4,
+        "commands_run": [
+          "which docslice || npm install -g docslice",
+          "docslice search https://mystmd.org/guide \"myst init gh-pages BASE_URL\"",
+          "docslice get 'https://mystmd.org/guide/deployment-github-pages#base-url-configuration-for-github-pages'",
+          "docslice get 'https://mystmd.org/guide/deployment-github-pages#example-a-full-github-action'"
+        ]
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 24495,
+      "graded": {
+        "rationale": "Answer states BASE_URL is set to /${{ github.event.repository.name }}, matching the key exactly.",
+        "verdict": "correct",
+        "score": 2
+      }
+    },
+    {
+      "set": "mystmd-guide",
+      "question": "gh-pages-base-url",
+      "model": "claude-haiku",
+      "arm": "raw-fetch",
+      "asked": {
+        "answer": "/${{ github.event.repository.name }}",
+        "admitted_unknown": false,
+        "tool_calls_made": 15,
+        "commands_run": [
+          "curl -sL https://mystmd.org/guide | head -200",
+          "curl -sL https://mystmd.org/guide | grep -o -i 'base_url|gh-pages|myst init' | head -20",
+          "curl -sL https://mystmd.org/guide/deployment | head -300",
+          "curl -sL https://mystmd.org/guide/deployment 2>/dev/null | sed 's/<[^>]*>//g' | grep -i -A 5 -B 5 'base_url|BASE_URL' | head -50",
+          "curl -sL https://mystmd.org/guide/quickstart 2>/dev/null | grep -o 'BASE_URL|base_url|gh-pages' | head -10",
+          "curl -sL https://mystmd.org/guide/deployment | grep -i 'myst init'",
+          "curl -sL https://mystmd.org/guide/github-pages 2>/dev/null | grep -o 'BASE_URL|base_url' | head -10",
+          "curl -sL https://mystmd.org/guide/deployment 2>/dev/null > /tmp/deployment.html && grep -i 'workflow|.github' /tmp/deployment.html | head -10",
+          "curl -sL https://mystmd.org/guide/quickstart 2>/dev/null | grep -i '\\-\\-gh-pages|gh.pages|BASE_URL' | head -20",
+          "curl -sL https://mystmd.org/guide 2>/dev/null (with Python script to find guide pages)",
+          "curl -sL https://mystmd.org/guide/quickstart-myst-documents 2>/dev/null (with Python script to find code blocks)",
+          "curl -sL https://mystmd.org/guide 2>/dev/null (with Python script to extract all guide links)",
+          "curl -sL https://mystmd.org/guide/deployment 2>/dev/null (with Python script to find GitHub Pages section)",
+          "curl -sL https://mystmd.org/guide/deployment-github-pages 2>/dev/null (with Python script to extract code blocks)"
+        ]
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 42222,
+      "graded": {
+        "rationale": "Model's answer exactly matches the key.",
+        "verdict": "correct",
+        "score": 2
+      }
+    },
+    {
+      "set": "mystmd-guide",
+      "question": "matplotlib-strings-default",
+      "model": "claude-haiku",
+      "arm": "cold",
+      "asked": {
+        "answer": "I do not know the default value of the output_matplotlib_strings project setting in mystmd.",
+        "admitted_unknown": true,
+        "tool_calls_made": 0,
+        "commands_run": []
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 22288,
+      "graded": {
+        "verdict": "wrong",
+        "score": 0,
+        "rationale": "Model admitted not knowing the answer, which is never partial credit and counts as wrong."
+      }
+    },
+    {
+      "set": "mystmd-guide",
+      "question": "matplotlib-strings-default",
+      "model": "claude-haiku",
+      "arm": "docslice",
+      "asked": {
+        "answer": "The default value of the `output_matplotlib_strings` project setting in mystmd is `\"remove-warn\"`. This setting removes matplotlib string outputs and logs a warning. Matplotlib strings are string-based Python objects like `<Figure size 720x576 with 1 Axes>` or `Text(0.5, 0.98, 'Test 1')` that appear in cell outputs.",
+        "admitted_unknown": false,
+        "tool_calls_made": 2,
+        "commands_run": [
+          "which docslice || npm list -g docslice 2>&1 | head -5",
+          "docslice search \"https://mystmd.org/guide\" \"output_matplotlib_strings\"",
+          "docslice get 'https://mystmd.org/guide/settings#project-settings'"
+        ]
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 24098,
+      "graded": {
+        "score": 2,
+        "verdict": "correct",
+        "rationale": "Answer states exactly \"remove-warn\" matching the key."
+      }
+    },
+    {
+      "set": "mystmd-guide",
+      "question": "matplotlib-strings-default",
+      "model": "claude-haiku",
+      "arm": "raw-fetch",
+      "asked": {
+        "answer": "remove-warn",
+        "admitted_unknown": false,
+        "tool_calls_made": 12,
+        "commands_run": [
+          "curl -sL https://mystmd.org/guide | head -100",
+          "grep -n output_matplotlib_strings /Users/choldgraf/.claude/projects/-Users-choldgraf-github-2i2c-events-2608-ai-hackweek-myst-doc/918bbc3a-9dd6-41ff-be06-89fdadb9f4ce/tool-results/brh2zc2f0.txt",
+          "curl -sL https://mystmd.org/guide/settings | grep -o output_matplotlib_strings | head -1",
+          "curl -sL https://mystmd.org/guide/settings > settings.html",
+          "grep remove-warn settings.html | head -3",
+          "grep -A 10 -B 5 output_matplotlib_strings settings.html | head -30",
+          "grep -n output_matplotlib_strings settings.html | head -10",
+          "python3 extraction script to find context around output_matplotlib_strings",
+          "grep -E 'default|output_matplotlib|remove-warn' to find default values"
+        ]
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 75848,
+      "graded": {
+        "score": 2,
+        "verdict": "correct",
+        "rationale": "Answer exactly matches the key \"remove-warn\"."
+      }
+    },
+    {
+      "set": "mystmd-guide",
+      "question": "theme-config-file",
+      "model": "claude-haiku",
+      "arm": "cold",
+      "asked": {
+        "answer": "I do not know which file a MyST theme should read first when it starts up according to the MyST theme developer guide.",
+        "admitted_unknown": true,
+        "tool_calls_made": 0,
+        "commands_run": []
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 22291,
+      "graded": {
+        "rationale": "The model admitted it did not know the answer, which per rules is never partial and is always wrong.",
+        "verdict": "wrong",
+        "score": 0
+      }
+    },
+    {
+      "set": "mystmd-guide",
+      "question": "theme-config-file",
+      "model": "claude-haiku",
+      "arm": "docslice",
+      "asked": {
+        "answer": "According to the MyST theme developer guide (Architecture in brief section), a theme should read `_build/site/config.json` first when it starts up.",
+        "admitted_unknown": false,
+        "tool_calls_made": 5,
+        "commands_run": [
+          "which docslice",
+          "docslice search https://mystmd.org/guide \"theme developer guide\" | head -20",
+          "docslice outline https://mystmd.org/guide | grep -i theme",
+          "docslice outline https://mystmd.org/guide/theme-developer",
+          "docslice search https://mystmd.org/guide \"first when it starts\"",
+          "docslice get 'https://mystmd.org/guide/theme-developer#architecture-in-brief'"
+        ]
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 27203,
+      "graded": {
+        "verdict": "correct",
+        "score": 2,
+        "rationale": "Answer exactly matches the key path _build/site/config.json and does not admit unknown."
+      }
+    },
+    {
+      "set": "mystmd-guide",
+      "question": "theme-config-file",
+      "model": "claude-haiku",
+      "arm": "raw-fetch",
+      "asked": {
+        "answer": "According to the MyST theme developer guide, a theme should read _build/site/config.json first when it starts up.",
+        "admitted_unknown": false,
+        "tool_calls_made": 11,
+        "commands_run": [
+          "curl -sL https://mystmd.org/guide | head -100",
+          "curl -sL https://mystmd.org/guide/themes | grep -i \"theme\\|startup\\|first file\" | head -50",
+          "curl -sL https://mystmd.org/guide/themes > /tmp/themes_page.html && wc -l /tmp/themes_page.html",
+          "cat /tmp/themes_page.html",
+          "curl -sL https://mystmd.org/guide/creating-themes > /tmp/creating_themes.html && wc -l /tmp/creating_themes.html",
+          "curl -sL https://mystmd.org/guide | grep -o 'href=\"[^\"]*theme[^\"]*\"' | head -20",
+          "grep -i \"developer\\|startup\\|index\\|theme.json\\|config\" /Users/choldgraf/.claude/projects/-Users-choldgraf-github-2i2c-events-2608-ai-hackweek-myst-doc/918bbc3a-9dd6-41ff-be06-89fdadb9f4ce/tool-results/biv49is60.txt | grep -i \"theme\" | head -20",
+          "curl -sL https://mystmd.org/guide 2>/dev/null | python3 -c \"import sys; content = sys.stdin.read(); import re; matches = re.findall(r'href=[\\\"\\'](\\/guide\\/[^\\\"\\']*)[\\\"\\']...; print('\\\\n'.join([f'{m[0]} - {m[2][:50]}' for m in matches[:30]]))\"",
+          "curl -sL https://mystmd.org/guide 2>/dev/null | python3 -c \"import sys; content = sys.stdin.read(); import re; matches = re.findall(r'href=[\\\"\\'](\\/guide\\/[^\\\"\\']*)[\\\"\\']...; print('\\\\n'.join([f'{m[0]} - {m[2][:50]}' for m in matches if 'dev' in m[0].lower() or 'theme' in m[0].lower() or 'plugin' in m[0].lower()]))\"",
+          "for url in \"https://mystmd.org/guide/theme-developers\" \"https://mystmd.org/guide/theme-developer\" \"https://mystmd.org/guide/develop-themes\" \"https://mystmd.org/guide/custom-themes\"; do echo \"Trying: $url\"; curl -sL \"$url\" 2>/dev/null | wc -l; done",
+          "curl -sL https://mystmd.org/guide/theme-developer > /tmp/theme_developer.html && cat /tmp/theme_developer.html",
+          "python3 << 'EOF' ... (text extraction)",
+          "python3 << 'EOF' ... (section extraction)"
+        ]
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 35010,
+      "graded": {
+        "rationale": "Answer states exactly _build/site/config.json, matching the key.",
+        "verdict": "correct",
+        "score": 2
+      }
+    },
+    {
+      "set": "nisar-cookbook",
+      "question": "earthdata-eula-name",
+      "model": "claude-haiku",
+      "arm": "cold",
+      "asked": {
+        "answer": "I do not know the exact name of the EULA required for Earthdata Login access to NISAR data as documented in the NISAR Cookbook.",
+        "admitted_unknown": true,
+        "tool_calls_made": 0,
+        "commands_run": []
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 22306,
+      "graded": {
+        "rationale": "Model admitted it did not know the answer, which is always graded wrong regardless of correctness.",
+        "verdict": "wrong",
+        "score": 0
+      }
+    },
+    {
+      "set": "nisar-cookbook",
+      "question": "earthdata-eula-name",
+      "model": "claude-haiku",
+      "arm": "docslice",
+      "asked": {
+        "answer": "The exact name of the EULA is \"Alaska Satellite Facility Data Access\"",
+        "admitted_unknown": false,
+        "tool_calls_made": 2,
+        "commands_run": [
+          "npm install -g docslice",
+          "docslice search \"https://asfopensarlab.github.io/NISAR_Cookbook\" \"EULA\"",
+          "docslice get 'https://asfopensarlab.github.io/NISAR_Cookbook/notebooks/set-up-earthdata-login#accept-the-alaska-satellite-facility-data-access-eula'"
+        ]
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 23928,
+      "graded": {
+        "verdict": "correct",
+        "score": 2,
+        "rationale": "The model's answer matches the key exactly: \"Alaska Satellite Facility Data Access\"."
+      }
+    },
+    {
+      "set": "nisar-cookbook",
+      "question": "earthdata-eula-name",
+      "model": "claude-haiku",
+      "arm": "raw-fetch",
+      "asked": {
+        "answer": "Alaska Satellite Facility Data Access",
+        "admitted_unknown": false,
+        "tool_calls_made": 10,
+        "commands_run": [
+          "curl -sL https://asfopensarlab.github.io/NISAR_Cookbook",
+          "curl -sL https://asfopensarlab.github.io/NISAR_Cookbook | grep -i \"eula\\|earthdata\" | head -20",
+          "curl -sL https://asfopensarlab.github.io/NISAR_Cookbook | sed 's/<[^>]*>//g' | grep -i \"eula\\|earthdata\" -A 2 -B 2 | head -40",
+          "curl -sL https://asfopensarlab.github.io/NISAR_Cookbook/ 2>&1 | sed 's/<[^>]*>//g' | grep -i \"earthdata\\|eula\\|login\" | head -10",
+          "for page in setup prerequisites getting-started access authentication data-access login credentials; do echo \"Trying: $page\"; curl -sL \"https://asfopensarlab.github.io/NISAR_Cookbook/$page\" 2>&1 | grep -i \"eula\\|earthdata\" | head -3; done",
+          "curl -sL \"https://raw.githubusercontent.com/ASFOpenSARlab/NISAR_Cookbook/main/README.md\" 2>&1 | head -100",
+          "curl -sL \"https://api.github.com/repos/ASFOpenSARlab/NISAR_Cookbook/contents/notebooks\" 2>&1 | grep \"\\\"name\\\"\" | head -20",
+          "curl -sL \"https://raw.githubusercontent.com/ASFOpenSARlab/NISAR_Cookbook/main/notebooks/set_up_Earthdata_Login.md\"",
+          "curl -sL \"https://asfopensarlab.github.io/NISAR_Cookbook/notebooks/set_up_Earthdata_Login\" 2>&1 | sed 's/<[^>]*>//g' | grep -i \"alaska satellite facility\" -A 2 -B 2 | head -20",
+          "curl -sL \"https://asfopensarlab.github.io/NISAR_Cookbook/notebooks/set_up_Earthdata_Login.html\" 2>&1 | sed 's/<[^>]*>//g' | grep -i \"alaska satellite facility\" -A 2 -B 2"
+        ]
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 34407,
+      "graded": {
+        "rationale": "Model answer exactly matches the key.",
+        "verdict": "correct",
+        "score": 2
+      }
+    },
+    {
+      "set": "nisar-cookbook",
+      "question": "gcov-hdf5-path",
+      "model": "claude-haiku",
+      "arm": "cold",
+      "asked": {
+        "answer": "I do not know the specific HDF5 group path and dataset names for NISAR GCOV gridded data for frequency A.",
+        "admitted_unknown": true,
+        "tool_calls_made": 0,
+        "commands_run": []
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 22316,
+      "graded": {
+        "verdict": "wrong",
+        "score": 0,
+        "rationale": "Model admitted it did not know, which is never scored as partial or correct per grading rules."
+      }
+    },
+    {
+      "set": "nisar-cookbook",
+      "question": "gcov-hdf5-path",
+      "model": "claude-haiku",
+      "arm": "docslice",
+      "asked": {
+        "answer": "The full group path to gridded data for frequency A in a NISAR GCOV HDF5 file is `/science/LSAR/GCOV/grids/frequencyA`. Two example real-valued polarization covariance datasets found there are: (1) HHHH - real-valued covariance term for HH-HH polarization combination, and (2) HVHV - real-valued covariance term for HV-HV polarization combination.",
+        "admitted_unknown": false,
+        "tool_calls_made": 4,
+        "commands_run": [
+          "npm install -g docslice",
+          "docslice search \"https://asfopensarlab.github.io/NISAR_Cookbook\" \"GCOV HDF5 group path frequency A\"",
+          "docslice search \"https://asfopensarlab.github.io/NISAR_Cookbook\" \"polarization covariance real-valued\"",
+          "docslice get \"https://asfopensarlab.github.io/NISAR_Cookbook/notebooks/opening-hdf5-python#hdf5-gcov-dataset\"",
+          "docslice get \"https://asfopensarlab.github.io/NISAR_Cookbook/notebooks/opening-hdf5-python#hdf5-frequency\""
+        ]
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 25648,
+      "graded": {
+        "rationale": "Answer includes exact path /science/LSAR/GCOV/grids/frequencyA and both HHHH and HVHV datasets.",
+        "verdict": "correct",
+        "score": 2
+      }
+    },
+    {
+      "set": "nisar-cookbook",
+      "question": "gcov-supporting-layers",
+      "model": "claude-haiku",
+      "arm": "cold",
+      "asked": {
+        "answer": "I do not know the names of the three supporting raster layer datasets in a NISAR GCOV frequency group.",
+        "admitted_unknown": true,
+        "tool_calls_made": 0,
+        "commands_run": []
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 22301,
+      "graded": {
+        "rationale": "Model admitted not knowing; admitted unknowns are never partial and score 0.",
+        "verdict": "wrong",
+        "score": 0
+      }
+    },
+    {
+      "set": "nisar-cookbook",
+      "question": "gcov-supporting-layers",
+      "model": "claude-haiku",
+      "arm": "docslice",
+      "asked": {
+        "answer": "The three supporting raster layer datasets in a NISAR GCOV frequency group are: (1) numberOfLooks, (2) rtcGammaToSigmaFactor, and (3) mask.",
+        "admitted_unknown": false,
+        "tool_calls_made": 3,
+        "commands_run": [
+          "which docslice || npm install -g docslice",
+          "docslice search https://asfopensarlab.github.io/NISAR_Cookbook \"GCOV frequency group raster layer\"",
+          "docslice search https://asfopensarlab.github.io/NISAR_Cookbook \"supporting raster layer datasets\"",
+          "docslice get 'https://asfopensarlab.github.io/NISAR_Cookbook/notebooks/opening-hdf5-python#hdf5-frequency'"
+        ]
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 24066,
+      "graded": {
+        "rationale": "All three required names (numberOfLooks, rtcGammaToSigmaFactor, mask) are present exactly.",
+        "verdict": "correct",
+        "score": 2
+      }
+    },
+    {
+      "set": "nisar-cookbook",
+      "question": "gcov-supporting-layers",
+      "model": "claude-haiku",
+      "arm": "raw-fetch",
+      "asked": {
+        "answer": "The three supporting raster layer datasets (not polarization or coordinate data) in a NISAR GCOV frequency group are: numberOfLooks, rtcGammaToSigmaFactor, and projection.",
+        "admitted_unknown": false,
+        "tool_calls_made": 10,
+        "commands_run": [
+          "curl -sL https://asfopensarlab.github.io/NISAR_Cookbook | head -200",
+          "curl -sL https://asfopensarlab.github.io/NISAR_Cookbook | grep -i gcov | head -20",
+          "curl -sL https://asfopensarlab.github.io/NISAR_Cookbook | grep -o 'href=\"[^\"]*\"' | grep -i gcov",
+          "curl -sL https://asfopensarlab.github.io/NISAR_Cookbook | grep -o 'href=\"[^\"]*\"' | grep -v '^href=\"#' | sort -u",
+          "curl -sL https://raw.githubusercontent.com/ASFOpenSARlab/NISAR_Cookbook/main/README.md | head -150",
+          "curl -s https://api.github.com/repos/ASFOpenSARlab/NISAR_Cookbook/contents/notebooks | grep -o '\"name\": \"[^\"]*\"' | head -30",
+          "curl -sL https://raw.githubusercontent.com/ASFOpenSARlab/NISAR_Cookbook/main/notebooks/GCOV_intro.md | tail -300",
+          "curl -sL https://raw.githubusercontent.com/ASFOpenSARlab/NISAR_Cookbook/main/notebooks/HDF5_intro.md | grep -A 5 -B 5 numberOfLooks",
+          "curl -sL https://raw.githubusercontent.com/ASFOpenSARlab/NISAR_Cookbook/main/notebooks/HDF5_intro.md | grep -B 5 -A 5 projection",
+          "curl -sL https://raw.githubusercontent.com/ASFOpenSARlab/NISAR_Cookbook/main/notebooks/HDF5_intro.md | grep -A 20 Two-dimensional datasets"
+        ]
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 93199,
+      "graded": {
+        "verdict": "partial",
+        "score": 1,
+        "rationale": "Model got numberOfLooks and rtcGammaToSigmaFactor correct but substituted \"projection\" for \"mask\", missing one required item from the must_include key."
+      }
+    },
+    {
+      "set": "nisar-cookbook",
+      "question": "kernel-registration-command",
+      "model": "claude-haiku",
+      "arm": "cold",
+      "asked": {
+        "answer": "I do not know the specific command that the NISAR Cookbook uses to register the isce3 environment's Python kernel with Jupyter.",
+        "admitted_unknown": true,
+        "tool_calls_made": 0,
+        "commands_run": []
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 22295,
+      "graded": {
+        "verdict": "wrong",
+        "score": 0,
+        "rationale": "Model admitted it did not know the command, which is always graded wrong."
+      }
+    },
+    {
+      "set": "nisar-cookbook",
+      "question": "kernel-registration-command",
+      "model": "claude-haiku",
+      "arm": "docslice",
+      "asked": {
+        "answer": "The NISAR Cookbook uses the command: `pixi run -e isce3 python -m ipykernel install --user --name isce3 --display-name \"isce3 (Python)\"` to register the isce3 environment's Python kernel with Jupyter. This runs the ipykernel install command within the isce3 pixi environment.",
+        "admitted_unknown": false,
+        "tool_calls_made": 3,
+        "commands_run": [
+          "npm install -g docslice 2>&1 | tail -20",
+          "docslice search \"https://asfopensarlab.github.io/NISAR_Cookbook\" \"jupyter kernel isce3\"",
+          "docslice search \"https://asfopensarlab.github.io/NISAR_Cookbook\" \"python_kernel register isce3\"",
+          "docslice get \"https://asfopensarlab.github.io/NISAR_Cookbook/notebooks/software-environment-docker#id-2c-register-the-isce3-environments-python-kernel-with-ipykernel\""
+        ]
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 23992,
+      "graded": {
+        "rationale": "Answer contains exact command including \"pixi run -e isce3\", \"ipykernel install\", and \"--user\".",
+        "verdict": "correct",
+        "score": 2
+      }
+    },
+    {
+      "set": "nisar-cookbook",
+      "question": "kernel-registration-command",
+      "model": "claude-haiku",
+      "arm": "raw-fetch",
+      "asked": {
+        "answer": "The NISAR Cookbook uses the command:\n\npixi run -e isce3 python -m ipykernel install --user --name isce3 --display-name \"isce3 (Python)\"\n\nThis command registers the isce3 environment's Python kernel with Jupyter using ipykernel. It's found in the \"Install Required Software or Run a Docker Image\" page (section 2c) at https://asfopensarlab.github.io/NISAR_Cookbook/notebooks/software-environment-docker\n\nThe command works by using pixi to run the ipykernel installation in the context of the isce3 environment, ensuring the kernel can access all the packages and environment variables from that managed environment.",
+        "admitted_unknown": false,
+        "tool_calls_made": 12,
+        "commands_run": [
+          "curl -sL \"https://asfopensarlab.github.io/NISAR_Cookbook\" | head -200",
+          "curl -sL \"https://asfopensarlab.github.io/NISAR_Cookbook/setup\" 2>&1 | grep -i \"kernel|ipython|jupyter\" | head -30",
+          "curl -sL \"https://asfopensarlab.github.io/NISAR_Cookbook/getting-started\" 2>&1 | grep -i \"kernel|ipython|jupyter|isce3\" | head -30",
+          "curl -sL \"https://asfopensarlab.github.io/NISAR_Cookbook\" 2>&1 | grep -o \"href=\\\"[^\\\"]*\\\"\" | grep -i \"getting|setup|environ|conda|install\" | sort -u",
+          "curl -sL \"https://asfopensarlab.github.io/NISAR_Cookbook/notebooks/software-environment-docker\" 2>&1 | grep -i \"kernel|ipython|jupyter|isce3\" | head -50",
+          "curl -sL \"https://asfopensarlab.github.io/NISAR_Cookbook/notebooks/software-environment-docker\" > /tmp/nisar_docker_page.html 2>&1 && grep -i \"kernel|install-kernel\" /tmp/nisar_docker_page.html | head -30",
+          "cat /tmp/nisar_docker_page.html | grep -A 50 \"id-2c-register-the-isce3\" | grep -E \"pixi run|python -m ipykernel\" | head -5",
+          "cat /tmp/nisar_docker_page.html | sed -n '/id-2c-register-the-isce3/,/id-2d/p' | strings | grep -A 10 \"pixi run -e isce3 python -m ipykernel\" | head -20",
+          "echo \"The command found in the NISAR Cookbook documentation is:\""
+        ]
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 41518,
+      "graded": {
+        "rationale": "Answer matches exactly the key command, includes pixi run -e isce3, ipykernel install, --user.",
+        "verdict": "correct",
+        "score": 2
+      }
+    },
+    {
+      "set": "nisar-cookbook",
+      "question": "pixi-install-command",
+      "model": "claude-haiku",
+      "arm": "cold",
+      "asked": {
+        "answer": "Unknown - I cannot reliably answer this specific technical detail about the NISAR Cookbook's Pixi installation command from my training knowledge alone.",
+        "admitted_unknown": true,
+        "tool_calls_made": 0,
+        "commands_run": []
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 22297,
+      "graded": {
+        "score": 0,
+        "verdict": "wrong",
+        "rationale": "Model admitted not knowing the answer; admitted unknowns are never partial, always wrong."
+      }
+    },
+    {
+      "set": "nisar-cookbook",
+      "question": "pixi-install-command",
+      "model": "claude-haiku",
+      "arm": "docslice",
+      "asked": {
+        "answer": "The exact command the NISAR Cookbook uses to install the isce3 environment with the Pixi package manager is: `pixi install -e isce3`. This command is found in section 2b of the software-environment-docker notebook at https://asfopensarlab.github.io/NISAR_Cookbook/notebooks/software-environment-docker#id-2b-install-the-isce3-environment-with-pixi",
+        "admitted_unknown": false,
+        "tool_calls_made": 3,
+        "commands_run": [
+          "which docslice",
+          "docslice search \"https://asfopensarlab.github.io/NISAR_Cookbook\" \"pixi isce3\"",
+          "docslice get 'https://asfopensarlab.github.io/NISAR_Cookbook/notebooks/software-environment-docker#id-2b-install-the-isce3-environment-with-pixi'"
+        ]
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 23858,
+      "graded": {
+        "rationale": "Model gives exact command \"pixi install -e isce3\" matching the key exactly.",
+        "verdict": "correct",
+        "score": 2
+      }
+    },
+    {
+      "set": "nisar-cookbook",
+      "question": "pixi-install-command",
+      "model": "claude-haiku",
+      "arm": "raw-fetch",
+      "asked": {
+        "answer": "pixi install -e isce3",
+        "admitted_unknown": false,
+        "tool_calls_made": 9,
+        "commands_run": [
+          "curl -sL https://asfopensarlab.github.io/NISAR_Cookbook/ | head -100",
+          "curl -sL https://asfopensarlab.github.io/NISAR_Cookbook/ 2>&1 | grep -i 'pixi\\|install\\|isce3' | head -20",
+          "curl -sL https://asfopensarlab.github.io/NISAR_Cookbook/setup 2>&1 | head -200",
+          "curl -sL https://asfopensarlab.github.io/NISAR_Cookbook/getting-started 2>&1 | grep -i 'pixi\\|isce3' | head -10",
+          "curl -sL https://api.github.com/repos/asfopensarlab/NISAR_Cookbook/contents/ 2>&1 | grep -E '\"name\".*\\.md' | head -20",
+          "curl -sL https://raw.githubusercontent.com/asfopensarlab/NISAR_Cookbook/main/README.md",
+          "curl -sL https://raw.githubusercontent.com/asfopensarlab/NISAR_Cookbook/main/pixi.toml",
+          "curl -sL https://asfopensarlab.github.io/NISAR_Cookbook/ 2>&1 | grep -o 'href=\"[^\"]*\"' | head -50 | sort -u",
+          "curl -sL https://asfopensarlab.github.io/NISAR_Cookbook/notebooks/software-environment-docker 2>&1 | sed 's/<[^>]*>//g' | grep -i 'pixi' | head -20"
+        ]
+      },
+      "asker_model": "claude-haiku-4-5-20251001",
+      "asker_total_tokens": 61090,
+      "graded": {
+        "verdict": "correct",
+        "score": 2,
+        "rationale": "Exact match to the key."
+      }
+    }
+  ]
+}

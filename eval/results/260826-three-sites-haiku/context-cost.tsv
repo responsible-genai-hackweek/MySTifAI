@@ -1,0 +1,16 @@
+question	html_chars	page_chars	section_chars	page/section	html/section	answer_in_section
+session-timeout	113016	5147	5147	1.0	22.0	true
+du-command	113016	5147	5147	1.0	22.0	true
+shared-permissions	113016	5147	5147	1.0	22.0	true
+pip-persistence	113016	5147	5147	1.0	22.0	true
+docker-image-tag	113016	5147	5147	1.0	22.0	true
+clean-exec-command	184756	8895	340	26.2	543.4	true
+matplotlib-strings-default	247911	16968	1774	9.6	139.7	true
+gh-pages-base-url	125793	4229	2173	1.9	57.9	true
+content-server-port	539590	45851	845	54.3	638.6	true
+theme-config-file	159012	7132	1090	6.5	145.9	true
+earthdata-eula-name	90852	1327	739	1.8	122.9	true
+pixi-install-command	123424	4535	126	36.0	979.6	true
+kernel-registration-command	123424	4535	261	17.4	472.9	true
+gcov-hdf5-path	269942	20102	1513	13.3	178.4	true
+gcov-supporting-layers	269942	20102	1513	13.3	178.4	true

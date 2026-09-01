@@ -1,7 +1,6 @@
-# Decisions
+# Technical decisions
 
 Findings that changed our design assumptions, newest last.
-See [](./recon-notes.md) for full detail behind each one.
 
 - Tests run against fixtures captured from live MyST sites (`tests/fixtures/`, saved by `scripts/recon.ts`) rather than synthetic data or live-network calls: offline and deterministic, while still proving the code works on what real deployments actually serve. `scripts/recon.ts` is temporary and goes away once the CLI can inspect sites itself.
 - The slash→dot URL→`data` derivation rule fails for folder-index pages (e.g. `/community/jobs` → `/community.jobs.index.json`, not `/community.jobs.json`); the xref `data` field must always be used as the source of truth, never derived.

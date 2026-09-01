@@ -60,8 +60,7 @@ Reparsing markdown would duplicate work the site has already done, and risks dri
 Local checkouts for API reference: `~/github/jupyter/book/mystmd` and `~/github/jupyter/book/myst-theme`.
 
 **Resolve page-JSON URLs via the `data` field in `myst.xref.json`.**
-Deriving a URL from the page path (slashes to dots) looks right most of the time, but breaks for folder-index pages; see the derivation-rule section in [](./recon-notes.md).
-Treat derivation as a fallback only.
+Deriving a URL from the page path (slashes to dots) looks right most of the time, but breaks for folder-index pages.
 
 **Route all network fetches through `src/fetch.ts`.**
 One caching layer means one place to reason about retries, caching, and offline tests.

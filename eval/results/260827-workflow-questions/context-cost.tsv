@@ -1,0 +1,15 @@
+question	html_chars	page_chars	section_chars	page/section	html/section	answer_in_section
+scratch-bucket	181685	6125	1325	4.6	137.1	true
+atl10-reader	404722	24008	3509	6.8	115.3	true
+du-command	113016	5147	5147	1.0	22.0	true
+package-install	113016	5147	5147	1.0	22.0	true
+execute-at-build	184756	8895	8895	1.0	20.8	true
+clean-exec-command	184756	8895	340	26.2	543.4	true
+matplotlib-strings-default	247911	16968	1774	9.6	139.7	true
+gh-pages-base-url	125793	4229	2173	1.9	57.9	true
+launch-buttons	110922	1964	1407	1.4	78.8	true
+earthdata-eula-name	90852	1327	739	1.8	122.9	true
+gcov-search	126104	4237	1241	3.4	101.6	true
+pixi-install-command	123424	4535	126	36.0	979.6	true
+kernel-registration-command	123424	4535	261	17.4	472.9	true
+gcov-hdf5-path	269942	20102	1513	13.3	178.4	true

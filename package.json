@@ -34,10 +34,13 @@
     "prepublishOnly": "npm run build",
     "test": "vitest run",
     "docs": "cd docs && myst build --html --execute",
-    "docs:live": "cd docs && myst start --execute"
+    "docs:live": "cd docs && myst start --execute",
+    "eval:args": "node eval/load-args.mjs",
+    "eval:context": "node eval/context-cost.mjs"
   },
   "devDependencies": {
     "@types/node": "^26.3.0",
+    "js-yaml": "^4.1.0",
     "mystmd": "^1.10.1",
     "tsx": "^4.23.12",
     "typescript": "^7.0.2",
