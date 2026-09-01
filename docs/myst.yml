@@ -1,10 +1,12 @@
 version: 1
 project:
   title: MyST Sites as Skills
+  abbreviations:
+    RAG: Retrieval-Augmented Generation
   toc:
     - file: index.md
-    - file: agent-skill.md
     - file: docslice.md
+    - file: agent-skill.md
     - file: evaluation.md
     - file: develop.md
       children:
